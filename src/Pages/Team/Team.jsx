@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Container from "../../Components/Container/Container";
 import Section from "../../Components/shared/Section/Section";
 import SubTitle from "../../Components/shared/SubTitle";
