@@ -21,28 +21,7 @@ const Team = () => {
           <SubTitle text={"lorenmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"} />
         </div>
 
-        <section className="game-section">
-          <h2 className="line-title">trending games</h2>
-          <div className="owl-carousel custom-carousel owl-theme">
-            {[
-              {
-                title: "Dota 2",
-                description: "Dota 2 is a multiplayer online battle arena by Valve...",
-              } /* Add more game objects here */,
-            ].map((game, index) => (
-              <div
-                className={`item ${index === activeIndex ? "active" : ""}`}
-                key={index}
-                onClick={() => handleItemClick(index)}
-              >
-                <div className="item-desc">
-                  <h3>{game.title}</h3>
-                  <p>{game.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+       
       </Container>
     </Section>
   );
