@@ -1,7 +1,9 @@
 const Logo = () => {
   return (
     <div>
-      <p className="font-bold text-xl text-[#31add5]">Neurons</p>
+      <a href="/">
+        <p className="font-bold text-xl text-[#31add5]">Neurons</p>
+      </a>
     </div>
   );
 };

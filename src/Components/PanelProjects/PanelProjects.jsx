@@ -1,7 +1,7 @@
 import { useState } from "react";
 import proyectosData from "./proyectosData"; // Suponiendo que tengas un archivo con datos de proyectos
 import Container from "../Container/Container";
-import CardProject from "../shared/CardProject";
+import CardProject from "../shared/CardProject/CardProject";
 import Title from "../shared/Title";
 import Section from "../shared/Section/Section";
 import ButtonSimple from "../shared/Buttons/ButtonSimple";
