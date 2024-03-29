@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Container from "../../Container/Container";
 import GalleryComponent from "../gallery/GalleryProject";
+import { IoMdClose } from "react-icons/io";
 
 const CardProject = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,6 @@ const CardProject = () => {
 
   const handleCardClick = () => {
     setIsOpen(true);
-    // Cambiar el URL sin recargar la página
     window.history.pushState({}, "", "/team");
   };
 
@@ -26,7 +26,7 @@ const CardProject = () => {
 
       setTimeout(() => {
         setIsText(!isText);
-      }, 3000);
+      }, 1000);
     } else {
       // Habilitar scroll cuando isOpen es false
       document.body.style.overflow = "auto";
@@ -74,22 +74,82 @@ const CardProject = () => {
           tabIndex="-1"
           aria-labelledby="drawer-swipe-label"
         >
+          <div
+            onClick={handleClose}
+            className="w-full flex justify-end py-10 px-10 cursor-pointer hover:text-red-500"
+          >
+            <IoMdClose />
+          </div>
           <Container>
-            <div onClick={handleClose}>Cerrar</div>
-            {isText && <GalleryComponent title={"nombre del proyecto"} />}
-            {isText && (
-              <div className={`h-screen ${style.text} ${isText ? style.open : style.closed}`}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
-                consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
-                praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum dolor,
-                sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur deleniti
-                nobis minus amet debitis quo maiores odio culpa in veniam tempore modi, animi, saepe
-                quod asperiores!lorenmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. At aut ipsum laboriosam assumenda
-                consequuntur sit error illo cum repellat neque suscipit, ab quisquam voluptate
-                veritatis deleniti atque perspiciatis incidunt temporibus.
+            {" "}
+            <GalleryComponent title={"nombre del proyecto"} />
+            <div className="grid grid-cols-3 gap-4  ">
+              <div className={` `}>
+                <h1 className={`pt-20 `}>About Client </h1>
+                <div>
+                  <p>
+                    {" "}
+                    <span>About Client:</span>
+                    Company Ltd
+                  </p>
+                  <p>
+                    {" "}
+                    <span>Services:</span>
+                    Company Ltd
+                  </p>
+                </div>
               </div>
-            )}
+              <div className={`col-span-2 flex flex-col gap-5`}>
+                <p className={` ${style.text}`}>
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
+                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
+                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
+                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
+                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
+                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
+                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
+                  perspiciatis incidunt temporibus.
+                </p>
+                <p className={` ${style.text}`}>
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
+                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
+                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
+                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
+                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
+                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
+                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
+                  perspiciatis incidunt temporibus.
+                </p>{" "}
+                <p className={` ${style.text}`}>
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
+                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
+                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
+                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
+                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
+                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
+                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
+                  perspiciatis incidunt temporibus.
+                </p>{" "}
+                <p className={` ${style.text}`}>
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
+                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
+                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
+                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
+                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
+                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
+                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
+                  perspiciatis incidunt temporibus.
+                </p>
+              </div>
+            </div>
           </Container>
         </div>
       )}
