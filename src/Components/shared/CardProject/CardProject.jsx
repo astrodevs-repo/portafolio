@@ -4,7 +4,7 @@ import Container from "../../Container/Container";
 import GalleryComponent from "../gallery/GalleryProject";
 import { IoMdClose } from "react-icons/io";
 
-const CardProject = () => {
+const CardProject = ({ nombre, description, tipoTrabajo, client, project, tools }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isText, setIsText] = useState(false);
 
@@ -53,7 +53,7 @@ const CardProject = () => {
           <div className="p-5">
             <a href="#">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Noteworthy technology acquisitions 2021
+                {nombre}
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -68,7 +68,7 @@ const CardProject = () => {
       {isOpen && (
         <div
           id="drawer-swipe"
-          className={`fixed h-screen  z-40 w-full overflow-y-auto bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-800 transition-transform bottom-0 left-0 right-0 drawer ${
+          className={`fixed h-screen z-40 w-full overflow-y-auto bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-800 transition-transform bottom-0 left-0 right-0 drawer ${
             style.drawer
           } ${isOpen ? style.open : style.closed}`}
           tabIndex="-1"
@@ -80,74 +80,46 @@ const CardProject = () => {
           >
             <IoMdClose />
           </div>
+          <GalleryComponent title={nombre} description={description} />
           <Container>
             {" "}
-            <GalleryComponent title={"nombre del proyecto"} />
-            <div className="grid grid-cols-3 gap-4  ">
-              <div className={` `}>
-                <h1 className={`pt-20 `}>About Client </h1>
+            <div className="grid grid-cols-1 gap-4 pb-[500px]  ">
+              <div className={` flex flex-col justify-start gap-10 pt-40`}>
+                <div className="grid grid-cols-2 gap-5">
+                  <div className="text-gray-400">
+                    client <br />
+                    <span className="font-bold text-black">{nombre} </span>
+                  </div>
+                  {Object.entries(client).map(([property, value], index) => (
+                    <div key={index} className="text-gray-400">
+                      {property} <br />
+                      <span className="font-bold text-black">{value} </span>
+                    </div>
+                  ))}
+                </div>
                 <div>
-                  <p>
+                  <h1 className="text-2xl m-0">Tools & Technologies</h1>
+
+                  <div className="flex flex-wrap gap-2">
                     {" "}
-                    <span>About Client:</span>
-                    Company Ltd
-                  </p>
-                  <p>
-                    {" "}
-                    <span>Services:</span>
-                    Company Ltd
-                  </p>
+                    {Object.entries(tools).map(([property], index) => (
+                      <div key={index}>
+                        <span className="font-normal">{property} </span>,
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className={`col-span-2 flex flex-col gap-5`}>
-                <p className={` ${style.text}`}>
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
-                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
-                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
-                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
-                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
-                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
-                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
-                  perspiciatis incidunt temporibus.
-                </p>
-                <p className={` ${style.text}`}>
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
-                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
-                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
-                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
-                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
-                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
-                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
-                  perspiciatis incidunt temporibus.
-                </p>{" "}
-                <p className={` ${style.text}`}>
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
-                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
-                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
-                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
-                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
-                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
-                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
-                  perspiciatis incidunt temporibus.
-                </p>{" "}
-                <p className={` ${style.text}`}>
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam aut
-                  consectetur ullam nemo quod nisi sequi consequatur accusamus corporis eius
-                  praesentium quam, officiis, rem vero. Facere tenetur inventore a. Lorem ipsum
-                  dolor, sit amet consectetur adipisicing elit. Nulla atque mollitia sunt pariatur
-                  deleniti nobis minus amet debitis quo maiores odio culpa in veniam tempore modi,
-                  animi, saepe quod asperiores!lorenmnnnn Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. At aut ipsum laboriosam assumenda consequuntur sit error illo
-                  cum repellat neque suscipit, ab quisquam voluptate veritatis deleniti atque
-                  perspiciatis incidunt temporibus.
-                </p>
+
+              <div className={` flex flex-col gap-5`}>
+                {Object.entries(project).map(([property, value], index) => (
+                  <section id={property} key={index}>
+                    <div className={` ${style.text}`}>
+                      <h1 className="m-0 text-lg py-5">{property}</h1>
+                      <p>{value}</p>
+                    </div>
+                  </section>
+                ))}
               </div>
             </div>
           </Container>

@@ -1,10 +1,18 @@
+import Container from "../../Container/Container";
 import styles from "./GalleryComponent.module.scss";
 import PropTypes from "prop-types";
 
-const GalleryComponent = ({ title }) => {
+const GalleryComponent = ({ title, description }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      <Container>
+        <div className="">
+          <p className="text-blue-600 font-semibold text-lg">product desig</p>
+          <br />
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
+      </Container>
 
       <div className={styles["gallery-wrap"]}>
         <div
@@ -19,12 +27,15 @@ const GalleryComponent = ({ title }) => {
             backgroundImage: `url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80')`,
           }}
         ></div>
+
         <div
           className={`${styles.item} ${styles["item-3"]}`}
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80')`,
           }}
-        ></div>
+        >
+          <a href="#objetive"></a>
+        </div>
         <div
           className={`${styles.item} ${styles["item-4"]}`}
           style={{
