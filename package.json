@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "framer-motion": "^11.0.24",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,7 +19,8 @@
     "react-qr-reader": "^3.0.0-beta-1",
     "react-router-dom": "^6.22.3",
     "react-scrollspy": "^3.4.3",
-    "react-slick-carousel": "^0.14.9"
+    "react-slick-carousel": "^0.14.9",
+    "swup": "^4.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
