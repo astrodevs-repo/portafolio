@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Footer from "../Components/Footer/Footer";
-import Navbar from "../Components/Navbar/Navbar";
+// import Navbar from "../Components/Navbar/Navbar";
+import { motion } from "framer-motion";
+
 import PropTypes from "prop-types";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -11,7 +13,7 @@ const Layout = ({ children }) => {
     // Función que maneja el evento de desplazamiento
     const handleScroll = () => {
       // Verifica si la posición de desplazamiento es mayor que 400px
-      if (window.scrollY > 400) {
+      if (window.scrollY > 200) {
         setShowButton(true); // Muestra el botón
       } else {
         setShowButton(false); // Oculta el botón
@@ -36,13 +38,14 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div style={{ position: "relative", minHeight: "100vh" }}>
-      <Navbar />
+    <div style={{ position: "relative" }}>
       {children}
-      <Footer id={"footer"} />
+      <Footer />
       {/* Botón para ir arriba */}
       {showButton && (
-        <button
+        <motion.button
+          animate={{ y: -50 }}
+          transition={{ ease: "easeOut", duration: 2 }}
           onClick={scrollToTop}
           style={{
             position: "fixed",
@@ -52,7 +55,7 @@ const Layout = ({ children }) => {
           }}
         >
           <FaArrowUp className="text-gray-500" />
-        </button>
+        </motion.button>
       )}
       {/* Botón de WhatsApp */}
       <a

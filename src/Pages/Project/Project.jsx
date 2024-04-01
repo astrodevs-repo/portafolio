@@ -5,7 +5,8 @@ import GalleryComponent from "../../Components/shared/gallery/GalleryProject";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import proyectosData from "../../Components/PanelProjects/proyectosData";
-const Team = () => {
+import Navbar from "../../Components/Navbar/Navbar";
+const Project = () => {
   const params = useParams();
   const [item, setItem] = useState(null);
 
@@ -34,6 +35,7 @@ const Team = () => {
       transition={{ duration: 2 }}
     >
       <section id="home">
+        <Navbar />
         <div className="h-20"></div>
 
         <GalleryComponent title={item.nombre} description={item.description} />
@@ -85,4 +87,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Project;
