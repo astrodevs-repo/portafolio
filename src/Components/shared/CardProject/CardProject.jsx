@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const CardProject = ({ id, nombre, description, tipoTrabajo, client, project, tools }) => {
   return (
@@ -28,6 +29,16 @@ const CardProject = ({ id, nombre, description, tipoTrabajo, client, project, to
       </Link>
     </>
   );
+};
+
+CardProject.propTypes = {
+  id: PropTypes.string.isRequired,
+  nombre: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tipoTrabajo: PropTypes.string.isRequired,
+  client: PropTypes.string.isRequired,
+  project: PropTypes.string.isRequired,
+  tools: PropTypes.string.isRequired,
 };
 
 export default CardProject;

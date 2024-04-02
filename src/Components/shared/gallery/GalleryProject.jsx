@@ -40,14 +40,14 @@ const GalleryComponent = ({ title, description }) => {
     <div>
       <Container>
         <div className="px-[100px]">
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
             <p className="text-blue-600 font-semibold text-lg">product desig</p>
           </motion.div>
           <br />
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
             <h1>{title}</h1>
           </motion.div>
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
             <p>{description}</p>
           </motion.div>
         </div>
