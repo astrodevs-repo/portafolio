@@ -26,11 +26,11 @@ function Header() {
       <div id="title" className={s.header__title}>
         {" "}
         <h1>
-          Astro <strong>Development</strong>
+          We are <strong>Neurons</strong>
         </h1>
       </div>
       <h4 className={s.header__subtitle}>
-        ¡Bienvenidos a AstroDevs! No somos solo una agencia de desarrollo web; somos una firma
+        ¡Bienvenidos a Neurons ! No somos solo una agencia de desarrollo web; somos una firma
         integral de soluciones digitales...
       </h4>
       <div className={s.header__buttons}>

@@ -3,6 +3,8 @@ import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import yeli from "../../../../public/team/yeli.jpg";
 import miguel from "../../../../public/team/miguel.jpg";
+import jesus from "../../../../public/team/jesus.jpg";
+
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 
 const Team = () => {
@@ -21,7 +23,7 @@ const Team = () => {
     },
     {
       name: "Jesus Moreno",
-      img: miguel,
+      img: jesus,
       rol: "Product Manager",
     },
     {

@@ -5,3 +5,22 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* CSS para transiciones */
+.transition-enter {
+  opacity: 0;
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
