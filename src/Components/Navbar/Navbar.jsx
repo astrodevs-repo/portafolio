@@ -50,8 +50,8 @@ const Navbar = () => {
   const navItems = [
     { id: "/home", label: "Home" },
     { id: "/about", label: "About" },
-    { id: "/valores", label: "Valores" },
-    { id: "/servicios", label: "Servicios" },
+    { id: "#valores", label: "Valores" },
+    { id: "#servicios", label: "Servicios" },
     { id: "/team", label: "Team" },
     { id: "/projects", label: "Projects" },
   ];
@@ -79,8 +79,11 @@ const Navbar = () => {
               <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 {navItems.map(({ id, label }) => (
                   <li key={id}>
-                    <Link
-                      to={`${id}`}
+                    {/* <Link
+                      to={`${id}`} */}
+
+                    <a
+                      href={id}
                       className={`block py-2 px-3 rounded ${
                         activeSection === id
                           ? "text-white bg-blue-700"
@@ -88,7 +91,8 @@ const Navbar = () => {
                       }`}
                     >
                       {label}
-                    </Link>
+                    </a>
+                    {/* </Link> */}
                   </li>
                 ))}
               </ul>

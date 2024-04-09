@@ -29,7 +29,7 @@ export const data = {
 };
 export const data1 = {
   header: "Servcios",
-  href: "services",
+  href: "servicios",
   Bg: "#5c76ff",
   textColor: "white",
 

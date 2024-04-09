@@ -40,14 +40,14 @@ const GalleryComponent = ({ title, description }) => {
     <div>
       <Container>
         <div className="px-[100px]">
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
             <p className="text-blue-600 font-semibold text-lg">product desig</p>
           </motion.div>
           <br />
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
             <h1>{title}</h1>
           </motion.div>
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 3 }}>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
             <p>{description}</p>
           </motion.div>
         </div>
@@ -58,15 +58,11 @@ const GalleryComponent = ({ title, description }) => {
         transition={{ ease: "easeOut", duration: 1 }}
         className={styles["gallery-wrap"]}
       >
-        {photos.map(({ name, url }, index) => (
-          <div
-            key={index}
-            className={`${styles.item} ${styles[`${name}`]}`}
-            style={{
-              backgroundImage: `url(${url})`,
-            }}
-          ></div>
-        ))}
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAavECFhYgFOATcJGFGRcfQEA34wu1A995n-J_dKsE&s"
+          alt=""
+          className="w-full"
+        />
       </motion.div>
     </div>
   );
