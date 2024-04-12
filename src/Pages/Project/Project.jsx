@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import proyectosData from "../../Components/PanelProjects/proyectosData";
 import Navbar from "../../Components/Navbar/Navbar";
+import { TextParallaxContentExample } from "../../Components/Project/ContentProjectInfo";
 const Project = () => {
   const params = useParams();
   const [item, setItem] = useState(null);
@@ -41,7 +42,7 @@ const Project = () => {
         <GalleryComponent title={item.nombre} description={item.description} />
 
         <Container>
-          <div className="grid grid-cols-1 gap-4 pb-[500px]">
+          <div className="grid grid-cols-1 gap-4 ">
             <div className={`flex flex-col justify-start gap-10 `}>
               <div className="grid grid-cols-2 gap-5">
                 <div className="text-gray-400">
@@ -70,7 +71,7 @@ const Project = () => {
               </div>
             </div>
 
-            <div className={`grid grid-cols-1 gap-5 `}>
+            {/* <div className={`grid grid-cols-1 gap-5 `}>
               {Object.entries(item.project).map(([property, value], index) => (
                 <section id={property} key={index}>
                   <div className={` ${style.text}`}>
@@ -79,9 +80,10 @@ const Project = () => {
                   </div>
                 </section>
               ))}
-            </div>
+            </div> */}
           </div>
         </Container>
+        <TextParallaxContentExample />
       </section>
     </motion.main>
   );
