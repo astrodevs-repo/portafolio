@@ -10,7 +10,7 @@ const SectionScroll = ({ data }) => {
       <div style={{ backgroundColor: data.Bg, textColor: data.textColor }} className="h-full">
         <Container>
           <div className="relative h-screen">
-            <div className="sticky top-40 left-0 text-white">{data.header}</div>
+            <div className="sticky top-20 left-0 text-white">{data.header}</div>
             <div className=" w-full  h-full flex justify-end items-start">
               <Carousel items={data} />
             </div>
