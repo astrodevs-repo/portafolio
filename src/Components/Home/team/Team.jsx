@@ -23,7 +23,7 @@ const Team = () => {
     },
     {
       name: "Jesus Moreno",
-      img: jesus,
+      img: yeli,
       rol: "Product Manager",
     },
     {
@@ -35,6 +35,11 @@ const Team = () => {
       name: "Luisana Acevedo",
       img: miguel,
       rol: "CTO",
+    },
+    {
+      name: "Jesus Moreno",
+      img: jesus,
+      rol: "Product Manager",
     },
   ];
 

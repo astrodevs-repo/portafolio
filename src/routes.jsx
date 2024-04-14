@@ -18,7 +18,7 @@ export const routes = [
     element: <Projects />,
   },
   {
-    path: "/team/:id",
+    path: "/team",
     element: <Team />,
   },
   {

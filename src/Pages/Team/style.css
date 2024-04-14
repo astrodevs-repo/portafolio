@@ -1,0 +1,26 @@
+.carousel-container {
+  height: 100vh; /* Altura máxima para evitar que el carrusel ocupe toda la pantalla */
+  overflow-y: scroll; /* Hace que el contenedor sea desplazable verticalmente */
+}
+
+.carousel {
+  display: flex;
+}
+
+.slide {
+  min-height: 100vh; /* Asegura que cada slide tenga la altura de la pantalla */
+  transition: transform 0.5s ease; /* Añade una transición suave al desplazamiento */
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Ajusta el tamaño y estilo del texto según sea necesario */
+.bg-black {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}

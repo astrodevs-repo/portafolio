@@ -19,21 +19,21 @@ const Carousel = ({ items }) => {
   }, [index]);
 
   return (
-    <div className="relative w-[90%] min-h-[500px] overflow-hidden  h-screen">
+    <div className="relative w-[100%] sm:w-[90%] min-h-[500px] overflow-hidden h-full sm:h-screen">
       <motion.div
         key={index}
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: "-100%", opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-full flex flex-col justify-start items-start absolute top-40 left-0 "
+        className="w-full h-full flex flex-col justify-start items-start absolute top-20 sm:top-40 left-0 "
       >
         <h1 className="text-4xl text-white">{items.data[index].title}</h1>
-        <p className="text-xl text-white w-1/2">{items.data[index].description}</p>
+        <p className="text-xl text-white w-full sm:w-1/2">{items.data[index].description}</p>
       </motion.div>
 
-      <div className="absolute bottom-40 right-0 w-full flex justify-between items-center">
-        <div className="block">
+      <div className="absolute bottom-0 sm:bottom-40 right-0 w-full flex justify-between items-center ">
+        <div className="flex sm:block ">
           {" "}
           <button
             onClick={goToPrevious}
