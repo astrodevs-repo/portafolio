@@ -23,14 +23,11 @@ function Header() {
 
   return (
     <>
-      <section className="h-screen bg-red-500"></section>
-      <section className="h-screen bg-white"></section>
-
       <section id="home" className={`${s.header__container} main`}>
         <div id="title" className={s.header__title}>
           {" "}
           <h1>
-            We are <strong>Neurons</strong>
+            Nosotros somos <strong>Neurons</strong>
           </h1>
         </div>
         <h4 className={s.header__subtitle}>
@@ -39,7 +36,7 @@ function Header() {
         </h4>
         <div className={s.header__buttons}>
           <button className="">
-            read more
+            LEER MÀS
             <FaArrowRight
               className={s.hoverimg}
               style={{ position: "absolute", right: "0.3vmax" }}
@@ -50,7 +47,7 @@ function Header() {
               className={s.hoverimg}
               style={{ position: "absolute", right: "0.3vmax" }}
             />
-            Nuestro trabajo
+            NUESTRO TRABAJO
           </button>
         </div>
       </section>
