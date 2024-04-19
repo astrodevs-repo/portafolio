@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 import { data, data1 } from "../../data/Home";
 import Navbar from "../../Components/Navbar/Navbar";
+import { ParallaxLayer } from "@react-spring/parallax";
 
 const Home = () => {
   return (

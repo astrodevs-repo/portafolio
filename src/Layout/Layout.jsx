@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import PropTypes from "prop-types";
 import { FaArrowUp } from "react-icons/fa";
+import { Parallax } from "@react-spring/parallax";
 
 const Layout = ({ children }) => {
   const [showButton, setShowButton] = useState(false);
@@ -40,7 +41,7 @@ const Layout = ({ children }) => {
   return (
     <div style={{ position: "relative" }}>
       {children}
-      <Footer />
+      {/* <Footer /> */}
       {/* Botón para ir arriba */}
       {showButton && (
         <motion.button
