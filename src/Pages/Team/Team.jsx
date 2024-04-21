@@ -6,7 +6,7 @@ const Team = () => {
   return (
     <div className="h-screen">
       <div className={styles.background}>
-        <Parallax pages={6}>
+        <Parallax pages={3}>
           <ParallaxLayer
             offset={0}
             speed={0.5}
@@ -14,7 +14,14 @@ const Team = () => {
           >
             <Header />
           </ParallaxLayer>
-
+          <ParallaxLayer
+            offset={1}
+            speed={0.5}
+            style={{ ...alignCenter, justifyContent: "center" }}
+          >
+            <div>about</div>
+          </ParallaxLayer>
+          {/* 
           <ParallaxLayer
             sticky={{ start: 1, end: 2 }}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
@@ -50,7 +57,7 @@ const Team = () => {
             <div className={`${styles.card} ${styles.parallax} ${styles.blue}`}>
               <p>Neither am I</p>
             </div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
         </Parallax>
       </div>
     </div>
