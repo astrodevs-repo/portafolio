@@ -22,7 +22,7 @@ function Header() {
   });
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <section id="home" className={`${s.header__container} main`}>
         <div id="title" className={s.header__title}>
           {" "}
@@ -51,7 +51,7 @@ function Header() {
           </button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

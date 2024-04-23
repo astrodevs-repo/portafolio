@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 import { data, data1 } from "../../data/Home";
 import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
       
 
        */}
-      {/* <Banner /> */}
+      <Footer />
     </motion.main>
   );
 };

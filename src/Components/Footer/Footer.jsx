@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const Footer = () => {
   return (
     <div
-      className=""
+      className=" w-full"
       style={{ backgroundImage: "linear-gradient(264.41deg, #31add5 -7.99%, #5c76ff 78.23%)" }}
     >
       <Container>
@@ -43,10 +43,10 @@ const Footer = () => {
             </ul>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className=" text-sm text-gray-500 sm:text-center dark:text-gray-400 w-full flex justify-start">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+            <a href="" className="hover:underline">
+              Neurons
             </a>
             . All Rights Reserved.
           </span>

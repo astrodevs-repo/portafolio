@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -48,10 +47,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { id: "/home", label: "Home" },
-    { id: "/about", label: "About" },
+    { id: "/", label: "Home" },
+    { id: "#about", label: "About" },
     { id: "#valores", label: "Valores" },
-    { id: "#servicios", label: "Servicios" },
+    { id: "#servicios", label: "Services" },
     { id: "/team", label: "Team" },
     { id: "/projects", label: "Projects" },
   ];
@@ -73,10 +72,15 @@ const Navbar = () => {
               <Logo />
             </a>
             <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <ButtonGrandient id={"#footer"} text={"Contact Us"} />
+              <ButtonGrandient
+                id={"https://forms.office.com/r/LA0vfN3Rd9"}
+                target="_blank"
+                rel="noopener noreferrer"
+                text={"Contact Us"}
+              />
             </div>
             <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                 {navItems.map(({ id, label }) => (
                   <li key={id}>
                     {/* <Link

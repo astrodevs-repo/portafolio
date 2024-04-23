@@ -1,59 +1,26 @@
-import { useState } from "react";
 import Title from "../../../Components/shared/Title";
 import SubTitle from "../../shared/SubTitle";
 import Section from "../../shared/Section/Section";
+import ButtonGrandient from "../../shared/Buttons/ButtonGrandient";
 
 const FooterForm = () => {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    telefono: "",
-    correo: "",
-    pais: "",
-    ciudad: "",
-    empresa: "",
-    tipoProyecto: "",
-    rangoInversion: "",
-    mensaje: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes enviar los datos del formulario a tu backend o hacer lo que necesites con ellos
-    console.log(formData);
-  };
-
-  // Array que contiene la cantidad de inputs que deseas renderizar
-  const inputs = [
-    { id: "nombre", label: "Tu nombre*", type: "text" },
-    { id: "telefono", label: "Teléfono*", type: "text" },
-    { id: "correo", label: "Tu correo electrónico*", type: "email" },
-    { id: "mensaje", label: "Tu mensaje*", type: "textarea" },
-  ];
-
   return (
     <Section id={"footer"}>
       <div className="py-8 ">
         <Title text={"TELL US"} />
         <SubTitle textColor={"white"} text={"What we can help you"} />
         <div className="lg:h-20 sm:h-0"></div>
-        <div className="container mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <div className="w-[90%] py-20 text-white">
-            <p>
-              En este código, he agregado la clase col-span-2 a cada input dentro del formulario.
-              Esto hará que los inputs ocupen toda la fila en dispositivos móviles. Además, he
-              agregado la clase sm:col-span-1 para asegurar que en pantallas más grandes los inputs
-              vuelvan a ocupar solo una columna
+        <div className="container flex flex-col sm:grid-cols-2">
+          <div className="w-[100%] py-10  text-white flex justify-center">
+            <p className="text-center w-1/2">
+              En <span className="font-bold">Neurons</span>, estamos comprometidos a brindarte
+              soluciones digitales innovadoras y de calidad. Ya sea que necesites desarrollar una
+              aplicación móvil, un sitio web o cualquier otro proyecto digital, nuestro equipo está
+              listo para ayudarte a alcanzar tus objetivos. ¡Contáctanos hoy mismo! Completa nuestro
+              formulario y nos pondremos en contacto contigo lo antes posible.
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
+          {/* <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
             {inputs.map((input, index) => (
               <div key={index} className="flex flex-col col-span-2 text-white">
                 <label htmlFor={input.id}>{input.label}</label>
@@ -88,7 +55,14 @@ const FooterForm = () => {
                 Enviar
               </button>
             </div>
-          </form>
+          </form> */}
+          <div className="w-full  flex justify-center items-center pt-10">
+            {" "}
+            <ButtonGrandient
+              text={"  Contactanos  "}
+              id={"https://forms.office.com/r/LA0vfN3Rd9"}
+            />
+          </div>
         </div>
       </div>
     </Section>
