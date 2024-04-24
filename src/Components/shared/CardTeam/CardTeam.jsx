@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import yeli from "../../../../public/team/yeli.jpg";
+import miguel from "../../../../public/team/miguel.jpg";
+import jesus from "../../../../public/team/jesus.jpg";
 
 const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const cardColors = ["#FF5733", "#33FF57", "#5733FF", "#FF33F9", "#F9FF33", "#33F9FF", "#FF3333"];
@@ -67,11 +70,11 @@ function Card({
   );
 }
 
-export default function Services() {
+export default function CardTeam() {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-screen w-full bg-red-500 flex justify-center items-center">
+    <div className="">
       <motion.div style={{ width: 150, height: 150, position: "relative" }} className="bg-red-500">
         <AnimatePresence initial={false}>
           <Card
@@ -85,7 +88,12 @@ export default function Services() {
             day={daysOfWeek[index === 0 ? daysOfWeek.length - 1 : index - 1]}
             color={cardColors[index === 0 ? daysOfWeek.length - 1 : index - 1]}
             className="rounded-lg"
-          />
+            style={{
+              backgroundImage: `url(${yeli})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></Card>
           <Card
             key={index}
             x={-10}

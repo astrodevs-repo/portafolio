@@ -119,7 +119,7 @@ const Team = () => {
 
           {/**texts */}
           <ParallaxLayer
-            offset={2}
+            sticky={{ start: 1.5, end: 2.5 }}
             speed={1}
             style={{ ...alignCenter, justifyContent: "flex-end" }}
           >
@@ -145,7 +145,7 @@ const Team = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={6}
+            sticky={{ start: 5.5, end: 6.5 }}
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "flex-start" }}
           >

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
+import DrawerNavigation from "../shared/drawer/Drawer";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -60,7 +61,7 @@ const Navbar = () => {
       {loaded && (
         <motion.nav
           initial={{ y: -100 }}
-          animate={{ y: visible ? 0 : -100 }}
+          animate={{ y: visible ? 0 : -10 }}
           exit={{ y: -100 }}
           transition={{ type: "spring", damping: 20, stiffness: 100 }}
           className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ease-in-out ${
@@ -78,6 +79,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 text={"Contact Us"}
               />
+              <DrawerNavigation />
             </div>
             <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
               <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">

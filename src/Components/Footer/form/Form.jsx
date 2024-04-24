@@ -12,7 +12,7 @@ const FooterForm = () => {
         <div className="lg:h-20 sm:h-0"></div>
         <div className="container flex flex-col sm:grid-cols-2">
           <div className="w-[100%] py-10  text-white flex justify-center">
-            <p className="text-center w-1/2">
+            <p className="text-center w-full px-5 sm:w-1/2">
               En <span className="font-bold">Neurons</span>, estamos comprometidos a brindarte
               soluciones digitales innovadoras y de calidad. Ya sea que necesites desarrollar una
               aplicación móvil, un sitio web o cualquier otro proyecto digital, nuestro equipo está
