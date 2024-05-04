@@ -1,6 +1,6 @@
 import Container from "../Container/Container";
 import Logo from "../shared/Logo";
-import FooterForm from "./form/Form";
+import ContactUs from "./form/Form";
 import PropTypes from "prop-types";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
       style={{ backgroundImage: "linear-gradient(264.41deg, #31add5 -7.99%, #5c76ff 78.23%)" }}
     >
       <Container>
-        <FooterForm />
+        <ContactUs />
       </Container>
 
       <footer className="bg-white  dark:bg-gray-900 ">
