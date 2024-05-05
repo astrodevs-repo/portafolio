@@ -22,7 +22,7 @@ function Header() {
   });
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen sm:h-screen md:h-[700px] lg:h-screen">
       <section id="home" className={`${s.header__container} main`}>
         <div id="title" className={s.header__title}>
           {" "}

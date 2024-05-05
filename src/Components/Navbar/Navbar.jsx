@@ -50,8 +50,7 @@ const Navbar = () => {
   const navItems = [
     { id: "/", label: "Home" },
     { id: "#about", label: "About" },
-    { id: "#valores", label: "Valores" },
-    { id: "#servicios", label: "Services" },
+
     { id: "/team", label: "Team" },
     { id: "/projects", label: "Projects" },
   ];
@@ -64,7 +63,7 @@ const Navbar = () => {
           animate={{ y: visible ? 0 : -10 }}
           exit={{ y: -100 }}
           transition={{ type: "spring", damping: 20, stiffness: 100 }}
-          className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ease-in-out ${
+          className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ease-in-out px-0 sm:px-0 md:px-10 lg:px-10 ${
             activeSection !== "home" || scrolledDown ? "bg-white" : "bg-transparent"
           }`}
         >

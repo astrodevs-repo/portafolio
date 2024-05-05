@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ButtonWithoutBorder from "./Buttons/ButtonWithoutBorder";
 import { motion } from "framer-motion";
 
 const Carousel = ({ items }) => {
@@ -19,20 +18,22 @@ const Carousel = ({ items }) => {
   }, [index]);
 
   return (
-    <div className="relative w-[100%] sm:w-[90%] min-h-[500px] overflow-hidden h-full sm:h-screen">
+    <section className="flex flex-col justify-between h-fit items-end gap-10">
       <motion.div
         key={index}
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: "-100%", opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-full flex flex-col justify-start items-start absolute top-20 sm:top-40 left-0 "
+        className="min-h-[300px] w-full"
       >
         <h1 className="text-4xl text-white">{items.data[index].title}</h1>
-        <p className="text-xl text-white w-full sm:w-1/2">{items.data[index].description}</p>
+        <p className="text-xl text-white w-full sm:w-3/4 md:w-3/4 lg:w-3/4">
+          {items.data[index].description}
+        </p>
       </motion.div>
 
-      <div className="absolute bottom-0 sm:bottom-40 right-0 w-full flex justify-between items-center ">
+      <div className="w-full flex justify-between items-center">
         <div className="flex sm:block ">
           {" "}
           <button
@@ -48,9 +49,9 @@ const Carousel = ({ items }) => {
             Next
           </button>
         </div>
-        <ButtonWithoutBorder text={"ver mas"} link={items.href} />
+        {/* <ButtonWithoutBorder text={"ver mas"} link={items.href} /> */}
       </div>
-    </div>
+    </section>
   );
 };
 

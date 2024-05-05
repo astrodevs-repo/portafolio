@@ -24,9 +24,9 @@ const ContactUs = () => {
   return (
     <>
       <h1 className="text-center text-white">Contactanos</h1>
-      <section className="grid grid-cols-2 gap-5">
+      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
         <article className="w-full flex justify-center items-center">
-          <p className="text-center  w-[80%]">
+          <p className="text-center  w-[100%] sm:w-[100%] md:w-[80%] lg:w-[80%]">
             En <span className="font-bold">Neurons</span>, estamos comprometidos a brindarte
             soluciones digitales innovadoras y de calidad. Ya sea que necesites desarrollar una
             aplicación móvil, un sitio web o cualquier otro proyecto digital, nuestro equipo está
