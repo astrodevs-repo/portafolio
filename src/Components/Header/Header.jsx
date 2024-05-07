@@ -2,6 +2,7 @@ import s from "./header.module.scss";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FaArrowRight } from "react-icons/fa";
+import ButtonSimple from "../shared/Buttons/ButtonSimple";
 
 function Header() {
   useGSAP(() => {
@@ -22,36 +23,22 @@ function Header() {
   });
 
   return (
-    <div className="flex flex-col h-screen sm:h-screen md:h-[700px] lg:h-screen">
-      <section id="home" className={`${s.header__container} main`}>
-        <div id="title" className={s.header__title}>
-          {" "}
-          <h1>
-            Nosotros somos <strong>Neurons</strong>
-          </h1>
-        </div>
-        <h4 className={s.header__subtitle}>
-          ¡Bienvenidos a Neurons ! No somos solo una agencia de desarrollo web; somos una firma
-          integral de soluciones digitales...
-        </h4>
-        <div className={s.header__buttons}>
-          <button className="">
-            LEER MÀS
-            <FaArrowRight
-              className={s.hoverimg}
-              style={{ position: "absolute", right: "0.3vmax" }}
-            />
-          </button>
-          <button>
-            <FaArrowRight
-              className={s.hoverimg}
-              style={{ position: "absolute", right: "0.3vmax" }}
-            />
-            NUESTRO TRABAJO
-          </button>
-        </div>
-      </section>
-    </div>
+    <section id="home" className={`${s.header__container} `}>
+      <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-100 md:text-5xl lg:text-6xl dark:text-white">
+        Nosotros somos{" "}
+        <strong className="bg-gradient-to-r from-[#694fff] to-[#0baeb6] text-transparent bg-clip-text">
+          Neurons
+        </strong>
+      </h1>
+      <h4 className="w-1/2 text-center py-5 text-2xl text-gray-500 ">
+        ¡Bienvenidos a Neurons ! No somos solo una agencia de desarrollo web; somos una firma
+        integral de soluciones digitales...
+      </h4>
+      <div className="flex justify-center gap-10 py-10">
+        <ButtonSimple text={"leer más"} />
+        <ButtonSimple text={"leer más"} />
+      </div>
+    </section>
   );
 }
 

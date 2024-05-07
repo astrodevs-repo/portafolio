@@ -9,7 +9,7 @@ const SectionScroll = ({ data }) => {
       style={{ backgroundColor: data.Bg, textColor: data.textColor }}
     >
       <div className="w-[20%] h-full relative hidden sm:flex md:flex lg:flex ">
-        <h1 className="text-white sm:text-[60px] md:text-[80px] lg:text-[100px] opacity-20 mb-10 w-full  text-start  px-20 -rotate-90 -bottom-10 absolute tracking-widest ">
+        <h1 className="text-white sm:text-[60px] md:text-[80px] lg:text-[100px] opacity-20 mb-10 w-full  text-start px-10 -rotate-90 bottom-10 absolute tracking-widest ">
           {data.header}
         </h1>
       </div>
