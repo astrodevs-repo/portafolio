@@ -1,12 +1,11 @@
 import About from "../../Components/About/About";
 import Header from "../../Components/Header/Header";
-import Section1 from "../../Components/Home/Section1";
 import Team from "../../Components/Home/team/Team";
 import Footer from "../../Components/Footer/Footer";
 import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 
 import { motion } from "framer-motion";
-import { data, data1 } from "../../data/Home";
+import StepList from "../../Components/Home/Steper";
 
 const Home = () => {
   return (
@@ -19,8 +18,10 @@ const Home = () => {
     >
       <Header />
       <About />
-      <Section1 data={data} />
-      <Section1 data={data1} />
+      {/* <Section1 data={data} />
+      <Section1 data={data1} /> */}
+
+      <StepList />
       <PanelProyectos />
       <Team />
       <Footer />

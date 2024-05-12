@@ -1,0 +1,167 @@
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 300px;
+}
+
+.v-stepper {
+  position: relative;
+  /*   visibility: visible; */
+}
+
+/* regular step */
+.step .circle1::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: calc(50% - 10px);
+  background-color: #790d1a;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step .circle1 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle2 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle3 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle4 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circlefade {
+  position: absolute;
+  z-index: 0;
+  top: -5px;
+  left: -5px;
+  background-color: #5959587b;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .activefade {
+  position: absolute;
+  z-index: 0;
+  top: -5px;
+  left: -5px;
+  background-color: #790d1a80;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .active {
+  background-color: #790d1a;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steper-count {
+}
+
+.step .line {
+  left: 50%;
+  height: 100%;
+  position: absolute;
+  border-left: 3px solid #595958;
+}
+
+.step .activeLine {
+  left: 50%;
+  height: 100%;
+  position: absolute;
+  border-left: 3px solid #790d1a;
+}
+
+.step.completed .circle {
+  visibility: visible;
+  background-color: rgb(6, 150, 215);
+  border-color: rgb(6, 150, 215);
+}
+
+.step.completed .line {
+  border-left: 3px solid rgb(6, 150, 215);
+}
+
+.step.active .circle {
+  visibility: visible;
+  border-color: rgb(6, 150, 215);
+}
+
+.step.empty .circle {
+  visibility: hidden;
+}
+
+.step.empty .line {
+  top: 0;
+  height: 150%;
+}
+
+.step:last-child .line {
+  border-left: 3px solid white;
+  z-index: -1;
+}
+
+.content {
+  margin-left: 20px;
+  display: flex;
+}

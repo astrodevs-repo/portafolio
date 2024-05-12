@@ -43,7 +43,7 @@ const ContactUs = () => {
             <label>Name</label>
             <input
               type="text"
-              name="from_name"
+              name="x|"
               className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 "
               required
             />

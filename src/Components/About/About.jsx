@@ -1,50 +1,81 @@
-import Container from "../Container/Container";
-import Section from "../shared/Section/Section";
-import videoBackground from "../../../public/video/aboutusvideo.mp4";
 import ButtonSimple from "../shared/Buttons/ButtonSimple";
+import ButtonWithoutBorder from "../shared/Buttons/ButtonWithoutBorder";
+import Section from "../shared/Section/Section";
 
 const About = () => {
   return (
-    <section id={"about"} className="grid grid-cols-3 gap-5 py-10 px-20">
-      <article className="bg-[#31add5] justify-center items-center flex flex-col gap-5 rounded-xl px-5 py-5">
-        <h1 className="text-center">Quiénes somos</h1>
-        <p className="z-2">
-          ¡Bienvenidos a AstroDevs! No somos solo una agencia de desarrollo web; somos una firma
-          integral de soluciones digitales. Nos enorgullece ofrecer servicios que van desde el
-          diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en
-          tecnologías disruptivas como la blockchain. En AstroDevs, transformamos ideas en
-          experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en
-          línea.
-        </p>
-
-        <ButtonSimple text={"Leer más"} link={"about"} textColor={"white"} />
-      </article>
-      <article className="bg-[#31add5] justify-center items-center flex flex-col gap-5 rounded-xl px-5 py-5">
-        <h1 className="text-center">Misión</h1>
-        <p className="z-2">
-          En Neurons nos dedicamos a transformar los desafíos digitales en oportunidades
-          emocionantes. Nuestra misión es crear experiencias digitales innovadoras y estratégicas
-          que impulsen el crecimiento y la visibilidad en línea de nuestros clientes. Desde el
-          desarrollo web hasta la analítica de datos, nos comprometemos a superar las expectativas y
-          a entregar resultados excepcionales.
-        </p>
-
-        <ButtonSimple text={"Leer más"} link={"about"} textColor={"white"} />
-      </article>
-      <article className="bg-[#31add5] justify-center items-center flex flex-col gap-5 rounded-xl px-5 py-5">
-        <h1 className="text-center text-white">Quiénes somos</h1>
-        <p className="z-2">
-          ¡Bienvenidos a AstroDevs! No somos solo una agencia de desarrollo web; somos una firma
-          integral de soluciones digitales. Nos enorgullece ofrecer servicios que van desde el
-          diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en
-          tecnologías disruptivas como la blockchain. En AstroDevs, transformamos ideas en
-          experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en
-          línea.
-        </p>
-
-        <ButtonSimple text={"Leer más"} link={"about"} textColor={"white"} />
-      </article>
-    </section>
+    <>
+      <Section bg={"bg-[#0baeb6]"} title={"Sobre nosotros"} id={"aboutus"}>
+        <section className="w-full grid grid-cols-4 ">
+          <h1 className="text-white font-extrabold leading-[40px] col-span-3 ">
+            Somos una creativa y talentoso equipo de desarrolladores radicados en Mendoza Argentina
+          </h1>
+          <section className="flex justify-end items-end ">
+            <ButtonWithoutBorder text={"Conocenos más"} />
+          </section>
+        </section>
+        <section className="grid grid-cols-2 gap-10">
+          <article>
+            <p className="text-white text-lg font-bold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deleniti fugiat veniam
+              necessitatibus, voluptas sapiente iste. Odio dolore explicabo distinctio dolores
+              sequi. Autem ullam voluptate fugiat vel odit laborum reiciendis. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Animi deleniti fugiat veniam necessitatibus,
+              voluptas sapiente iste. Odio dolore explicabo distinctio dolores sequi. Autem ullam
+              voluptate fugiat vel odit laborum reiciendis.Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Animi deleniti fugiat veniam necessitatibus, voluptas sapiente iste.
+              Odio dolore
+            </p>
+          </article>
+          <article>
+            <img
+              src="https://www.hubgets.com/blog/wp-content/uploads/team-dynamics.png"
+              alt=""
+              className="rounded-lg"
+            />
+          </article>
+        </section>
+      </Section>
+      <Section bg={"bg-[#c5fcff]"} title={""} id={"aboutus"}>
+        <section className="grid grid-cols-2">
+          <section className="w-full ">
+            <h1 className="text-[#0baeb6] font-extrabold leading-[40px] ">
+              Cualquier cosa acerca de la agencia
+            </h1>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum amet saepe
+                iure. Recusandae, deleniti, sequi, adipisci doloribus quia accusantium nemo suscipit
+                harum aspernatur aliquam reiciendis officiis! Labore, molestias ducimus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nihil, molestiae velit maiores corrupti
+                mollitia quod debitis saepe atque autem beatae ullam laudantium, iure iste
+                consectetur! Dolorem earum sint molestias facilis.
+              </p>
+            </article>
+          </section>
+        </section>
+      </Section>
+      <Section bg={"bg-[#89b8ffcc]"} title={""} id={"aboutus"}>
+        <section className="grid grid-cols-2">
+          <section className="w-full ">
+            <h1 className="text-[#c5fcff] font-extrabold leading-[40px] ">
+              Cualquier cosa acerca de la agencia
+            </h1>
+          </section>
+          <article>
+            <p className="text-white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum amet saepe iure.
+              Recusandae, deleniti, sequi, adipisci doloribus quia accusantium nemo suscipit harum
+              aspernatur aliquam reiciendis officiis! Labore, molestias ducimus? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Nihil, molestiae velit maiores corrupti
+              mollitia quod debitis saepe atque autem beatae ullam laudantium, iure iste
+              consectetur! Dolorem earum sint molestias facilis.
+            </p>
+            <ButtonSimple text={"contactanos"} border={"border-[#694fff]"} textColor={"#694fff"} />
+          </article>
+        </section>
+      </Section>
+    </>
   );
 };
 

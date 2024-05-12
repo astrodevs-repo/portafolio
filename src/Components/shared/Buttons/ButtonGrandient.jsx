@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const ButtonGrandient = ({ text, id }) => {
   return (
     <button
@@ -12,8 +10,5 @@ const ButtonGrandient = ({ text, id }) => {
     </button>
   );
 };
-ButtonGrandient.propTypes = {
-  text: PropTypes.node,
-  id: PropTypes.node,
-};
+
 export default ButtonGrandient;
