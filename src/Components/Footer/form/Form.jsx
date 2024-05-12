@@ -23,65 +23,53 @@ const ContactUs = () => {
 
   return (
     <>
-      <h1 className="text-center text-white">Contactanos</h1>
-      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
-        <article className="w-full flex justify-center items-center">
-          <p className="text-center  w-[100%] sm:w-[100%] md:w-[80%] lg:w-[80%]">
-            En <span className="font-bold">Neurons</span>, estamos comprometidos a brindarte
-            soluciones digitales innovadoras y de calidad. Ya sea que necesites desarrollar una
-            aplicación móvil, un sitio web o cualquier otro proyecto digital, nuestro equipo está
-            listo para ayudarte a alcanzar tus objetivos. ¡Contáctanos hoy mismo! Completa nuestro
-            formulario y nos pondremos en contacto contigo lo antes posible.
-          </p>
-        </article>
+      <section className="">
         <form
           ref={form}
           onSubmit={sendEmail}
           className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1"
         >
-          <div className="flex flex-col col-span-2 text-white gap-2">
+          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
             <label>Name</label>
             <input
               type="text"
               name="x|"
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 "
+              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1 "
               required
             />
           </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
+          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
             <label>Email</label>
             <input
               type="email"
               name="email"
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1"
+              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1"
               required
             />
           </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
+          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
             <label>Phone</label>
             <input
               type="number"
               name="user_referrer"
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1"
+              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1"
               required
             />
           </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
+          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
             <label>Message</label>
             <textarea
               name="message"
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2"
+              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2"
               required
             />
           </div>
 
-          <div className="w-full justify-center flex ">
-            <input
-              type="submit"
-              value="Send"
-              className="py-2.5 cursor-pointer w-full text-sm font-medium text-white focus:outline-none bg-transparent rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            />
-          </div>
+          <input
+            type="submit"
+            value="Send"
+            className="py-2.5 w-full cursor-pointer  text-sm font-medium text-[#4b4b4b] focus:outline-none bg-transparent rounded-lg border border-gray-200 hover:bg-[#694fff] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-[#4b4b4b] dark:hover:bg-gray-700"
+          />
         </form>
       </section>
     </>

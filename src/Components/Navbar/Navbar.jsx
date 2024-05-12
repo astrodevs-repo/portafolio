@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
 import DrawerNavigation from "../shared/drawer/Drawer";
-import Container from "../Container/Container";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);

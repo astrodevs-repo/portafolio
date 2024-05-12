@@ -1,11 +1,7 @@
 import PropTypes from "prop-types";
 
-const Title = ({ text }) => {
-  return (
-    <div className="w-full justify-center flex items-center">
-      <h1 className="text-4xl">{text}</h1>
-    </div>
-  );
+const Title = ({ text, extra, textColor }) => {
+  return <h1 className={`${textColor} font-extrabold leading-[40px] w-full ${extra}`}>{text}</h1>;
 };
 Title.propTypes = {
   text: PropTypes.node,

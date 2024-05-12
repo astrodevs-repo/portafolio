@@ -1,77 +1,71 @@
+import ContactUs from "../Footer/form/Form";
 import ButtonSimple from "../shared/Buttons/ButtonSimple";
 import ButtonWithoutBorder from "../shared/Buttons/ButtonWithoutBorder";
+import Modal from "../shared/Modal/Modal";
 import Section from "../shared/Section/Section";
+import SubTitle from "../shared/SubTitle";
+import Title from "../shared/Title";
 
 const About = () => {
   return (
     <>
       <Section bg={"bg-[#0baeb6]"} title={"Sobre nosotros"} id={"aboutus"}>
         <section className="w-full grid grid-cols-4 ">
-          <h1 className="text-white font-extrabold leading-[40px] col-span-3 ">
-            Somos una creativa y talentoso equipo de desarrolladores radicados en Mendoza Argentina
-          </h1>
+          <Title
+            extra={"col-span-3"}
+            textColor={"text-[#ffffff]"}
+            text={
+              "Somos una creativa y talentoso equipo de desarrolladores radicados en Mendoza Argentina"
+            }
+          />
           <section className="flex justify-end items-end ">
             <ButtonWithoutBorder text={"Conocenos más"} />
           </section>
         </section>
         <section className="grid grid-cols-2 gap-10">
-          <article>
-            <p className="text-white text-lg font-bold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deleniti fugiat veniam
-              necessitatibus, voluptas sapiente iste. Odio dolore explicabo distinctio dolores
-              sequi. Autem ullam voluptate fugiat vel odit laborum reiciendis. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Animi deleniti fugiat veniam necessitatibus,
-              voluptas sapiente iste. Odio dolore explicabo distinctio dolores sequi. Autem ullam
-              voluptate fugiat vel odit laborum reiciendis.Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Animi deleniti fugiat veniam necessitatibus, voluptas sapiente iste.
-              Odio dolore
-            </p>
-          </article>
-          <article>
-            <img
-              src="https://www.hubgets.com/blog/wp-content/uploads/team-dynamics.png"
-              alt=""
-              className="rounded-lg"
-            />
-          </article>
+          <SubTitle
+            text={
+              "lorem Las comillas invertidas «`» son interpretadas como sustitución de comandos , es decir, los comandos que estén dentro serán pasados al comando que lo precede."
+            }
+          />
+
+          <img
+            src="https://www.hubgets.com/blog/wp-content/uploads/team-dynamics.png"
+            alt=""
+            className="rounded-lg"
+          />
         </section>
       </Section>
       <Section bg={"bg-[#c5fcff]"} title={""} id={"aboutus"}>
         <section className="grid grid-cols-2">
-          <section className="w-full ">
-            <h1 className="text-[#0baeb6] font-extrabold leading-[40px] ">
-              Cualquier cosa acerca de la agencia
-            </h1>
-            <article>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum amet saepe
-                iure. Recusandae, deleniti, sequi, adipisci doloribus quia accusantium nemo suscipit
-                harum aspernatur aliquam reiciendis officiis! Labore, molestias ducimus? Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Nihil, molestiae velit maiores corrupti
-                mollitia quod debitis saepe atque autem beatae ullam laudantium, iure iste
-                consectetur! Dolorem earum sint molestias facilis.
-              </p>
-            </article>
-          </section>
+          <article>
+            <Title textColor={"text-[#0baeb6]"} text={"Somos una creativa y n Mendoza Argentina"} />
+            <SubTitle
+              text={
+                "lorem Las comillas invertidas «`» son interpretadas como sustitución de comandos , es decir, los comandos que estén dentro serán pasados al comando que lo precede."
+              }
+            />
+          </article>
         </section>
       </Section>
       <Section bg={"bg-[#89b8ffcc]"} title={""} id={"aboutus"}>
-        <section className="grid grid-cols-2">
-          <section className="w-full ">
-            <h1 className="text-[#c5fcff] font-extrabold leading-[40px] ">
-              Cualquier cosa acerca de la agencia
-            </h1>
-          </section>
-          <article>
-            <p className="text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum amet saepe iure.
-              Recusandae, deleniti, sequi, adipisci doloribus quia accusantium nemo suscipit harum
-              aspernatur aliquam reiciendis officiis! Labore, molestias ducimus? Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Nihil, molestiae velit maiores corrupti
-              mollitia quod debitis saepe atque autem beatae ullam laudantium, iure iste
-              consectetur! Dolorem earum sint molestias facilis.
-            </p>
-            <ButtonSimple text={"contactanos"} border={"border-[#694fff]"} textColor={"#694fff"} />
+        <section className="grid grid-cols-2 gap-10">
+          <Title
+            textColor={"text-[#c5fcff]"}
+            text={
+              "Somos una creativa y talentoso equipo de desarrolladores radicados en Mendoza Argentina"
+            }
+          />
+          <article className="flex flex-col justify-between">
+            <SubTitle
+              text={
+                "lorem Las comillas invertidas «`» son interpretadas como sustitución de comandos , es decir, los comandos que estén dentro serán pasados al comando que lo precede."
+              }
+            />
+
+            <Modal title={"Contactanos"}>
+              <ContactUs />
+            </Modal>
           </article>
         </section>
       </Section>

@@ -1,18 +1,10 @@
-import Container from "../Container/Container";
 import Logo from "../shared/Logo";
-import ContactUs from "./form/Form";
+
 import PropTypes from "prop-types";
 
 const Footer = () => {
   return (
-    <div
-      className=" w-full"
-      style={{ backgroundImage: "linear-gradient(264.41deg, #31add5 -7.99%, #5c76ff 78.23%)" }}
-    >
-      <Container>
-        <ContactUs />
-      </Container>
-
+    <div className=" w-full">
       <footer className="bg-white  dark:bg-gray-900 ">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">

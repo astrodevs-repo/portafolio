@@ -33,7 +33,7 @@ function StepList() {
         {steps.map(({ name, index }, i) => (
           <ItemMobile
             currentStep={currentStep}
-            key={name}
+            key={i}
             name={name}
             index={index}
             i={i}

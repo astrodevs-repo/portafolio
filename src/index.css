@@ -23,5 +23,5 @@ html {
 .transition-exit-active {
   opacity: 0;
   transition: opacity 0.5s;
-  background-color: #010101;
+  background-color: #4b4b4b;
 }
