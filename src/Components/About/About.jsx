@@ -1,7 +1,4 @@
-import ContactUs from "../Footer/form/Form";
-import ButtonSimple from "../shared/Buttons/ButtonSimple";
 import ButtonWithoutBorder from "../shared/Buttons/ButtonWithoutBorder";
-import Modal from "../shared/Modal/Modal";
 import Section from "../shared/Section/Section";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
@@ -9,7 +6,7 @@ import Title from "../shared/Title";
 const About = () => {
   return (
     <>
-      <Section bg={"bg-[#0baeb6]"} title={"Sobre nosotros"} id={"aboutus"}>
+      <Section bg={"bg-[#89b8ffcc]"} title={"Sobre nosotros"} id={"aboutus"}>
         <section className="w-full grid grid-cols-4 ">
           <Title
             extra={"col-span-3"}
@@ -36,7 +33,7 @@ const About = () => {
           />
         </section>
       </Section>
-      <Section bg={"bg-[#c5fcff]"} title={""} id={"aboutus"}>
+      {/* <Section bg={"bg-[#c5fcff]"} title={""} id={"aboutus"}>
         <section className="grid grid-cols-2">
           <article>
             <Title textColor={"text-[#0baeb6]"} text={"Somos una creativa y n Mendoza Argentina"} />
@@ -47,8 +44,9 @@ const About = () => {
             />
           </article>
         </section>
-      </Section>
-      <Section bg={"bg-[#89b8ffcc]"} title={""} id={"aboutus"}>
+      </Section> */}
+
+      {/* <Section bg={"bg-[#89b8ffcc]"} title={""} id={"aboutus"}>
         <section className="grid grid-cols-2 gap-10">
           <Title
             textColor={"text-[#c5fcff]"}
@@ -68,7 +66,7 @@ const About = () => {
             </Modal>
           </article>
         </section>
-      </Section>
+      </Section> */}
     </>
   );
 };

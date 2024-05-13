@@ -16,7 +16,7 @@
   position: absolute;
   width: 3px;
   height: calc(50% - 10px);
-  background-color: #790d1a;
+  background-color: white;
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
@@ -91,7 +91,7 @@
   z-index: 0;
   top: -5px;
   left: -5px;
-  background-color: #790d1a80;
+  background-color: rgba(255, 255, 255, 0.427);
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 30px;
@@ -103,7 +103,7 @@
   justify-content: center;
 }
 .step .active {
-  background-color: #790d1a;
+  background-color: white;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 20px;
@@ -129,22 +129,7 @@
   left: 50%;
   height: 100%;
   position: absolute;
-  border-left: 3px solid #790d1a;
-}
-
-.step.completed .circle {
-  visibility: visible;
-  background-color: rgb(6, 150, 215);
-  border-color: rgb(6, 150, 215);
-}
-
-.step.completed .line {
-  border-left: 3px solid rgb(6, 150, 215);
-}
-
-.step.active .circle {
-  visibility: visible;
-  border-color: rgb(6, 150, 215);
+  border-left: 3px solid white;
 }
 
 .step.empty .circle {

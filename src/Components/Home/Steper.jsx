@@ -28,8 +28,8 @@ function StepList() {
   ];
 
   return (
-    <Section title={"Service"}>
-      <section className="mt-40">
+    <Section title={"Service"} bg={"bg-[#89b8ffcc]"} textColor={"text-white"}>
+      <section className="mt-40 ">
         {steps.map(({ name, index }, i) => (
           <ItemMobile
             currentStep={currentStep}
