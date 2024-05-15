@@ -92,27 +92,30 @@ const Content = ({ currentStep, index, i, name }) => {
 
 const sections = [
   {
-    title: "Establish IDS",
-    subTitle: "Establish IDS and all of it’s Brands, RoM, Kennetz SDK and Project Code: Alpha",
+    title: "lorem",
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum porro placeat, veritatis voluptatum animi obcaecati facere nihil voluptatibus laudantium blanditiis, quidem voluptas a facilis molestiae sapiente repudiandae officia maxime numquam.",
     img: "roadmap1",
     index: "1",
   },
   {
-    title: "RoM Universe",
-    subTitle: "Concept, Design, Plan, Develop and build the RoM universe with all of the games",
+    title: "lorem",
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum porro placeat, veritatis voluptatum animi obcaecati facere nihil voluptatibus laudantium blanditiis, quidem voluptas a facilis molestiae sapiente repudiandae officia maxime numquam.",
     img: "roadmap2",
     index: "2",
   },
   {
-    title: "KernNetz SDK",
-    subTitle: "Multiplayer Core System Server with direct connection to the blockchain",
+    title: "lorem",
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum porro placeat, veritatis voluptatum animi obcaecati facere nihil voluptatibus laudantium blanditiis, quidem voluptas a facilis molestiae sapiente repudiandae officia maxime numquam.",
     img: "roadmap3",
     index: "3",
   },
   {
-    title: "Project Code: Alpha",
+    title: "lorem",
     subTitle:
-      "Aiming to be a AAA title fully playable on any browser, exploiting the web3 technology",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum porro placeat, veritatis voluptatum animi obcaecati facere nihil voluptatibus laudantium blanditiis, quidem voluptas a facilis molestiae sapiente repudiandae officia maxime numquam.",
     img: " roadmap4",
     index: "4",
   },

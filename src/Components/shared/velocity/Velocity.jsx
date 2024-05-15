@@ -18,7 +18,12 @@ const MovingText = ({ text, left, right, bg, textColor }) => {
         className="w-[100%] flex gap-5"
       >
         {items.map((item) => (
-          <div className="min-w-fit" key={item}>
+          <div className="min-w-fit flex items-center gap-5" key={item}>
+            <img
+              src="https://cdn-icons-png.flaticon.com/256/731/731972.png"
+              alt=""
+              className="w-20"
+            />
             <h2 className={`text-${textColor} text-4xl`}>{text}</h2>{" "}
           </div>
         ))}

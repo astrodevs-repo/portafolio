@@ -6,6 +6,8 @@ import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 
 import { motion } from "framer-motion";
 import StepList from "../../Components/Home/Steper";
+import MovingText from "../../Components/shared/velocity/Velocity";
+import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 
 const Home = () => {
   return (
@@ -18,12 +20,19 @@ const Home = () => {
     >
       <Header />
       <About />
-      {/* <Section1 data={data} />
-      <Section1 data={data1} /> */}
 
       <StepList />
       <PanelProyectos />
+      <ClientsSection />
       <Team />
+      <MovingText
+        text={"Our Team"}
+        right={"0%"}
+        left={"-100%"}
+        bg={"bg-[#694fff]"}
+        textColor={"white"}
+      />
+      <MovingText text={"now us"} right={"-100%"} left={"0%"} bg={"bg-[#c5fcff]"} />
       <Footer />
     </motion.main>
   );

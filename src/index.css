@@ -5,6 +5,12 @@
 html {
   scroll-behavior: smooth;
 }
+/* body {
+  background: linear-gradient(43deg, #c5fcff -78.04%, #694fff 100.94%);
+  @media only screen and (max-width: 700px) {
+    background: #b4d3f8;
+  }
+} */
 
 /* CSS para transiciones */
 .transition-enter {

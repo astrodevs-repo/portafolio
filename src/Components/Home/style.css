@@ -16,7 +16,7 @@
   position: absolute;
   width: 3px;
   height: calc(50% - 10px);
-  background-color: white;
+  background-color: #694fff;
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
@@ -75,7 +75,7 @@
   z-index: 0;
   top: -5px;
   left: -5px;
-  background-color: #5959587b;
+  background-color: #694fff;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 30px;
@@ -91,7 +91,7 @@
   z-index: 0;
   top: -5px;
   left: -5px;
-  background-color: rgba(255, 255, 255, 0.427);
+  background-color: #694fff8c;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 30px;
@@ -103,7 +103,7 @@
   justify-content: center;
 }
 .step .active {
-  background-color: white;
+  background-color: #694fff;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 20px;
@@ -122,14 +122,14 @@
   left: 50%;
   height: 100%;
   position: absolute;
-  border-left: 3px solid #595958;
+  border-left: 3px solid gray;
 }
 
 .step .activeLine {
   left: 50%;
   height: 100%;
   position: absolute;
-  border-left: 3px solid white;
+  border-left: 3px solid #694fff;
 }
 
 .step.empty .circle {
@@ -142,7 +142,7 @@
 }
 
 .step:last-child .line {
-  border-left: 3px solid white;
+  border-left: 3px solid rgba(255, 255, 255, 0);
   z-index: -1;
 }
 

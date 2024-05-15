@@ -7,12 +7,12 @@ const HorizontalScrollCarousel = ({ children }) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-transparent">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-2">
+      <div className="sticky top-0 left-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex">
           {children}
         </motion.div>
       </div>

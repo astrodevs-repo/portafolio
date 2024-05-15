@@ -43,8 +43,7 @@ const PanelProyectos = () => {
   ];
 
   return (
-    <section id={"projects"} className="px-20 py-20">
-      <h1>Projects</h1>
+    <Section id={"projects"} title={"nuestros proyectos"} className="px-20 py-20">
       <div className="flex flex-wrap justify-start space-x-4">
         {buttons.map(({ keyword, name }, index) => (
           <button
@@ -67,7 +66,7 @@ const PanelProyectos = () => {
           <ButtonSimple textColor={"gray"} text={"Ver más"} link={"projects"} />
         </div>
       )}
-    </section>
+    </Section>
   );
 };
 

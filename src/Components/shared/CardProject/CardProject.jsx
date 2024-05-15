@@ -6,8 +6,8 @@ const CardProject = ({ id, nombre, description, tipoTrabajo, client, project, to
     <>
       {/* Drawer init and toggle */}
       <Link to={`/project/${id}`}>
-        <div className="text-center">
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="text-center  w-full">
+          <div className="w-full rounded-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div>
               <img
                 className="rounded-t-lg"

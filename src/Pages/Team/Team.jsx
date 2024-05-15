@@ -49,10 +49,7 @@ const Team = () => {
             speed={1.5}
             style={{ ...alignCenter, justifyContent: "center" }}
           >
-            <section
-              id="section1"
-              className="bg-gradient-to-br from-[#c5fcff]  to-[#694fff] h-full w-full py-40"
-            >
+            <section id="section1" className="bg-transparent h-full w-full py-40">
               <Container>
                 <h1 className=" flex justify-center text-4xl md:text-5xl lg:text-5xl font-bold relative z-10 p-6 md:p-8 lg:p-10">
                   <span className="bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-indigo-600">
@@ -75,14 +72,6 @@ const Team = () => {
                   </p>
                 </motion.div>
               </Container>
-              <Velocity
-                text={"Our Team"}
-                right={"0%"}
-                left={"-100%"}
-                bg={"bg-[#694fff]"}
-                textColor={"white"}
-              />
-              <Velocity text={"now us"} right={"-100%"} left={"0%"} bg={"bg-[#c5fcff]"} />
             </section>
           </ParallaxLayer>
 
