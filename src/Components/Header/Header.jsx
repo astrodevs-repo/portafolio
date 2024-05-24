@@ -1,27 +1,6 @@
 import s from "./header.module.scss";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { FaArrowRight } from "react-icons/fa";
-import ButtonSimple from "../shared/Buttons/ButtonSimple";
 
 function Header() {
-  useGSAP(() => {
-    gsap.fromTo(
-      "main #img",
-      { opacity: 1 },
-      {
-        opacity: 0,
-        ease: "power4.in",
-        scrollTrigger: {
-          trigger: "main",
-          start: "top top",
-          end: "bottom",
-          scrub: true,
-        },
-      }
-    );
-  });
-
   return (
     <main id="main" className={`${s.header__container} main`}>
       <div id="title" className={s.header__title}>

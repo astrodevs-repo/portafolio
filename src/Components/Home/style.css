@@ -16,7 +16,7 @@
   position: absolute;
   width: 3px;
   height: calc(50% - 10px);
-  background-color: #694fff;
+  background-color: white;
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
@@ -70,12 +70,48 @@
   flex-direction: column;
   justify-content: center;
 }
+.step .circle5 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle6 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle7 {
+  background-color: #595958;
+  border: 50px solid rgba(128, 128, 128, 0.781) D1A;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .step .circlefade {
   position: absolute;
   z-index: 0;
   top: -5px;
   left: -5px;
-  background-color: #694fff;
+  background-color: white;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 30px;
@@ -91,7 +127,7 @@
   z-index: 0;
   top: -5px;
   left: -5px;
-  background-color: #694fff8c;
+  background-color: white8c;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 30px;
@@ -103,7 +139,7 @@
   justify-content: center;
 }
 .step .active {
-  background-color: #694fff;
+  background-color: white;
   border: 50px solid rgba(128, 128, 128, 0.781) D1A;
   border-radius: 100%;
   width: 20px;
@@ -129,7 +165,7 @@
   left: 50%;
   height: 100%;
   position: absolute;
-  border-left: 3px solid #694fff;
+  border-left: 3px solid white;
 }
 
 .step.empty .circle {
@@ -144,9 +180,4 @@
 .step:last-child .line {
   border-left: 3px solid rgba(255, 255, 255, 0);
   z-index: -1;
-}
-
-.content {
-  margin-left: 20px;
-  display: flex;
 }

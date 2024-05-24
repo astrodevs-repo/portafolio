@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blackCeniza: "#2D3142",
+      },
+      fontFamily: {
+        LusitanaBold: ["LusitanaBold"],
+        LusitanaLght: ["LusitanaBold"],
+        Poppins: ["Poppins"],
+      },
+    },
   },
   plugins: [],
 };

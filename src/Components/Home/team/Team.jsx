@@ -1,91 +1,127 @@
-import yeli from "../../../../public/team/yeli.jpg";
-import miguel from "../../../../public/team/miguel.jpg";
-import jesus from "../../../../public/team/jesus.jpg";
-import { motion } from "framer-motion";
-import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-import Section from "../../shared/Section/Section";
-import { useState } from "react";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unreachable */
+import { useGSAP } from "@gsap/react";
+import s from "./style.module.scss";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import yeli from "/public/team/yeli.jpg";
+import miguel from "/public/team/miguel.jpg";
+import SubTitle from "../../shared/SubTitle";
+import Text from "../../shared/Text";
+import Title from "../../shared/Title";
+gsap.registerPlugin(ScrollTrigger);
 
-const Team = () => {
-  const items = [
-    {
-      name: "Yelitza Palma",
-      img: yeli,
-      rol: "Project Manager",
-      bgColor: "bg-[#FADBD8]", // Color pastel
-    },
-    {
-      name: "Miguel Cruz",
-      img: yeli,
-      rol: "Database",
-      bgColor: "bg-[#D2B4DE]", // Color pastel
-    },
-    {
-      name: "Jesus Moreno",
-      img: yeli,
-      rol: "Product Manager",
-      bgColor: "bg-[#AED6F1]", // Color pastel
-    },
-    {
-      name: "Adrian León",
-      img: yeli,
-      rol: "Data Analysis",
-      bgColor: "bg-[#ABEBC6]", // Color pastel
-    },
-    {
-      name: "Luisana Acevedo",
-      img: miguel,
-      rol: "CTO",
-      bgColor: "bg-[#F9E79F]", // Color pastel
-    },
-    {
-      name: "Jesus Moreno",
-      img: jesus,
-      rol: "Product Manager",
-      bgColor: "bg-[#D5DBDB]", // Color pastel
-    },
-  ];
+function Community() {
+  const galleryRef = useRef(null);
+  const container = useRef(null);
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  useGSAP(() => {
+    let ctx = gsap.context(() => {
+      const additionalY = { val: 0 };
+      let additionalYAnim;
+      let offset = 0;
+      const cols = gsap.utils.toArray("#col");
+
+      cols.forEach((col, i) => {
+        const images = col.childNodes;
+
+        // DUPLICATE IMAGES FOR LOOP
+        images.forEach((image) => {
+          var clone = image.cloneNode(true);
+          col.appendChild(clone);
+        });
+
+        images.forEach((item) => {
+          let columnHeight = item.parentElement.clientHeight;
+          let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
+
+          gsap.to(item, {
+            y: direction + Number(columnHeight / 2),
+            duration: 40, // Aumenta la duración para reducir la velocidad de la animación
+            repeat: -1,
+            ease: "none",
+            trigger: galleryRef.current,
+            modifiers: {
+              y: gsap.utils.unitize((y) => {
+                if (direction == "+=") {
+                  offset += additionalY.val;
+                  y = (parseFloat(y) - offset) % (columnHeight * 0.5);
+                } else {
+                  offset += additionalY.val;
+                  y = (parseFloat(y) + offset) % -Number(columnHeight * 0.5);
+                }
+
+                return y;
+              }),
+            },
+          });
+        });
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
+      gsap.killTweensOf("*");
+    };
+  }, []);
 
   return (
-    <Section title={"Quienes somos"} id="team">
-      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {items.map((item, index) => (
-          <motion.article
-            key={index}
-            className="items-center flex justify-center"
-            whileHover={{ scale: 1.1 }}
-            onHoverStart={() => setActiveIndex(index)}
-            onHoverEnd={() => setActiveIndex(null)}
-          >
-            <motion.img
-              src={item.img}
-              alt=""
-              className="rounded-lg rounded-b-lg h-80 w-80 object-cover"
-              animate={{ rotateY: activeIndex === index ? 180 : 0 }}
-              transition={{ duration: 1 }}
-            />
-
-            {activeIndex === index && (
-              <motion.div
-                className={`text-white absolute inset-0 ${item.bgColor} flex items-center justify-center flex-col`}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 5 }}
-              >
-                <h1 className="text-2xl text-white font-extrabold">{item.name}</h1>
-                <p>{item.rol}</p>
-              </motion.div>
-            )}
-          </motion.article>
-        ))}
-      </section>
-      <section className="group h-full flex items-center ">
-        <ButtonSimple textColor={"gray"} text={"ver mas"} link={"team"} />
-      </section>
-    </Section>
+    <>
+      <div ref={container} className={s.community__container}>
+        <div className={s.community__left}>
+          <div className={s.galleryverticalsection}>
+            <div className={s.galleryvertical}>
+              <div id="col" className={s.col}>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+              </div>
+              <div id="col" className={s.col}>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+              </div>
+              <div id="col" className={s.col}>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+                <div className={s.image}>
+                  <img src={yeli} alt="gallery1"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.opacityeffect}></div>
+        <div className="w-1/2 px-20">
+          <Title text={"Nuestro Equipo"} textColor={"text-white"} />
+          <Text
+            content={
+              "Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en data science, blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea."
+            }
+            textColor={"text-white"}
+          />
+        </div>
+      </div>
+    </>
   );
-};
-
-export default Team;
+}
+export default Community;

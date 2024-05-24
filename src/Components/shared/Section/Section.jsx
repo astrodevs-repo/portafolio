@@ -1,10 +1,11 @@
 import Container from "../../Container/Container";
+import Title from "../Title";
 
 const Section = ({ id, children, bg, title, textColor }) => {
   return (
     <section className={`w-full h-fit-content ${bg}`} id={id}>
       <Container>
-        <h1 className={`${textColor}`}>{title}</h1>
+        <Title text={title} />
         {children}
       </Container>
     </section>
