@@ -2,11 +2,11 @@ import About from "../../Components/About/About";
 import Header from "../../Components/Header/Header";
 import Team from "../../Components/Home/team/Team";
 import Footer from "../../Components/Footer/Footer";
-import { motion } from "framer-motion";
 import StepList from "../../Components/Home/Steper";
-import MovingText from "../../Components/shared/velocity/Velocity";
 import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
+
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (

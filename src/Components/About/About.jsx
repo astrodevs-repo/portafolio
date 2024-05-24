@@ -22,9 +22,9 @@ const About = () => {
     },
   ];
   return (
-    <Section title={""} className="bg-transparent">
+    <section title={""} className="bg-transparent px-2 sm:px-2 md:px-5 lg:px-10 py-20">
       <section className="grid grid-cols-1">
-        <section className="h-full w-full bg-blackCeniza  rounded-t-[50px] py-20 px-20 grid grid-cols-2">
+        <section className="h-full w-full bg-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           <article>
             <Title text={"Quienes somos"} textColor={"text-white"} />
             <SubTitle
@@ -41,11 +41,11 @@ const About = () => {
             />
           </article>
         </section>
-        <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-3 divide-x-2 border-2">
+        <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2">
           {articles.map(({ title, content }) => (
             <article
               key={title}
-              className="w-full flex flex-col justify-center items-center gap-10 p-20"
+              className="w-full flex flex-col justify-center items-center gap-10 p-5 lg:p-20"
             >
               <Text content={title} />
               <p className="text-xl font-Poppins">{content}</p>
@@ -53,7 +53,7 @@ const About = () => {
           ))}
         </section>
       </section>
-    </Section>
+    </section>
   );
 };
 

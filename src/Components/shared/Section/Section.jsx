@@ -3,7 +3,7 @@ import Title from "../Title";
 
 const Section = ({ id, children, bg, title, textColor }) => {
   return (
-    <section className={`w-full h-fit-content ${bg}`} id={id}>
+    <section className={`w-full h-fit-content ${bg} py-40`} id={id}>
       <Container>
         <Title text={title} />
         {children}

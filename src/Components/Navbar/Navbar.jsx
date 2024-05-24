@@ -63,14 +63,14 @@ const Navbar = () => {
           animate={{ y: visible ? 0 : -10 }}
           exit={{ y: -100 }}
           transition={{ type: "spring", damping: 20, stiffness: 100 }}
-          className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ease-in-out px-0 sm:px-0 md:px-20 lg:px-20 flex justify-between items-center py-3  ${
-            activeSection !== "home" || scrolledDown ? "bg-white" : "bg-transparent"
+          className={`fixed w-full z-20 top-0  start-0 transition-all duration-300 ease-in-out px-0 sm:px-0 md:px-20 lg:px-20 flex justify-start gap-10 items-center py-3  ${
+            activeSection !== "home" || scrolledDown ? "bg-white h-20 px-5" : "bg-transparent"
           }`}
         >
           <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Logo />
+            {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
           </a>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse mt-3">
+          <div className="flex  absolute top-5 right-5">
             <ButtonGrandient
               id={"https://forms.office.com/r/LA0vfN3Rd9"}
               target="_blank"

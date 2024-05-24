@@ -12,8 +12,10 @@ import icon6 from "/public/services/6.svg";
 import icon7 from "/public/services/7.svg";
 import icon8 from "/public/services/8.svg";
 import { useState } from "react";
+import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 
 const Servicios = () => {
+  const [showMore, setShowMore] = useState(false);
   const servicios = [
     {
       title: "Desarrollo Aplicaciones Web",
@@ -51,59 +53,50 @@ const Servicios = () => {
       content:
         "frecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
     },
-    // {
-    //   title: "Blockchain",
-    //   svg: icon7,
-    //   content:
-    //     "Implementamos soluciones basadas en tecnología blockchain para garantizar la seguridad, la transparencia y la integridad de los datos y las transacciones en línea.",
-    // },
-    // {
-    //   title: "Google Ads y Posicionamiento SEO",
-    //   svg: icon8,
-    //   content:
-    //     "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
-    // },
+    {
+      title: "Blockchain",
+      svg: icon7,
+      content:
+        "Implementamos soluciones basadas en tecnología blockchain para garantizar la seguridad, la transparencia y la integridad de los datos y las transacciones en línea.",
+    },
+    {
+      title: "Google Ads y Posicionamiento SEO",
+      svg: icon8,
+      content:
+        "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
+    },
   ];
+
+  const serviciosToShow = showMore ? servicios : servicios.slice(0, 6);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <Section title={"Nuestros Servicios"}>
-      <section className="grid grid-cols-3 gap-10">
-        {servicios.map((servicio) => (
-          <Card key={servicio.svg} {...servicio} />
+      <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-10">
+        {serviciosToShow.map((servicio, index) => (
+          <Card key={index} {...servicio} />
         ))}
       </section>
+      {!showMore && <ButtonSimple func={toggleShowMore} text={"Mostrar más"} bg={"bg-[#134EA7]"} />}
     </Section>
   );
 };
 
 export default Servicios;
-const Card = ({ title, content, svg }, index) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+
+const Card = ({ title, content, svg }) => {
   return (
-    <motion.article
-      key={index}
-      className="items-center flex justify-center"
-      whileHover={{ scale: 1.02 }}
-      onHoverStart={() => setActiveIndex(index)}
-      onHoverEnd={() => setActiveIndex(null)}
-    >
-      <article className="relative bg-blackCeniza  h-[380px] w-full mx-auto rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10">
+    <motion.article className="items-center flex justify-center" whileHover={{ scale: 1.02 }}>
+      <article className="relative bg-blackCeniza h-[380px] w-full mx-auto rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10">
         <img src={svg} alt="" />
         <Text content={title} textColor={"text-white"} extra={"text-center"} />
         <div className="absolute inset-0 flex items-center justify-center opacity-0 cursor-pointer hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 text-white text-center p-5">
           <Text content={content} />
         </div>
       </article>
-      ;
-      {activeIndex === index && (
-        <motion.div
-          className={`text-white absolute inset-0  flex items-center justify-center flex-col bg-black p-5 cursor-pointer rounded-3xl`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Text content={content} extra={"text-center"} />
-        </motion.div>
-      )}
     </motion.article>
   );
 };

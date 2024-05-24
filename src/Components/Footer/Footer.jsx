@@ -1,38 +1,32 @@
 import Logo from "../shared/Logo";
-
-import PropTypes from "prop-types";
-import SubTitle from "../shared/SubTitle";
-import Section from "../shared/Section/Section";
-import Title from "../shared/Title";
-import Modal from "../shared/Modal/Modal";
 import ContactUs from "./form/Form";
+import Text from "../shared/Text";
+import SubTitle from "../shared/SubTitle";
 
 const Footer = () => {
   return (
     <div className=" w-full">
-      <Section bg={"bg-[#89b8ffcc]"} title={""} id={"aboutus"}>
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          <Title
-            textColor={"text-[#c5fcff]"}
-            text={
-              "Somos una creativa y talentoso equipo de desarrolladores radicados en Mendoza Argentina"
-            }
-          />
-          <article className="flex flex-col justify-between">
+      <section className="bg-[#89b8ffcc] py-40 px-5 lg:px-40" title={""} id={"contactanos"}>
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 lg:gap-40">
+          <section>
             <SubTitle
+              textColor={"text-white"}
               text={
-                "lorem Las comillas invertidas «`» son interpretadas como sustitución de comandos , es decir, los comandos que estén dentro serán pasados al comando que lo precede."
+                "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
               }
             />
+            <p
+              className={`text-black font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
+            >
+              ¡Gracias por considerar Neurons como su socio digital!
+            </p>
+          </section>
 
-            <section className="flex justify-end">
-              <Modal title={"Contactanos"}>
-                <ContactUs />
-              </Modal>
-            </section>
-          </article>
+          <section className="flex justify-end w-full">
+            <ContactUs />
+          </section>
         </section>
-      </Section>
+      </section>
       <footer className="bg-white  dark:bg-gray-900 ">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">
@@ -74,9 +68,6 @@ const Footer = () => {
       </footer>
     </div>
   );
-};
-Footer.propTypes = {
-  id: PropTypes.node,
 };
 
 export default Footer;

@@ -7,10 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import yeli from "/public/team/yeli.jpg";
-import miguel from "/public/team/miguel.jpg";
-import SubTitle from "../../shared/SubTitle";
-import Text from "../../shared/Text";
-import Title from "../../shared/Title";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Community() {
@@ -104,24 +101,24 @@ function Community() {
                   <img src={yeli} alt="gallery1"></img>
                 </div>
                 <div className={s.image}>
-                  <img src={yeli} alt="gallery1"></img>
+                  <img src="/assets/gallery9.jpg" alt="gallery1"></img>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className={s.opacityeffect}></div>
-        <div className="w-1/2 px-20">
-          <Title text={"Nuestro Equipo"} textColor={"text-white"} />
-          <Text
-            content={
-              "Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en data science, blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea."
-            }
-            textColor={"text-white"}
-          />
+        <div className={s.community__right}>
+          <h2>
+            Conoce a nuestro <br></br>
+            <span>team</span>
+          </h2>
+          <p className={s.community__text}>Neurons cuenta con un equipo</p>
+          <button>ver más</button>
         </div>
       </div>
     </>
   );
 }
+
 export default Community;

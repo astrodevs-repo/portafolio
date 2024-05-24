@@ -1,12 +1,29 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 
 const ContactUs = () => {
   const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const initialFormData = {
+    name: "",
+    email: "",
+    user_referrer: "",
+    message: "",
+  };
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log({ form });
+    setIsSent(true);
     emailjs
       .sendForm("service_vnyx5ko", "template_0mirxxd", form.current, {
         publicKey: "R13_8ytNrA1XcoYTj",
@@ -14,63 +31,74 @@ const ContactUs = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setIsSent(false);
+          setFormData(initialFormData);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setIsSent(false);
         }
       );
   };
 
   return (
     <>
-      <section className="">
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1"
-        >
-          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
+      <section className="w-full">
+        <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
+          <div className="flex flex-col col-span-2 text-white gap-2">
             <label>Name</label>
             <input
               type="text"
-              name="x|"
-              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1 "
-              required
-            />
-          </div>
-          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1"
-              required
-            />
-          </div>
-          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
-            <label>Phone</label>
-            <input
-              type="number"
-              name="user_referrer"
-              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2 sm:col-span-1"
-              required
-            />
-          </div>
-          <div className="flex flex-col col-span-2 text-[#4b4b4b] gap-2">
-            <label>Message</label>
-            <textarea
-              name="message"
-              className="bg-transparent border border-[#4b4b4b] rounded px-3 py-1 col-span-2"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
               required
             />
           </div>
 
-          <input
-            type="submit"
-            value="Send"
-            className="py-2.5 w-full cursor-pointer  text-sm font-medium text-[#4b4b4b] focus:outline-none bg-transparent rounded-lg border border-gray-200 hover:bg-[#694fff] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-[#4b4b4b] dark:hover:bg-gray-700"
-          />
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Phone</label>
+            <input
+              type="number"
+              name="user_referrer"
+              value={formData.user_referrer}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Message</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 hover:outline-none"
+              required
+            />
+          </div>
         </form>
+        <br />
+        <ButtonSimple
+          func={sendEmail}
+          text={"Send"}
+          w={"w-full"}
+          display={"center"}
+          loader={isSent}
+          bg={"bg-[#134EA7]"}
+        />
       </section>
     </>
   );

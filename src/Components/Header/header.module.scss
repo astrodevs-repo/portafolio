@@ -56,22 +56,15 @@
       height: 16%;
       flex-direction: column;
     }
-    .goldimg {
-      position: absolute;
-      left: 0;
-      min-width: 62px;
-      min-height: 81px;
-      width: 4vmax;
-      aspect-ratio: 62/81;
-    }
+
     button {
       font-family: Satoshi Bold;
       color: black;
       text-wrap: nowrap;
       position: relative;
       border: 1px solid rgba(227, 225, 214, 1);
-      background: #ffffff99;
-      border-radius: 50px;
+      background-color: #e9eeff;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,10 +76,10 @@
         transition-duration: 0.3s;
       }
       .hoverimg {
-        background-color: #2fe3ce;
+        background-color: #4f75ff;
         border-radius: 100%;
-        width: 47px;
-        height: 47px;
+        width: 40px;
+        height: 40px;
         padding: 12.5px;
       }
       &:hover {

@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import SubTitle from "../shared/SubTitle";
+import Text from "../shared/Text";
 
 const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
   const ref = useRef(null);
@@ -65,7 +67,7 @@ export default ItemMobile;
 
 const Content = ({ currentStep, index, i, name }) => {
   return (
-    <section className="w-full grid grid-cols-3">
+    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       <motion.p
         initial={{ opacity: 20, y: 20 }}
         animate={{
@@ -74,7 +76,7 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="text-xs sm:text-xs md:text-lg lg:text-2xl  w-full mt-2 ml-20 text-black font-Poppins uppercase"
+        className="text-xs sm:text-xs md:text-lg lg:text-2xl  w-full mt-3 ml-8 sm:ml-20 text-black font-Poppins uppercase"
       >
         {name}
       </motion.p>
@@ -86,10 +88,10 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col gap-3w-full col-span-2 "
+        className="flex flex-col pl-20 pr-5 col-span-2 h-full py-10 "
       >
-        <h1>{sections[i]?.title}</h1>
-        <p>{sections[i]?.subTitle}</p>
+        <SubTitle text={sections[i]?.title} />
+        <Text content={sections[i]?.subTitle} />
       </motion.section>
     </section>
   );
