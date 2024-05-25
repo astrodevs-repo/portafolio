@@ -1,3 +1,5 @@
+import SubTitle from "../shared/SubTitle";
+import Title from "../shared/Title";
 import s from "./header.module.scss";
 
 function Header() {
@@ -11,14 +13,16 @@ function Header() {
     <main id="main" className={`${s.header__container} main`}>
       <div id="title" className={s.header__title}>
         {" "}
-        <p className="font-Lalezar font-extrabold text-5xl">
+        <p className="font-Lalezar font-extrabold text-5xl text-blackCeniza">
           NOSOTROS SOMOS <strong className="text-5xl font-extrabold font-Lalezar">NEURONS</strong>
           <br />
         </p>
       </div>
-      <h4 className={s.header__subtitle}>Una firma integral de soluciones digitales.</h4>
+      <h4 className={s.header__subtitle}>
+        <SubTitle text={"Una firma integral de soluciones digitales."} />
+      </h4>
       <div className={s.header__buttons}>
-        <button className="">
+        <button className="font-Poppins">
           Nuestros Proyectos
           <img
             className={s.hoverimg}

@@ -24,9 +24,9 @@ const About = () => {
   return (
     <section title={""} className="bg-transparent px-2 sm:px-2 md:px-5 lg:px-10 py-20">
       <section className="grid grid-cols-1">
-        <section className="h-full w-full bg-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-          <article>
-            <Title text={"Quienes somos"} textColor={"text-white"} />
+        <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <article className="flex flex-col gap-5">
+            <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
             <SubTitle
               text={
                 "No somos solo una agencia de desarrollo web; una firma integral de soluciones digitales."
@@ -45,10 +45,10 @@ const About = () => {
           {articles.map(({ title, content }) => (
             <article
               key={title}
-              className="w-full flex flex-col justify-center items-center gap-10 p-5 lg:p-20"
+              className="w-full flex flex-col justify-center items-center gap-10 p-5 lg:p-10"
             >
-              <Text content={title} />
-              <p className="text-xl font-Poppins">{content}</p>
+              <SubTitle text={title} position={"text-center"} />
+              <Text content={content} />
             </article>
           ))}
         </section>

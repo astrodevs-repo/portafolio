@@ -70,7 +70,7 @@ const Navbar = () => {
           <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
             {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
           </a>
-          <div className="flex  absolute top-5 right-5">
+          <div className="flex  absolute top-5 right-20">
             <ButtonGrandient
               id={"https://forms.office.com/r/LA0vfN3Rd9"}
               target="_blank"

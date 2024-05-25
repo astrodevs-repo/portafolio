@@ -6,7 +6,7 @@ import SubTitle from "../shared/SubTitle";
 const Footer = () => {
   return (
     <div className=" w-full">
-      <section className="bg-[#89b8ffcc] py-40 px-5 lg:px-40" title={""} id={"contactanos"}>
+      <section className="bg-[#4f75ff] py-40 px-5 lg:px-40" title={""} id={"contactanos"}>
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 lg:gap-40">
           <section>
             <SubTitle

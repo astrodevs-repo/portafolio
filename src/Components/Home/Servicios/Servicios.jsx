@@ -13,6 +13,7 @@ import icon7 from "/public/services/7.svg";
 import icon8 from "/public/services/8.svg";
 import { useState } from "react";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
+import SubTitle from "../../shared/SubTitle";
 
 const Servicios = () => {
   const [showMore, setShowMore] = useState(false);
@@ -74,7 +75,7 @@ const Servicios = () => {
   };
 
   return (
-    <Section title={"Nuestros Servicios"}>
+    <Section title={"Cómo trabajamos en Neurons"}>
       <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-10">
         {serviciosToShow.map((servicio, index) => (
           <Card key={index} {...servicio} />
@@ -90,11 +91,11 @@ export default Servicios;
 const Card = ({ title, content, svg }) => {
   return (
     <motion.article className="items-center flex justify-center" whileHover={{ scale: 1.02 }}>
-      <article className="relative bg-blackCeniza h-[380px] w-full mx-auto rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10">
+      <article className="relative bg-blackCeniza h-[380px] w-full mx-auto rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-10">
         <img src={svg} alt="" />
-        <Text content={title} textColor={"text-white"} extra={"text-center"} />
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 cursor-pointer hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 text-white text-center p-5">
-          <Text content={content} />
+        <SubTitle text={title} textColor={"text-white"} extra={"text-center"} />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 cursor-pointer hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5">
+          <Text content={content} textColor={"text-white"} />
         </div>
       </article>
     </motion.article>
