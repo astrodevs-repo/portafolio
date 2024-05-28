@@ -48,11 +48,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { id: "/", label: "Home" },
-    { id: "#about", label: "About" },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
 
-    { id: "/team", label: "Team" },
-    { id: "/projects", label: "Projects" },
+    { id: "servicios", label: "Servicios" },
+    { id: "comotrabajamos", label: "Como trabajamos" },
+    { id: "team", label: "Team" },
   ];
 
   return (
@@ -70,13 +71,8 @@ const Navbar = () => {
           <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
             {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
           </a>
-          <div className="flex  absolute top-5 right-20">
-            <ButtonGrandient
-              id={"https://forms.office.com/r/LA0vfN3Rd9"}
-              target="_blank"
-              rel="noopener noreferrer"
-              text={"Contact Us"}
-            />
+          <div className="flex  absolute top-5 right-5 sm:right-20">
+            <ButtonGrandient id={"/#contactanos"} text={"Contact Us"} />
             <DrawerNavigation />
           </div>
           <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 hidden ">
@@ -88,9 +84,7 @@ const Navbar = () => {
                 <a
                   href={id}
                   className={`block py-2 px-3 rounded ${
-                    activeSection === id
-                      ? "text-white bg-blue-700"
-                      : "text-gray-900 hover:bg-gray-100"
+                    activeSection === id ? "text-blackCeniza" : "text-gray-900 hover:bg-gray-100"
                   }`}
                 >
                   {label}

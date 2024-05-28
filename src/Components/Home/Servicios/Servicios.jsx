@@ -75,7 +75,7 @@ const Servicios = () => {
   };
 
   return (
-    <Section title={"Cómo trabajamos en Neurons"}>
+    <Section title={"Nuestros Servicios"} id={"servicios"}>
       <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-10">
         {serviciosToShow.map((servicio, index) => (
           <Card key={index} {...servicio} />

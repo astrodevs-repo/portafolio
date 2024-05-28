@@ -40,7 +40,12 @@ function StepList() {
   ];
 
   return (
-    <Section title={"Service"} bg={"bg-transparent"} textColor={"text-white"}>
+    <Section
+      title={"Como trabajamos en Neurons"}
+      id={"comotrabajamos"}
+      bg={"bg-transparent"}
+      textColor={"text-white"}
+    >
       <section className="mt-40 ">
         {steps.map(({ name, index }, i) => (
           <ItemMobile

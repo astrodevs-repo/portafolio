@@ -10,7 +10,7 @@ function Header() {
     }
   };
   return (
-    <main id="main" className={`${s.header__container} main`}>
+    <main id="home" className={`${s.header__container} main`}>
       <div id="title" className={s.header__title}>
         {" "}
         <p className="font-Lalezar font-extrabold text-5xl text-blackCeniza">

@@ -80,7 +80,13 @@ function Community() {
             }
             textColor={"text-white"}
           />
-          <ButtonSimple text={"ver más"} w={"w-full"} bg={"bg-[#4f75ff]"} />
+          <ButtonSimple
+            text={"ver más"}
+            w={"w-full"}
+            bg={"bg-[#4f75ff]"}
+            border={"border-[#4f75ff]"}
+            hover={"bg-[#4563d0]"}
+          />
         </div>
         <div className="mx-0">
           <div className="overflow-hidden transform-gpu">

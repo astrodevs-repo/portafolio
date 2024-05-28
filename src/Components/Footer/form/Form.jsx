@@ -43,7 +43,8 @@ const ContactUs = () => {
 
   return (
     <>
-      <section className="w-full">
+      <section className="w-full" id={"contactanos"}>
+        <div className="h-20"></div>
         <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
           <div className="flex flex-col col-span-2 text-white gap-2">
             <label>Name</label>
@@ -93,7 +94,7 @@ const ContactUs = () => {
         <br />
         <ButtonSimple
           func={sendEmail}
-          text={"Send"}
+          text={"Enviar"}
           w={"w-full"}
           display={"center"}
           loader={isSent}
