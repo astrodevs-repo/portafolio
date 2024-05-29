@@ -1,8 +1,8 @@
 const Logo = () => {
   return (
-    <div>
+    <a href="/">
       <img src="src/assets/logo.svg" alt="" />
-    </div>
+    </a>
   );
 };
 

@@ -30,8 +30,8 @@ const MovingText = ({ left, right }) => {
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         className="w-[100%] flex gap-20"
       >
-        {items.map((item) => (
-          <div className="min-w-fit flex items-center gap-5" key={item}>
+        {items.map((item, index) => (
+          <div className="min-w-fit flex items-center gap-5" key={index}>
             <img src={item.svg} alt="" className="w-20" />
           </div>
         ))}

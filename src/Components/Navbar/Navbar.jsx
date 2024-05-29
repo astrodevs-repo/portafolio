@@ -48,11 +48,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
+    { id: "/comingsoom", label: "About" },
 
-    { id: "servicios", label: "Servicios" },
-    { id: "comotrabajamos", label: "Como trabajamos" },
+    { id: "/comingsoom", label: "Servicios" },
+    { id: "/comingsoon", label: "Como trabajamos" },
     { id: "team", label: "Team" },
   ];
 
@@ -72,12 +71,12 @@ const Navbar = () => {
             {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
           </a>
           <div className="flex  absolute top-5 right-5 sm:right-20">
-            <ButtonGrandient id={"/#contactanos"} text={"Contact Us"} />
+            <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
             <DrawerNavigation />
           </div>
           <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 hidden ">
             {navItems.map(({ id, label }) => (
-              <li key={id}>
+              <li key={label}>
                 {/* <Link
                       to={`${id}`} */}
 

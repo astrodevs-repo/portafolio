@@ -23,10 +23,9 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
   }, [index]);
 
   return (
-    <article className="step" key={name} ref={ref}>
+    <article className="step" ref={ref}>
       <section className={`v-stepper `}>
         <motion.div
-          key={name}
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={{
@@ -39,7 +38,6 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
           <span className="steper-count"></span>
         </motion.div>
         <motion.div
-          key={name}
           ref={ref}
           initial={{ opacity: 20, y: 20 }}
           animate={{

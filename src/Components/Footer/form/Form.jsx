@@ -98,7 +98,9 @@ const ContactUs = () => {
           w={"w-full"}
           display={"center"}
           loader={isSent}
-          bg={"bg-[#89b8ffcc]"}
+          bg={"bg-[#2D3142]"}
+          border={"bg-[#4A5171]"}
+          hover={"bg-red-500"}
         />
       </section>
     </>

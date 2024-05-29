@@ -14,8 +14,9 @@ import icon8 from "/public/services/8.svg";
 import { useState } from "react";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 import SubTitle from "../../shared/SubTitle";
+import Inspector from "../../shared/Inspector/Inspector";
 
-const Servicios = () => {
+const Servicios = ({ index, onObserver, currentStep }) => {
   const [showMore, setShowMore] = useState(false);
   const servicios = [
     {
@@ -75,14 +76,33 @@ const Servicios = () => {
   };
 
   return (
-    <Section title={"Nuestros Servicios"} id={"servicios"}>
-      <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-10">
-        {serviciosToShow.map((servicio, index) => (
-          <Card key={index} {...servicio} />
-        ))}
-      </section>
-      {!showMore && <ButtonSimple func={toggleShowMore} text={"Mostrar más"} bg={"bg-[#134EA7]"} />}
-    </Section>
+    <Inspector index={index} onObserver={onObserver}>
+      <Section
+        title={"Nuestros Servicios"}
+        id={"quienessomos"}
+        index={index}
+        currentStep={currentStep}
+      >
+        <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-10">
+          {serviciosToShow.map((servicio, index) => (
+            <Card key={index} {...servicio} />
+          ))}
+        </section>
+        {!showMore && (
+          <section className="w-full flex justify-center">
+            <ButtonSimple
+              text={"ver más"}
+              w={"w-full"}
+              bg={"bg-[#4f75ff]"}
+              border={"border-[#4f75ff]"}
+              hover={"bg-[#4563d0]"}
+              func={toggleShowMore}
+              display={"center"}
+            />
+          </section>
+        )}
+      </Section>
+    </Inspector>
   );
 };
 

@@ -7,8 +7,12 @@ import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection"
 import Servicios from "../../Components/Home/Servicios/Servicios";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Home = () => {
+  const [currentStep, setCurrentStep] = useState("1");
+
+  const handleStepChange = (step) => setCurrentStep(step);
   return (
     <motion.main
       className="main__container"
@@ -17,13 +21,17 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      <Header />
-      <About />
-      <Servicios />
-      <ClientsSection />
-      <StepList />
-      <Team />
-      <Footer />
+      <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
+      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
+      <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
+      <StepList
+        index={"comotrabajamos"}
+        onObserver={handleStepChange}
+        currentStepAnother={currentStep}
+      />
+      <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Footer index={"footer"} onObserver={handleStepChange} currentStep={currentStep} />
     </motion.main>
   );
 };
