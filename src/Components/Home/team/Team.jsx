@@ -38,11 +38,11 @@ function Community({ index, onObserver, currentStep }) {
 
         images.forEach((item) => {
           let columnHeight = item.parentElement.clientHeight;
-          let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
+          let direction = i % 2 !== 0 ? "+=" : "-=";
 
           gsap.to(item, {
             y: direction + Number(columnHeight / 2),
-            duration: 40, // Aumenta la duración para reducir la velocidad de la animación
+            duration: 20,
             repeat: -1,
             ease: "none",
             trigger: galleryRef.current,
@@ -81,7 +81,7 @@ function Community({ index, onObserver, currentStep }) {
         }
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-3xl  my-20 grid grid-cols-1 sm:grid-cols-2 mx-5 sm:mx-20">
+        <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza rounded-t-3xl sm:rounded-3xl  my-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20">
           <div className="p-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
             <Title text={"Nuestro Team"} textColor={"text-white"} extra={"italic"} />
             <Text
@@ -98,7 +98,7 @@ function Community({ index, onObserver, currentStep }) {
               hover={"bg-[#4563d0]"}
             />
           </div>
-          <div className="mx-0">
+          <div className="mx-0 ">
             <div className="overflow-hidden transform-gpu">
               <div className={s.galleryvertical}>
                 <div id="col" className={s.col}>

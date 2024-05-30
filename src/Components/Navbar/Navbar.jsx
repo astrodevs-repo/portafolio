@@ -67,14 +67,14 @@ const Navbar = () => {
             activeSection !== "home" || scrolledDown ? "bg-white h-20 px-5" : "bg-transparent"
           }`}
         >
-          <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="#home" className="flex items-center sm:pr-0 md:pr-5 lg:pr-20">
             {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
           </a>
           <div className="flex  absolute top-5 right-5 sm:right-20">
             <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
             <DrawerNavigation />
           </div>
-          <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 hidden ">
+          <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-20 md:flex-row md:mt-0 md:border-0 hidden ">
             {navItems.map(({ id, label }) => (
               <li key={label}>
                 {/* <Link
@@ -82,7 +82,7 @@ const Navbar = () => {
 
                 <a
                   href={id}
-                  className={`block py-2 px-3 rounded ${
+                  className={`block  rounded ${
                     activeSection === id ? "text-blackCeniza" : "text-gray-900 hover:bg-gray-100"
                   }`}
                 >

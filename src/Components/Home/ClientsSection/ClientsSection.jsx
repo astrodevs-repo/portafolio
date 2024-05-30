@@ -8,15 +8,7 @@ import { motion } from "framer-motion";
 export default function SkillsSection({ index, onObserver, currentStep }) {
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <motion.section
-        className="min-h-[650px]"
-        id="skills"
-        initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
-        animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
-        }
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
+      <motion.section className="" id="skills">
         <Container>
           <Title text={"Nuestras Skills"} />
         </Container>

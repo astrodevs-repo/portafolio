@@ -18,7 +18,7 @@ function Header({ index, onObserver, currentStep }) {
   };
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <main
+      <section
         id="home"
         className={`h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center items-center`}
       >
@@ -29,7 +29,7 @@ function Header({ index, onObserver, currentStep }) {
               index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
             }
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="flex flex-wrap px-20 sm:px-0  justify-center text-center items-center gap-2 text-5xl sm:text-lg md:text-xl lg:text-2xl xl:text-5xl 2xl:text-8xl"
+            className="flex flex-wrap px-5 sm:px-0  justify-center text-center items-center gap-2 text-5xl sm:text-lg md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
           >
             NOSOTROS SOMOS
             {"  "}
@@ -63,7 +63,7 @@ function Header({ index, onObserver, currentStep }) {
             </button>
           </a>
         </div>
-      </main>
+      </section>
     </Inspector>
   );
 }

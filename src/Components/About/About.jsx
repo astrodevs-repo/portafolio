@@ -27,7 +27,7 @@ const About = ({ index, onObserver, currentStep }) => {
       <motion.section
         id={"aboutus"}
         title={""}
-        className="px-5 py-5 sm:px-40 sm:py-20"
+        className="px-5 py-5 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-40 sm:py-20"
         initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
         animate={
           index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
@@ -35,7 +35,7 @@ const About = ({ index, onObserver, currentStep }) => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <section className="grid grid-cols-1">
-          <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
               <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
               <SubTitle
@@ -51,7 +51,7 @@ const About = ({ index, onObserver, currentStep }) => {
                 textColor={"text-white"}
               />
             </article>
-            <img src="/public/Logo.svg" alt="" className="w-full hidden sm:flex" />
+            <img src="/public/Logo.svg" alt="" className="w-full hidden sm:flex md:hidden" />
           </section>
           <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2">
             {articles.map(({ title, content }) => (
