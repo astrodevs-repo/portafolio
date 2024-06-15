@@ -8,20 +8,18 @@ import { FaFacebook, FaDiscord, FaGithub, FaDribbble } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
+import Container from "../Container/Container";
 
 const Footer = ({ index, onObserver }) => {
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section id="footer" className=" w-full">
-        <section
-          className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 px-5 lg:px-40"
-          title={""}
-        >
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 lg:gap-40">
+      <section className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 ">
+        <Container>
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center ">
             <motion.section>
-              <SubTitle
+              <Text
                 textColor={"text-white"}
-                text={
+                content={
                   "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
                 }
               />
@@ -36,63 +34,63 @@ const Footer = ({ index, onObserver }) => {
               <ContactUs />
             </motion.section>
           </section>
-        </section>
+        </Container>
+      </section>
 
-        <footer className="bg-white dark:bg-gray-900">
-          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div className="md:flex md:justify-between">
-              <div className="mb-6 md:mb-0 flex flex-col justify-start">
-                <a href="/" className="flex items-center">
-                  <p className="font-bold text-xl text-[#31add5]">Neurons</p>
-                </a>
-                <Text content={"SOLUCIONES DIGITALES"} />
-              </div>
-
-              <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
-                {footerContent.map((section, index) => (
-                  <div key={index}>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                      {section.title}
-                    </h2>
-                    <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      {section.links.map((link, j) => (
-                        <li key={j} className="mb-4">
-                          <a href={link.url} className="hover:underline">
-                            <TextFooter content={link.text} />
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+      <footer className="bg-white ">
+        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div className="md:flex md:justify-between">
+            <div className="mb-6 md:mb-0 flex flex-col justify-start">
+              <a href="/" className="flex items-center">
+                <p className="font-bold text-xl text-[#31add5]">Neurons</p>
+              </a>
+              <Text content={"SOLUCIONES DIGITALES"} />
             </div>
-            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
-            <div className="sm:flex sm:items-center sm:justify-between">
-              <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                {footerInfo.copyright}
-                <a href="https://flowbite.com/" className="hover:underline">
-                  {footerInfo.poweredBy}
-                </a>
-              </span>
-
-              <div className="flex mt-4 sm:justify-center sm:mt-0">
-                {footerInfo.socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                  >
-                    {link.icon}
-                    <span className="sr-only">{link.label}</span>
-                  </a>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
+              {footerContent.map((section, index) => (
+                <div key={index}>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                    {section.title}
+                  </h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                    {section.links.map((link, j) => (
+                      <li key={j} className="mb-4">
+                        <a href={link.url} className="hover:underline">
+                          <TextFooter content={link.text} />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </footer>
-      </section>
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              {footerInfo.copyright}
+              <a href="https://flowbite.com/" className="hover:underline">
+                {footerInfo.poweredBy}
+              </a>
+            </span>
+
+            <div className="flex mt-4 sm:justify-center sm:mt-0">
+              {footerInfo.socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                >
+                  {link.icon}
+                  <span className="sr-only">{link.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </footer>
     </Inspector>
   );
 };
@@ -119,24 +117,37 @@ const footerContent = [
     ],
   },
 
+  // {
+  //   title: "Seguinos",
+  //   links: [
+  //     {
+  //       text: "Linkedin",
+  //       url: "https://github.com/themesberg/flowbite",
+  //     },
+  //     {
+  //       text: "Github",
+  //       url: "https://github.com/themesberg/flowbite",
+  //     },
+  //     {
+  //       text: "Discord",
+  //       url: "https://github.com/themesberg/flowbite",
+  //     },
+  //   ],
+  // },
+
   {
-    title: "Seguinos",
+    title: "Nuestros Servicios",
     links: [
-      {
-        text: "Linkedin",
-        url: "https://github.com/themesberg/flowbite",
-      },
-      {
-        text: "Github",
-        url: "https://github.com/themesberg/flowbite",
-      },
-      {
-        text: "Discord",
-        url: "https://github.com/themesberg/flowbite",
-      },
+      { text: "Desarrollo Web" },
+      { text: "Diseño UX/UI" },
+      { text: "Data Science y Data Analytics" },
+      { text: "Creación de Bases de Datos" },
+      { text: "Blockchain" },
+      { text: "Desarrollo de Aplicaciones Móviles" },
+      { text: "Google Ads y Posicionamiento SEO" },
+      { text: "Mantenimiento y Soporte" },
     ],
   },
-
   {
     title: "Nuestros Servicios",
     links: [
@@ -181,7 +192,7 @@ const socialLinks = [
 ];
 
 const footerInfo = {
-  copyright: "© 2024 Neurons™. All Rights Reserved.",
+  copyright: "© 2024 Neurons",
 
   socialLinks: socialLinks,
 };

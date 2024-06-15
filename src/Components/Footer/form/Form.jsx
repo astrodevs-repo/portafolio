@@ -1,12 +1,16 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
+import Title from "../../shared/Title";
+import SubTitle from "../../shared/SubTitle";
 
 const ContactUs = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
   const initialFormData = {
+    name1: "",
     name: "",
+
     email: "",
     user_referrer: "",
     message: "",
@@ -43,14 +47,14 @@ const ContactUs = () => {
 
   return (
     <>
-      <section className="w-full" id={"contactanos"}>
-        <div className="h-20"></div>
+      <section className="w-full flex flex-col gap-10" id="contactanos">
+        <SubTitle text={"Contactanos"} textColor={"text-white"} />
         <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
           <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>Name</label>
+            <label>Nombre</label>
             <input
               type="text"
-              name="name"
+              name="name1"
               value={formData.name}
               onChange={handleChange}
               className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
@@ -70,7 +74,7 @@ const ContactUs = () => {
             />
           </div>
           <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>Phone</label>
+            <label>Teléfono</label>
             <input
               type="number"
               name="user_referrer"
@@ -81,7 +85,18 @@ const ContactUs = () => {
             />
           </div>
           <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>Message</label>
+            <label>País</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Mensaje</label>
             <textarea
               name="message"
               value={formData.message}

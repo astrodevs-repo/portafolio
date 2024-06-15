@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  min-height: 300px;
+  min-height: fit-content;
 }
 
 .v-stepper {
   position: relative;
-  /*   visibility: visible; */
 }
 
 /* regular step */

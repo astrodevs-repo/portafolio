@@ -11,31 +11,31 @@ function StepList({ index, onObserver }) {
 
   const steps = [
     {
-      name: "1",
+      name: "1. Contacto inicial",
       index: "1",
     },
     {
-      name: "2",
+      name: "2. Reunión Inicial y Análisis de Requerimientos",
       index: "2",
     },
     {
-      name: "3",
+      name: "3. Diseño del Plan de Acción",
       index: "3",
     },
     {
-      name: "4",
+      name: "4. Ejecución del Plan",
       index: "4",
     },
     {
-      name: "5",
+      name: "5. Pruebas y Validación",
       index: "5",
     },
     {
-      name: "6",
+      name: "6. Entrega del Proyecto",
       index: "6",
     },
     {
-      name: "7",
+      name: "7. Mantenimiento y Mejoras",
       index: "7",
     },
   ];
@@ -48,7 +48,7 @@ function StepList({ index, onObserver }) {
         bg={"bg-transparent"}
         textColor={"text-white"}
       >
-        <section className="mt-40 ">
+        <section className="mt-40 px-0">
           {steps.map(({ name, index }, i) => (
             <ItemMobile
               currentStep={currentStep}

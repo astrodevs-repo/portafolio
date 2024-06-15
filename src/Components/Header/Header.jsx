@@ -1,5 +1,4 @@
 import Inspector from "../shared/Inspector/Inspector";
-import SubTitle from "../shared/SubTitle";
 import { motion } from "framer-motion";
 
 import s from "./header.module.scss";
@@ -20,9 +19,9 @@ function Header({ index, onObserver, currentStep }) {
     <Inspector index={index} onObserver={onObserver}>
       <section
         id="home"
-        className={`h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center items-center`}
+        className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-start items-center sm:pt-60`}
       >
-        <div id="title" className="flex flex-col justify-center gap-10 sm:gap-20">
+        <div id="title" className="flex flex-col justify-center gap-10 sm:gap-10">
           <motion.p
             initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: -100 }}
             animate={
@@ -33,16 +32,35 @@ function Header({ index, onObserver, currentStep }) {
           >
             NOSOTROS SOMOS
             {"  "}
-            <strong style={gradientText}> NEURONS</strong>
+            <strong style={gradientText} className="font-LusitanaBold mt-2">
+              {" "}
+              NEURONS
+            </strong>
             <br />
           </motion.p>
-          <SubTitle text={"Una firma integral de soluciones digitales."} position={"text-center"} />
+          <div className="flex justify-center">
+            {["Una firma integral de soluciones digitales."].map((phrase, phraseIndex) => (
+              <div key={phraseIndex} className="flex">
+                {phrase.split("").map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="text-3xl font-Poppins font-extrabold  text-center"
+                  >
+                    {letter === " " ? "\u00A0" : letter}
+                  </motion.span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={s.header__buttons}>
           <a href={"#quienessomos"}>
             <button className="font-Poppins">
-              Nuestros Proyectos
+              Nuestros Servicios
               <img
                 className={s.hoverimg}
                 style={{ position: "absolute", right: "0.3vmax" }}

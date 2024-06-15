@@ -4,7 +4,7 @@ import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
 import { motion } from "framer-motion";
 
-const About = ({ index, onObserver, currentStep }) => {
+const About = ({ index, onObserver }) => {
   const articles = [
     {
       title: "Visión",
@@ -17,7 +17,7 @@ const About = ({ index, onObserver, currentStep }) => {
         "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas ",
     },
     {
-      title: "¿Por qué eligir a Neurons como su socio digital?",
+      title: "¿Por qué eligirnos?",
       content:
         "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio. ",
     },
@@ -27,11 +27,9 @@ const About = ({ index, onObserver, currentStep }) => {
       <motion.section
         id={"aboutus"}
         title={""}
-        className="px-5 py-5 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-40 sm:py-20"
+        className="px-5 py-5 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-20 sm:py-20 sm:mt-[-250px]"
         initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
-        animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
-        }
+        animate={{ opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <section className="grid grid-cols-1">
@@ -40,9 +38,9 @@ const About = ({ index, onObserver, currentStep }) => {
               <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
               <SubTitle
                 text={
-                  "No somos solo una agencia de desarrollo web; una firma integral de soluciones digitales."
+                  "No somos solo una agencia de desarrollo web; somos una firma integral de soluciones digitales."
                 }
-                textColor={"text-white"}
+                textColor={"text-[#2FE3CE]"}
               />
               <Text
                 content={

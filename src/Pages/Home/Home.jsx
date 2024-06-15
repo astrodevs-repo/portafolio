@@ -31,7 +31,7 @@ const Home = () => {
         currentStepAnother={currentStep}
       />
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Footer index={"footer"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />
     </motion.main>
   );
 };

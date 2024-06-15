@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         blackCeniza: "#2D3142",
+        Chicle: "#2FE3CE",
       },
       fontFamily: {
         LusitanaBold: ["LusitanaBold"],

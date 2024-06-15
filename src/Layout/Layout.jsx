@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
         style={{
           position: "fixed",
           bottom: "20px",
-          right: "20px",
+          right: "-10px",
           zIndex: "1000",
         }}
       >

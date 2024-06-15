@@ -1,5 +1,5 @@
 const Page404 = () => {
-  return <div className="w-full h-screen">error 404</div>;
+  return <div className="w-full h-screen"></div>;
 };
 
 export default Page404;

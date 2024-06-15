@@ -77,11 +77,11 @@ function Community({ index, onObserver, currentStep }) {
         id="team"
         initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
         animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
+          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 100 } : {}
         }
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza rounded-t-3xl sm:rounded-3xl  my-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20">
+        <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza rounded-t-3xl sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20">
           <div className="p-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
             <Title text={"Nuestro Team"} textColor={"text-white"} extra={"italic"} />
             <Text
@@ -91,11 +91,12 @@ function Community({ index, onObserver, currentStep }) {
               textColor={"text-white"}
             />
             <ButtonSimple
-              text={"ver más"}
+              text={"Trabajá con nosotros"}
               w={"w-full"}
               bg={"bg-[#4f75ff]"}
               border={"border-[#4f75ff]"}
               hover={"bg-[#4563d0]"}
+              active={false}
             />
           </div>
           <div className="mx-0 ">

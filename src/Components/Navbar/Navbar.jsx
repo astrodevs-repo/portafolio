@@ -6,14 +6,13 @@ import DrawerNavigation from "../shared/drawer/Drawer";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-  const [visible, setVisible] = useState(true);
+
   const [activeSection, setActiveSection] = useState("home");
   const [loaded, setLoaded] = useState(false);
   const [scrolledDown, setScrolledDown] = useState(false);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
     setPrevScrollPos(currentScrollPos);
 
     if (currentScrollPos > 20) {
@@ -48,33 +47,23 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { id: "/comingsoom", label: "About" },
-
-    { id: "/comingsoom", label: "Servicios" },
-    { id: "/comingsoon", label: "Como trabajamos" },
-    { id: "team", label: "Team" },
+    { id: "#aboutus", label: "Quienes somos" },
+    { id: "#quienessomos", label: "Servicios" },
+    { id: "#comotrabajamos", label: "Como trabajamos" },
+    { id: "#team", label: "Nuestro equipo" },
   ];
 
   return (
     <>
       {loaded && (
         <motion.nav
-          initial={{ y: -100 }}
-          animate={{ y: visible ? 0 : -10 }}
-          exit={{ y: -100 }}
-          transition={{ type: "spring", damping: 20, stiffness: 100 }}
-          className={`fixed w-full z-20 top-0  start-0 transition-all duration-300 ease-in-out px-0 sm:px-0 md:px-20 lg:px-20 flex justify-start gap-10 items-center py-3  ${
-            activeSection !== "home" || scrolledDown ? "bg-white h-20 px-5" : "bg-transparent"
-          }`}
+          className={`fixed w-full z-20 top-0  start-0  flex justify-around  gap-5 items-center py-2 bg-blackCeniza`}
         >
-          <a href="#home" className="flex items-center sm:pr-0 md:pr-5 lg:pr-20">
-            {scrolledDown ? <p className="font-bold text-xl text-[#31add5]">Neurons</p> : <Logo />}
+          <a href="#home" className="flex items-center ">
+            {scrolledDown ? <p className="font-bold text-xl text-[#2FE3CE]">Neurons</p> : <Logo />}
           </a>
-          <div className="flex  absolute top-5 right-5 sm:right-20">
-            <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
-            <DrawerNavigation />
-          </div>
-          <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-20 md:flex-row md:mt-0 md:border-0 hidden ">
+
+          <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
             {navItems.map(({ id, label }) => (
               <li key={label}>
                 {/* <Link
@@ -83,7 +72,7 @@ const Navbar = () => {
                 <a
                   href={id}
                   className={`block  rounded ${
-                    activeSection === id ? "text-blackCeniza" : "text-gray-900 hover:bg-gray-100"
+                    activeSection === id ? "text-blackCeniza" : "text-white hover:text-[#2FE3CE]"
                   }`}
                 >
                   {label}
@@ -92,6 +81,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="flex ">
+            <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
+            <DrawerNavigation />
+          </div>
         </motion.nav>
       )}
     </>
