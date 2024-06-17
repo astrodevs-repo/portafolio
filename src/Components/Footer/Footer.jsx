@@ -15,7 +15,10 @@ const Footer = ({ index, onObserver }) => {
     <Inspector index={index} onObserver={onObserver}>
       <section className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 ">
         <Container>
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center ">
+          <section
+            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center "
+            id="contactanos"
+          >
             <motion.section>
               <Text
                 textColor={"text-white"}
@@ -30,9 +33,7 @@ const Footer = ({ index, onObserver }) => {
               </p>
             </motion.section>
 
-            <motion.section className="flex justify-end w-full">
-              <ContactUs />
-            </motion.section>
+            <ContactUs />
           </section>
         </Container>
       </section>

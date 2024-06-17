@@ -11,7 +11,6 @@ import icon5 from "/public/services/5.svg";
 import icon6 from "/public/services/6.svg";
 import icon7 from "/public/services/7.svg";
 import icon8 from "/public/services/8.svg";
-import SubTitle from "../../shared/SubTitle";
 import Inspector from "../../shared/Inspector/Inspector";
 
 const Servicios = ({ index, onObserver, currentStep }) => {
@@ -74,7 +73,7 @@ const Servicios = ({ index, onObserver, currentStep }) => {
         index={index}
         currentStep={currentStep}
       >
-        <section className="grid grid-cols-4 justify-center gap-5">
+        <section className="grid grid-cols-1 sm:grid-cols-4 justify-center gap-5">
           {servicios.map((servicio, index) => (
             <Card key={index} {...servicio} />
           ))}

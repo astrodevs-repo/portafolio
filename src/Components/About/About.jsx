@@ -27,7 +27,7 @@ const About = ({ index, onObserver }) => {
       <motion.section
         id={"aboutus"}
         title={""}
-        className="px-5 py-5 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-20 sm:py-20 sm:mt-[-250px]"
+        className="px-5 py-20 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-20  sm:py-5 sm:mt-[-250px]"
         initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
         animate={{ opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 }}
         transition={{ duration: 1, ease: "easeInOut" }}

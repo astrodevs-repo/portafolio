@@ -28,9 +28,10 @@ function Header({ index, onObserver, currentStep }) {
               index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
             }
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="flex flex-wrap px-5 sm:px-0  justify-center text-center items-center gap-2 text-5xl sm:text-lg md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
+            className="flex flex-wrap  sm:px-0  justify-center text-center items-center gap-2 text-5xl sm:text-lg md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
           >
-            NOSOTROS SOMOS
+            NOSOTROS
+            <span>SOMOS</span>
             {"  "}
             <strong style={gradientText} className="font-LusitanaBold mt-2">
               {" "}
@@ -38,9 +39,9 @@ function Header({ index, onObserver, currentStep }) {
             </strong>
             <br />
           </motion.p>
-          <div className="flex justify-center">
+          <section className="flex flex-wrap justify-center px-8 sm:px-0">
             {["Una firma integral de soluciones digitales."].map((phrase, phraseIndex) => (
-              <div key={phraseIndex} className="flex">
+              <div key={phraseIndex} className="flex flex-wrap">
                 {phrase.split("").map((letter, index) => (
                   <motion.span
                     key={index}
@@ -54,7 +55,7 @@ function Header({ index, onObserver, currentStep }) {
                 ))}
               </div>
             ))}
-          </div>
+          </section>
         </div>
 
         <div className={s.header__buttons}>

@@ -81,7 +81,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="flex ">
+          <div className="flex gap-5 ">
             <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
             <DrawerNavigation />
           </div>

@@ -19,12 +19,10 @@ const DrawerNavigation = () => {
     };
   }, []);
   const navItems = [
-    { id: "/", label: "Home" },
-    { id: "#about", label: "About" },
-    { id: "#valores", label: "Valores" },
-    { id: "#servicios", label: "Services" },
-    { id: "/team", label: "Team" },
-    { id: "/projects", label: "Projects" },
+    { id: "#aboutus", label: "Quienes somos" },
+    { id: "#quienessomos", label: "Servicios" },
+    { id: "#comotrabajamos", label: "Como trabajamos" },
+    { id: "#team", label: "Nuestro equipo" },
   ];
 
   return (
@@ -34,22 +32,22 @@ const DrawerNavigation = () => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:hidden flex"
+        className="sm:hidden flex justify-center items-center"
       >
         <MdOutlineMenu size={35} />
       </button>
       {isOpen && (
         <div
           id="drawer-navigation"
-          className={`fixed w-[80%] sm:w-[30%] top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform  ${
+          className={`fixed w-[80%] sm:w-[30%] top-0 left-0 z-40 h-screen  overflow-y-auto transition-transform  ${
             isOpen ? "animate__animated animate__slideInLeft" : "-translate-x-full"
-          } bg-white w-64 dark:bg-gray-800`}
+          } bg-blackCeniza w-64`}
           tabIndex="-1"
           aria-labelledby="drawer-navigation-label"
         >
           <h5
             id="drawer-navigation-label"
-            className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+            className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400 p-3"
           >
             Menu
           </h5>
@@ -57,7 +55,7 @@ const DrawerNavigation = () => {
             type="button"
             onClick={() => setIsOpen(!isOpen)}
             aria-controls="drawer-navigation"
-            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+            className="text-gray-400 bg-transparent hover:bg-[#4A5171] rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
           >
             <svg
               className="w-3 h-3"
@@ -85,7 +83,7 @@ const DrawerNavigation = () => {
                     onClick={() => {
                       setIsOpen(!isOpen);
                     }}
-                    className="block py-2 px-3 rounded text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    className="block py-2 px-3 rounded text-white hover:bg-[#4A5171] dark:text-white dark:hover:bg-gray-700"
                   >
                     {label}
                   </a>

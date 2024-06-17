@@ -47,7 +47,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <section className="w-full flex flex-col gap-10" id="contactanos">
+      <section className="w-full flex flex-col gap-10 mt-20">
         <SubTitle text={"Contactanos"} textColor={"text-white"} />
         <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
           <div className="flex flex-col col-span-2 text-white gap-2">
@@ -114,8 +114,8 @@ const ContactUs = () => {
           display={"center"}
           loader={isSent}
           bg={"bg-[#2D3142]"}
-          border={"bg-[#4A5171]"}
-          hover={"bg-red-500"}
+          border={"border-[#4A5171] border-2"}
+          hover={"hover:bg-[#4A5171]"}
         />
       </section>
     </>
