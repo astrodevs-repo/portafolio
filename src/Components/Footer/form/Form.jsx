@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-import Title from "../../shared/Title";
+
 import SubTitle from "../../shared/SubTitle";
 
 const ContactUs = () => {
@@ -113,9 +113,10 @@ const ContactUs = () => {
           w={"w-full"}
           display={"center"}
           loader={isSent}
-          bg={"bg-[#2D3142]"}
-          border={"border-[#4A5171] border-2"}
-          hover={"hover:bg-[#4A5171]"}
+          bg={"bg-Chicle"}
+          border={"border-[#28ae9e] border-2"}
+          hover={"hover:bg-[#28ae9e]"}
+          textColor={"balck"}
         />
       </section>
     </>

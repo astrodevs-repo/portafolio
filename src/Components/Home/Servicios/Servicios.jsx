@@ -72,6 +72,7 @@ const Servicios = ({ index, onObserver, currentStep }) => {
         id={"quienessomos"}
         index={index}
         currentStep={currentStep}
+        extra={"mt-[-200px]"}
       >
         <section className="grid grid-cols-1 sm:grid-cols-4 justify-center gap-5">
           {servicios.map((servicio, index) => (

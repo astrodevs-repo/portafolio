@@ -2,7 +2,7 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
-import { motion } from "framer-motion";
+import Section from "../shared/Section/Section";
 
 const About = ({ index, onObserver }) => {
   const articles = [
@@ -24,14 +24,7 @@ const About = ({ index, onObserver }) => {
   ];
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <motion.section
-        id={"aboutus"}
-        title={""}
-        className="px-5 py-20 sm:px-5 md:px-5 lg:px-20 xl:px-40 2xl:px-20  sm:py-5 sm:mt-[-250px]"
-        initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
-        animate={{ opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
+      <Section extra={"lg:mt-[-350px]"}>
         <section className="grid grid-cols-1">
           <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
@@ -63,7 +56,7 @@ const About = ({ index, onObserver }) => {
             ))}
           </section>
         </section>
-      </motion.section>
+      </Section>
     </Inspector>
   );
 };

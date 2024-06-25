@@ -11,7 +11,7 @@ const Inspector = ({ children, index, onObserver }) => {
           console.log(index);
         });
       },
-      { threshold: 0, rootMargin: "-50% 0% -50% 0%" }
+      { threshold: 0, rootMargin: "-60% 0% -50% 0%" }
     );
 
     observer.observe(ref.current);

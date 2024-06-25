@@ -19,7 +19,7 @@ function Header({ index, onObserver, currentStep }) {
     <Inspector index={index} onObserver={onObserver}>
       <section
         id="home"
-        className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-start items-center sm:pt-60`}
+        className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-center`}
       >
         <div id="title" className="flex flex-col justify-center gap-10 sm:gap-10">
           <motion.p
@@ -65,7 +65,7 @@ function Header({ index, onObserver, currentStep }) {
               <img
                 className={s.hoverimg}
                 style={{ position: "absolute", right: "0.3vmax" }}
-                src="src/assets/buttons/arrow.svg"
+                src="/public/arrow.svg"
                 alt=""
               />
             </button>
@@ -76,7 +76,7 @@ function Header({ index, onObserver, currentStep }) {
               <img
                 className={s.hoverimg}
                 style={{ position: "absolute", right: "0.3vmax" }}
-                src="src/assets/buttons/arrow.svg"
+                src="/public/arrow.svg"
                 alt=""
               />
             </button>
