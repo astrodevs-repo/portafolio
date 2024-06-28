@@ -91,7 +91,7 @@ function Community({ index, onObserver, currentStep }) {
             <Title text={"Nuestro Team"} textColor={"text-white"} extra={"italic"} />
             <Text
               content={
-                " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en data science, blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea."
+                " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea."
               }
               textColor={"text-white"}
             />

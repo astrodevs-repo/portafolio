@@ -37,7 +37,7 @@ const Servicios = ({ index, onObserver, currentStep }) => {
       title: "Data Science y Data Analytic",
       svg: icon4,
       content:
-        "Aplicamos técnicas de data science y data analytics para extraer información valiosa de los datos y tomar decisiones informadas que impulsen el crecimiento de nuestros clientes.",
+        "Aplicamos técnicas de Data Science y Data Analytics para extraer información valiosa de los datos y tomar decisiones informadas que impulsen el crecimiento de nuestros clientes.",
     },
     {
       title: "Diseño UX/UI",
@@ -49,13 +49,13 @@ const Servicios = ({ index, onObserver, currentStep }) => {
       title: "Mantenimiento y Soporte",
       svg: icon6,
       content:
-        "frecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
+        "Ofrecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
     },
     {
       title: "Blockchain",
       svg: icon7,
       content:
-        "Implementamos soluciones basadas en tecnología blockchain para garantizar la seguridad, la transparencia y la integridad de los datos y las transacciones en línea.",
+        "Implementamos soluciones basadas en tecnología Blockchain para garantizar la seguridad, la transparencia e integridad de los datos y las transacciones en línea.",
     },
     {
       title: "Google Ads y Posicionamiento SEO",

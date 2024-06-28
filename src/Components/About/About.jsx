@@ -2,8 +2,6 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
-import Section from "../shared/Section/Section";
-
 const About = ({ index, onObserver }) => {
   const articles = [
     {
@@ -24,7 +22,8 @@ const About = ({ index, onObserver }) => {
   ];
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <Section extra={"lg:mt-[-350px]"}>
+      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-20 lg:px-20 ">
+        <section className="h-10"></section>
         <section className="grid grid-cols-1">
           <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
@@ -37,7 +36,7 @@ const About = ({ index, onObserver }) => {
               />
               <Text
                 content={
-                  "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
+                  "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
                 }
                 textColor={"text-white"}
               />
@@ -62,7 +61,7 @@ const About = ({ index, onObserver }) => {
             ))}
           </section>
         </section>
-      </Section>
+      </section>
     </Inspector>
   );
 };
