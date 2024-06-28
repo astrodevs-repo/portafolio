@@ -60,9 +60,7 @@ const Navbar = () => {
         <motion.nav
           className={`fixed w-full z-20 top-0  start-0  flex justify-around  gap-5 items-center py-2 bg-blackCeniza`}
         >
-          <a href="#home" className="flex items-center ">
-            {scrolledDown ? <p className="font-bold text-xl text-[#2FE3CE]">Neurons</p> : <Logo />}
-          </a>
+          <Logo />
 
           <ul className="md:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
             {navItems.map(({ id, label }) => (

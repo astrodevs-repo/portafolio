@@ -26,15 +26,15 @@ const DrawerNavigation = () => {
   ];
 
   return (
-    <div>
+    <div className=" flex justify-center items-center">
       <button
         onClick={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:hidden flex justify-center items-center"
+        className="sm:hidden flex justify-center items-center text-[25px] text-white sm:text-[40px]"
       >
-        <MdOutlineMenu size={35} />
+        <MdOutlineMenu />
       </button>
       {isOpen && (
         <div

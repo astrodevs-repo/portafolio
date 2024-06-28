@@ -101,7 +101,7 @@ function Community({ index, onObserver, currentStep }) {
               bg={"bg-[#4f75ff]"}
               border={"border-[#4f75ff]"}
               hover={"bg-[#4563d0]"}
-              active={false}
+              active={true}
             />
           </div>
           <div className="mx-0 ">
@@ -131,13 +131,13 @@ function Community({ index, onObserver, currentStep }) {
                 </div>
                 <div id="col" className={s.col}>
                   <div className={s.image}>
-                    <img src={yeli} alt="gallery1"></img>
+                    <img src={miguel} alt="gallery1"></img>
                   </div>
                   <div className={s.image}>
                     <img src={jesus} alt="gallery1"></img>
                   </div>
                   <div className={s.image}>
-                    <img src={yeli} alt="gallery1"></img>
+                    <img src={luisana} alt="gallery1"></img>
                   </div>
                 </div>
               </div>

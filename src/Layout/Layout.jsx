@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import { motion } from "framer-motion";
 
 import { FaArrowUp } from "react-icons/fa";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const Layout = ({ children }) => {
   const [showButton, setShowButton] = useState(false);
@@ -31,16 +32,27 @@ const Layout = ({ children }) => {
     <div style={{ position: "relative" }}>
       <Navbar />
       {children}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
 
       {showButton && (
         <motion.button
           animate={{ y: -50 }}
           transition={{ ease: "easeOut", duration: 2 }}
           onClick={scrollToTop}
+          className="fixed bottom-10 left-5"
           style={{
-            position: "fixed",
-            bottom: "20px",
-            left: "20px",
             zIndex: "1000",
           }}
         >
@@ -52,10 +64,8 @@ const Layout = ({ children }) => {
         href="https://wa.me/tunumero"
         target="_blank"
         rel="noopener noreferrer"
+        className="fixed bottom-10 right-0 "
         style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "-10px",
           zIndex: "1000",
         }}
       >

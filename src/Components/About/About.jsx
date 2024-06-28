@@ -42,7 +42,13 @@ const About = ({ index, onObserver }) => {
                 textColor={"text-white"}
               />
             </article>
-            <img src="/public/Logo.svg" alt="" className="w-full hidden sm:flex md:hidden" />
+            <article className="justify-center flex">
+              <img
+                src="/public/logoBrain.png"
+                alt=""
+                className="w-[550px] hidden sm:flex md:hidden lg:flex opacity-20 p-10"
+              />
+            </article>
           </section>
           <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2">
             {articles.map(({ title, content }) => (

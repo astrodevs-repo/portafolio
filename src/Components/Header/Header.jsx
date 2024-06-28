@@ -28,7 +28,7 @@ function Header({ index, onObserver, currentStep }) {
               index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 20 } : {}
             }
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="flex flex-wrap  sm:px-0  justify-center text-center items-center gap-2 text-5xl sm:text-lg md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
+            className="flex flex-wrap  sm:px-0  justify-center text-center items-center gap-2 text-4xl sm:text-lg md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl"
           >
             NOSOTROS
             <span>SOMOS</span>
@@ -41,14 +41,14 @@ function Header({ index, onObserver, currentStep }) {
           </motion.p>
           <section className="flex flex-wrap justify-center px-8 sm:px-0">
             {["Una firma integral de soluciones digitales."].map((phrase, phraseIndex) => (
-              <div key={phraseIndex} className="flex flex-wrap">
+              <div key={phraseIndex} className="flex flex-wrap justify-center">
                 {phrase.split("").map((letter, index) => (
                   <motion.span
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="text-3xl font-Poppins font-extrabold  text-center"
+                    className="text-2xl sm:text-3xl font-Poppins font-extrabold  text-center"
                   >
                     {letter === " " ? "\u00A0" : letter}
                   </motion.span>

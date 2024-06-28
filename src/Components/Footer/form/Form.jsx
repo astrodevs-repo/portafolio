@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 
 import SubTitle from "../../shared/SubTitle";
+import { Bounce, toast } from "react-toastify";
 
 const ContactUs = () => {
   const form = useRef();
@@ -10,7 +11,6 @@ const ContactUs = () => {
   const initialFormData = {
     name1: "",
     name: "",
-
     email: "",
     user_referrer: "",
     message: "",
@@ -37,6 +37,17 @@ const ContactUs = () => {
           console.log("SUCCESS!");
           setIsSent(false);
           setFormData(initialFormData);
+          toast.success("🦄 Wow so easy!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -55,7 +66,7 @@ const ContactUs = () => {
             <input
               type="text"
               name="name1"
-              value={formData.name}
+              value={formData.name1}
               onChange={handleChange}
               className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
               required

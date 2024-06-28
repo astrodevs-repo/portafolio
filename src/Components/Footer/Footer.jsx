@@ -42,10 +42,15 @@ const Footer = ({ index, onObserver }) => {
           <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0 flex flex-col justify-start">
-                <a href="/" className="flex items-center">
-                  <p className="font-bold text-xl text-[#31add5]">Neurons</p>
-                </a>
-                <Text content={"SOLUCIONES DIGITALES"} />
+                <section className="w-full">
+                  <a href="/" className="flex items-center gap-2">
+                    <section className="w-[20%]">
+                      <img src="/public/logoBrain.png" className="w-40" />
+                    </section>
+                    <p className="font-bold text-xl text-[#31add5]">Neurons</p>
+                  </a>
+                  <Text content={"SOLUCIONES DIGITALES"} />
+                </section>
               </div>
 
               <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
@@ -57,7 +62,7 @@ const Footer = ({ index, onObserver }) => {
                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       {section.links.map((link, j) => (
                         <li key={j} className="mb-4">
-                          <p className="hover:underline">
+                          <p className="">
                             <TextFooter content={link.text} />
                           </p>
                         </li>
@@ -72,7 +77,7 @@ const Footer = ({ index, onObserver }) => {
             <div className="sm:flex sm:items-center sm:justify-between">
               <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                 {footerInfo.copyright}
-                <p className="hover:underline">{footerInfo.poweredBy}</p>
+                <p className="">{footerInfo.poweredBy}</p>
               </span>
 
               <div className="flex mt-4 sm:justify-center sm:mt-0">
