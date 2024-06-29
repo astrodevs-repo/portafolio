@@ -87,7 +87,7 @@ function Community({ index, onObserver, currentStep }) {
         className="mt-[-100px]"
       >
         <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza rounded-t-3xl sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20">
-          <div className="p-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
+          <div className="p-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5 text-justify">
             <Title text={"Nuestro Team"} textColor={"text-white"} extra={"italic"} />
             <Text
               content={
