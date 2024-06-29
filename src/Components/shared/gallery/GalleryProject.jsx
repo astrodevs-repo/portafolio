@@ -1,49 +1,76 @@
+import { useEffect, useState } from "react";
+import Container from "../../Container/Container";
 import styles from "./GalleryComponent.module.scss";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-const GalleryComponent = ({ title }) => {
+const GalleryComponent = ({ title, description }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [photos, setPhotos] = useState([
+    {
+      name: "item-1",
+      url: "https://www.ebizneeds.com/blog/wp-content/uploads/2022/11/Frame-206.jpg",
+    },
+    {
+      name: "item-2",
+      url: "https://preview.redd.it/20-prompts-for-landing-pages-and-ui-ux-design-v0-ai7ad1oeutta1.png?width=636&format=png&auto=webp&s=baea36a17742c21387e47033c889ef8e316b5649",
+    },
+    {
+      name: "item-3",
+      url: "https://cdn.dribbble.com/users/2962548/screenshots/14043254/media/8e911e30c479cdda2bb75502cadf882d.png?resize=400x0",
+    },
+    {
+      name: "item-4",
+      url: "https://www.ebizneeds.com/blog/wp-content/uploads/2022/11/Frame-206.jpg",
+    },
+    {
+      name: "item-5",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcoilMloAzXz2_iWW2e5BhTDHCn3QIn0b7GK-fWXB9FG_pRRJElTl_7xP-jk-dezPqH8&usqp=CAU",
+    },
+  ]);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsOpen(!isOpen);
+    }, 5000);
+    return () => {
+      setIsOpen(!isOpen);
+    };
+  }, []);
   return (
     <div>
-      <h1>{title}</h1>
-
-      <div className={styles["gallery-wrap"]}>
-        <div
-          className={`${styles.item} ${styles["item-1"]}`}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80')`,
-          }}
-        ></div>
-        <div
-          className={`${styles.item} ${styles["item-2"]}`}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80')`,
-          }}
-        ></div>
-        <div
-          className={`${styles.item} ${styles["item-3"]}`}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80')`,
-          }}
-        ></div>
-        <div
-          className={`${styles.item} ${styles["item-4"]}`}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80')`,
-          }}
-        ></div>
-        <div
-          className={`${styles.item} ${styles["item-5"]}`}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80')`,
-          }}
-        ></div>
-      </div>
+      <Container>
+        <div className="px-[100px]">
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <p className="text-blue-600 font-semibold text-lg">product desig</p>
+          </motion.div>
+          <br />
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <h1>{title}</h1>
+          </motion.div>
+          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <p>{description}</p>
+          </motion.div>
+        </div>
+      </Container>
+      <div className="h-20"></div>
+      <motion.div
+        animate={{ y: -50 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+        className={styles["gallery-wrap"]}
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAavECFhYgFOATcJGFGRcfQEA34wu1A995n-J_dKsE&s"
+          alt=""
+          className="w-full"
+        />
+      </motion.div>
     </div>
   );
 };
 
 GalleryComponent.propTypes = {
   title: PropTypes.node,
+  description: PropTypes.node,
 };
 
 export default GalleryComponent;

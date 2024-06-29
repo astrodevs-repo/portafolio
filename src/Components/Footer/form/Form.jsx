@@ -1,95 +1,126 @@
-import { useState } from "react";
-import Title from "../../../Components/shared/Title";
-import SubTitle from "../../shared/SubTitle";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 
-const FooterForm = () => {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    telefono: "",
-    correo: "",
-    pais: "",
-    ciudad: "",
-    empresa: "",
-    tipoProyecto: "",
-    rangoInversion: "",
-    mensaje: "",
-  });
+import SubTitle from "../../shared/SubTitle";
+import { Bounce, toast } from "react-toastify";
+
+const ContactUs = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const initialFormData = {
+    name1: "",
+    name: "",
+    email: "",
+    user_referrer: "",
+    message: "",
+  };
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Aquí puedes enviar los datos del formulario a tu backend o hacer lo que necesites con ellos
-    console.log(formData);
+    setIsSent(true);
+    emailjs
+      .sendForm("service_vnyx5ko", "template_0mirxxd", form.current, {
+        publicKey: "R13_8ytNrA1XcoYTj",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsSent(false);
+          setFormData(initialFormData);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setIsSent(false);
+        }
+      );
   };
 
-  // Array que contiene la cantidad de inputs que deseas renderizar
-  const inputs = [
-    { id: "nombre", label: "Tu nombre*", type: "text" },
-    { id: "telefono", label: "Teléfono*", type: "text" },
-    { id: "correo", label: "Tu correo electrónico*", type: "email" },
-    { id: "mensaje", label: "Tu mensaje*", type: "textarea" },
-  ];
-
   return (
-    <div className="py-8 ">
-      <Title text={"TELL US"} />
-      <SubTitle textColor={"white"} text={"What we can help you"} />
-      <div className="lg:h-20 sm:h-0"></div>
-      <div className="container mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <div className="w-[90%] py-20 text-white">
-          <p>
-            En este código, he agregado la clase col-span-2 a cada input dentro del formulario. Esto
-            hará que los inputs ocupen toda la fila en dispositivos móviles. Además, he agregado la
-            clase sm:col-span-1 para asegurar que en pantallas más grandes los inputs vuelvan a
-            ocupar solo una columna
-          </p>
-        </div>
-        <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
-          {inputs.map((input, index) => (
-            <div key={index} className="flex flex-col col-span-2 text-white">
-              <label htmlFor={input.id}>{input.label}</label>
-              {input.type === "textarea" ? (
-                <textarea
-                  id={input.id}
-                  name={input.id}
-                  value={formData[input.id]}
-                  onChange={handleChange}
-                  rows="4"
-                  className="bg-transparent border border-white rounded px-3 py-1 col-span-2"
-                  required
-                ></textarea>
-              ) : (
-                <input
-                  type={input.type}
-                  id={input.id}
-                  name={input.id}
-                  value={formData[input.id]}
-                  onChange={handleChange}
-                  className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1"
-                  required
-                />
-              )}
-            </div>
-          ))}
-          <div className="flex flex-col col-span-2 ">
-            <button
-              type="submit"
-              className="py-2.5 w-full text-sm font-medium text-white focus:outline-none bg-transparent rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              Enviar
-            </button>
+    <>
+      <section className="w-full flex flex-col gap-10 mt-20">
+        <SubTitle text={"Contactanos"} textColor={"text-white"} />
+        <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Nombre</label>
+            <input
+              type="text"
+              name="name1"
+              value={formData.name1}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Teléfono</label>
+            <input
+              type="number"
+              name="user_referrer"
+              value={formData.user_referrer}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>País</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              required
+            />
+          </div>
+          <div className="flex flex-col col-span-2 text-white gap-2">
+            <label>Mensaje</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 hover:outline-none"
+              required
+            />
           </div>
         </form>
-      </div>
-    </div>
+        <br />
+        <ButtonSimple
+          func={sendEmail}
+          text={"Enviar"}
+          w={"w-full"}
+          display={"center"}
+          loader={isSent}
+          bg={"bg-Chicle"}
+          border={"border-[#28ae9e] border-2"}
+          hover={"hover:bg-[#28ae9e]"}
+          textColor={"balck"}
+        />
+      </section>
+    </>
   );
 };
 
-export default FooterForm;
+export default ContactUs;

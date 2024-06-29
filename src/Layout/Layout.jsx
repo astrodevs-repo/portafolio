@@ -1,68 +1,71 @@
 import { useEffect, useState } from "react";
-import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
-import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+
 import { FaArrowUp } from "react-icons/fa";
+import { ToastContainer } from "react-toastify";
 
 const Layout = ({ children }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    // Función que maneja el evento de desplazamiento
     const handleScroll = () => {
-      // Verifica si la posición de desplazamiento es mayor que 400px
-      if (window.scrollY > 400) {
-        setShowButton(true); // Muestra el botón
+      if (window.scrollY > 200) {
+        setShowButton(true);
       } else {
-        setShowButton(false); // Oculta el botón
+        setShowButton(false);
       }
     };
-
-    // Agrega un event listener para el evento de desplazamiento
     window.addEventListener("scroll", handleScroll);
-
-    // Limpia el event listener cuando el componente se desmonta
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // Función para manejar el clic en el botón
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Desplazamiento suave
+      behavior: "smooth",
     });
   };
 
   return (
-    <div style={{ position: "relative", minHeight: "100vh" }}>
+    <div style={{ position: "relative" }}>
       <Navbar />
       {children}
-      <Footer id={"footer"} />
-      {/* Botón para ir arriba */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
+
       {showButton && (
-        <button
+        <motion.button
+          animate={{ y: -50 }}
+          transition={{ ease: "easeOut", duration: 2 }}
           onClick={scrollToTop}
+          className="fixed bottom-10 left-5"
           style={{
-            position: "fixed",
-            bottom: "20px",
-            left: "20px",
             zIndex: "1000",
           }}
         >
           <FaArrowUp className="text-gray-500" />
-        </button>
+        </motion.button>
       )}
-      {/* Botón de WhatsApp */}
+
       <a
-        href="https://wa.me/tunumero"
+        href="https://wa.me/+5492612336104"
         target="_blank"
         rel="noopener noreferrer"
+        className="fixed bottom-10 right-0 "
         style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
           zIndex: "1000",
         }}
       >
@@ -75,10 +78,6 @@ const Layout = ({ children }) => {
       </a>
     </div>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node,
 };
 
 export default Layout;

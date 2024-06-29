@@ -1,40 +1,69 @@
-import Container from "../Container/Container";
-import Section from "../shared/Section/Section";
-import videoBackground from "../../../public/video/aboutusvideo.mp4";
-import ButtonSimple from "../shared/Buttons/ButtonSimple";
-
-const About = () => {
+import SubTitle from "../shared/SubTitle";
+import Title from "../shared/Title";
+import Text from "../shared/Text";
+import Inspector from "../shared/Inspector/Inspector";
+import logoBrain from "../../../public/logoBrain.png"
+const About = ({ index, onObserver }) => {
+  const articles = [
+    {
+      title: "Visión",
+      content:
+        "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
+    },
+    {
+      title: "Misión",
+      content:
+        "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas ",
+    },
+    {
+      title: "¿Por qué eligirnos?",
+      content:
+        "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio. ",
+    },
+  ];
   return (
-    <Section id={"about"}>
-      <div className="relative">
-        {/* Video de fondo */}
-        <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted>
-          <source src={videoBackground} type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
-
-        {/* Color con opacidad encima del video */}
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-
-        {/* Contenido */}
-        <Container>
-          <div className="relative z-10 flex flex-col lg:justify-around sm:justify-center items-center lg:h-screen sm:h-full text-center">
-            <h1 className="text-3xl text-white mb-6">Quiénes somos</h1>
-            <p className="text-lg text-white mb-6">
-              ¡Bienvenidos a AstroDevs! No somos solo una agencia de desarrollo web; somos una firma
-              integral de soluciones digitales. Nos enorgullece ofrecer servicios que van desde el
-              diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en
-              tecnologías disruptivas como la blockchain. En AstroDevs, transformamos ideas en
-              experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en
-              línea.
-            </p>
-            <div className="w-full flex justify-center lg:mt-[-100px]">
-              <ButtonSimple text={"Leer más"} link={"about"} textColor={"white"} />
-            </div>
-          </div>
-        </Container>
-      </div>
-    </Section>
+    <Inspector index={index} onObserver={onObserver}>
+      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-20 lg:px-20 ">
+        <section className="h-10"></section>
+        <section className="grid grid-cols-1">
+          <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 text-justify">
+              <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
+              <SubTitle
+                text={
+                  "No somos solo una agencia de desarrollo web; somos una firma integral de soluciones digitales."
+                }
+                textColor={"text-[#2FE3CE]"}
+              />
+              <Text
+                content={
+                  "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
+                }
+                textColor={"text-white"}
+              />
+            </article>
+            <article className="justify-center flex">
+              <img
+                src={logoBrain}
+                alt=""
+                className="w-[550px] hidden sm:flex md:hidden lg:flex opacity-20 p-10"
+              />
+            </article>
+          </section>
+          <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2">
+            {articles.map(({ title, content }) => (
+              <article
+                key={title}
+                className="w-full flex flex-col justify-center items-center gap-10 p-10 lg:p-10"
+              >
+                <SubTitle text={title} position={"text-center"} />
+                <Text content={content} extra={"text-justify"} />
+              </article>
+            ))}
+          </section>
+        </section>
+      </section>
+    </Inspector>
   );
 };
 

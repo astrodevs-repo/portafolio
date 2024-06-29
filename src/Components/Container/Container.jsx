@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-
 const Container = ({ children }) => {
-  return <div className=" px-4 mx-auto max-w-screen-xl py-16 h-full">{children}</div>;
+  return (
+    <section className="px-5 sm:px-5 md:px-10 lg:px-10 xl:px-40 2xl:px-60  3xl:px-80 w-full py-16 h-full flex flex-col gap-10">
+      {children}
+    </section>
+  );
 };
-Container.propTypes = {
-  children: PropTypes.node,
-};
+
 export default Container;

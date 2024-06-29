@@ -2,6 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "LusitanaBold";
+  src: url("/public/fonts/Lusitana/Lusitana-Bold.ttf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("/public/fonts/Lalezar/Lalezar-Regular.ttf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lusitanalight";
+  src: url("/public/fonts/Lusitana/Lusitana-Regular.ttf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/public/fonts/Poppins/Poppins-Regular.ttf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
+}
+body {
+  background-color: #e9eeff;
+}
+
+/* CSS para transiciones */
+.transition-enter {
+  opacity: 0;
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: #4b4b4b;
 }

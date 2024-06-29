@@ -1,10 +1,9 @@
+import logoBrain from "../../../public/logoBrain.png"
 const Logo = () => {
   return (
-    <div>
-      <a href="/">
-        <p className="font-bold text-xl text-[#31add5]">Neurons</p>
-      </a>
-    </div>
+    <a href="/" className="p-2">
+      <img src={logoBrain} alt="" className="w-[30px] sm:w-[50px]" />
+    </a>
   );
 };
 

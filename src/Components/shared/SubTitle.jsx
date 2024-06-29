@@ -1,15 +1,11 @@
-import PropTypes from "prop-types";
-const SubTitle = ({ text, textColor }) => {
+const SubTitle = ({ text, extra, textColor, position }) => {
   return (
-    <div className="w-full justify-center flex items-center">
-      <p className="text-xl text-gray-500" style={{ color: textColor }}>
-        {text}
-      </p>
-    </div>
+    <h1
+      className={`${textColor} font-extrabold font-Poppins leading-[40px] w-full text-lg sm:text-sm md:text-2xl lg:text-lg xl:text-xl 2xl:text-2xl ${position}  ${extra} leading-5 m-0`}
+    >
+      {text}
+    </h1>
   );
 };
-SubTitle.propTypes = {
-  text: PropTypes.node,
-  textColor: PropTypes.node,
-};
+
 export default SubTitle;

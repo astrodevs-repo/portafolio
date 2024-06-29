@@ -1,0 +1,185 @@
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: fit-content;
+}
+
+.v-stepper {
+  position: relative;
+}
+
+/* regular step */
+.step .circle1::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: calc(50% - 10px);
+  background-color: white;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step .circle1 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+}
+.step .circle2 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle3 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+}
+.step .circle4 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle5 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle6 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circle7 {
+  background-color: #2d3142;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .circlefade {
+  position: absolute;
+  z-index: 0;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .activefade {
+  position: absolute;
+  z-index: 0;
+  top: -5px;
+  left: 0px;
+  background-color: white;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .active {
+  background-color: white;
+  border: 50px solid #2d3142 D1A;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steper-count {
+}
+
+.step .line {
+  left: 50%;
+  height: 100%;
+  position: absolute;
+  border-left: 6px solid #2d3142;
+  z-index: 0;
+}
+
+.step .activeLine {
+  left: 50%;
+  height: 100%;
+  position: absolute;
+  border-left: 6px solid white;
+}
+
+.step.empty .circle {
+  visibility: hidden;
+}
+
+.step.empty .line {
+  top: 0;
+  height: 150%;
+}
+
+.step:last-child .line {
+  border-left: 3px solid rgba(255, 255, 255, 0);
+  z-index: -1;
+}
