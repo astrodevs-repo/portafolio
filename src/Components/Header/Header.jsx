@@ -2,6 +2,7 @@ import Inspector from "../shared/Inspector/Inspector";
 import { motion } from "framer-motion";
 
 import s from "./header.module.scss";
+import arrow from "../../../public/arrow.svg"
 
 function Header({ index, onObserver, currentStep }) {
   const scrollToAboutUs = () => {
@@ -65,7 +66,7 @@ function Header({ index, onObserver, currentStep }) {
               <img
                 className={s.hoverimg}
                 style={{ position: "absolute", right: "0.3vmax" }}
-                src="/public/arrow.svg"
+                src={arrow}
                 alt=""
               />
             </button>
@@ -76,7 +77,7 @@ function Header({ index, onObserver, currentStep }) {
               <img
                 className={s.hoverimg}
                 style={{ position: "absolute", right: "0.3vmax" }}
-                src="/public/arrow.svg"
+                src={arrow}
                 alt=""
               />
             </button>

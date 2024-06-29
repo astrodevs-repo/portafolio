@@ -8,6 +8,7 @@ import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
+import logoBrain from "../../../public/logoBrain.png"
 
 const Footer = ({ index, onObserver }) => {
   return (
@@ -45,7 +46,7 @@ const Footer = ({ index, onObserver }) => {
                 <section className="w-full">
                   <a href="/" className="flex items-center gap-2">
                     <section className="w-[20%]">
-                      <img src="/public/logoBrain.png" className="w-40" />
+                      <img src={logoBrain} className="w-40" />
                     </section>
                     <p className="font-bold text-xl text-[#31add5]">Neurons</p>
                   </a>

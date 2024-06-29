@@ -2,6 +2,7 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
+import logoBrain from "../../../public/logoBrain.png"
 const About = ({ index, onObserver }) => {
   const articles = [
     {
@@ -43,7 +44,7 @@ const About = ({ index, onObserver }) => {
             </article>
             <article className="justify-center flex">
               <img
-                src="/public/logoBrain.png"
+                src={logoBrain}
                 alt=""
                 className="w-[550px] hidden sm:flex md:hidden lg:flex opacity-20 p-10"
               />

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Text from "../shared/Text";
-import SubTitle from "../shared/SubTitle";
 
 const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
   const ref = useRef(null);
@@ -88,7 +87,6 @@ const Content = ({ currentStep, index, i, name }) => {
         transition={{ duration: 0.5 }}
         className="flex flex-col pl-20 pr-5 col-span-2 h-full py-1 text-justify"
       >
-        {/* <SubTitle text={sections[i]?.title} /> */}
         <Text content={sections[i]?.subTitle} />
       </motion.section>
     </section>
