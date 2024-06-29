@@ -16,7 +16,7 @@ const Footer = ({ index, onObserver }) => {
       <section className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 ">
         <Container>
           <section
-            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center text-justify"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center"
             id="contactanos"
           >
             <motion.section>
