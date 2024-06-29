@@ -27,7 +27,7 @@ const About = ({ index, onObserver }) => {
         <section className="h-10"></section>
         <section className="grid grid-cols-1">
           <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 text-justify">
+            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
               <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
               <SubTitle
                 text={
