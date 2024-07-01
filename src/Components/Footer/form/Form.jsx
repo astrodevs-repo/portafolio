@@ -37,6 +37,17 @@ const ContactUs = () => {
           console.log("SUCCESS!");
           setIsSent(false);
           setFormData(initialFormData);
+          toast.success("Tu mensaje ha sido enviado satisfactoriamente!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -47,66 +58,81 @@ const ContactUs = () => {
 
   return (
     <>
-      <section className="w-full flex flex-col gap-10 mt-20">
+      <section className="w-full flex flex-col gap-10 ">
         <SubTitle text={"Contactanos"} textColor={"text-white"} />
-        <form ref={form} className="w-full grid grid-cols-1 gap-4 sm:grid-cols-1">
-          <div className="flex flex-col col-span-2 text-white gap-2">
+        <form ref={form} className="w-full grid grid-cols-1 gap-4">
+          <div className="flex flex-col  text-white gap-2">
             <label>Nombre</label>
             <input
               type="text"
               name="name1"
               value={formData.name1}
               onChange={handleChange}
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+              className="bg-transparent border border-white rounded px-3 py-1  hover:outline-none"
               required
             />
           </div>
 
-          <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
-              required
-            />
+          <div className="flex gap-2 w-full ">
+            <div className="flex flex-col w-1/2  text-white gap-2">
+              <label>Teléfono</label>
+              <input
+                type="number"
+                name="user_referrer"
+                value={formData.user_referrer}
+                onChange={handleChange}
+                className="bg-transparent border border-white rounded px-3 py-1 hover:outline-none"
+                required
+              />
+            </div>
+            <div className="flex flex-col w-1/2 text-white gap-2">
+              <label>País</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="bg-transparent border border-white rounded px-3 py-1 hover:outline-none"
+                required
+              />
+            </div>
           </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>Teléfono</label>
-            <input
-              type="number"
-              name="user_referrer"
-              value={formData.user_referrer}
-              onChange={handleChange}
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
-              required
-            />
+          <div className="flex gap-2 w-full ">
+            <div className="flex flex-col w-1/2 text-white">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email1"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+                required
+              />
+            </div>
+            <div className="flex flex-col w-1/2 text-white">
+              <label>Confirme su email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
+                required
+              />
+            </div>
           </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
-            <label>País</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 sm:col-span-1 hover:outline-none"
-              required
-            />
-          </div>
-          <div className="flex flex-col col-span-2 text-white gap-2">
+
+          <div className="flex flex-col  text-white gap-2">
             <label>Mensaje</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="bg-transparent border border-white rounded px-3 py-1 col-span-2 hover:outline-none"
+              className="bg-transparent border border-white rounded px-3 py-1  hover:outline-none"
               required
             />
           </div>
         </form>
-        <br />
         <ButtonSimple
           func={sendEmail}
           text={"Enviar"}

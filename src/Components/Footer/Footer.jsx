@@ -8,18 +8,19 @@ import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
-import logoBrain from "../../../public/logoBrain.png"
+import logoBrain from "../../../public/logoBrain.png";
 
 const Footer = ({ index, onObserver }) => {
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 ">
+      <section
+        className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff]  pb-20 
+      "
+        id="contactanos"
+      >
         <Container>
-          <section
-            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center"
-            id="contactanos"
-          >
-            <motion.section>
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center ">
+            <motion.section className="">
               <Text
                 textColor={"text-white"}
                 content={

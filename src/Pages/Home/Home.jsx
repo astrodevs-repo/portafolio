@@ -5,7 +5,6 @@ import Footer from "../../Components/Footer/Footer";
 import StepList from "../../Components/Home/Steper";
 import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 
