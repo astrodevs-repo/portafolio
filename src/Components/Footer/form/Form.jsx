@@ -7,15 +7,15 @@ import { Bounce, toast } from "react-toastify";
 const ContactUs = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
-  const initialFormData = {
+  const [formData, setFormData] = useState({
     name1: "",
     name: "",
     email: "",
     email1: "",
     user_referrer: "",
     message: "",
-  };
-  const [formData, setFormData] = useState(initialFormData);
+  });
+  const [emailMatchError, setEmailMatchError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,11 +23,17 @@ const ContactUs = () => {
       ...prevData,
       [name]: value,
     }));
+
+    if (name === "email1" || name === "email") {
+      setEmailMatchError(formData.email !== formData.email1);
+    }
+    console.log(value, name);
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
     if (formData.email !== formData.email1) {
+      setEmailMatchError(true);
       toast.error("Los correos electrónicos no coinciden", {
         position: "top-right",
         autoClose: 5000,
@@ -40,6 +46,8 @@ const ContactUs = () => {
         transition: Bounce,
       });
       return;
+    } else {
+      setEmailMatchError(false);
     }
     setIsSent(true);
     emailjs
@@ -50,7 +58,14 @@ const ContactUs = () => {
         () => {
           console.log("SUCCESS!");
           setIsSent(false);
-          setFormData(initialFormData);
+          setFormData({
+            name1: "",
+            name: "",
+            email: "",
+            email1: "",
+            user_referrer: "",
+            message: "",
+          });
           toast.success("Tu mensaje ha sido enviado satisfactoriamente!", {
             position: "top-right",
             autoClose: 5000,
@@ -129,10 +144,15 @@ const ContactUs = () => {
               name="email1"
               value={formData.email1}
               onChange={handleChange}
-              className="bg-transparent text-white border border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
+              className={`bg-transparent text-white border  rounded px-3 py-1 hover:outline-none custom-placeholder`}
               placeholder="Confirme su email"
               required
             />
+            {emailMatchError ? (
+              <p className="text-red-300">Los correos electrónicos no coinciden</p>
+            ) : (
+              ""
+            )}
           </div>
 
           <div className="flex flex-col text-white gap-2">
