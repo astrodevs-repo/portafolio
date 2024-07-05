@@ -3,23 +3,24 @@ import ContactUs from "./form/Form";
 import { motion } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
 
-import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
-import logoBrain from "../../../public/logoBrain.png"
+import logoBrain from "../../../public/logoBrain.png";
 
 const Footer = ({ index, onObserver }) => {
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#e9eeff] pt-80 pb-20 ">
+      <section
+        className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#3d59b8] sm:to-[#e9eeff] md:to-[#e9eeff]  pb-20 pt-10
+      "
+        id="contactanos"
+      >
         <Container>
-          <section
-            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center"
-            id="contactanos"
-          >
-            <motion.section>
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-20 ">
+            <motion.section className="">
               <Text
                 textColor={"text-white"}
                 content={
@@ -82,14 +83,17 @@ const Footer = ({ index, onObserver }) => {
               </span>
 
               <div className="flex mt-4 sm:justify-center sm:mt-0">
-                {footerInfo.socialLinks.map((link, index) => (
-                  <p
+                {footerInfo.socialLinks.map(({ url, icon, label }, index) => (
+                  <a
+                    href={url}
                     key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
                   >
-                    {link.icon}
-                    <span className="sr-only">{link.label}</span>
-                  </p>
+                    {icon}
+                    <span className="sr-only">{label}</span>
+                  </a>
                 ))}
               </div>
             </div>
@@ -125,7 +129,7 @@ const footerContent = [
         url: "",
       },
       {
-        text: "Telefono +542619621721",
+        text: "Telefono +54 9 261 233-6104",
         url: "",
       },
       {
@@ -142,24 +146,24 @@ const socialLinks = [
   //   url: "#",
   //   label: "Facebook page",
   // },
-  {
-    icon: <FaDiscord />,
-    url: "#",
-    label: "Discord community",
-  },
+  // {
+  //   icon: <FaDiscord />,
+  //   url: "#",
+  //   label: "Discord community",
+  // },
   // {
   //   icon: <FaXTwitter />,
   //   url: "#",
   //   label: "Twitter page",
   // },
-  {
-    icon: <FaGithub />,
-    url: "#",
-    label: "GitHub account",
-  },
+  // {
+  //   icon: <FaGithub />,
+  //   url: "#",
+  //   label: "GitHub account",
+  // },
   {
     icon: <FaLinkedin />,
-    url: "#",
+    url: "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
     label: "Dribbble account",
   },
 ];

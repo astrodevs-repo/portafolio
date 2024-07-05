@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { FaArrowUp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Layout = ({ children }) => {
   const [showButton, setShowButton] = useState(false);
@@ -30,21 +31,7 @@ const Layout = ({ children }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <Navbar />
       {children}
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition:Bounce
-      />
 
       {showButton && (
         <motion.button
@@ -64,7 +51,7 @@ const Layout = ({ children }) => {
         href="https://wa.me/+5492612336104"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 right-0 "
+        className="fixed bottom-10 -right-2 "
         style={{
           zIndex: "1000",
         }}
@@ -76,6 +63,19 @@ const Layout = ({ children }) => {
           height="100"
         />
       </a>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
     </div>
   );
 };

@@ -86,7 +86,7 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col pl-20 pr-5 col-span-2 h-full py-1 text-justify"
+        className="flex flex-col pl-10 pr-5 col-span-2 h-full py-1"
       >
         <SubTitle text={sections[i]?.title} />
         <Text content={sections[i]?.subTitle} />
