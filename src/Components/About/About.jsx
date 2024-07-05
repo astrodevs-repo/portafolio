@@ -2,7 +2,7 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
-import logoBrain from "../../../public/logoBrain.png"
+import logoBrain from "../../../public/logoBrain.png";
 const About = ({ index, onObserver }) => {
   const articles = [
     {
@@ -28,12 +28,12 @@ const About = ({ index, onObserver }) => {
         <section className="grid grid-cols-1">
           <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
-              <Title text={"Quienes somos"} textColor={"text-white"} extra={"italic"} />
+              <Title text={"Quienes somos"} textColor={"text-white"} extra={"font-Baskerville"} />
               <SubTitle
                 text={
                   "No somos solo una agencia de desarrollo web; somos una firma integral de soluciones digitales."
                 }
-                textColor={"text-[#2FE3CE]"}
+                textColor={"text-white"}
               />
               <Text
                 content={

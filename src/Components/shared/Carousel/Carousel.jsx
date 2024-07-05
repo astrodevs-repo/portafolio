@@ -1,23 +1,46 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { Swiper } from "swiper/react";
 
-const HorizontalScrollCarousel = ({ children }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
+// import required modules
+import { Pagination } from "swiper/modules";
 
+export default function Carousel({ children, show }) {
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-transparent">
-      <div className="sticky top-0 left-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex">
-          {children}
-        </motion.div>
-      </div>
-    </section>
+    <>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={5}
+        pagination={true}
+        breakpoints={{
+          300: {
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+          },
+          400: {
+            slidesPerView: 1.3,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2.3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2.3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3.3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {children}
+      </Swiper>
+    </>
   );
-};
-
-export default HorizontalScrollCarousel;
+}

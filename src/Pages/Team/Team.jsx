@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import yeli from "../../../public/team/yeli.jpg";
 import Container from "../../Components/Container/Container";
 import Footer from "../../Components/Footer/Footer";
-import Velocity from "../../Components/shared/velocity/Velocity";
 
 const Team = () => {
   const alignCenter = { display: "flex", alignItems: "center" };
@@ -41,7 +40,7 @@ const Team = () => {
   //   },
   // ];
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <div className={styles.background}>
         <Parallax pages={9}>
           <ParallaxLayer

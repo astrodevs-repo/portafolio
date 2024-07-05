@@ -1,4 +1,5 @@
 import Page404 from "./Pages/404/404";
+import Blog from "./Pages/Blog/Blog";
 import Home from "./Pages/Home/Home";
 import Project from "./Pages/Project/Project";
 import Projects from "./Pages/Projects/Projects";
@@ -26,6 +27,10 @@ export const routes = [
   {
     path: "/services",
     element: <Services />,
+  },
+  {
+    path: "/blog/:id",
+    element: <Blog />,
   },
   {
     path: "/*",

@@ -79,16 +79,16 @@ function Community({ index, onObserver, currentStep }) {
     <Inspector index={index} onObserver={onObserver}>
       <motion.section
         id="team"
-        initial={{ opacity: 0, color: "rgba(255, 255, 255, 0)", y: 200 }}
+        initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
         animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 100 } : {}
+          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 150 } : {}
         }
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="mt-[-100px]"
+        className=""
       >
         <div className=" bg-gradient-to-r from-slate-600 to-blackCeniza rounded-t-3xl sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20">
-          <div className="p-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
-            <Title text={"Nuestro Team"} textColor={"text-white"} extra={"italic"} />
+          <div className="p-5 py-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
+            <Title text={"Nuestro Equipo"} textColor={"text-white"} extra={"font-Baskerville"} />
             <Text
               content={
                 " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea."
@@ -131,7 +131,7 @@ function Community({ index, onObserver, currentStep }) {
                 </div>
                 <div id="col" className={s.col}>
                   <div className={s.image}>
-                    <img src={miguel} alt="gallery1"></img>
+                    <img src={adrian} alt="gallery1"></img>
                   </div>
                   <div className={s.image}>
                     <img src={jesus} alt="gallery1"></img>

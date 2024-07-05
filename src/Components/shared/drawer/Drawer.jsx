@@ -23,6 +23,7 @@ const DrawerNavigation = () => {
     { id: "#quienessomos", label: "Servicios" },
     { id: "#comotrabajamos", label: "Como trabajamos" },
     { id: "#team", label: "Nuestro equipo" },
+    { id: "#contactanosform", label: "Contactanos" },
   ];
 
   return (

@@ -11,6 +11,7 @@ export default {
         LusitanaBold: ["LusitanaBold"],
         LusitanaLght: ["LusitanaBold"],
         Poppins: ["Poppins"],
+        Baskerville: ["Baskerville"],
       },
     },
   },

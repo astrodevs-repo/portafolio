@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
 import DrawerNavigation from "../shared/drawer/Drawer";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -53,6 +54,12 @@ const Navbar = () => {
     { id: "#team", label: "Nuestro equipo" },
     { id: "#team", label: "Trabaja con nosotros" },
   ];
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log("Current pathname:", location.pathname);
+    // Aquí puedes hacer lo que necesites con el pathname actual
+  }, [location.pathname]);
 
   return (
     <>

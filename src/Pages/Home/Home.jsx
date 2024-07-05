@@ -5,9 +5,10 @@ import Footer from "../../Components/Footer/Footer";
 import StepList from "../../Components/Home/Steper";
 import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
+
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -21,16 +22,21 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
+      <Navbar />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
+
       <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
       <StepList
         index={"comotrabajamos"}
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
+      {/* <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
+      <section className="h-40"></section>
+
       <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />
     </motion.main>
   );

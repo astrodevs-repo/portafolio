@@ -1,8 +1,7 @@
-import Section from "../../shared/Section/Section";
-
-import Text from "../../shared/Text";
+import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Section from "../../shared/Section/Section";
+import Text from "../../shared/Text";
 import icon1 from "/public/services/1.svg";
 import icon2 from "/public/services/2.svg";
 import icon3 from "/public/services/3.svg";
@@ -65,6 +64,12 @@ const Servicios = ({ index, onObserver, currentStep }) => {
     },
   ];
 
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const handleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <Inspector index={index} onObserver={onObserver}>
       <Section
@@ -72,11 +77,32 @@ const Servicios = ({ index, onObserver, currentStep }) => {
         id={"quienessomos"}
         index={index}
         currentStep={currentStep}
-        extra={"mt-[-200px]"}
+        extra={""}
       >
-        <section className="grid grid-cols-1 sm:grid-cols-4 justify-center gap-5">
+        <section className="grid-cols-1 sm:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid">
           {servicios.map((servicio, index) => (
-            <Card key={index} {...servicio} />
+            <Card
+              key={index}
+              index={index}
+              title={servicio.title}
+              content={servicio.content}
+              svg={servicio.svg}
+              expanded={expandedIndex === index}
+              onExpand={handleExpand}
+            />
+          ))}
+        </section>
+        <section className="w-full flex flex-col gap-4 sm:flex md:hidden">
+          {servicios.map((servicio, index) => (
+            <CardAccordion
+              key={index}
+              index={index}
+              title={servicio.title}
+              content={servicio.content}
+              svg={servicio.svg}
+              expanded={expandedIndex === index}
+              onExpand={handleExpand}
+            />
           ))}
         </section>
       </Section>
@@ -86,19 +112,57 @@ const Servicios = ({ index, onObserver, currentStep }) => {
 
 export default Servicios;
 
-const Card = ({ title, content, svg }) => {
+const Card = ({ title, content, svg, index, expanded, onExpand }) => {
   return (
     <motion.article
       className="items-center flex justify-center max-w-full"
       whileHover={{ scale: 1.02 }}
     >
-      <article className="relative bg-blackCeniza h-full w-full  rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-20 py-10">
+      <article
+        className="relative bg-blackCeniza h-full w-full rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-20 py-10 cursor-pointer"
+        onClick={() => onExpand(index)}
+      >
         <img src={svg} alt="" />
         <Text content={title} textColor={"text-white"} extra={"text-center"} />
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 cursor-pointer hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5">
+        <motion.div
+          className={`absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
+            expanded ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <p>{content}</p>
-        </div>
+        </motion.div>
       </article>
     </motion.article>
+  );
+};
+const CardAccordion = ({ title, content, svg, index, expanded, onExpand }) => {
+  return (
+    <motion.div
+      className="border border-gray-300 rounded-lg overflow-hidden cursor-pointer"
+      onClick={() => onExpand(index)}
+    >
+      <motion.div className="flex items-center justify-between p-4 bg-blackCeniza text-white">
+        <div className="flex items-center">
+          <img src={svg} alt={title} className="w-8 h-8 mr-4" />
+          <Text content={title} textColor={"text-white"} />
+        </div>
+        <motion.span
+          className="transform transition-transform duration-300"
+          animate={{ rotate: expanded ? 180 : 0 }}
+        >
+          ▼
+        </motion.span>
+      </motion.div>
+      {expanded && (
+        <motion.div
+          className="p-4 bg-gradient-to-r from-slate-600 to-blackCeniza text-white"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+        >
+          <p>{content}</p>
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
