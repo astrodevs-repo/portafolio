@@ -16,7 +16,7 @@ const Home = () => {
   const handleStepChange = (step) => setCurrentStep(step);
   return (
     <motion.main
-      className="main__container"
+      className=""
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

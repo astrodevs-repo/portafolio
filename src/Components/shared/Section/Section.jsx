@@ -1,5 +1,5 @@
 import Container from "../../Container/Container";
-import SubTitle from "../SubTitle";
+
 import SubTitleItalic from "../SubTitleItalic";
 import Title from "../Title";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const Section = ({ id, children, bg, title, index, currentStep, extra, subtitle 
     >
       <Container>
         <Title text={title} textColor={"text-blackCeniza"} extra={"font-LusitanaBold"} />
-        <SubTitleItalic text={subtitle} />
+        {subtitle ? <SubTitleItalic text={subtitle} /> : ""}
         {children}
       </Container>
     </motion.section>

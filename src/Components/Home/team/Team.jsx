@@ -81,7 +81,7 @@ function Community({ index, onObserver, currentStep }) {
         id="team"
         initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
         animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 150 } : {}
+          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 100 } : {}
         }
         transition={{ duration: 1, ease: "easeInOut" }}
         className=""
