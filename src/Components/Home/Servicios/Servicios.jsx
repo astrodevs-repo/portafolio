@@ -79,7 +79,7 @@ const Servicios = ({ index, onObserver, currentStep }) => {
         currentStep={currentStep}
         extra={""}
       >
-        <section className="grid-cols-1 sm:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid">
+        <section className="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid">
           {servicios.map((servicio, index) => (
             <Card
               key={index}

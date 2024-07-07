@@ -48,7 +48,7 @@ function StepList({ index, onObserver }) {
         bg={"bg-transparent"}
         textColor={"text-white"}
       >
-        <section className="mt-40 px-0">
+        <section className="mt-20 px-0">
           {steps.map(({ name, index }, i) => (
             <ItemMobile
               currentStep={currentStep}

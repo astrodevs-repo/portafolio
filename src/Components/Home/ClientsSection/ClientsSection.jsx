@@ -5,7 +5,7 @@ import MovingText from "../../shared/velocity/Velocity";
 
 import { motion } from "framer-motion";
 
-export default function SkillsSection({ index, onObserver, currentStep }) {
+export default function SkillsSection({ index, onObserver }) {
   return (
     <Inspector index={index} onObserver={onObserver}>
       <motion.section className="" id="skills">

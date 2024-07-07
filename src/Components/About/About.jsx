@@ -3,6 +3,7 @@ import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
 import logoBrain from "../../../public/logoBrain.png";
+
 const About = ({ index, onObserver }) => {
   const articles = [
     {
@@ -23,11 +24,11 @@ const About = ({ index, onObserver }) => {
   ];
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-20 lg:px-20 ">
+      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-10 lg:px-20 ">
         <section className="h-10"></section>
         <section className="grid grid-cols-1">
           <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20">
+            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 md:p-10">
               <Title text={"Quienes somos"} textColor={"text-white"} extra={"font-Baskerville"} />
               <SubTitle
                 text={
@@ -50,14 +51,14 @@ const About = ({ index, onObserver }) => {
               />
             </article>
           </section>
-          <section className="h-full w-full bg-white rounded-b-lg grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2">
+          <section className="h-full w-full bg-white rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2 grid">
             {articles.map(({ title, content }) => (
               <article
                 key={title}
-                className="w-full flex flex-col justify-center items-center gap-10 p-10 lg:p-10"
+                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10"
               >
                 <SubTitle text={title} position={"text-center"} />
-                <Text content={content} extra={"text-justify"} />
+                <Text content={content} extra={"text-start"} />
               </article>
             ))}
           </section>

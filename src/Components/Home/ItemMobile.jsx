@@ -19,7 +19,6 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
     observer.observe(ref.current);
 
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   return (
@@ -65,7 +64,7 @@ export default ItemMobile;
 
 const Content = ({ currentStep, index, i, name }) => {
   return (
-    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 pb-20">
+    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 pb-20  -mt-2">
       <motion.p
         initial={{ opacity: 20, y: 20 }}
         animate={{
@@ -74,7 +73,7 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="text-xs sm:text-xs md:text-lg lg:text-2xl  w-3/4  mt-3 ml-8 sm:ml-20 text-black font-Poppins uppercase hidden sm:flex"
+        className="text-xs sm:text-xs md:text-lg lg:text-2xl w-3/4 md:max-w-[20rem]  mt-3 ml-8 sm:ml-20 md:ml-10 text-black font-Poppins uppercase hidden sm:flex"
       >
         {name}
       </motion.p>
@@ -86,7 +85,7 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col pl-10 pr-5 col-span-2 h-full py-1"
+        className="flex flex-col pl-10 pr-5 col-span-2 h-full py-1 gap-5"
       >
         <SubTitle text={sections[i]?.title} />
         <Text content={sections[i]?.subTitle} />

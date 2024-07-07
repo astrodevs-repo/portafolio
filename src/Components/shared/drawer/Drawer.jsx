@@ -33,16 +33,16 @@ const DrawerNavigation = () => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:hidden flex justify-center items-center text-[25px] text-white sm:text-[40px]"
+        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[25px] text-white sm:text-[40px]"
       >
         <MdOutlineMenu />
       </button>
       {isOpen && (
         <div
           id="drawer-navigation"
-          className={`fixed w-[80%] sm:w-[30%] top-0 left-0 z-40 h-screen  overflow-y-auto transition-transform  ${
-            isOpen ? "animate__animated animate__slideInLeft" : "-translate-x-full"
-          } bg-blackCeniza w-64`}
+          className={`fixed w-[80%] sm:w-[30%] md:w-[50%] top-0 right-0 z-40 h-screen  overflow-y-auto transition-transform  ${
+            isOpen ? "animate__animated animate__slideInRight" : "-translate-x-full"
+          } bg-blackCeniza w-80`}
           tabIndex="-1"
           aria-labelledby="drawer-navigation-label"
         >

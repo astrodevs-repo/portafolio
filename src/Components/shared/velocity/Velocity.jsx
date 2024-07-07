@@ -32,7 +32,7 @@ const MovingText = ({ left, right }) => {
       >
         {items.map((item, index) => (
           <div className="min-w-fit flex items-center gap-5" key={index}>
-            <img src={item.svg} alt="" className="w-20" />
+            <img src={item.svg} alt="" className="w-20 " />
           </div>
         ))}
       </motion.div>
