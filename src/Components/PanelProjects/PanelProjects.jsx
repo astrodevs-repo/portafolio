@@ -1,8 +1,7 @@
 import { useState } from "react";
-import proyectosData from "./proyectosData"; // Suponiendo que tengas un archivo con datos de proyectos
-import Container from "../Container/Container";
+import proyectosData from "./proyectosData";
 import CardProject from "../shared/CardProject/CardProject";
-import Title from "../shared/Title";
+
 import Section from "../shared/Section/Section";
 import ButtonSimple from "../shared/Buttons/ButtonSimple";
 
@@ -43,7 +42,7 @@ const PanelProyectos = () => {
   ];
 
   return (
-    <Section id={"projects"} title={"nuestros proyectos"} className="px-20 py-20">
+    <Section id={"projects"} title={"Nuestros proyectos"} className="px-20 py-20">
       <div className="flex flex-wrap justify-start space-x-4">
         {buttons.map(({ keyword, name }, index) => (
           <button
@@ -56,7 +55,7 @@ const PanelProyectos = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 mt-8">
         {proyectosFiltrados.slice(0, proyectosVisibles).map((proyecto, index) => (
           <CardProject key={index} {...proyecto} />
         ))}

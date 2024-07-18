@@ -145,39 +145,39 @@ export const itemsBlog = [
     body: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam.",
     img: "/public/Blog/ia.jpg",
   },
-  // {
-  //   fecha: "15 de marzo del 2024",
-  //   hora: "10:00 AM",
-  //   id: "12131616152",
-  //   category: "Sostenibilidad",
-  //   autor: "Ana López",
-  //   color: "bg-[#4CAF50]",
-  //   title: "Construyendo un futuro sostenible",
-  //   subtitle: "El Papel de las Empresas en la Preservación del Medio Ambiente",
-  //   content: {
-  //     title:
-  //       "Construyendo un Futuro Sostenible: El Papel de las Empresas en la Preservación del Medio Ambiente",
-  //     sections: [
-  //       {
-  //         subtitle: "",
-  //         content:
-  //           "La sostenibilidad se ha convertido en un imperativo global. En este artículo exploramos cómo las empresas pueden contribuir a la protección del medio ambiente mediante prácticas empresariales responsables y la adopción de tecnologías verdes. Desde la reducción de la huella de carbono hasta la implementación de políticas de reciclaje, cada paso cuenta en la construcción de un futuro más limpio y sostenible para las generaciones venideras.",
-  //       },
-  //       {
-  //         subtitle: "Desafíos Actuales y Oportunidades",
-  //         content:
-  //           "Afrontar los desafíos ambientales requiere un enfoque holístico que integre estrategias económicas, sociales y ambientales. Las empresas están descubriendo que invertir en sostenibilidad no solo es ético, sino también beneficioso desde el punto de vista económico. Al adoptar prácticas sostenibles, las organizaciones pueden mejorar su reputación, reducir costos operativos y fortalecer su posición en un mercado cada vez más consciente del medio ambiente.",
-  //       },
-  //       {
-  //         subtitle: "El Rol de la Innovación Tecnológica",
-  //         content:
-  //           "La innovación tecnológica desempeña un papel crucial en la transición hacia un futuro sostenible. Desde energías renovables hasta soluciones de transporte más eficientes, las nuevas tecnologías están transformando industrias enteras y ofreciendo nuevas oportunidades para mitigar el cambio climático. En este artículo exploramos cómo la innovación puede ser un catalizador para el progreso hacia un desarrollo más sostenible y equitativo a nivel global.",
-  //       },
-  //     ],
-  //   },
-  //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur.",
-  //   img: "/public/Blog/sostenibilidad.jpg",
-  // },
+  {
+    fecha: "15 de marzo del 2024",
+    hora: "10:00 AM",
+    id: "12131616152",
+    category: "Sostenibilidad",
+    autor: "Ana López",
+    color: "bg-[#4CAF50]",
+    title: "Construyendo un futuro sostenible",
+    subtitle: "El Papel de las Empresas en la Preservación del Medio Ambiente",
+    content: {
+      title:
+        "Construyendo un Futuro Sostenible: El Papel de las Empresas en la Preservación del Medio Ambiente",
+      sections: [
+        {
+          subtitle: "",
+          content:
+            "La sostenibilidad se ha convertido en un imperativo global. En este artículo exploramos cómo las empresas pueden contribuir a la protección del medio ambiente mediante prácticas empresariales responsables y la adopción de tecnologías verdes. Desde la reducción de la huella de carbono hasta la implementación de políticas de reciclaje, cada paso cuenta en la construcción de un futuro más limpio y sostenible para las generaciones venideras.",
+        },
+        {
+          subtitle: "Desafíos Actuales y Oportunidades",
+          content:
+            "Afrontar los desafíos ambientales requiere un enfoque holístico que integre estrategias económicas, sociales y ambientales. Las empresas están descubriendo que invertir en sostenibilidad no solo es ético, sino también beneficioso desde el punto de vista económico. Al adoptar prácticas sostenibles, las organizaciones pueden mejorar su reputación, reducir costos operativos y fortalecer su posición en un mercado cada vez más consciente del medio ambiente.",
+        },
+        {
+          subtitle: "El Rol de la Innovación Tecnológica",
+          content:
+            "La innovación tecnológica desempeña un papel crucial en la transición hacia un futuro sostenible. Desde energías renovables hasta soluciones de transporte más eficientes, las nuevas tecnologías están transformando industrias enteras y ofreciendo nuevas oportunidades para mitigar el cambio climático. En este artículo exploramos cómo la innovación puede ser un catalizador para el progreso hacia un desarrollo más sostenible y equitativo a nivel global.",
+        },
+      ],
+    },
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur.",
+    img: "/public/Blog/sostenibilidad.jpg",
+  },
   // {
   //   fecha: "10 de abril del 2024",
   //   hora: "02:30 PM",

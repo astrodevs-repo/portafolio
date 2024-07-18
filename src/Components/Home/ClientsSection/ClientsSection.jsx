@@ -10,7 +10,11 @@ export default function SkillsSection({ index, onObserver }) {
     <Inspector index={index} onObserver={onObserver}>
       <motion.section className="" id="skills">
         <Container>
-          <Title text={"Nuestras Skills"} />
+          <Title
+            text={"Nuestras Herramientas"}
+            textColor={"text-blackCeniza"}
+            extra={"font-LusitanaBold"}
+          />
         </Container>
         <MovingText right={"0%"} left={"-100%"} />
       </motion.section>

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Title from "../../Components/shared/Title";
 import { itemsBlog } from "../../data/Home";
@@ -87,7 +87,7 @@ const Blog = () => {
           <Carousel show={3.5}>
             {itemsBlog.map(({ title, content, img, id }) => (
               <SwiperSlide key={img}>
-                <a href={`http://localhost:5174/blog/${id}`}>
+                <Link to={`/blog/${id}`}>
                   <section className="group [perspective:1000px] ">
                     <img src={img} alt={title} className="w-full h-full object-cover rounded-lg" />
                     <section className="flex flex-col gap-2 pt-5">
@@ -98,7 +98,7 @@ const Blog = () => {
                       />
                     </section>
                   </section>
-                </a>
+                </Link>
               </SwiperSlide>
             ))}
           </Carousel>

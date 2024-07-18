@@ -7,8 +7,10 @@ import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection"
 import Servicios from "../../Components/Home/Servicios/Servicios";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Blog from "../../Components/Home/Blog/Blog";
 
 import Navbar from "../../Components/Navbar/Navbar";
+import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -24,7 +26,7 @@ const Home = () => {
     >
       <Navbar />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
-      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
+
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
 
       <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
@@ -33,8 +35,11 @@ const Home = () => {
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      {/* <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} /> */}
+      <PanelProyectos index={"proyectos"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
+
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
+
       <section className="h-40"></section>
 
       <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />

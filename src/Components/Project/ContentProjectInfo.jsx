@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
 
 export const TextParallaxContentExample = () => {
   return (
@@ -30,7 +29,7 @@ export const TextParallaxContentExample = () => {
   );
 };
 
-const IMG_PADDING = 12;
+const IMG_PADDING = 0;
 
 const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   return (
@@ -67,10 +66,11 @@ const StickyImage = ({ imgUrl }) => {
         backgroundPosition: "center",
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
+        borderRadius: "20px",
         scale,
       }}
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
+      className="sticky z-0 overflow-hidden"
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"

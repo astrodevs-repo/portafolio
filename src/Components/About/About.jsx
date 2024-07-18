@@ -24,10 +24,10 @@ const About = ({ index, onObserver }) => {
   ];
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-10 lg:px-20 ">
+      <section className=" w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-10 lg:px-20 ">
         <section className="h-10"></section>
         <section className="grid grid-cols-1">
-          <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+          <section className="h-full w-full bg-gradient-to-r bg-opacity-10 from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 md:p-10">
               <Title text={"Quienes somos"} textColor={"text-white"} extra={"font-Baskerville"} />
               <SubTitle

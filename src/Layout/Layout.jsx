@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         href="https://wa.me/+5492612336104"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 -right-2 "
+        className="fixed bottom-10 right-2 "
         style={{
           zIndex: "1000",
         }}
