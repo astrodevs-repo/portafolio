@@ -3,13 +3,12 @@ import { motion, useAnimation } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
 import s from "./header.module.scss";
 import arrow from "../../../public/arrow.svg";
-import Title from "../shared/Title";
-import SubTitle from "../shared/SubTitle";
-import Text from "../shared/Text";
-import About from "../About/About";
+import { IoIosArrowDown } from "react-icons/io";
+import SmokeBackground from "../shared/Smoked/Smoked";
 
 function Header({ index, onObserver }) {
   const [scrollY, setScrollY] = useState(0);
+  const [showArrow, setShowArrow] = useState(true); // Estado para controlar la visibilidad de la flecha
 
   // Controladores de animación de framer-motion para las secciones
   const homeControls = useAnimation();
@@ -28,16 +27,19 @@ function Header({ index, onObserver }) {
   }, []);
 
   useEffect(() => {
-    // Calcula la opacidad para la sección "home"
     const homeOpacity = 1 - Math.min(scrollY / 300, 1);
 
-    // Calcula la opacidad y desplazamiento para la sección "header"
     const headerOpacity = Math.min(scrollY / 300, 1);
-    const headerY = Math.min(scrollY / 100, 1) * 50; // Ajusta el valor 50 según sea necesario
+    const headerY = Math.min(scrollY / 100, 1) * 50;
 
-    // Inicia las animaciones
     homeControls.start({ opacity: homeOpacity });
     headerControls.start({ opacity: headerOpacity, y: -headerY });
+
+    if (scrollY > 100) {
+      setShowArrow(false);
+    } else {
+      setShowArrow(true);
+    }
   }, [scrollY, homeControls, headerControls]);
 
   const scrollToAboutUs = () => {
@@ -45,6 +47,11 @@ function Header({ index, onObserver }) {
     if (aboutUsSection) {
       aboutUsSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleArrowClick = () => {
+    scrollToAboutUs();
+    setShowArrow(false);
   };
 
   const gradientText = {
@@ -61,15 +68,25 @@ function Header({ index, onObserver }) {
   };
 
   const firstPhraseDelay = calculateTotalDelay(firstPhrase);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      controls.start({ scale: [1, 1.1, 1] });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [controls]);
 
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="relative">
+      <SmokeBackground />
+      <section className="">
         <motion.section
           animate={homeControls}
           initial={{ opacity: 1 }}
           id="home"
-          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-center`}
+          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-center relative`}
         >
           <div id="title" className="flex flex-col justify-center gap-10 sm:gap-10">
             <motion.p
@@ -133,9 +150,9 @@ function Header({ index, onObserver }) {
                 />
               </button>
             </a>
-            <a href="#aboutus">
-              <button onClick={scrollToAboutUs}>
-                Quienes Somos
+            <a href={"#aboutus"}>
+              <button className="font-Poppins">
+                Quienes somos
                 <img
                   className={s.hoverimg}
                   style={{ position: "absolute", right: "0.3vmax" }}
@@ -145,14 +162,23 @@ function Header({ index, onObserver }) {
               </button>
             </a>
           </div>
-        </motion.section>
-        <motion.section
-          id="header"
-          className="top-3/4 absolute w-full flex justify-center"
-          animate={headerControls}
-          initial={{ opacity: 1, y: 0 }}
-        >
-          <About />
+
+          {showArrow && (
+            <motion.button
+              onClick={handleArrowClick}
+              className=""
+              whileHover={{ rotate: 360 }}
+              animate={controls}
+              whileTap={{ scale: 0.9 }}
+              style={{
+                position: "absolute",
+                bottom: "10px",
+                left: "50%",
+              }}
+            >
+              <IoIosArrowDown size={60} className="text-blackCeniza" />
+            </motion.button>
+          )}
         </motion.section>
       </section>
     </Inspector>

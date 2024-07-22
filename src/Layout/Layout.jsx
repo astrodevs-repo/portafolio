@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Navbar from "../Components/Navbar/Navbar";
 import { motion } from "framer-motion";
 
 import { FaArrowUp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SmokeBackground from "../Components/shared/Smoked/Smoked";
 
 const Layout = ({ children }) => {
   const [showButton, setShowButton] = useState(false);

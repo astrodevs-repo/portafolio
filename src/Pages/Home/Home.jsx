@@ -18,7 +18,7 @@ const Home = () => {
   const handleStepChange = (step) => setCurrentStep(step);
   return (
     <motion.main
-      className=""
+      className="z-30"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -26,6 +26,8 @@ const Home = () => {
     >
       <Navbar />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
+
+      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
 
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
 

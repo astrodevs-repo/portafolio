@@ -79,7 +79,7 @@ const Servicios = ({ index, onObserver, currentStep }) => {
         currentStep={currentStep}
         extra={""}
       >
-        <section className="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid">
+        <section className="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid ">
           {servicios.map((servicio, index) => (
             <Card
               key={index}
@@ -125,9 +125,11 @@ const Card = ({ title, content, svg, index, expanded, onExpand }) => {
         <img src={svg} alt="" />
         <Text content={title} textColor={"text-white"} extra={"text-center"} />
         <motion.div
-          className={`absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
+          className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
             expanded ? "opacity-100" : "opacity-0"
           }`}
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
         >
           <p>{content}</p>
         </motion.div>
@@ -135,6 +137,7 @@ const Card = ({ title, content, svg, index, expanded, onExpand }) => {
     </motion.article>
   );
 };
+
 const CardAccordion = ({ title, content, svg, index, expanded, onExpand }) => {
   return (
     <motion.div
