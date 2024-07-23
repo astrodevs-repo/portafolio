@@ -4,7 +4,6 @@ import Inspector from "../shared/Inspector/Inspector";
 import s from "./header.module.scss";
 import arrow from "../../../public/arrow.svg";
 import { IoIosArrowDown } from "react-icons/io";
-import SmokeBackground from "../shared/Smoked/Smoked";
 
 function Header({ index, onObserver }) {
   const [scrollY, setScrollY] = useState(0);
@@ -80,7 +79,7 @@ function Header({ index, onObserver }) {
 
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <SmokeBackground />
+      {/* <SmokeBackground /> */}
       <section className="">
         <motion.section
           animate={homeControls}

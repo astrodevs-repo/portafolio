@@ -9,17 +9,16 @@ import { TextParallaxContentExample } from "../../Components/Project/ContentProj
 import Text from "../../Components/shared/Text";
 import Title from "../../Components/shared/Title";
 import SubTitle from "../../Components/shared/SubTitle";
+import Footer from "../../Components/Footer/Footer";
 const Project = () => {
   const params = useParams();
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    // Buscar el proyecto correspondiente en proyectosData utilizando el ID de los parámetros de la URL
     const project = proyectosData.find((e) => e.id === params.id);
     console.log("hola", params, item);
     setItem(project);
 
-    // Limpiar el estado al desmontar el componente
     return () => {
       setItem(null);
     };
@@ -38,7 +37,6 @@ const Project = () => {
       transition={{ duration: 2 }}
     >
       <section id="home">
-        <div className="h-20"></div>
 
         <GalleryComponent {...item} />
 
@@ -86,6 +84,7 @@ const Project = () => {
         </Container>
         <TextParallaxContentExample project={item?.project} />
       </section>
+      <Footer/>
     </motion.main>
   );
 };

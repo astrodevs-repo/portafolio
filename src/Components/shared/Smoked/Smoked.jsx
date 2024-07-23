@@ -18,7 +18,7 @@ const SmokeBackground = () => {
     camera.position.z = 1000;
     scene.add(camera);
 
-    const light = new THREE.DirectionalLight(0xffffff, 0.3);
+    const light = new THREE.DirectionalLight(0xffffff, 0.01);
     light.position.set(-1, 0, 1);
     scene.add(light);
 
@@ -33,7 +33,7 @@ const SmokeBackground = () => {
       smokeMaterial.map.minFilter = THREE.LinearFilter;
       const smokeGeometry = new THREE.PlaneBufferGeometry(300, 300);
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 50; i++) {
         const smokeMesh = new THREE.Mesh(smokeGeometry, smokeMaterial);
         smokeMesh.position.set(
           Math.random() * width - width / 2,
@@ -80,7 +80,7 @@ const SmokeBackground = () => {
     const onScroll = () => {
       if (mountRef.current) {
         if (window.scrollY === 0) {
-          mountRef.current.style.opacity = "0.2";
+          mountRef.current.style.opacity = "0.5";
         } else {
           mountRef.current.style.opacity = "0";
         }
@@ -100,7 +100,7 @@ const SmokeBackground = () => {
   return (
     <div
       ref={mountRef}
-      className="absolute  -left-5 z-0 h-full w-full opacity-10 transition-opacity duration-500"
+      className="absolute  -left-5 -z-10 h-full w-full opacity-10 transition-opacity duration-500"
     ></div>
   );
 };

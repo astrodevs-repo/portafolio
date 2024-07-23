@@ -13,19 +13,17 @@ const proyectosData = [
       Website: "https://costaexport.com",
       Phone: "555 8888 888",
     },
-    project: [
+    project:[
       {
         imgUrl: "",
         title: "Objetivo",
+        subtitle: "Optimización de Usabilidad y Accesibilidad, Mejora Estética y Estrategia SEO",
         body: [
           {
             title: "Optimización de Usabilidad",
             text: "El principal objetivo del proyecto fue desarrollar un sitio web responsive que optimizara la usabilidad. Esto aseguró que los usuarios pudieran navegar y encontrar información de manera intuitiva desde cualquier dispositivo, ya sea móvil, tableta o computadora de escritorio. Se implementaron principios de diseño centrados en el usuario para mejorar la experiencia de navegación.",
           },
-          {
-            title: "Mejora de Accesibilidad",
-            text: "Se puso un fuerte énfasis en la accesibilidad mediante la implementación de estándares como WCAG. Esto garantizó que personas con discapacidades pudieran utilizar el sitio sin dificultades, cumpliendo con normativas internacionales de accesibilidad web.",
-          },
+          
           {
             title: "Estética Atractiva",
             text: "El diseño visual del sitio fue meticulosamente creado para ser moderno y atractivo. Se utilizó una paleta de colores coherente y una tipografía que facilitara la lectura, asegurando una experiencia visual agradable y profesional.",
@@ -39,6 +37,7 @@ const proyectosData = [
       {
         imgUrl: "",
         title: "Reto",
+        subtitle: "Desafío de Atracción Visual y Funcionalidad, Superación de Obstáculos Técnicos y Integración de Tecnologías",
         body: [
           {
             title: "Atracción Visual y Funcionalidad",
@@ -57,6 +56,7 @@ const proyectosData = [
       {
         imgUrl: "",
         title: "Solución",
+        subtitle: "Enfoque Centrado en el Usuario, Uso de TailwindCSS, Estrategia de Dominio y SEO, Despliegue en Plataforma Confiable",
         body: [
           {
             title: "Enfoque Centrado en el Usuario",
@@ -79,6 +79,7 @@ const proyectosData = [
       {
         imgUrl: "",
         title: "Resultado",
+        subtitle: "Lanzamiento Exitoso, Colaboración Efectiva y Reputación Consolidada",
         body: [
           {
             title: "Lanzamiento Exitoso",

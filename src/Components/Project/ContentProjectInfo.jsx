@@ -11,15 +11,25 @@ export const TextParallaxContentExample = ({ project }) => {
       {project.map((item, index) => (
         <TextParallaxContent
           key={index}
-          subheading={item.title} // Suponiendo que tienes una propiedad subheading en tu objeto item
-          heading={item.title} // Suponiendo que tienes una propiedad heading en tu objeto item
+          subheading={item.subtitle} 
+
+          heading={item.title} 
         >
           <Container>
-            <section className="grid  grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 min-h-screen">
-              {item.body.map((e, index) => (
-                <ExampleContent description={e.text} title={e.title} key={index} />
+          <motion.section
+              className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 min-h-screen"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              {item.body.map((e, idx) => (
+                <div
+                  
+                >
+                  <ExampleContent description={e.text} title={e.title} />
+                </div>
               ))}
-            </section>
+            </motion.section>
           </Container>
         </TextParallaxContent>
       ))}
@@ -97,10 +107,11 @@ const OverlayCopy = ({ subheading, heading }) => {
         opacity,
       }}
       ref={targetRef}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center "
+      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center gap-10"
     >
-      <SubTitle text={subheading} extra={"text-center"} />
       <Title text={heading} extra={"text-center font-Baskerville"} />
+
+      <SubTitle text={subheading} extra={"text-center w-[60%]"} />
     </motion.div>
   );
 };
@@ -117,14 +128,10 @@ const ExampleContent = ({ description, title }) => {
       <SubTitle text={title} extra={"font-bold"} />
       <section className="">
         <Text
-          content={showFullDescription ? description : description.substring(0, 100) + " . . ."}
+          content={description}
           extra={""}
         />
-        {!showFullDescription && (
-          <span onClick={toggleDescription} className="">
-            <Text content={"Leer más"} extra={"text-blue-500 cursor-pointer"} />
-          </span>
-        )}
+        
       </section>
     </section>
   );

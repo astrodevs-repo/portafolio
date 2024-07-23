@@ -11,6 +11,7 @@ import Blog from "../../Components/Home/Blog/Blog";
 
 import Navbar from "../../Components/Navbar/Navbar";
 import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
+import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -18,13 +19,14 @@ const Home = () => {
   const handleStepChange = (step) => setCurrentStep(step);
   return (
     <motion.main
-      className="z-30"
+      className="z-40"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
       <Navbar />
+      <SmokeBackgroundz/>
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
 
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
