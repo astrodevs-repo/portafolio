@@ -26,7 +26,7 @@ const Home = () => {
       transition={{ duration: 2 }}
     >
       <Navbar />
-      <SmokeBackgroundz/>
+      <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
 
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />

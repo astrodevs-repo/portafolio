@@ -64,9 +64,7 @@ const Footer = ({ index, onObserver }) => {
                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       {section.links.map((link, j) => (
                         <li key={j} className="mb-4">
-                          <p className="">
-                            <TextFooter content={link.text} />
-                          </p>
+                          <TextFooter content={link.text} />
                         </li>
                       ))}
                     </ul>

@@ -18,8 +18,8 @@ const SmokeBackground = () => {
     camera.position.z = 1000;
     scene.add(camera);
 
-    const light = new THREE.DirectionalLight(0xffffff, 0.01);
-    light.position.set(-1, 0, 1);
+    const light = new THREE.DirectionalLight(0xffffff, 0.1);
+    light.position.set(1, 0, 1);
     scene.add(light);
 
     const smokeParticles = [];
@@ -93,7 +93,6 @@ const SmokeBackground = () => {
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
-      mountRef.current.removeChild(renderer.domElement);
     };
   }, []);
 

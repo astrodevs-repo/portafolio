@@ -9,23 +9,16 @@ export const TextParallaxContentExample = ({ project }) => {
   return (
     <>
       {project.map((item, index) => (
-        <TextParallaxContent
-          key={index}
-          subheading={item.subtitle} 
-
-          heading={item.title} 
-        >
+        <TextParallaxContent key={item.title} subheading={item.subtitle} heading={item.title}>
           <Container>
-          <motion.section
+            <motion.section
               className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 min-h-screen"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
-              {item.body.map((e, idx) => (
-                <div
-                  
-                >
+              {item.body.map((e) => (
+                <div key={e.text}>
                   <ExampleContent description={e.text} title={e.title} />
                 </div>
               ))}
@@ -127,11 +120,7 @@ const ExampleContent = ({ description, title }) => {
     <section className="flex flex-col gap-10 bg-[#FDF59C] p-10 h-fit">
       <SubTitle text={title} extra={"font-bold"} />
       <section className="">
-        <Text
-          content={description}
-          extra={""}
-        />
-        
+        <Text content={description} extra={""} />
       </section>
     </section>
   );

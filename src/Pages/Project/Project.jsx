@@ -4,10 +4,8 @@ import GalleryComponent from "../../Components/shared/gallery/GalleryProject";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import proyectosData from "../../Components/PanelProjects/proyectosData";
-import Navbar from "../../Components/Navbar/Navbar";
 import { TextParallaxContentExample } from "../../Components/Project/ContentProjectInfo";
 import Text from "../../Components/shared/Text";
-import Title from "../../Components/shared/Title";
 import SubTitle from "../../Components/shared/SubTitle";
 import Footer from "../../Components/Footer/Footer";
 const Project = () => {
@@ -16,13 +14,13 @@ const Project = () => {
 
   useEffect(() => {
     const project = proyectosData.find((e) => e.id === params.id);
-    console.log("hola", params, item);
+
     setItem(project);
 
     return () => {
       setItem(null);
     };
-  }, [params.id]);
+  }, []);
 
   if (!item) {
     return null;
@@ -37,7 +35,6 @@ const Project = () => {
       transition={{ duration: 2 }}
     >
       <section id="home">
-
         <GalleryComponent {...item} />
 
         <Container>
@@ -84,7 +81,7 @@ const Project = () => {
         </Container>
         <TextParallaxContentExample project={item?.project} />
       </section>
-      <Footer/>
+      <Footer />
     </motion.main>
   );
 };
