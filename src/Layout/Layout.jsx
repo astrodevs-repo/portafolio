@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "../Components/Navbar/Navbar";
 import { motion } from "framer-motion";
 
 import { FaArrowUp } from "react-icons/fa";
@@ -31,6 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <div style={{ position: "relative" }}>
+     
       {children}
 
       {showButton && (
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         href="https://wa.me/+5492612336104"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 -right-2 "
+        className="fixed bottom-10 right-2 "
         style={{
           zIndex: "1000",
         }}

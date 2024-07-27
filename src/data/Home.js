@@ -104,13 +104,14 @@ export const data1 = {
 export const itemsBlog = [
   {
     fecha: "22 de enero del 2024",
-    hora: "04:45 AM",
+    hora: "04:45 PM",
     id: "12131616151",
-    category: "UIUX",
+    category: "AI",
     autor: "Jesus E. Moreno",
     color: "bg-[#005187]",
     title: "Inteligencia artificial",
-    subtitle: "",
+    subtitle:
+      "La Revolución de la Inteligencia Artificial: Transformando el Futuro de Nuestro Negocio",
     content: {
       title:
         "La Revolución de la Inteligencia Artificial: Transformando el Futuro de Nuestro Negocio",
@@ -127,24 +128,42 @@ export const itemsBlog = [
         },
         {
           subtitle: "Beneficios de la IA en Nuestro Negocio",
-          content:
-            "1. Eficiencia Operacional: La IA nos permite automatizar tareas repetitivas y mundanas, liberando tiempo para que nuestro equipo se concentre en actividades más estratégicas. Desde la gestión de inventarios hasta la atención al cliente, las soluciones impulsadas por IA están mejorando nuestra eficiencia y reduciendo costos operativos.\n 2. Análisis Predictivo: Con la capacidad de analizar grandes volúmenes de datos en tiempo real, la IA nos proporciona insights valiosos que nos ayudan a prever tendencias del mercado y comportamientos de los consumidores. Esto nos permite tomar decisiones informadas y estar un paso adelante en un entorno empresarial competitivo.\n 3. Personalización del Servicio: Al analizar las preferencias y comportamientos de nuestros clientes, la IA nos permite ofrecer experiencias personalizadas. Ya sea a través de recomendaciones de productos o servicios específicos, estamos en una mejor posición para satisfacer las necesidades individuales de nuestros clientes.\n 4. Innovación Continua:** La integración de la IA nos impulsa a innovar constantemente. Estamos utilizando esta tecnología para desarrollar nuevos productos y servicios que no solo cumplen con las expectativas de nuestros clientes, sino que también establecen nuevos estándares en nuestra industria.",
+
+          content: [
+            {
+              title: "",
+              body: "La integración de la IA en nuestros procesos operativos ha resultado en una automatización significativa de tareas repetitivas y rutinarias. Esto no solo ha permitido una reducción en los costos operativos, sino que también ha liberado a nuestro personal para que se concentre en actividades que requieren creatividad y toma de decisiones estratégicas. Por ejemplo, en la gestión de inventarios, los algoritmos predictivos pueden anticipar las necesidades futuras, optimizando así el flujo de productos y minimizando el desperdicio.",
+            },
+            {
+              title: "Análisis Predictivo",
+              body: "La capacidad de la IA para analizar grandes volúmenes de datos en tiempo real proporciona a nuestra empresa una ventaja competitiva al ofrecer insights valiosos sobre tendencias del mercado y comportamientos del consumidor. Estos análisis predictivos nos permiten ajustar nuestras estrategias de manera proactiva, anticipar cambios en la demanda y personalizar nuestras ofertas para alinearlas con las expectativas de nuestros clientes.",
+            },
+            {
+              title: "Personalización del Servicio",
+              body: "A través del análisis de datos sobre las preferencias y comportamientos de nuestros clientes, la IA nos permite ofrecer un nivel de personalización sin precedentes. Desde recomendaciones de productos hasta servicios personalizados, la IA facilita una experiencia de usuario más ajustada a las necesidades individuales, aumentando la satisfacción y fidelidad de nuestros clientes.",
+            },
+            {
+              title: "Innovación Continua",
+              body: "La IA actúa como un catalizador para la innovación dentro de nuestra empresa. Estamos utilizando esta tecnología para desarrollar productos y servicios innovadores que no solo cumplen con las expectativas del mercado, sino que también establecen nuevos estándares en la industria. La capacidad de simular y modelar distintos escenarios permite a nuestros equipos explorar nuevas ideas y enfoques que antes eran impensables.",
+            },
+          ],
         },
         {
           subtitle: "Desafíos y Consideraciones Éticas",
           content:
-            "Aunque la IA ofrece numerosos beneficios, también presenta desafíos y consideraciones éticas que debemos abordar. La privacidad de los datos y la transparencia en el uso de algoritmos son temas críticos. En nuestra empresa, estamos comprometidos a implementar prácticas responsables de IA, asegurándonos de que nuestras soluciones sean justas, seguras y respetuosas con la privacidad de los usuarios.",
+            "A pesar de los numerosos beneficios que ofrece la IA, también presenta desafíos y dilemas éticos que deben ser cuidadosamente gestionados. Uno de los principales problemas es la privacidad de los datos. La recopilación y el análisis de grandes cantidades de datos personales plantean riesgos significativos si no se manejan adecuadamente. Además, la transparencia en el uso de algoritmos es crucial para garantizar que los sistemas de IA operen de manera justa y equitativa. En nuestra empresa, estamos comprometidos a implementar prácticas responsables en el uso de la IA. Esto incluye la adopción de políticas claras para la protección de datos, la auditoría de algoritmos para evitar sesgos y la implementación de mecanismos de transparencia que permitan a nuestros usuarios entender cómo y por qué se toman decisiones basadas en IA.",
         },
         {
           subtitle: "El Futuro de la IA en Nuestra Empresa",
           content:
-            "Estamos emocionados por las posibilidades que la inteligencia artificial trae a nuestro negocio. A medida que la tecnología avanza, continuaremos explorando nuevas formas de integrar la IA para mejorar nuestros productos y servicios. Creemos que la inteligencia artificial no solo transformará nuestra empresa, sino también la manera en que nuestros clientes experimentan y se benefician de nuestras soluciones.\nEn conclusión, la inteligencia artificial está marcando el comienzo de una nueva era para nuestro negocio. Con su capacidad para mejorar la eficiencia, ofrecer personalización y fomentar la innovación, la IA está posicionada para ser un motor clave de nuestro crecimiento y éxito continuo. Estamos entusiasmados por liderar el camino en esta revolución tecnológica y ver cómo la IA transformará el futuro de nuestra industria.",
+            "Mirando hacia el futuro, estamos entusiasmados con las posibilidades que la inteligencia artificial ofrece para seguir transformando nuestro negocio. La tecnología está avanzando a un ritmo rápido, y estamos comprometidos a explorar nuevas aplicaciones de la IA que puedan mejorar aún más nuestros productos y servicios. Creemos firmemente que la IA no solo cambiará nuestra empresa, sino que también redefinirá la manera en que nuestros clientes experimentan y se benefician de nuestras soluciones. En resumen, la inteligencia artificial está marcando el comienzo de una nueva era para nuestra empresa. Con su capacidad para optimizar procesos, ofrecer personalización y fomentar la innovación, la IA está destinada a ser un motor clave de nuestro crecimiento y éxito continuo. Estamos emocionados por liderar esta revolución tecnológica y por el impacto positivo que tendrá en el futuro de nuestra industria.",
         },
       ],
     },
-    body: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore, ducimus distinctio, voluptatum blanditiis, voluptatem obcaecati qui reiciendis quod pariatur ab labore velit. Debitis delectus dolor adipisci consequatur commodi quam.",
+
     img: "/public/Blog/ia.jpg",
   },
+
   // {
   //   fecha: "15 de marzo del 2024",
   //   hora: "10:00 AM",

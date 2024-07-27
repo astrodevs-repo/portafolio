@@ -1,70 +1,34 @@
-import { useEffect, useState } from "react";
 import Container from "../../Container/Container";
-import styles from "./GalleryComponent.module.scss";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import Title from "../../../Components/shared/Title";
+import Text from "../Text";
+import SubTitle from "../SubTitle";
 
-const GalleryComponent = ({ title, description }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [photos, setPhotos] = useState([
-    {
-      name: "item-1",
-      url: "https://www.ebizneeds.com/blog/wp-content/uploads/2022/11/Frame-206.jpg",
-    },
-    {
-      name: "item-2",
-      url: "https://preview.redd.it/20-prompts-for-landing-pages-and-ui-ux-design-v0-ai7ad1oeutta1.png?width=636&format=png&auto=webp&s=baea36a17742c21387e47033c889ef8e316b5649",
-    },
-    {
-      name: "item-3",
-      url: "https://cdn.dribbble.com/users/2962548/screenshots/14043254/media/8e911e30c479cdda2bb75502cadf882d.png?resize=400x0",
-    },
-    {
-      name: "item-4",
-      url: "https://www.ebizneeds.com/blog/wp-content/uploads/2022/11/Frame-206.jpg",
-    },
-    {
-      name: "item-5",
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcoilMloAzXz2_iWW2e5BhTDHCn3QIn0b7GK-fWXB9FG_pRRJElTl_7xP-jk-dezPqH8&usqp=CAU",
-    },
-  ]);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsOpen(!isOpen);
-    }, 5000);
-    return () => {
-      setIsOpen(!isOpen);
-    };
-  }, []);
+const GalleryComponent = ({ nombre, description, imgCard }) => {
   return (
-    <div>
+    <>
       <Container>
-        <div className="px-[100px]">
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
-            <p className="text-blue-600 font-semibold text-lg">product desig</p>
+        <section className="flex flex-col gap-10">
+          <motion.div animate={{ x: -20 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <SubTitle text={"Desarrollo web"} />
           </motion.div>
-          <br />
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
-            <h1>{title}</h1>
+          <motion.div animate={{ x: -20 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <Title text={nombre} extra={"font-Baskerville"} />
           </motion.div>
-          <motion.div animate={{ x: -100 }} transition={{ ease: "easeOut", duration: 2 }}>
-            <p>{description}</p>
+          <motion.div animate={{ x: -20 }} transition={{ ease: "easeOut", duration: 2 }}>
+            <Text content={description} extra={"w-2/3"} />
           </motion.div>
-        </div>
+        </section>
       </Container>
-      <div className="h-20"></div>
       <motion.div
         animate={{ y: -50 }}
         transition={{ ease: "easeOut", duration: 1 }}
-        className={styles["gallery-wrap"]}
+        className={`pt-40 object-fit`}
       >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAavECFhYgFOATcJGFGRcfQEA34wu1A995n-J_dKsE&s"
-          alt=""
-          className="w-full"
-        />
+        <img src={imgCard} alt="" className="w-full h-96 object-cover" />
       </motion.div>
-    </div>
+    </>
   );
 };
 

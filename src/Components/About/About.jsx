@@ -2,9 +2,9 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
-import logoBrain from "../../../public/logoBrain.png";
+import { motion } from "framer-motion";
 
-const About = ({ index, onObserver }) => {
+const About = ({ index, onObserver, currentStep }) => {
   const articles = [
     {
       title: "Visión",
@@ -24,34 +24,46 @@ const About = ({ index, onObserver }) => {
   ];
   return (
     <Inspector index={index} onObserver={onObserver}>
-      <section className="lg:mt-[-250px] w-full h-fit-content  py-10 sm:py-20 xl:px-20 2xl:px-20 px-5  md:px-10 lg:px-20 ">
+      <motion.section
+        id={index}
+        initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
+        animate={
+          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 50 } : { y: 80 }
+        }
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className=" w-full h-fit-content  py-10 sm:py-0 xl:px-20 2xl:px-24 px-5  md:px-10 lg:px-20 "
+      >
         <section className="h-10"></section>
-        <section className="grid grid-cols-1">
-          <section className="h-full w-full bg-gradient-to-r from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 md:p-10">
-              <Title text={"Quienes somos"} textColor={"text-white"} extra={"font-Baskerville"} />
-              <SubTitle
+        <section className={`grid grid-cols-1 `}>
+          <section className="h-full w-full bg-gradient-to-r bg-opacity-10 from-slate-600 to-blackCeniza  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+            <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 md:px-20">
+              <Title
+                text={"Transformando Ideas en Experiencias Digitales Extraordinarias"}
+                textColor={"text-white"}
+                extra={"font-Baskerville"}
+              />
+              {/* <SubTitle
                 text={
                   "No somos solo una agencia de desarrollo web; somos una firma integral de soluciones digitales."
                 }
                 textColor={"text-white"}
-              />
-              <Text
-                content={
+              /> */}
+            </article>
+            <article className="flex flex-col gap-5 justify-center items-center pt-5 sm:p-20 md:p-20">
+              {/* <img
+                src={logoBrain}
+                alt=""
+                className="w-[150px] hidden sm:flex md:hidden lg:flex opacity-25"
+              /> */}
+              <SubTitle
+                text={
                   "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
                 }
                 textColor={"text-white"}
               />
             </article>
-            <article className="justify-center flex">
-              <img
-                src={logoBrain}
-                alt=""
-                className="w-[550px] hidden sm:flex md:hidden lg:flex opacity-20 p-10"
-              />
-            </article>
           </section>
-          <section className="h-full w-full bg-white rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 border-2 grid">
+          <section className="h-full w-full bg-white rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2  grid">
             {articles.map(({ title, content }) => (
               <article
                 key={title}
@@ -63,7 +75,7 @@ const About = ({ index, onObserver }) => {
             ))}
           </section>
         </section>
-      </section>
+      </motion.section>
     </Inspector>
   );
 };

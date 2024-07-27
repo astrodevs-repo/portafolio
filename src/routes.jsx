@@ -33,7 +33,7 @@ export const routes = [
     element: <Blog />,
   },
   {
-    path: "/*",
+    path: "*",
     element: <Page404 />,
   },
 ];
