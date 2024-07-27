@@ -104,23 +104,17 @@ const OverlayCopy = ({ subheading, heading }) => {
     >
       <Title text={heading} extra={"text-center font-Baskerville"} />
 
-      <SubTitle text={subheading} extra={"text-center w-[60%]"} />
+      <SubTitle text={subheading} extra={"text-center w-[40%]"} />
     </motion.div>
   );
 };
 
 const ExampleContent = ({ description, title }) => {
-  const [showFullDescription, setShowFullDescription] = useState(false);
-
-  const toggleDescription = () => {
-    setShowFullDescription(!showFullDescription);
-  };
-
   return (
     <section className="flex flex-col gap-10 bg-[#FDF59C] p-10 h-fit">
       <SubTitle text={title} extra={"font-bold"} />
       <section className="">
-        <Text content={description} extra={""} />
+        <Text content={description} />
       </section>
     </section>
   );

@@ -1,5 +1,6 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Text from "./src/Components/shared/Text";
 const NavbarGoBack = () => {
   return (
     <section className="py-5 px-5">
@@ -10,7 +11,7 @@ const NavbarGoBack = () => {
           </Link>
         </section>
         <Link to={"/"} className="cursor-pointer">
-          Volver al Inicio
+          <Text content={"Volver al Inicio"} />
         </Link>
       </section>
     </section>

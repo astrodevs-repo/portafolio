@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import Container from "../../Container/Container";
-import styles from "./GalleryComponent.module.scss";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import Title from "../../../Components/shared/Title";
@@ -9,9 +7,9 @@ import SubTitle from "../SubTitle";
 
 const GalleryComponent = ({ nombre, description, imgCard }) => {
   return (
-    <div>
+    <>
       <Container>
-        <div className="flex flex-col gap-10">
+        <section className="flex flex-col gap-10">
           <motion.div animate={{ x: -20 }} transition={{ ease: "easeOut", duration: 2 }}>
             <SubTitle text={"Desarrollo web"} />
           </motion.div>
@@ -19,19 +17,18 @@ const GalleryComponent = ({ nombre, description, imgCard }) => {
             <Title text={nombre} extra={"font-Baskerville"} />
           </motion.div>
           <motion.div animate={{ x: -20 }} transition={{ ease: "easeOut", duration: 2 }}>
-            <Text content={description} />
+            <Text content={description} extra={"w-2/3"} />
           </motion.div>
-        </div>
+        </section>
       </Container>
-      <div className="h-20"></div>
       <motion.div
         animate={{ y: -50 }}
         transition={{ ease: "easeOut", duration: 1 }}
-        className={styles["gallery-wrap"]}
+        className={`pt-40 object-fit`}
       >
-        <img src={imgCard} alt="" className="w-full" />
+        <img src={imgCard} alt="" className="w-full h-96 object-cover" />
       </motion.div>
-    </div>
+    </>
   );
 };
 

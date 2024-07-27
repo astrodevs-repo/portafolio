@@ -38,46 +38,31 @@ const Project = () => {
         <GalleryComponent {...item} />
 
         <Container>
-          <div className="grid grid-cols-1 gap-4 ">
-            <div className={`flex flex-col justify-start gap-10 `}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="text-gray-400">
-                  Client <br />
-                  <Text content={item.nombre} extra={"font-bold"} />
-                </div>
-                {/* Si tienes un objeto `client`, puedes iterar sobre sus propiedades */}
-                {item.client &&
-                  Object.entries(item.client).map(([property, value], index) => (
-                    <div key={index} className="text-gray-400">
-                      {property} <br />
-                      <Text content={value} extra={"font-bold"} />
-                    </div>
-                  ))}
-              </div>
-              <div>
-                <SubTitle text={"Tools & Technologies"} extra={""} />
-                <div className="flex flex-wrap gap-2">
-                  {item.tools &&
-                    Object.entries(item.tools).map(([property], index) => (
-                      <div key={index}>
-                        <Text content={property} extra={"font-bold"} />
-                      </div>
-                    ))}
-                </div>
-              </div>
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="text-gray-400">
+              Client <br />
+              <Text content={item.nombre} extra={"font-bold"} />
             </div>
-
-            {/* <div className={`grid grid-cols-1 gap-5 `}>
-              {Object.entries(item.project).map(([property, value], index) => (
-                <section id={property} key={index}>
-                  <div className={` ${style.text}`}>
-                    <h1 className="m-0 text-lg py-5">{property}</h1>
-                    <p>{value}</p>
-                  </div>
-                </section>
+            {/* Si tienes un objeto `client`, puedes iterar sobre sus propiedades */}
+            {item.client &&
+              Object.entries(item.client).map(([property, value], index) => (
+                <div key={index} className="text-gray-400">
+                  {property} <br />
+                  <Text content={value} extra={"font-bold"} />
+                </div>
               ))}
-            </div> */}
-          </div>
+          </section>
+          <section>
+            <SubTitle text={"Tools & Technologies"} extra={""} />
+            <div className="flex flex-wrap gap-2">
+              {item.tools &&
+                Object.entries(item.tools).map(([property], index) => (
+                  <div key={index}>
+                    <Text content={property} extra={"font-bold"} />
+                  </div>
+                ))}
+            </div>
+          </section>
         </Container>
         <TextParallaxContentExample project={item?.project} />
       </section>

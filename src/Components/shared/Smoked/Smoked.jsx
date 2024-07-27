@@ -80,7 +80,7 @@ const SmokeBackground = () => {
     const onScroll = () => {
       if (mountRef.current) {
         if (window.scrollY === 0) {
-          mountRef.current.style.opacity = "0.5";
+          mountRef.current.style.opacity = "0.2";
         } else {
           mountRef.current.style.opacity = "0";
         }

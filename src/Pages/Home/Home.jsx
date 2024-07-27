@@ -28,24 +28,18 @@ const Home = () => {
       <Navbar />
       <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
       <StepList
         index={"comotrabajamos"}
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      <PanelProyectos index={"proyectos"} onObserver={handleStepChange} currentStep={currentStep} />
+      {/* <PanelProyectos index={"proyectos"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <section className="h-40"></section>
-
       <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />
     </motion.main>
   );
