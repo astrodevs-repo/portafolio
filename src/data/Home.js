@@ -1,3 +1,4 @@
+import ia from "/public/Blog/ia.jpg";
 export const data = {
   Bg: "#31add5",
   textColor: "white",
@@ -161,7 +162,7 @@ export const itemsBlog = [
       ],
     },
 
-    img: "/public/Blog/ia.jpg",
+    img: ia,
   },
 
   // {

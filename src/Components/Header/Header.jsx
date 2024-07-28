@@ -7,21 +7,15 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function Header({ index, onObserver }) {
   const [scrollY, setScrollY] = useState(0);
-  const [showArrow, setShowArrow] = useState(true); // Estado para controlar la visibilidad de la flecha
-
-  // Controladores de animación de framer-motion para las secciones
+  const [showArrow, setShowArrow] = useState(true);
   const homeControls = useAnimation();
   const headerControls = useAnimation();
-
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
 
   useEffect(() => {
-    // Escucha el evento de desplazamiento
     window.addEventListener("scroll", handleScroll);
-
-    // Limpia el event listener cuando el componente se desmonte
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -79,7 +73,6 @@ function Header({ index, onObserver }) {
 
   return (
     <Inspector index={index} onObserver={onObserver}>
-      {/* <SmokeBackground /> */}
       <section className="">
         <motion.section
           animate={homeControls}
