@@ -5,13 +5,12 @@ import Footer from "../../Components/Footer/Footer";
 import StepList from "../../Components/Home/Steper";
 import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
+import Blog from "../../Components/Home/Blog/Blog";
+import Navbar from "../../Components/Navbar/Navbar";
+import SmokeBackground from "../../Components/shared/Smoked/Smoked";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Blog from "../../Components/Home/Blog/Blog";
-
-import Navbar from "../../Components/Navbar/Navbar";
-import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
-import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -36,7 +35,6 @@ const Home = () => {
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      {/* <PanelProyectos index={"proyectos"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
       <section className="h-40"></section>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import png from "/public/fondo.png";
 import * as THREE from "https://cdn.skypack.dev/three@0.134";
 
 const SmokeBackground = () => {
@@ -24,7 +25,7 @@ const SmokeBackground = () => {
 
     const smokeParticles = [];
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load("/public/fondo.png", (texture) => {
+    textureLoader.load(png, (texture) => {
       const smokeMaterial = new THREE.MeshLambertMaterial({
         color: 0xff6666,
         map: texture,
