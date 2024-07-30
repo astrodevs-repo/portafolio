@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Text from "../shared/Text";
 import SubTitle from "../shared/SubTitle";
+import SubTitleItalic from "../shared/SubTitleItalic";
 
 const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
   const ref = useRef(null);
@@ -75,7 +76,7 @@ const Content = ({ currentStep, index, i, name }) => {
         transition={{ duration: 0.5 }}
         className="text-xs sm:text-xs md:text-lg lg:text-2xl w-3/4 md:max-w-[20rem]  mt-3 ml-8 sm:ml-20 md:ml-10 text-black font-Poppins uppercase hidden sm:flex"
       >
-        {name}
+        <SubTitle text={name} />
       </motion.p>
       <motion.section
         initial={{ opacity: 20, y: 20 }}

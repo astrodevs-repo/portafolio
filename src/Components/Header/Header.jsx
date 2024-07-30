@@ -78,7 +78,7 @@ function Header({ index, onObserver }) {
           animate={homeControls}
           initial={{ opacity: 1 }}
           id="home"
-          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] flex flex-col justify-center sm:justify-center relative`}
+          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] dark:from-[#001f3fd7] dark:via-[#003366dd] dark:to-[#00008bd9] flex flex-col justify-center sm:justify-center relative`}
         >
           <div id="title" className="flex flex-col justify-center gap-10 sm:gap-10">
             <motion.p

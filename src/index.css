@@ -45,7 +45,9 @@ html {
 body {
   background-color: #e9eeff;
 }
-
+.dark body {
+  @apply bg-gray-800 text-white;
+}
 /* CSS para transiciones */
 .transition-enter {
   opacity: 0;
