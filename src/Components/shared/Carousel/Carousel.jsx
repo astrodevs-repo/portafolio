@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-export default function Carousel({ children, show }) {
+export default function Carousel({ children }) {
   return (
     <>
       <Swiper
@@ -37,7 +37,7 @@ export default function Carousel({ children, show }) {
           },
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className=""
       >
         {children}
       </Swiper>

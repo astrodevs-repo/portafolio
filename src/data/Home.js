@@ -1,4 +1,25 @@
 import ia from "/public/Blog/ia.jpg";
+import sql from "/public/OurSkills/sql.svg";
+import boostrap from "/public/OurSkills/Boopstrap.svg";
+import node from "/public/OurSkills/node.svg";
+import angular from "/public/OurSkills/angular.svg";
+import html from "/public/OurSkills/html.svg";
+import java from "/public/OurSkills/java.svg";
+import js from "/public/OurSkills/js.svg";
+import ts from "/public/OurSkills/ts.svg";
+import mongodb from "/public/OurSkills/mongodb.svg";
+import mysql from "/public/OurSkills/mysql.svg";
+import pb from "/public/OurSkills/pb.svg";
+import php from "/public/OurSkills/php.svg";
+import python from "/public/OurSkills/python.svg";
+import r from "/public/OurSkills/r.svg";
+import adrian from "/public/team/adrian.jpg";
+import jesus from "/public/team/jesus2.jpg";
+import luisana from "/public/team/luisana.jpg";
+import miguel from "/public/team/miguel.jpg";
+import tomas from "/public/team/tomas.jpg";
+import yeli from "/public/team/yeli.jpg";
+
 export const data = {
   Bg: "#31add5",
   textColor: "white",
@@ -397,4 +418,280 @@ export const itemsBlog = [
   //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facere porro distinctio aut repellat aspernatur, nostrum provident quidem obcaecati, accusantium necessitatibus asperiores fugit voluptatem ratione beatae odit architecto amet aperiam?",
   //   img: "/public/Blog/job.jpg",
   // },
+];
+
+export const itemsClient = [
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+  {
+    svg: sql,
+  },
+  {
+    svg: boostrap,
+  },
+  {
+    svg: node,
+  },
+  {
+    svg: angular,
+  },
+  {
+    svg: html,
+  },
+  {
+    svg: java,
+  },
+  {
+    svg: js,
+  },
+  {
+    svg: ts,
+  },
+  {
+    svg: mongodb,
+  },
+  {
+    svg: mysql,
+  },
+  {
+    svg: pb,
+  },
+  {
+    svg: php,
+  },
+  {
+    svg: python,
+  },
+  {
+    svg: r,
+  },
+];
+export const itemsTeam = [
+  {
+    svg: adrian,
+  },
+  {
+    svg: jesus,
+  },
+
+  {
+    svg: luisana,
+  },
+  {
+    svg: miguel,
+  },
+  {
+    svg: yeli,
+  },
+  {
+    svg: tomas,
+  },
 ];

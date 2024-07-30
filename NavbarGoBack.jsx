@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Text from "./src/Components/shared/Text";
 const NavbarGoBack = () => {
   return (
-    <section className="py-5 px-5">
+    <section className="py-5 px-5 ">
       <section className="flex justify-start items-center gap-5 text-[106px]">
         <section>
           <Link to={"/"} className="cursor-pointer">

@@ -101,7 +101,8 @@ function Community({ index, onObserver, currentStep }) {
               bg={"bg-[#4f75ff]"}
               border={"border-[#4f75ff]"}
               hover={"bg-[#4563d0]"}
-              active={true}
+              active={false}
+              route={"/teamattachment"}
             />
           </div>
           <div className="mx-0 ">

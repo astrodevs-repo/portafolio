@@ -16,7 +16,7 @@ const Blog = ({ index, onObserver, currentStep }) => {
         id={"quienessomos"}
         index={index}
         currentStep={currentStep}
-        extra={"mt-[-100px]"}
+        extra={"  "}
       >
         <Carousel show={"3.5"}>
           {itemsBlog.map(({ title, img, id, content }) => (
