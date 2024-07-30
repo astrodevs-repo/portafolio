@@ -3,6 +3,7 @@ import Title from "../shared/Title";
 import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
 import { motion } from "framer-motion";
+import Container from "../Container/Container";
 
 const About = ({ index, onObserver, currentStep }) => {
   const articles = [
@@ -34,8 +35,8 @@ const About = ({ index, onObserver, currentStep }) => {
         className=" w-full h-fit-content  py-10 sm:py-0 xl:px-20 2xl:px-24 px-5  md:px-10 lg:px-20 "
       >
         <section className="h-10"></section>
-        <section className={`grid grid-cols-1 `}>
-          <section className="h-full w-full bg-gradient-to-r bg-opacity-10 from-slate-600 to-blackCeniza dark:from-blackCeniza dark:to-gray-900  rounded-t-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        <section className={`grid grid-cols-1 dark:gap-5 `}>
+          <section className="h-full w-full bg-gradient-to-r bg-opacity-10 from-slate-600 to-blackCeniza dark:from-blackCeniza dark:to-gray-900  rounded-t-[50px] dark:rounded-b-[50px] rounded-b-[50px] py-10 px-10 lg:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <article className="flex flex-col gap-5 justify-center pt-5 sm:p-20 md:px-20">
               <Title
                 text={"Transformando Ideas en Experiencias Digitales Extraordinarias"}
@@ -63,19 +64,24 @@ const About = ({ index, onObserver, currentStep }) => {
               />
             </article>
           </section>
-          <section className="h-full w-full bg-white rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 lg:divide-x-2 dark:divide-x-0 dark:divide-y-0  grid">
+        </section>
+      </motion.section>
+
+      <section className="bg-white dark:bg-gray-900 h-fit">
+        <Container>
+          <section className="h-full w-full bg-white  dark:bg-gray-900  rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 md:divide-y-0 lg:divide-x-2  dark:divide-y-0  grid mt-20 dark:divide-x-2">
             {articles.map(({ title, content }) => (
               <article
                 key={title}
-                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10 dark:bg-gray-900"
+                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10  "
               >
                 <SubTitle text={title} position={"text-center"} />
                 <Text content={content} extra={"text-start"} />
               </article>
             ))}
           </section>
-        </section>
-      </motion.section>
+        </Container>
+      </section>
     </Inspector>
   );
 };

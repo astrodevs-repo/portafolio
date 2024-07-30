@@ -1,4 +1,3 @@
-import "./style.css";
 import ItemMobile from "./ItemMobile";
 import { useState } from "react";
 import Section from "../shared/Section/Section";
@@ -52,6 +51,7 @@ function StepList({ index, onObserver }) {
           {steps.map(({ name, index }, i) => (
             <ItemMobile
               currentStep={currentStep}
+              length={steps.length}
               key={i}
               name={name}
               index={index}

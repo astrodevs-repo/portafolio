@@ -346,7 +346,7 @@ const FormAttachment = () => {
                       placeholder={input.placeholder}
                       value={formData[input.index] || ""}
                       onChange={handleChange}
-                      className={`bg-transparent  border border-blackCeniza rounded px-3 py-2 focus:outline-none focus:border-blue-500 ${input.col}`}
+                      className={`bg-transparent  border border-blackCeniza dark:border-white rounded px-3 py-2 focus:outline-none focus:border-blue-500 ${input.col}`}
                       required
                     />
                   </div>
@@ -362,7 +362,7 @@ const FormAttachment = () => {
               name="resume"
               accept=".pdf,.doc,.docx"
               onChange={handleFileChange}
-              className="bg-transparent text-blackCeniza border border-blackCeniza rounded px-3 py-2 focus:outline-none"
+              className="bg-transparent text-blackCeniza border border-blackCeniza dark:border-white rounded px-3 py-2 focus:outline-none"
               required
             />
           </label>

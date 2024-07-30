@@ -2,9 +2,8 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Text from "../shared/Text";
 import SubTitle from "../shared/SubTitle";
-import SubTitleItalic from "../shared/SubTitleItalic";
 
-const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
+const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -23,8 +22,14 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
   }, [index]);
 
   return (
-    <article className="step" ref={ref}>
-      <section className={`v-stepper `}>
+    <article
+      className={`relative flex justify-center ${
+        i === length - 1 ? "" : "divide-x-8 divide-blackCeniza dark:divide-gray-400"
+      } ${parseInt(currentStep) >= parseInt(index) && i != length - 1 && "divide-x-8"} `}
+      ref={ref}
+    >
+      <section className={``}>
+        {/** circle */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
@@ -33,10 +38,11 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
             y: parseInt(currentStep) >= parseInt(index) ? 0 : 20,
           }}
           transition={{ duration: 0.5 }}
-          className={`circle${index}  ${parseInt(currentStep) >= parseInt(index) && "active"}`}
-        >
-          <span className="steper-count"></span>
-        </motion.div>
+          className={`bg-blackCeniza dark:bg-gray-400 h-10 w-10 rounded-full absolute -top-5 -left-4 `}
+        ></motion.div>
+        {/** circle */}
+
+        {/** circle fade */}
         <motion.div
           ref={ref}
           initial={{ opacity: 20, y: 20 }}
@@ -46,13 +52,18 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep }) => {
             scale: parseInt(currentStep) >= parseInt(index) ? 1.3 : 1,
           }}
           transition={{ duration: 0.5 }}
-          className={`circlefade  ${parseInt(currentStep) >= parseInt(index) && "activefade"}`}
-        >
-          <span className="steper-count"></span>
-        </motion.div>
+          className={`  ${
+            parseInt(currentStep) >= parseInt(index) &&
+            "bg-blackCeniza dark:bg-gray-400 w-8 h-8 rounded-full absolute -top-4 -left-3 "
+          }`}
+        ></motion.div>
+        {/** circle fade */}
 
         <span
-          className={`line  ${parseInt(currentStep) >= parseInt(index) && "activeLine"}`}
+          className={`border-l-5  ${
+            parseInt(currentStep) >= parseInt(index) &&
+            "bg-blackCeniza dark:bg-gray-400 opacity-20 w-16 h-16 absolute -top-8 -left-7 rounded-full"
+          }`}
         ></span>
       </section>
 
@@ -65,7 +76,7 @@ export default ItemMobile;
 
 const Content = ({ currentStep, index, i, name }) => {
   return (
-    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 pb-20  -mt-2">
+    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 pb-20  -mt-5">
       <motion.p
         initial={{ opacity: 20, y: 20 }}
         animate={{
@@ -74,15 +85,15 @@ const Content = ({ currentStep, index, i, name }) => {
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}
-        className="text-xs sm:text-xs md:text-lg lg:text-2xl w-3/4 md:max-w-[20rem]  mt-3 ml-8 sm:ml-20 md:ml-10 text-black font-Poppins uppercase hidden sm:flex"
+        className="text-xs sm:text-xs md:text-lg lg:text-2xl w-3/4 md:max-w-[20rem]  mt-3 ml-8 sm:ml-20 md:ml-14 text-black font-Poppins uppercase hidden sm:flex"
       >
         <SubTitle text={name} />
       </motion.p>
       <motion.section
-        initial={{ opacity: 20, y: 20 }}
+        initial={{ opacity: 0, x: 100 }} // Inicia fuera del área visible a la derecha
         animate={{
           opacity: parseInt(currentStep) >= parseInt(index) ? 1 : 0,
-          y: parseInt(currentStep) >= parseInt(index) ? 0 : 5,
+          x: parseInt(currentStep) >= parseInt(index) ? 0 : 20, // Se mueve desde 100 hasta 0, y si no está en el paso actual, se mueve hacia la derecha ligeramente
           scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
         }}
         transition={{ duration: 0.5 }}

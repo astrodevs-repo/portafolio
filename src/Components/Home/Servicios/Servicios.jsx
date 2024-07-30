@@ -119,13 +119,13 @@ const Card = ({ title, content, svg, index, expanded, onExpand }) => {
       whileHover={{ scale: 1.02 }}
     >
       <article
-        className="relative bg-blackCeniza h-full w-full rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-20 py-10 cursor-pointer"
+        className="relative bg-blackCeniza dark:bg-gray-900 h-full w-full rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-20 py-10 cursor-pointer"
         onClick={() => onExpand(index)}
       >
         <img src={svg} alt="" />
         <Text content={title} textColor={"text-white"} extra={"text-center"} />
         <motion.div
-          className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
+          className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza dark:from-slate-900 dark:to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
             expanded ? "opacity-100" : "opacity-0"
           }`}
           initial={{ opacity: 0 }}
