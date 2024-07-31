@@ -24,7 +24,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
   return (
     <article
       className={`relative flex justify-center ${
-        i === length - 1 ? "" : "divide-x-8 divide-blackCeniza dark:divide-gray-400"
+        i === length - 1 ? "" : "divide-x-4 divide-blackCeniza dark:divide-gray-400"
       } ${parseInt(currentStep) >= parseInt(index) && i != length - 1 && "divide-x-8"} `}
       ref={ref}
     >
@@ -38,7 +38,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
             y: parseInt(currentStep) >= parseInt(index) ? 0 : 20,
           }}
           transition={{ duration: 0.5 }}
-          className={`bg-blackCeniza dark:bg-gray-400 h-10 w-10 rounded-full absolute -top-5 -left-4 `}
+          className={`bg-blackCeniza dark:bg-gray-400 h-5 w-5 rounded-full absolute -top-5 -left-2 `}
         ></motion.div>
         {/** circle */}
 
@@ -54,7 +54,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
           transition={{ duration: 0.5 }}
           className={`  ${
             parseInt(currentStep) >= parseInt(index) &&
-            "bg-blackCeniza dark:bg-gray-400 w-8 h-8 rounded-full absolute -top-4 -left-3 "
+            "bg-blackCeniza dark:bg-gray-400 w-5 <h-5></h-5> rounded-full absolute -top-4 -left-3 "
           }`}
         ></motion.div>
         {/** circle fade */}
@@ -62,7 +62,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
         <span
           className={`border-l-5  ${
             parseInt(currentStep) >= parseInt(index) &&
-            "bg-blackCeniza dark:bg-gray-400 opacity-20 w-16 h-16 absolute -top-8 -left-7 rounded-full"
+            "bg-blackCeniza dark:bg-gray-400 opacity-20 w-10 h-10 absolute -top-[30px] left-[-18px] rounded-full"
           }`}
         ></span>
       </section>

@@ -5,7 +5,7 @@ import useDarkMode from "../../../hooks/useDarkMode";
 const TOGGLE_CLASSES =
   "text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
 
-const Example = () => {
+const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useDarkMode();
   return (
     <div className={`grid place-content-center px-4 transition-colors `}>
@@ -46,4 +46,4 @@ const SliderToggle = ({ selected, setSelected }) => {
   );
 };
 
-export default Example;
+export default DarkModeToggle;

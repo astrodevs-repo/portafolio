@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
-import s from "./header.module.scss";
 import arrow from "../../../public/arrow.svg";
 import { IoIosArrowDown } from "react-icons/io";
+import ButtonSimple from "../shared/Buttons/ButtonSimple";
 
 function Header({ index, onObserver }) {
   const [scrollY, setScrollY] = useState(0);
@@ -78,7 +78,7 @@ function Header({ index, onObserver }) {
           animate={homeControls}
           initial={{ opacity: 1 }}
           id="home"
-          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] dark:from-[#001f3fd7] dark:via-[#003366dd] dark:to-[#00008bd9] flex flex-col justify-center sm:justify-center relative`}
+          className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffcc] to-[#694fff] dark:from-[#001f3fd7] dark:via-[#003366dd] dark:to-[#2626c8b9] flex flex-col justify-center sm:justify-center relative`}
         >
           <div id="title" className="flex flex-col justify-center gap-10 sm:gap-10">
             <motion.p
@@ -130,28 +130,22 @@ function Header({ index, onObserver }) {
             </section>
           </div>
 
-          <div className={s.header__buttons}>
+          <div className="flex justify-center gap-10 py-10">
             <a href={"#quienessomos"}>
-              <button className="font-Poppins">
-                Nuestros Servicios
-                <img
-                  className={s.hoverimg}
-                  style={{ position: "absolute", right: "0.3vmax" }}
-                  src={arrow}
-                  alt=""
-                />
-              </button>
+              <ButtonSimple
+                text={"Nuestros Servicios"}
+                img={arrow}
+                bg={"bg-[#e9eeff]"}
+                extra={"hover:shadow-lg  hover:shadow-[#89b8ffee] dark:hover:shadow-[#00008bd9]"}
+              />
             </a>
             <a href={"#aboutus"}>
-              <button className="font-Poppins">
-                Quienes somos
-                <img
-                  className={s.hoverimg}
-                  style={{ position: "absolute", right: "0.3vmax" }}
-                  src={arrow}
-                  alt=""
-                />
-              </button>
+              <ButtonSimple
+                text={"Quienes somos"}
+                img={arrow}
+                bg={"bg-[#e9eeff]"}
+                extra={"hover:shadow-lg  hover:shadow-[#89b8ffee] dark:hover:shadow-[#00008bd9]"}
+              />
             </a>
           </div>
 
