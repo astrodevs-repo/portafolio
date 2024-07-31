@@ -14,7 +14,11 @@ const Footer = ({ index, onObserver }) => {
   return (
     <Inspector index={index} onObserver={onObserver}>
       <section
-        className="bg-gradient-to-t from-[#4f75ff] via-[#4f75ff] to-[#3d59b8] sm:to-[#e9eeff] md:to-[#e9eeff]  pb-20 pt-10
+        className="bg-gradient-to-t 
+        from-[#4f75ff] via-[#4f75ff] to-[#3d59b8] sm:to-[#e9eeff] md:to-[#e9eeff] 
+        dark:bg-blackCeniza pb-20 pt-10
+        dark:bg-gradient-to-t 
+        dark:from-[#1a2755] dark:via-[#03207d] dark:to-gray-800
       "
         id="contactanos"
       >
@@ -39,7 +43,7 @@ const Footer = ({ index, onObserver }) => {
         </Container>
       </section>
 
-      <footer className="bg-white ">
+      <footer className="bg-white dark:bg-[#1a2755] ">
         <Container>
           <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
@@ -51,7 +55,7 @@ const Footer = ({ index, onObserver }) => {
                     </section>
                     <p className="font-bold text-xl text-[#31add5]">Neurons</p>
                   </a>
-                  <Text content={"SOLUCIONES DIGITALES"} />
+                  {/* <Text content={"SOLUCIONES DIGITALES"} /> */}
                 </section>
               </div>
 

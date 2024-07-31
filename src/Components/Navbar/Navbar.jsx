@@ -4,16 +4,24 @@ import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
 import DrawerNavigation from "../shared/drawer/Drawer";
 import { useLocation } from "react-router-dom";
+import DarkModeToggle from "../shared/DarkModeToggle/DarkModeToggle";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-
   const [activeSection, setActiveSection] = useState("home");
   const [loaded, setLoaded] = useState(false);
+  const [navbarBackground, setNavbarBackground] = useState(false);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     setPrevScrollPos(currentScrollPos);
+
+    // Check if the user has scrolled down
+    if (currentScrollPos > 0) {
+      setNavbarBackground(true);
+    } else {
+      setNavbarBackground(false);
+    }
 
     const sections = document.querySelectorAll("section[id]");
     let activeSectionFound = false;
@@ -57,7 +65,11 @@ const Navbar = () => {
     <>
       {loaded && (
         <motion.nav
-          className={`fixed w-full z-20 top-0  start-0  flex justify-between px-3 sm:px-10 md:px-5 lg:px-20  gap-5 items-center py-2 bg-blackCeniza`}
+          className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 ${
+            navbarBackground
+              ? "bg-blackCeniza dark:bg-[#2D3142]"
+              : "dark:bg-[#2d3142e7] bg-[#2d314281]"
+          } transition-colors duration-1000`}
         >
           <Logo />
 
@@ -66,8 +78,10 @@ const Navbar = () => {
               <li key={label}>
                 <a
                   href={id}
-                  className={`block  rounded ${
-                    activeSection === id ? "text-blackCeniza" : "text-white hover:text-[#2FE3CE]"
+                  className={`block rounded ${
+                    activeSection === id
+                      ? "text-blackCeniza"
+                      : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE]"
                   }`}
                 >
                   {label}
@@ -75,9 +89,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="flex gap-5 ">
+          <div className="flex gap-5">
             <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
             <DrawerNavigation />
+            <DarkModeToggle />
           </div>
         </motion.nav>
       )}
