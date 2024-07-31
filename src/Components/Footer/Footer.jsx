@@ -55,7 +55,7 @@ const Footer = ({ index, onObserver }) => {
                     </section>
                     <p className="font-bold text-xl text-[#31add5]">Neurons</p>
                   </a>
-                  <Text content={"SOLUCIONES DIGITALES"} />
+                  {/* <Text content={"SOLUCIONES DIGITALES"} /> */}
                 </section>
               </div>
 

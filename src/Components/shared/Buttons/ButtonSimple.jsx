@@ -34,7 +34,7 @@ const ButtonSimple = ({
         style={{ color: textColor }}
         onClick={handleClick}
         disabled={active}
-        className={`${bg} ${extra}  flex justify-center items-center gap-2 dark:bg-blackCeniza dark:border-blackCeniza dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium text-white focus:outline-none rounded-lg  ${border}  ${hover} focus:z-10 focus:ring-4  transition-all duration-300 ${
+        className={`${bg} ${extra}  flex justify-center items-center gap-2 dark:bg-gray-600 dark:border-gray-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium text-white focus:outline-none rounded-lg  ${border}  ${hover} focus:z-10 focus:ring-4  transition-colors duration-700 ${
           active && "opacity-50 cursor-not-allowed"
         }  ${w}`}
       >

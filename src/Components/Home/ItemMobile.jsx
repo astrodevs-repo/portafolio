@@ -25,7 +25,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
     <article
       className={`relative flex justify-center ${
         i === length - 1 ? "" : "divide-x-4 divide-blackCeniza dark:divide-gray-400"
-      } ${parseInt(currentStep) >= parseInt(index) && i != length - 1 && "divide-x-8"} `}
+      } ${parseInt(currentStep) >= parseInt(index) && i != length - 1 && "divide-x-4"} `}
       ref={ref}
     >
       <section className={``}>

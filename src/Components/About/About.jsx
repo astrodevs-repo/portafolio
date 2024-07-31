@@ -4,7 +4,7 @@ import Text from "../shared/Text";
 import Inspector from "../shared/Inspector/Inspector";
 import { motion } from "framer-motion";
 import Container from "../Container/Container";
-
+import logoBrain from "/public/logoBrain.png";
 const About = ({ index, onObserver, currentStep }) => {
   const articles = [
     {
@@ -32,30 +32,31 @@ const About = ({ index, onObserver, currentStep }) => {
           index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 50 } : { y: 80 }
         }
         transition={{ duration: 1, ease: "easeInOut" }}
-        className=" w-full h-fit-content  py-10 sm:py-0 xl:px-20 2xl:px-24 px-5  md:px-10 lg:px-20 "
+        className=" w-full h-fit-content  py-0 sm:py-0 xl:px-20 2xl:px-24 px-5  md:px-10 lg:px-20 "
       >
         <section className="h-10"></section>
-        <section className={`grid grid-cols-1 dark:gap-5 `}>
-          <section className="bg-blackCeniza rounded-xl p-10 flex flex-col justify-center items-center gap-10">
+        <section className={` dark:gap-5  relative`}>
+          <motion.article
+            initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)" }}
+            animate={
+              index === currentStep
+                ? { opacity: 1, color: "rgba(255, 255, 255, 1)", rotate: 360 }
+                : { y: 80, rotate: 0 }
+            }
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="bg-blackCeniza border-4 rounded-full w-fit absolute -bottom-14 left-[45%] hidden sm:flex"
+          >
+            <img src={logoBrain} alt="" className="w-[100px] p-5" />
+          </motion.article>
+          <section className="bg-gradient-to-t to-gray-500 from-blackCeniza rounded-xl p-10 sm:p-20 flex flex-col justify-center items-center gap-10">
             <article className="">
               <Title
                 text={"Transformando Ideas en Experiencias Digitales Extraordinarias"}
                 textColor={"text-white"}
                 extra={"font-Baskerville text-center"}
               />
-              {/* <SubTitle
-                text={
-                  "No somos solo una agencia de desarrollo web; somos una firma integral de soluciones digitales."
-                }
-                textColor={"text-white"}
-              /> */}
             </article>
-            <article className="w-3/4">
-              {/* <img
-                src={logoBrain}
-                alt=""
-                className="w-[150px] hidden sm:flex md:hidden lg:flex opacity-25"
-              /> */}
+            <article className="w-full sm:w-3/4">
               <SubTitle
                 text={
                   "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
@@ -69,13 +70,13 @@ const About = ({ index, onObserver, currentStep }) => {
         </section>
       </motion.section>
 
-      <section className="bg-white dark:bg-gray-900 h-fit">
+      <section className="bg-transparent sm:bg-white  dark:bg-gray-900 h-fit">
         <Container>
-          <section className="h-full w-full bg-white  dark:bg-gray-900  rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 md:divide-y-0 lg:divide-x-2  dark:divide-y-0  grid mt-20 dark:divide-x-0 dark:sm:divide-x-2">
+          <section className="h-full w-full bg-white rounded-lg sm:rounded-none dark:bg-gray-900  rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 md:divide-y-0 lg:divide-x-2  dark:divide-y-0  grid mt-20 dark:divide-x-0 dark:sm:divide-x-2">
             {articles.map(({ title, content }) => (
               <article
                 key={title}
-                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10  "
+                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10 "
               >
                 <SubTitle text={title} position={"text-center"} />
                 <Text content={content} extra={"text-start"} />

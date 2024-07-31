@@ -97,6 +97,8 @@ const FormAttachment = () => {
     phone: "",
     resume: null,
   });
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [preview, setPreview] = useState(null);
   const inputs = [
     {
       section: "Información Personal",
@@ -314,13 +316,21 @@ const FormAttachment = () => {
     });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      resume: e.target.files[0],
-    });
-  };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
 
+    // Generar una vista previa si es una imagen
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setPreview(null);
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -357,14 +367,15 @@ const FormAttachment = () => {
 
           <label className="flex flex-col col-span-2 gap-5">
             <Text content={"Currículum (PDF o Word):"} />
-            <input
-              type="file"
-              name="resume"
-              accept=".pdf,.doc,.docx"
-              onChange={handleFileChange}
-              className="bg-transparent text-blackCeniza border border-blackCeniza dark:border-white rounded px-3 py-2 focus:outline-none"
-              required
-            />
+            <section className="border border-gray-400 p-10">
+              <input type="file" accept="image/*,application/pdf" onChange={handleFileChange} />
+              {preview && (
+                <div>
+                  <h4>Vista previa de la imagen:</h4>
+                  <img src={preview} alt="Vista previa" style={{ maxWidth: "200px" }} />
+                </div>
+              )}
+            </section>
           </label>
         </form>
         <ButtonSimple text={"enviar"} bg={"bg-blue-500"} w={"w-1/2"} />

@@ -16,7 +16,7 @@ const DarkModeToggle = () => {
 
 const SliderToggle = ({ selected, setSelected }) => {
   return (
-    <div className="relative flex w-fit items-center rounded-full">
+    <div className="relative hidden sm:flex w-fit items-center rounded-full">
       <button
         className={`${TOGGLE_CLASSES} ${selected === "light" ? "text-white" : "text-slate-300"}`}
         onClick={() => setSelected(!selected)}
