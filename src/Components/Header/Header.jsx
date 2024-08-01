@@ -127,7 +127,7 @@ function Header({ index, onObserver }) {
           ))}
         </section>
 
-        <section className="grid grid-cols-1 sm:grid-cols-1 md:gird-cols-2  gap-2 sm:gap-10">
+        <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-2 sm:gap-10">
           <a href={"#quienessomos"} className="flex justify-center w-full">
             <ButtonSimple
               text={"Nuestros Servicios"}
