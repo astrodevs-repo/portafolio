@@ -3,7 +3,7 @@ import Inspector from "../../shared/Inspector/Inspector";
 import Section from "../../shared/Section/Section";
 import ItemMobile from "./ItemMobile";
 
-function StepList({ index, onObserver }) {
+function Stepper({ index, onObserver }) {
   const [currentStep, setCurrentStep] = useState("1");
 
   const handleStepChange = (step) => setCurrentStep(step);
@@ -65,4 +65,4 @@ function StepList({ index, onObserver }) {
   );
 }
 
-export default StepList;
+export default Stepper;

@@ -4,7 +4,7 @@ import About from "../../Components/About/About";
 import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
 import Footer from "../../Components/Footer/Footer";
-import StepList from "../../Components/Home/Steper/Steper";
+import StepList from "../../Components/Home/Stepper/Stepper";
 import ClientsSection from "../../Components/Home/SkillsSection/SkillsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";

@@ -718,3 +718,13 @@ export const about = {
     },
   ],
 };
+export const Stepper = {
+  title: "Trabajá con nosotros",
+  linkButton: "/teamattachment",
+  body: " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
+  itemsStepperImages: [
+    { items: [luisana, yeli, adrian, jesus, miguel], top: "0%", bottom: "-10%", duration: "100" },
+    { items: [jesus, miguel, yeli, adrian, luisana], top: "-10%", bottom: "0%", duration: "100" },
+    { items: [luisana, yeli, adrian, jesus, miguel], top: "0%", bottom: "-10%", duration: "100" },
+  ],
+};
