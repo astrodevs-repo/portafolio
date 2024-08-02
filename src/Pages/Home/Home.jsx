@@ -5,7 +5,7 @@ import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
 import Footer from "../../Components/Footer/Footer";
 import StepList from "../../Components/Home/Steper/Steper";
-import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
+import ClientsSection from "../../Components/Home/SkillsSection/SkillsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
