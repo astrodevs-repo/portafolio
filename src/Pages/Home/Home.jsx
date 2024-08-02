@@ -1,29 +1,22 @@
+import { useState } from "react";
+
 import About from "../../Components/About/About";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
 import Footer from "../../Components/Footer/Footer";
-import StepList from "../../Components/Home/Steper";
+import StepList from "../../Components/Home/Steper/Steper";
 import ClientsSection from "../../Components/Home/ClientsSection/ClientsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
 
   const handleStepChange = (step) => setCurrentStep(step);
   return (
-    <motion.main
-      className="z-40"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 3 }}
-    >
+    <>
       <Navbar />
       <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
@@ -39,7 +32,7 @@ const Home = () => {
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
       <section className="h-40"></section>
       <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />
-    </motion.main>
+    </>
   );
 };
 
