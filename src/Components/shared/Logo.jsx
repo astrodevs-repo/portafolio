@@ -1,7 +1,7 @@
-import logoBrain from "../../../public/logoBrain.png"
-const Logo = () => {
+import logoBrain from "../../../public/logoBrain.png";
+const Logo = ({ link }) => {
   return (
-    <a href="/" className="p-2">
+    <a href={link} className="p-2">
       <img src={logoBrain} alt="" className="w-[30px] sm:w-[50px]" />
     </a>
   );

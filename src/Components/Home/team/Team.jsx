@@ -2,9 +2,9 @@ import Title from "../../shared/Title";
 import Text from "../../shared/Text";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 import Inspector from "../../shared/Inspector/Inspector";
-import { motion } from "framer-motion";
-import VelocityVertical from "../Stepper/VelocityVertical";
 import { Stepper } from "../../../data/Home";
+import { motion } from "framer-motion";
+import VelocityVertical from "../../shared/VelocityVertical";
 
 function Community({ index, onObserver, currentStep }) {
   return (
