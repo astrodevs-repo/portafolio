@@ -5,11 +5,12 @@ import Logo from "../shared/Logo";
 import DrawerNavigation from "../shared/drawer/Drawer";
 import { useLocation } from "react-router-dom";
 import DarkModeToggle from "../shared/DarkModeToggle/DarkModeToggle";
+import { navItems } from "../../data/data";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [activeSection, setActiveSection] = useState("home");
-  const [loaded, setLoaded] = useState(false);
+
   const [navbarBackground, setNavbarBackground] = useState(false);
 
   const handleScroll = () => {
@@ -44,17 +45,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  const navItems = [
-    { id: "#aboutus", label: "Quienes somos" },
-    { id: "#quienessomos", label: "Servicios" },
-    { id: "#comotrabajamos", label: "Como trabajamos" },
-    { id: "#team", label: "Nuestro equipo" },
-    { id: "#team", label: "Trabaja con nosotros" },
-  ];
   const location = useLocation();
 
   useEffect(() => {
@@ -62,41 +52,35 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <>
-      {loaded && (
-        <motion.nav
-          className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 ${
-            navbarBackground
-              ? "bg-blackCeniza dark:bg-[#2D3142]"
-              : "dark:bg-[#2d3142e7] bg-[#2d314281]"
-          } transition-colors duration-1000`}
-        >
-          <Logo />
+    <motion.nav
+      className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 ${
+        navbarBackground ? "bg-blackCeniza dark:bg-[#2D3142]" : "dark:bg-[#2d3142e7] bg-[#2d314281]"
+      } transition-colors duration-1000`}
+    >
+      <Logo link={"#home"} />
 
-          <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
-            {navItems.map(({ id, label }) => (
-              <li key={label}>
-                <a
-                  href={id}
-                  className={`block rounded ${
-                    activeSection === id
-                      ? "text-blackCeniza"
-                      : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE]"
-                  }`}
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="flex gap-5">
-            <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
-            <DrawerNavigation />
-            <DarkModeToggle />
-          </div>
-        </motion.nav>
-      )}
-    </>
+      <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
+        {navItems.map(({ id, label }) => (
+          <li key={label}>
+            <a
+              href={id}
+              className={`block rounded ${
+                activeSection === id
+                  ? "text-blackCeniza"
+                  : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE]"
+              }`}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="flex gap-5">
+        <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
+        <DrawerNavigation />
+        <DarkModeToggle />
+      </div>
+    </motion.nav>
   );
 };
 

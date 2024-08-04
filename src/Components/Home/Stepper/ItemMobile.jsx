@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import Text from "../shared/Text";
-import SubTitle from "../shared/SubTitle";
+import SubTitle from "../../shared/SubTitle";
+import Text from "../../shared/Text";
 
 const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
   const ref = useRef(null);

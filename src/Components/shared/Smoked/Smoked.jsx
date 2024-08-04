@@ -100,7 +100,7 @@ const SmokeBackground = () => {
   return (
     <div
       ref={mountRef}
-      className="absolute  -left-5 -z-10 h-full w-full opacity-10 transition-opacity duration-500"
+      className="absolute  -left-5 -z-10 h-screen w-full opacity-10 transition-opacity duration-500"
     ></div>
   );
 };

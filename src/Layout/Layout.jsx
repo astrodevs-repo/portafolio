@@ -29,9 +29,16 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
-     
-      {children}
+    <section style={{ position: "relative" }}>
+      <motion.section
+        className="z-40"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3 }}
+      >
+        {children}
+      </motion.section>
 
       {showButton && (
         <motion.button
@@ -76,7 +83,7 @@ const Layout = ({ children }) => {
         theme="light"
         transition:Bounce
       />
-    </div>
+    </section>
   );
 };
 

@@ -19,6 +19,7 @@ import luisana from "/public/team/luisana.jpg";
 import miguel from "/public/team/miguel.jpg";
 import tomas from "/public/team/tomas.jpg";
 import yeli from "/public/team/yeli.jpg";
+import logoBrain from "/public/logoBrain.png";
 
 export const data = {
   Bg: "#31add5",
@@ -695,3 +696,35 @@ export const itemsTeam = [
     svg: tomas,
   },
 ];
+export const about = {
+  title: "Transformando Ideas en Experiencias Digitales Extraordinarias",
+  body: "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
+  imgBrain: logoBrain,
+  articles: [
+    {
+      title: "Visión",
+      content:
+        "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
+    },
+    {
+      title: "Misión",
+      content:
+        "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas ",
+    },
+    {
+      title: "¿Por qué eligirnos?",
+      content:
+        "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio. ",
+    },
+  ],
+};
+export const Stepper = {
+  title: "Trabajá con nosotros",
+  linkButton: "/teamattachment",
+  body: " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
+  itemsStepperImages: [
+    { items: [luisana, yeli, adrian, jesus, miguel], top: "0%", bottom: "-10%", duration: "100" },
+    { items: [jesus, miguel, yeli, adrian, luisana], top: "-10%", bottom: "0%", duration: "100" },
+    { items: [luisana, yeli, adrian, jesus, miguel], top: "0%", bottom: "-10%", duration: "100" },
+  ],
+};

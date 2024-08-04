@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           {routes.map((route, index) => (

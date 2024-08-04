@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const MovingText = ({ left, right, items, extra }) => {
+const Velocity = ({ left, right, items, extra }) => {
   return (
     <section className={`relative h-fit py-5 overflow-hidden w-full px-20 `}>
       <motion.div
@@ -26,4 +26,4 @@ const MovingText = ({ left, right, items, extra }) => {
   );
 };
 
-export default MovingText;
+export default Velocity;
