@@ -10,7 +10,7 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
+// import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -29,13 +29,11 @@ const Home = () => {
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      <PanelProyectos index={"projects"} onObserver={handleStepChange} currentStep={currentStep} />
-
+      {/* <PanelProyectos index={"projects"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
       <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
-
       <section className="h-40"></section>
-      <Footer index={"contact.anos"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Footer index={"contactanos"} />
     </>
   );
 };

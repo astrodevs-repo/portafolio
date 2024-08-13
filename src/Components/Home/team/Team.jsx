@@ -2,7 +2,7 @@ import Title from "../../shared/Title";
 import Text from "../../shared/Text";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 import Inspector from "../../shared/Inspector/Inspector";
-import { Stepper } from "../../../data/Home";
+import { Stepper, StepperMobile } from "../../../data/Home";
 import { motion } from "framer-motion";
 import VelocityVertical from "../../shared/VelocityVertical";
 
@@ -32,6 +32,18 @@ function Community({ index, onObserver, currentStep }) {
           />
         </section>
         <section className={`flex justify-center px-0 sm:px-2`}>
+          {StepperMobile.itemsStepperImages.map(({ items, top, bottom, duration }, index) => (
+            <VelocityVertical
+              top={top}
+              bottom={bottom}
+              duration={duration}
+              items={items}
+              extra={"rounded-lg"}
+              key={index}
+            />
+          ))}
+        </section>
+        <section className={`md:flex justify-center px-0 sm:px-2 hidden sm:hidden `}>
           {Stepper.itemsStepperImages.map(({ items, top, bottom, duration }, index) => (
             <VelocityVertical
               top={top}

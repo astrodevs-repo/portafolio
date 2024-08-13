@@ -5,6 +5,7 @@ import Project from "./Pages/Project/Project";
 import Projects from "./Pages/Projects/Projects";
 import Services from "./Pages/Services/Services";
 import Team from "./Pages/Team/Team";
+import Sended from "./Pages/TeamAttachment/Sended";
 import TeamAttachment from "./Pages/TeamAttachment/TeamAttachment";
 
 export const routes = [
@@ -36,6 +37,10 @@ export const routes = [
   {
     path: "/teamattachment",
     element: <TeamAttachment />,
+  },
+  {
+    path: "/sended",
+    element: <Sended />,
   },
   {
     path: "*",

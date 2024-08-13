@@ -75,10 +75,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className="flex gap-5">
+      <div className="flex gap-5 items-center">
         <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
-        <DrawerNavigation />
         <DarkModeToggle />
+        <DrawerNavigation />
       </div>
     </motion.nav>
   );
