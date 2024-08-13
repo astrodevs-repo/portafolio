@@ -31,7 +31,7 @@ function Community({ index, onObserver, currentStep }) {
             route={Stepper.linkButton}
           />
         </section>
-        <section className={`flex justify-center px-0 sm:px-2`}>
+        <section className={`flex sm:hidden md:hidden justify-center px-0 sm:px-2 `}>
           {StepperMobile.itemsStepperImages.map(({ items, top, bottom, duration }, index) => (
             <VelocityVertical
               top={top}
