@@ -9,15 +9,19 @@ const ButtonsSection = () => {
           text={"Nuestros Servicios"}
           img={arrow}
           bg={"bg-[#e9eeff]"}
-          extra={"hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0]"}
+          extra={
+            "hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0] w-full min-w-60"
+          }
         />
       </a>
-      <a href={"#aboutus"} className="flex justify-center w-full">
+      <a href={"#aboutus"} className="flex justify-center w-full ">
         <ButtonSimple
           text={"Quienes somos"}
           img={arrow}
           bg={"bg-[#e9eeff]"}
-          extra={"hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0]"}
+          extra={
+            "hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0] w-full min-w-60 flex justify-center gap-10"
+          }
         />
       </a>
     </section>

@@ -41,14 +41,7 @@ const TeamAttachment = () => {
           extra="py-5"
           transitionTime={8000} // Adjust the transition time as needed
         />
-        <MovingText
-          right={"0%"}
-          left={"-100%"}
-          items={itemsTeam}
-          extra={
-            "max-w-[250px] min-w-[250px] max-h-[300px] min-h-[300px] sm:max-w-[400px] sm:min-w-[400px] sm:max-h-[500px] sm:min-h-[500px] rounded-lg flex sm:hidden"
-          }
-        />
+
         <Title extra={"font-Baskerville text-center"} text={"Queremos conocerte"} />
 
         <SubTitle
@@ -63,7 +56,7 @@ const TeamAttachment = () => {
         left={"-100%"}
         items={itemsTeam}
         extra={
-          "max-w-[250px] min-w-[250px] max-h-[300px] min-h-[300px] sm:max-w-[400px] sm:min-w-[400px] sm:max-h-[500px] sm:min-h-[500px] rounded-lg hidden sm:flex "
+          "max-w-[250px] min-w-[250px] max-h-[300px] min-h-[300px] sm:max-w-[400px] sm:min-w-[400px] sm:max-h-[500px] sm:min-h-[500px] rounded-lg  "
         }
       />
       <FormAttachment />
