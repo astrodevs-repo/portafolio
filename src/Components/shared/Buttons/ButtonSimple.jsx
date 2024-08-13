@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Text from "../Text";
+import Loading from "../Loading/Loading";
 
 const ButtonSimple = ({
   text,
@@ -16,6 +17,7 @@ const ButtonSimple = ({
   route,
   img,
   extra,
+  type,
 }) => {
   const navigate = useNavigate();
 
@@ -31,7 +33,7 @@ const ButtonSimple = ({
   return (
     <section className={`flex justify-${display} ${w}`}>
       <motion.button
-        type="button"
+        type={type ? type : "button"}
         style={{ color: textColor }}
         onClick={handleClick}
         disabled={active}
@@ -42,7 +44,7 @@ const ButtonSimple = ({
           active && "opacity-50 cursor-not-allowed"
         } ${w}`}
       >
-        <Text content={loader ? "enviando..." : text} />
+        {loader ? <Loading /> : <Text content={text} />}
         <motion.img
           disabled={active}
           initial={{ scale: 1 }}

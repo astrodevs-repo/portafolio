@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Velocity = ({ left, right, items, extra }) => {
   return (
-    <section className={`relative h-fit py-5 overflow-hidden w-full px-20 `}>
+    <section className={`relative h-fit py-5 overflow-hidden w-full `}>
       <motion.div
         style={{
           transform: "translate(-50%, -50%)",
@@ -14,10 +14,10 @@ const Velocity = ({ left, right, items, extra }) => {
         initial={{ x: right }}
         animate={{ x: left }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="w-[100%] flex gap-20"
+        className={`${extra} w-[100%] flex gap-10`}
       >
         {items.map((item, index) => (
-          <div className="min-w-fit flex items-center gap-5" key={index}>
+          <div className="min-w-fit flex items-center" key={index}>
             <img src={item.svg} alt="" className={extra} />
           </div>
         ))}
