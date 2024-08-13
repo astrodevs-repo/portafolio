@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <SmokeBackground />
+
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
