@@ -17,7 +17,7 @@ export default function SkillsSection({ index, onObserver }) {
             extra={"font-LusitanaBold"}
           />
         </Container>
-        <MovingText right={"0%"} left={"-100%"} items={itemsClient} extra={"gap-20"} />
+        <MovingText right={"0%"} left={"-100%"} items={itemsClient} extra={"gap-20 "} />
       </motion.section>
     </Inspector>
   );
