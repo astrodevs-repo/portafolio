@@ -6,21 +6,27 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Layout = ({ children }) => {
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(true); // Inicialmente es true
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY === 0) {
         setShowButton(true);
       } else {
         setShowButton(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
+
+    // Check initial position on mount
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -81,7 +87,7 @@ const Layout = ({ children }) => {
         draggable
         pauseOnHover
         theme="light"
-        transition:Bounce
+        transition="Bounce" // Corrige la propiedad de transición
       />
     </section>
   );
