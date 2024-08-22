@@ -3,5 +3,5 @@ export const navItems = [
   { id: "#quienessomos", label: "Servicios" },
   { id: "#comotrabajamos", label: "Como trabajamos" },
   { id: "#team", label: "Nuestro equipo" },
-  { id: "#team", label: "Trabaja con nosotros" },
+  // { id: "#team", label: "Trabaja con nosotros" },
 ];
