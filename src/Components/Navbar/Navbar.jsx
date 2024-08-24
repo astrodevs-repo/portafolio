@@ -58,7 +58,7 @@ const Navbar = () => {
         navbarBackground ? "bg-blackCeniza dark:bg-[#2D3142]" : "dark:bg-transparent bg-translate"
       } transition-colors duration-1000`}
     >
-      <Logo link={"#home"} />
+      <Logo link={"home"} />
 
       <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
         {navItems.map(({ id, label }) => (
@@ -77,7 +77,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="flex gap-5 items-center">
-        <ButtonGrandient id={"/#contactanos"} text={"Contactanos"} />
+        <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
         <DarkModeToggle />
         <DrawerNavigation />
       </div>

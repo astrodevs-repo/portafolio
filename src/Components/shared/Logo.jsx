@@ -1,8 +1,9 @@
 import logoBrain from "../../../public/logoBrain.png";
+import { scrollToSection } from "../../utils/functions";
 const Logo = ({ link }) => {
   return (
-    <a href={link} className="p-2">
-      <img src={logoBrain} alt="" className="w-[30px] sm:w-[50px]" />
+    <a onClick={() => scrollToSection(link)} className="p-2 cursor-pointer">
+      <img src={logoBrain} alt="" className="w-[50px] sm:w-[50px]" />
     </a>
   );
 };

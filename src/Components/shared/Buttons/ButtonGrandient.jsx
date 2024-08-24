@@ -1,6 +1,8 @@
+import { scrollToSection } from "../../../utils/functions";
+
 const ButtonGrandient = ({ text, id }) => {
   return (
-    <a href={id}>
+    <a onClick={() => scrollToSection(id)}>
       {" "}
       <button
         type="button"
