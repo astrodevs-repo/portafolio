@@ -1,108 +1,51 @@
-import { useEffect, useRef } from "react";
-import png from "/public/fondo.png";
-import * as THREE from "https://cdn.skypack.dev/three@0.134";
+// Background.tsx
+import { motion } from "framer-motion";
+import React from "react";
+import png from "/public/atomgrueso.png"; // Asegúrate de que esta ruta sea correcta
 
-const SmokeBackground = () => {
-  const mountRef = useRef(null);
-
-  useEffect(() => {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-
-    const clock = new THREE.Clock();
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(width, height);
-
-    const scene = new THREE.Scene();
-
-    const camera = new THREE.PerspectiveCamera(75, width / height, 1, 10000);
-    camera.position.z = 1000;
-    scene.add(camera);
-
-    const light = new THREE.DirectionalLight(0xffffff, 0.1);
-    light.position.set(1, 0, 1);
-    scene.add(light);
-
-    const smokeParticles = [];
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(png, (texture) => {
-      const smokeMaterial = new THREE.MeshLambertMaterial({
-        color: 0xff6666,
-        map: texture,
-        transparent: true,
-      });
-      smokeMaterial.map.minFilter = THREE.LinearFilter;
-      const smokeGeometry = new THREE.PlaneBufferGeometry(300, 300);
-
-      for (let i = 0; i < 50; i++) {
-        const smokeMesh = new THREE.Mesh(smokeGeometry, smokeMaterial);
-        smokeMesh.position.set(
-          Math.random() * width - width / 2,
-          Math.random() * height - height / 2,
-          Math.random() * 2000 - 1000
-        );
-        smokeMesh.rotation.z = Math.random() * 360;
-        smokeParticles.push(smokeMesh);
-        scene.add(smokeMesh);
-      }
-    });
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      const delta = clock.getDelta();
-      smokeParticles.forEach((particle) => {
-        particle.rotation.z += delta * 0.09;
-      });
-      renderer.render(scene, camera);
+const Background = () => {
+  // Crea una función para generar una posición, tamaño y rotación aleatorios
+  const getRandomTransform = () => {
+    const size = Math.random() * 150 + 250; // Tamaño entre 50 y 250 px
+    const rotation = Math.random() * 360; // Rotación entre 0 y 360 grados
+    const x = Math.random() * 100; // Posición X en porcentaje
+    const y = Math.random() * 100; // Posición Y en porcentaje
+    return {
+      width: `${size}px`,
+      height: `${size}px`,
+      transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
+      top: `${y}%`,
+      left: `${x}%`,
     };
+  };
 
-    animate();
-
-    mountRef.current.appendChild(renderer.domElement);
-
-    const onResize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-
-      // Update smoke particles positions
-      smokeParticles.forEach((particle) => {
-        particle.position.set(
-          Math.random() * width - width / 2,
-          Math.random() * height - height / 2,
-          Math.random() * 2000 - 1000
-        );
-      });
-    };
-
-    const onScroll = () => {
-      if (mountRef.current) {
-        if (window.scrollY === 0) {
-          mountRef.current.style.opacity = "0.2";
-        } else {
-          mountRef.current.style.opacity = "0";
-        }
-      }
-    };
-
-    window.addEventListener("resize", onResize);
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
+  // Crea una lista de elementos de imagen con transformaciones aleatorias
+  const elements = Array.from({ length: 30 }).map((_, i) => (
+    <motion.div
+      key={i}
+      className="absolute"
+      style={{
+        ...getRandomTransform(),
+        backgroundImage: `url(${png})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+      animate={{
+        rotate: [0, 360],
+      }}
+      transition={{
+        repeat: Infinity,
+        duration: 60, // Cambia la duración según la velocidad que desees
+        ease: "linear",
+      }}
+    />
+  ));
 
   return (
-    <div
-      ref={mountRef}
-      className="absolute  -left-5 -z-10 h-screen w-full  opacity-10 transition-opacity duration-500"
-    ></div>
+    <div className="absolute top-0 left-0 z-0 w-full h-screen overflow-hidden opacity-30">
+      {elements}
+    </div>
   );
 };
 
-export default SmokeBackground;
+export default Background;

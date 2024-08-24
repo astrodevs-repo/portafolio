@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import { FaArrowUp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -45,20 +44,6 @@ const Layout = ({ children }) => {
       >
         {children}
       </motion.section>
-
-      {showButton && (
-        <motion.button
-          animate={{ y: -50 }}
-          transition={{ ease: "easeOut", duration: 2 }}
-          onClick={scrollToTop}
-          className="fixed bottom-10 left-5"
-          style={{
-            zIndex: "1000",
-          }}
-        >
-          <FaArrowUp className="text-gray-500" />
-        </motion.button>
-      )}
 
       <a
         href="https://wa.me/+5492612336104"

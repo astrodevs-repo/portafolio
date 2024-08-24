@@ -6,6 +6,7 @@ import DrawerNavigation from "../shared/drawer/Drawer";
 import { useLocation } from "react-router-dom";
 import DarkModeToggle from "../shared/DarkModeToggle/DarkModeToggle";
 import { navItems } from "../../data/data";
+import { scrollToSection } from "../../utils/functions";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -54,7 +55,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 ${
-        navbarBackground ? "bg-blackCeniza dark:bg-[#2D3142]" : "dark:bg-[#2d3142e7] bg-[#2d314281]"
+        navbarBackground ? "bg-blackCeniza dark:bg-[#2D3142]" : "dark:bg-transparent bg-translate"
       } transition-colors duration-1000`}
     >
       <Logo link={"#home"} />
@@ -62,16 +63,16 @@ const Navbar = () => {
       <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
         {navItems.map(({ id, label }) => (
           <li key={label}>
-            <a
-              href={id}
-              className={`block rounded ${
+            <p
+              onClick={() => scrollToSection(id)}
+              className={`block rounded cursor-pointer ${
                 activeSection === id
-                  ? "text-blackCeniza"
-                  : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE]"
+                  ? "text-[#2FE3CE]"
+                  : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
               }`}
             >
               {label}
-            </a>
+            </p>
           </li>
         ))}
       </ul>

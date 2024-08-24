@@ -2,19 +2,25 @@ import Inspector from "../../shared/Inspector/Inspector";
 import TextEffect from "./TextEffect";
 import TextPrincipal from "./TextPrincipal";
 import ButtonsSection from "./ButtonsSection";
-import ArrowDown from "./ArrowDown";
+import SubTitle from "../../shared/SubTitle";
 
 function Header({ index, onObserver }) {
   return (
     <Inspector index={index} onObserver={onObserver}>
       <section
         id="home"
-        className={`min-h-screen bg-gradient-to-bl from-[#c5fcff] via-[#89b8ffe8] to-[#694fff] dark:from-[#001f3fd7] dark:via-[#266cb3dd] dark:to-[#7f7fcc68] flex flex-col gap-10 justify-center sm:justify-center items-center relative`}
+        className={`min-h-screen bg-gradient-to-bl from-[#89b8ffe8] via-[#89b8ffe8] to-[#694fff] dark:from-[#001f3fd7] dark:via-[#266cb3dd] dark:to-[#7f7fcc68] flex flex-col gap-10 justify-center sm:justify-center items-center relative`}
       >
-        <TextPrincipal />
         <TextEffect />
+
+        <TextPrincipal />
+        <SubTitle
+          text={
+            "Nuestra flexibilidad y adaptabilidad nos permiten convertir cada desafío en una estrategia personalizada que se alinea con tus objetivos empresariales, asegurando soluciones eficaces y a medida."
+          }
+          extra={"w-3/4 text-center"}
+        />
         <ButtonsSection />
-        <ArrowDown />
       </section>
     </Inspector>
   );
