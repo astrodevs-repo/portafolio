@@ -9,6 +9,7 @@ import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
 import logoBrain from "../../../public/logoBrain.png";
+import Logo from "../shared/Logo";
 
 const Footer = ({ index, onObserver }) => {
   return (
@@ -49,12 +50,10 @@ const Footer = ({ index, onObserver }) => {
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0 flex flex-col justify-start">
                 <section className="w-full">
-                  <a href="/" className="flex items-center gap-2">
-                    <section className="w-[20%]">
-                      <img src={logoBrain} className="w-40" />
-                    </section>
+                  <section className="flex items-center gap-2">
+                    <Logo link={"home"} />
                     <p className="font-bold text-xl text-[#31add5]">Neurons</p>
-                  </a>
+                  </section>
                   {/* <Text content={"SOLUCIONES DIGITALES"} /> */}
                 </section>
               </div>

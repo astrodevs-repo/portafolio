@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import { FaArrowUp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Layout = ({ children }) => {
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(true); // Inicialmente es true
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY === 0) {
         setShowButton(true);
       } else {
         setShowButton(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
+
+    // Check initial position on mount
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -39,20 +44,6 @@ const Layout = ({ children }) => {
       >
         {children}
       </motion.section>
-
-      {showButton && (
-        <motion.button
-          animate={{ y: -50 }}
-          transition={{ ease: "easeOut", duration: 2 }}
-          onClick={scrollToTop}
-          className="fixed bottom-10 left-5"
-          style={{
-            zIndex: "1000",
-          }}
-        >
-          <FaArrowUp className="text-gray-500" />
-        </motion.button>
-      )}
 
       <a
         href="https://wa.me/+5492612336104"
@@ -81,7 +72,7 @@ const Layout = ({ children }) => {
         draggable
         pauseOnHover
         theme="light"
-        transition:Bounce
+        transition="Bounce" // Corrige la propiedad de transición
       />
     </section>
   );

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Velocity = ({ left, right, items, extra }) => {
   return (
-    <section className={`relative h-fit py-5 overflow-hidden w-full `}>
+    <section className={`relative h-fit py-5 overflow-hidden w-full rotate `}>
       <motion.div
         style={{
           transform: "translate(-50%, -50%)",
