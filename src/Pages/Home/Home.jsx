@@ -10,7 +10,6 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-import PanelProyectos from "../../Components/PanelProjects/PanelProjects";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
