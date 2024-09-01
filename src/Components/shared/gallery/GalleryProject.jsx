@@ -5,7 +5,7 @@ import Title from "../../../Components/shared/Title";
 import Text from "../Text";
 import SubTitle from "../SubTitle";
 
-const GalleryComponent = ({ nombre, description, imgCard }) => {
+const GalleryComponent = ({ nombre, description, imgCard, groupimg }) => {
   return (
     <>
       <Container>
@@ -26,8 +26,15 @@ const GalleryComponent = ({ nombre, description, imgCard }) => {
         transition={{ ease: "easeOut", duration: 1 }}
         className={`pt-40 object-fit`}
       >
-        <img src={imgCard} alt="" className="w-full h-96 object-cover" />
+        <img src={imgCard} alt="" className="w-full h-fit object-cover" />
       </motion.div>
+      {/* <div className="flex">
+        {groupimg.map((e, index) => (
+          <section key={index}>
+            <img src={e} alt="" className="min-w-96" />
+          </section>
+        ))}
+      </div> */}
     </>
   );
 };

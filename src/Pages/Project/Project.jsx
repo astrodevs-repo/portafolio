@@ -43,7 +43,7 @@ const Project = () => {
               Client <br />
               <Text content={item.nombre} extra={"font-bold"} />
             </div>
-            {/* Si tienes un objeto `client`, puedes iterar sobre sus propiedades */}
+
             {item.client &&
               Object.entries(item.client).map(([property, value], index) => (
                 <div key={index} className="text-gray-400">
