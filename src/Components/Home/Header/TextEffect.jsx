@@ -11,7 +11,7 @@ const TextEffect = () => {
   const firstPhraseDelay = calculateTotalDelay(firstPhrase);
 
   return (
-    <section className="flex flex-wrap justify-center px-12 sm:px-0 text-blackCeniza">
+    <section className="flex flex-wrap justify-center px-12 sm:px-0 text-blackCeniza dark:text-white">
       {[firstPhrase].map((phrase, phraseIndex) => (
         <div key={phraseIndex} className="flex flex-wrap justify-center">
           {phrase.split("").map((letter, index) => (

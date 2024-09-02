@@ -90,5 +90,5 @@ body {
 }
 
 .custom-placeholder::placeholder {
-  color: rgba(255, 255, 255, 0.604); /* Cambia 'red' al color que prefieras */
+  @apply text-blackCeniza dark:text-white;
 }

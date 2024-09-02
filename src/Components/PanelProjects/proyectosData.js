@@ -13,7 +13,7 @@ const proyectosData = [
       Website: "https://costaexport.com",
       Phone: "555 8888 888",
     },
-    project:[
+    project: [
       {
         imgUrl: "",
         title: "Objetivo",
@@ -23,7 +23,7 @@ const proyectosData = [
             title: "Optimización de Usabilidad",
             text: "El principal objetivo del proyecto fue desarrollar un sitio web responsive que optimizara la usabilidad. Esto aseguró que los usuarios pudieran navegar y encontrar información de manera intuitiva desde cualquier dispositivo, ya sea móvil, tableta o computadora de escritorio. Se implementaron principios de diseño centrados en el usuario para mejorar la experiencia de navegación.",
           },
-          
+
           {
             title: "Estética Atractiva",
             text: "El diseño visual del sitio fue meticulosamente creado para ser moderno y atractivo. Se utilizó una paleta de colores coherente y una tipografía que facilitara la lectura, asegurando una experiencia visual agradable y profesional.",
@@ -37,7 +37,8 @@ const proyectosData = [
       {
         imgUrl: "",
         title: "Reto",
-        subtitle: "Desafío de Atracción Visual y Funcionalidad, Superación de Obstáculos Técnicos y Integración de Tecnologías",
+        subtitle:
+          "Desafío de Atracción Visual y Funcionalidad, Superación de Obstáculos Técnicos y Integración de Tecnologías",
         body: [
           {
             title: "Atracción Visual y Funcionalidad",
@@ -56,7 +57,8 @@ const proyectosData = [
       {
         imgUrl: "",
         title: "Solución",
-        subtitle: "Enfoque Centrado en el Usuario, Uso de TailwindCSS, Estrategia de Dominio y SEO, Despliegue en Plataforma Confiable",
+        subtitle:
+          "Enfoque Centrado en el Usuario, Uso de TailwindCSS, Estrategia de Dominio y SEO, Despliegue en Plataforma Confiable",
         body: [
           {
             title: "Enfoque Centrado en el Usuario",
@@ -105,6 +107,80 @@ const proyectosData = [
       AdobeXD: true,
       SEO: true,
       "Domain Purchase": true,
+      Deployment: true,
+    },
+  },
+  {
+    id: "neurons-eduardo-portfolio",
+    nombre: "Portafolio de Eduardo",
+    imgCard: "/public/projects/portfolio.png", // Cambia esto por la URL de la imagen del portafolio.
+    groupimg: [
+      "/public/projects/aboutme.png",
+      "/public/projects/aboutme2.png",
+      "/public/projects/screenc.png",
+      "/public/projects/conocimientos.png",
+      "/public/projects/conocimientos2.png",
+      "/public/projects/experiencias.png",
+      "/public/projects/footer.png",
+
+      "/public/projects/screenc.png",
+      "/public/projects/screenb.png",
+    ],
+    description:
+      "Creación de un portafolio web completo para Eduardo, un desarrollador con experiencia en tecnologías avanzadas y gestión de proyectos. El objetivo fue diseñar y desarrollar un sitio web profesional que muestre sus habilidades y proyectos de manera efectiva.",
+    tipoTrabajo: "Web Development",
+    client: {
+      name: "Eduardo",
+      services:
+        "Full-Stack Development, Web3 Integration, Blockchain Solutions, UI/UX Design, Project Management",
+      Website: "https://eduardowebdev.com", // Cambia esto por la URL del portafolio si está disponible.
+      Phone: "555 1234 567",
+    },
+    project: [
+      {
+        imgUrl: "https://example.com/eduardo-project1.jpg", // Cambia esto por la URL de la imagen del proyecto.
+        title: "Desarrollo del Portafolio Web",
+        subtitle: "Diseño y Desarrollo del Portafolio Profesional de Eduardo",
+        body: [
+          {
+            title: "Análisis de Requerimientos",
+            text: "Comenzamos con un análisis exhaustivo de los requerimientos de Eduardo para entender sus necesidades y objetivos. Esto incluyó reuniones detalladas para definir la estructura, el diseño y las funcionalidades del portafolio.",
+          },
+          {
+            title: "Diseño de Interfaz de Usuario (UI)",
+            text: "Desarrollé un diseño de interfaz intuitivo y atractivo utilizando herramientas como Adobe XD y Figma. Se creó un diseño responsivo para asegurar que el portafolio se viera bien en dispositivos móviles y de escritorio.",
+          },
+          {
+            title: "Desarrollo Frontend",
+            text: "Utilicé tecnologías como React y TailwindCSS para construir una interfaz dinámica y estilizada. Se implementaron componentes reutilizables y una estructura de navegación fluida para una experiencia de usuario óptima.",
+          },
+          {
+            title: "Integración de Contenidos",
+            text: "Incorporé contenido detallado sobre los proyectos y habilidades de Eduardo, incluyendo descripciones, imágenes y enlaces relevantes. La integración de contenido se hizo de manera que resaltara los logros y experiencia del cliente.",
+          },
+          {
+            title: "Desarrollo Backend y Funcionalidades",
+            text: "Implementé funcionalidades backend para el portafolio utilizando Node.js y Express. Se integraron características como formularios de contacto y un sistema de gestión de contenido para que Eduardo pudiera actualizar su portafolio fácilmente.",
+          },
+          {
+            title: "Optimización y SEO",
+            text: "Realicé una optimización completa del sitio para asegurar tiempos de carga rápidos y una buena indexación en motores de búsqueda. Se implementaron prácticas de SEO tanto on-page como off-page para mejorar la visibilidad en línea.",
+          },
+          {
+            title: "Despliegue y Mantenimiento",
+            text: "Desplegué el portafolio en una plataforma confiable y proporcioné mantenimiento continuo para asegurar que el sitio funcionara sin problemas. Se llevaron a cabo pruebas exhaustivas para garantizar la estabilidad y el rendimiento del sitio.",
+          },
+        ],
+      },
+    ],
+    tools: {
+      React: true,
+      TailwindCSS: true,
+      "Node.js": true,
+      Express: true,
+      "Adobe XD": true,
+      Figma: true,
+      SEO: true,
       Deployment: true,
     },
   },

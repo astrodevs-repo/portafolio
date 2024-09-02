@@ -44,18 +44,7 @@ const ButtonSimple = ({
           active && "opacity-50 cursor-not-allowed"
         } ${w}`}
       >
-        {loader ? <Loading /> : <Text content={text} />}
-        <motion.img
-          disabled={active}
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300, damping: 15 }}
-          src={img}
-          alt=""
-          className={`${
-            img ? "flex bg-Chicle dark:bg-violet-600 p-2 rounded-full w-8 h-8" : "hidden"
-          }`}
-        />
+        {loader ? <Loading /> : <Text textColor={textColor} content={text} />}
       </motion.button>
     </section>
   );
