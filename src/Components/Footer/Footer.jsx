@@ -15,11 +15,10 @@ const Footer = ({ index, onObserver }) => {
   return (
     <Inspector index={index} onObserver={onObserver}>
       <section
-        className="bg-gradient-to-t 
-        from-[#4f75ff] via-[#4f75ff] to-[#3d59b8] sm:to-[#e9eeff] md:to-[#e9eeff] 
+        className="bg-transparent
         dark:bg-blackCeniza pb-20 pt-10
         dark:bg-gradient-to-t 
-        dark:from-[#1a2755] dark:via-[#03207d] dark:to-gray-800
+        dark:from-[#001f3fe7] dark:via-[#001f3fe7] dark:to-gray-800
       "
         id="contactanos"
       >
@@ -27,13 +26,13 @@ const Footer = ({ index, onObserver }) => {
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-20 ">
             <motion.section className="">
               <Text
-                textColor={"text-white"}
+                textColor={"text-blackCeniza dark:text-white"}
                 content={
                   "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
                 }
               />
               <p
-                className={`text-black font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
+                className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
               >
                 ¡Gracias por considerar Neurons como su socio digital!
               </p>
@@ -44,7 +43,7 @@ const Footer = ({ index, onObserver }) => {
         </Container>
       </section>
 
-      <footer className="bg-white dark:bg-[#1a2755] ">
+      <footer className="bg-gradient-to-tr  from-[#89b8fff7] via-[#e9eeff] to-[#e9eeff] dark:bg-[#001f3fe7] ">
         <Container>
           <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">

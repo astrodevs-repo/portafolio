@@ -68,7 +68,11 @@ const Navbar = () => {
               className={`block rounded cursor-pointer ${
                 activeSection === id
                   ? "text-[#2FE3CE]"
-                  : "text-white dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
+                  : `${
+                      navbarBackground
+                        ? "text-white dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
+                        : "text-blackCeniza dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
+                    } `
               }`}
             >
               {label}

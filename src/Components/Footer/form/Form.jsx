@@ -15,7 +15,7 @@ const ContactUs = () => {
 
   return (
     <section className="w-full flex flex-col gap-10 pt-20 sm:pt-20 md:pt-0" id="contactanosform">
-      <SubTitle text={"Contactanos"} textColor={"text-white"} />
+      <SubTitle text={"Contactanos"} textColor={"text-blackCeniza dark:text-white"} />
       <form ref={form} onSubmit={handleSubmit}>
         <section className={`w-full grid grid-cols-1 gap-4 mb-5 ${loading ? "opacity-50" : ""}`}>
           <div className="flex flex-col gap-2">
@@ -26,13 +26,13 @@ const ContactUs = () => {
               value={values.name1}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-transparent text-white border border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
+              className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
               required
             />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 w-full">
-            <div className="flex flex-col w-full text-white gap-2">
+            <div className="flex flex-col w-full text-blackCeniza dark:text-white gap-2">
               <input
                 type="text"
                 placeholder="Dejanos tu teléfono"
@@ -40,57 +40,57 @@ const ContactUs = () => {
                 value={values.user_referrer}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-transparent text-white border border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
+                className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
                 required
               />
             </div>
-            <div className="flex flex-col w-full text-white gap-2">
+            <div className="flex flex-col w-full text-blackCeniza dark:text-white gap-2">
               <input
                 type="text"
                 name="name"
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="bg-transparent text-white border border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
+                className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
                 placeholder="En que país estás"
                 required
               />
             </div>
           </div>
 
-          <div className="flex flex-col text-white">
+          <div className="flex flex-col text-blackCeniza dark:text-white">
             <input
               type="email"
               name="email"
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-transparent text-white border border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
+              className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
               placeholder="Escribe tu email"
               required
             />
           </div>
-          <div className="flex flex-col text-white">
+          <div className="flex flex-col text-blackCeniza dark:text-white">
             <input
               type="email"
               name="email1"
               value={values.email1}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`bg-transparent text-white border rounded px-3 py-1 hover:outline-none custom-placeholder`}
+              className={`bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white  rounded px-3 py-1 hover:outline-none custom-placeholder`}
               placeholder="Confirme su email"
               required
             />
             {errors.email1 && <p className="text-red-300">{errors.email1}</p>}
           </div>
 
-          <div className="flex flex-col text-white gap-2">
+          <div className="flex flex-col text-blackCeniza dark:text-white gap-2">
             <textarea
               name="message"
               value={values.message}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-transparent text-white border border-white rounded px-3 py-2 hover:outline-none custom-placeholder"
+              className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-2 hover:outline-none custom-placeholder"
               placeholder="Dejanos tu consulta, nos contactaremos contigo de inmediato"
               required
             />

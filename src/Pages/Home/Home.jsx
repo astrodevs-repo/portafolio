@@ -28,7 +28,6 @@ const Home = () => {
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      <PanelProyectos index={"projects"} onObserver={handleStepChange} currentStep={currentStep} />
       <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
       <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
       <section className="h-40"></section>
