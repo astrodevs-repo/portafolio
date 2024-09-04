@@ -16,9 +16,8 @@ const Footer = ({ index, onObserver }) => {
     <Inspector index={index} onObserver={onObserver}>
       <section
         className="bg-transparent
-        dark:bg-blackCeniza pb-20 pt-10
-        dark:bg-gradient-to-t 
-        dark:from-[#001f3fe7] dark:via-[#001f3fe7] dark:to-gray-800
+         pb-20 pt-10
+       
       "
         id="contactanos"
       >
@@ -43,7 +42,10 @@ const Footer = ({ index, onObserver }) => {
         </Container>
       </section>
 
-      <footer className="bg-gradient-to-tr  from-[#89b8fff7] via-[#e9eeff] to-[#e9eeff] dark:bg-[#001f3fe7] ">
+      <footer
+        className="bg-gradient-to-tr  from-[#89b8fff7] via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-t 
+        dark:from-[#001f3fe7] dark:via-[#001f3fe7] dark:to-gray-800 "
+      >
         <Container>
           <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
