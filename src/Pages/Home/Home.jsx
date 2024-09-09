@@ -10,10 +10,10 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-import Section from "../../Components/shared/Section/Section";
 import Text from "../../Components/shared/Text";
-import SubTitleItalic from "../../Components/shared/SubTitleItalic";
 import Container from "../../Components/Container/Container";
+import Title from "../../Components/shared/Title";
+import SubTitle from "../../Components/shared/SubTitle";
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
 
@@ -24,7 +24,10 @@ const Home = () => {
       <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter />
-      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
+
+      <AboutExample />
+
+      {/* <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
       <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
       <StepList
@@ -105,5 +108,66 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
       </section>
       <Text content={description} extra={"text-bold"} />
     </section>
+  );
+};
+
+const AboutExample = () => {
+  return (
+    <Container>
+      <section className="grid grid-cols-4 gap-10">
+        <section className="col-span-1 bg-transparent flex-col gap-5 bg-blackCeniza  rounded-xl flex justify-center items-center">
+          <Text
+            content={
+              "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
+            }
+            textColor={"text-blackCeniza "}
+            w={"w-3/4"}
+            extra={"text-start"}
+          />
+        </section>
+        <section className=" border-2 border-blackCeniza p-5 rounded-md">
+          {" "}
+          <SubTitle
+            text={"Visión"}
+            position={"text-center "}
+            font={"font-Baskerville font-extrabold"}
+          />
+          <Text
+            content={
+              "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan."
+            }
+            extra={"text-start"}
+          />
+        </section>
+        <section className="border-2 border-blackCeniza p-5 rounded-md">
+          {" "}
+          <SubTitle
+            font={"font-Baskerville font-extrabold"}
+            text={"Misión"}
+            position={"text-center"}
+          />
+          <Text
+            content={
+              "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas"
+            }
+            extra={"text-start"}
+          />
+        </section>
+        <section className="border-2 border-blackCeniza p-5 rounded-md">
+          {" "}
+          <SubTitle
+            font={"font-Baskerville font-extrabold"}
+            text={"¿Por qué elegirnos?"}
+            position={"text-center"}
+          />
+          <Text
+            content={
+              "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio."
+            }
+            extra={"text-start"}
+          />
+        </section>
+      </section>
+    </Container>
   );
 };
