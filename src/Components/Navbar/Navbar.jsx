@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 ${
-        navbarBackground ? "bg-blackCeniza dark:bg-[#2D3142]" : "dark:bg-transparent bg-translate"
+        navbarBackground ? "bg-[#e9eeff] dark:bg-gray-800" : "dark:bg-transparent bg-translate"
       } transition-colors duration-1000`}
     >
       <Logo link={"home"} />
@@ -70,7 +70,7 @@ const Navbar = () => {
                   ? "text-[#2FE3CE]"
                   : `${
                       navbarBackground
-                        ? "text-white dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
+                        ? "text-blackCeniza dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
                         : "text-blackCeniza dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
                     } `
               }`}

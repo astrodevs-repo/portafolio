@@ -42,13 +42,12 @@ const Footer = ({ index, onObserver }) => {
         className="bg-gradient-to-tr  from-[#89b8fff7] via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-t 
         dark:from-[#001f3fe7] dark:via-[#001f3fe7] dark:to-gray-800 "
       >
-        <Container>
+        <section className="px-3 sm:px-10 md:px-5 lg:px-20 ">
           <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0 flex flex-col justify-start">
                 <section className="w-full">
                   <section className="flex items-center gap-2">
-                    <Logo link={"home"} />
                     <p className="font-bold text-xl text-[#31add5]">Neurons</p>
                   </section>
                   {/* <Text content={"SOLUCIONES DIGITALES"} /> */}
@@ -96,7 +95,7 @@ const Footer = ({ index, onObserver }) => {
               </div>
             </div>
           </div>
-        </Container>
+        </section>
       </footer>
     </Inspector>
   );

@@ -14,6 +14,7 @@ import Text from "../../Components/shared/Text";
 import Container from "../../Components/Container/Container";
 import Title from "../../Components/shared/Title";
 import SubTitle from "../../Components/shared/SubTitle";
+import Section from "../../Components/shared/Section/Section";
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
 
@@ -23,11 +24,12 @@ const Home = () => {
       <Navbar />
       <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
+
+      {/* <AboutExample /> */}
+
+      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter />
 
-      <AboutExample />
-
-      {/* <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} /> */}
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
       <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
       <StepList
@@ -67,13 +69,13 @@ const Counter = () => {
     },
   ];
   return (
-    <Container>
+    <Section>
       <section className="flex justify-around gap-20">
         {data.map(({ value, label, description }, index) => (
           <CountUp end={value} duration={1} key={index} label={label} description={description} />
         ))}
       </section>
-    </Container>
+    </Section>
   );
 };
 
@@ -113,8 +115,8 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
 
 const AboutExample = () => {
   return (
-    <Container>
-      <section className="grid grid-cols-4 gap-10">
+    <Section>
+      <section className="grid grid-cols-4 gap-5">
         <section className="col-span-1 bg-transparent flex-col gap-5 bg-blackCeniza  rounded-xl flex justify-center items-center">
           <Text
             content={
@@ -148,7 +150,7 @@ const AboutExample = () => {
           />
           <Text
             content={
-              "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas"
+              "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas."
             }
             extra={"text-start"}
           />
@@ -168,6 +170,6 @@ const AboutExample = () => {
           />
         </section>
       </section>
-    </Container>
+    </Section>
   );
 };
