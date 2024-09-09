@@ -11,10 +11,8 @@ const ButtonsSection = () => {
           text={"Nuestros Servicios"}
           img={arrow}
           func={() => scrollToSection("quienessomos")}
-          bg={"border-2 border-[#89b8ffee] dark:border-[#e9eeff] "}
-          extra={
-            "hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0] w-full min-w-60"
-          }
+          bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent "}
+          extra={" w-full min-w-60"}
         />
       </a>
       <a className="flex justify-center w-full ">
@@ -22,11 +20,9 @@ const ButtonsSection = () => {
           textColor={"text-blackCeniza"}
           text={"Quienes somos"}
           img={arrow}
-          bg={"border-2 border-[#89b8ffee] dark:border-[#e9eeff]  "}
+          bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent  "}
           func={() => scrollToSection("aboutus")}
-          extra={
-            "hover:shadow-2xl  hover:shadow-[#89b8ffee] dark:hover:shadow-[#001f3fa0] w-full min-w-60 flex justify-center gap-10"
-          }
+          extra={" w-full min-w-60 flex justify-center gap-10"}
         />
       </a>
     </section>

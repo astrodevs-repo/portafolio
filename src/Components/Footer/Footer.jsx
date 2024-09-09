@@ -1,14 +1,10 @@
 import ContactUs from "./form/Form";
-
 import { motion } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
-
 import { FaLinkedin } from "react-icons/fa";
-
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
-import logoBrain from "../../../public/logoBrain.png";
 import Logo from "../shared/Logo";
 
 const Footer = ({ index, onObserver }) => {
