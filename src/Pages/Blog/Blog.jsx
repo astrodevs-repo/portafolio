@@ -12,22 +12,31 @@ import NavbarGoBack from "../../../NavbarGoBack";
 import Carousel from "../../Components/shared/Carousel/Carousel";
 import { SwiperSlide } from "swiper/react";
 import ProgressBar from "../../Components/shared/ProgressBar/ProgressBar";
+import Loading from "../../Components/shared/Loading/Loading";
+import SEO from "../../Components/shared/SEO/Seo";
 
 const Blog = () => {
   const { id } = useParams();
   const [body, setBody] = useState(null);
   const [loading, setLoading] = useState(true); // State to manage loading status
   const sectionsRef = useRef([]);
-
   useEffect(() => {
-    if (id) {
-      const fetchData = async () => {
+    const fetchData = async () => {
+      try {
         const aux = itemsBlog.find((e) => e.id === id);
         if (aux) {
           setBody(aux);
+        } else {
+          console.error("Blog post not found");
         }
-        setLoading(false); // Set loading to false once data is fetched
-      };
+      } catch (error) {
+        console.error("Error fetching blog post:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
       fetchData();
     }
   }, [id]);
@@ -42,8 +51,32 @@ const Blog = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p>Loading...</p>{" "}
-        {/* Replace this with a spinner or more sophisticated loading indicator if desired */}
+        <SEO
+          title="Learning React Helmet!"
+          description="Beginner friendly page for learning React Helmet."
+          name="Company name."
+          type="article"
+        />
+        <Loading />
+      </div>
+    );
+  }
+
+  if (!body) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <SEO
+          title="Blog Not Found"
+          description="The blog post you're looking for does not exist."
+          image="" // Placeholder if needed
+          url={`https://example.com/blog/${id}`} // Placeholder URL
+          type="article"
+          siteName="Company name."
+        />
+        <div className="text-center">
+          <h1>Blog Post Not Found</h1>
+          <p>Sorry, the blog post youre looking for does not exist.</p>
+        </div>
       </div>
     );
   }
@@ -52,6 +85,14 @@ const Blog = () => {
     <ScrollToTop>
       <NavbarGoBack />
       <ProgressBar />
+      <SEO
+        title={"body.title"}
+        description={body.subtitle}
+        image={body?.img}
+        url={`https://lv6hkvjw-5173.brs.devtunnels.ms/blog/${id}`}
+        type="article"
+        siteName="Company name."
+      />
       <section className="relative">
         <Container>
           <section className="flex flex-col gap-2">
