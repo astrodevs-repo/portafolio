@@ -11,7 +11,6 @@ export default function Carousel({ children, show }) {
       slidesPerView={1}
       spaceBetween={5}
       pagination={true}
-      autoplay={{ delay: 3000 }} // Add autoplay configuration
       breakpoints={{
         300: {
           slidesPerView: 1.3,

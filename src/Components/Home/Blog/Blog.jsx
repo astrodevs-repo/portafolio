@@ -13,7 +13,7 @@ const Blog = ({ index }) => {
       subtitle={"Descubre nuestra perspectiva innovadora sobre tecnología y soluciones"}
       id={"quienessomos"}
       index={index}
-      currentStep={null}
+      currentStep={index}
       extra={"  "}
     >
       <Carousel show={"3.5"}>

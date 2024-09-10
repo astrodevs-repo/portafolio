@@ -18,13 +18,13 @@ const SliderToggle = ({ selected, setSelected }) => {
   return (
     <div className="relative flex w-fit items-center rounded-full">
       <button
-        className={`${TOGGLE_CLASSES} ${selected === "light" ? "text-white" : "text-slate-300"}`}
+        className={`${TOGGLE_CLASSES} ${selected === "light" ? "text-blackCeniza" : "text-white "}`}
         onClick={() => setSelected(!selected)}
       >
         <FiSun className="relative z-10 text-lg md:text-sm" />
       </button>
       <button
-        className={`${TOGGLE_CLASSES} ${selected === "dark" ? "text-slate-800" : "text-white"}`}
+        className={`${TOGGLE_CLASSES} ${selected === "dark" ? "text-white" : "text-blackCeniza"}`}
         onClick={() => {
           setSelected("dark");
         }}

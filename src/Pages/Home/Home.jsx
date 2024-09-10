@@ -11,8 +11,7 @@ import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 import Text from "../../Components/shared/Text";
-import Container from "../../Components/Container/Container";
-import Title from "../../Components/shared/Title";
+
 import SubTitle from "../../Components/shared/SubTitle";
 import Section from "../../Components/shared/Section/Section";
 const Home = () => {
@@ -25,8 +24,6 @@ const Home = () => {
       <SmokeBackground />
       <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
 
-      {/* <AboutExample /> */}
-
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter />
 
@@ -37,8 +34,9 @@ const Home = () => {
         onObserver={handleStepChange}
         currentStepAnother={currentStep}
       />
-      <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
+
       <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
       <section className="h-40"></section>
       <Footer index={"contactanos"} />
     </>
@@ -70,7 +68,7 @@ const Counter = () => {
   ];
   return (
     <Section>
-      <section className="flex justify-around gap-20">
+      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-20">
         {data.map(({ value, label, description }, index) => (
           <CountUp end={value} duration={1} key={index} label={label} description={description} />
         ))}
@@ -101,75 +99,14 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
     <section className="flex flex-col gap-5">
       <section>
         <h1
-          className={`text-Chicle  dark:text-white font-Baskerville leading-[40px] w-full text-lg sm:text-sm md:text-2xl lg:text-lg xl:text-xl 2xl:text-6xl  m-0`}
+          className={`text-Chicle  dark:text-violet-600 font-Baskerville leading-[40px] w-full text-4xl sm:text-sm md:text-4xl lg:text-4 xl:text-5xl 2xl:text-6xl  m-0`}
         >
           +{count}
         </h1>
 
-        <Text content={label} extra={"font-extrabold ml-5"} />
+        <SubTitle text={label} extra={"font-extrabold ml-5"} />
       </section>
       <Text content={description} extra={"text-bold"} />
     </section>
-  );
-};
-
-const AboutExample = () => {
-  return (
-    <Section>
-      <section className="grid grid-cols-4 gap-5">
-        <section className="col-span-1 bg-transparent flex-col gap-5 bg-blackCeniza  rounded-xl flex justify-center items-center">
-          <Text
-            content={
-              "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea."
-            }
-            textColor={"text-blackCeniza "}
-            w={"w-3/4"}
-            extra={"text-start"}
-          />
-        </section>
-        <section className=" border-2 border-blackCeniza p-5 rounded-md">
-          {" "}
-          <SubTitle
-            text={"Visión"}
-            position={"text-center "}
-            font={"font-Baskerville font-extrabold"}
-          />
-          <Text
-            content={
-              "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan."
-            }
-            extra={"text-start"}
-          />
-        </section>
-        <section className="border-2 border-blackCeniza p-5 rounded-md">
-          {" "}
-          <SubTitle
-            font={"font-Baskerville font-extrabold"}
-            text={"Misión"}
-            position={"text-center"}
-          />
-          <Text
-            content={
-              "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas."
-            }
-            extra={"text-start"}
-          />
-        </section>
-        <section className="border-2 border-blackCeniza p-5 rounded-md">
-          {" "}
-          <SubTitle
-            font={"font-Baskerville font-extrabold"}
-            text={"¿Por qué elegirnos?"}
-            position={"text-center"}
-          />
-          <Text
-            content={
-              "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio."
-            }
-            extra={"text-start"}
-          />
-        </section>
-      </section>
-    </Section>
   );
 };
