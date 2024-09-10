@@ -9,7 +9,7 @@ function Header({ index, onObserver }) {
     <Inspector index={index} onObserver={onObserver}>
       <section
         id="home"
-        className={`min-h-screen bg-gradient-to-bl from-[#89b8fff7] via-[#e9eeffe2]  to-[#e9eeff] dark:from-[#001f3fe7] dark:via-gray-800 dark:to-gray-800 flex flex-col gap-5 sm:gap-10 justify-center sm:justify-center items-center relative`}
+        className={`min-h-screen bg-gradient-to-bl from-BlueNeurons/50 via-[#e9eeffe2]  to-[#e9eeff] dark:from-dark-BlueNeurons/20 dark:via-gray-800/90 dark:to-gray-800 flex flex-col gap-5 sm:gap-10 justify-center sm:justify-center items-center relative`}
       >
         <TextEffect />
 

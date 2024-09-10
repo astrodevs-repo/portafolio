@@ -6,7 +6,7 @@ import SubTitle from "../../shared/SubTitle";
 import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
 
-const Blog = ({ index }) => {
+const Blog = ({ index, onObserver }) => {
   return (
     <Section
       title={"Blog y Artículos"}
@@ -14,6 +14,7 @@ const Blog = ({ index }) => {
       id={"quienessomos"}
       index={index}
       currentStep={index}
+      onObserver={onObserver}
       extra={"  "}
     >
       <Carousel show={"3.5"}>

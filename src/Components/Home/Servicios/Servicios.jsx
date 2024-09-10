@@ -1,7 +1,10 @@
 import { useState } from "react";
+
 import { motion } from "framer-motion";
+
 import Section from "../../shared/Section/Section";
 import Text from "../../shared/Text";
+
 import icon1 from "/public/services/1.svg";
 import icon2 from "/public/services/2.svg";
 import icon3 from "/public/services/3.svg";
@@ -10,7 +13,6 @@ import icon5 from "/public/services/5.svg";
 import icon6 from "/public/services/6.svg";
 import icon7 from "/public/services/7.svg";
 import icon8 from "/public/services/8.svg";
-import Inspector from "../../shared/Inspector/Inspector";
 
 const Servicios = ({ index, onObserver, currentStep }) => {
   const servicios = [
@@ -71,42 +73,41 @@ const Servicios = ({ index, onObserver, currentStep }) => {
   };
 
   return (
-    <Inspector index={index} onObserver={onObserver}>
-      <Section
-        title={"Nuestros Servicios"}
-        id={"quienessomos"}
-        index={index}
-        currentStep={currentStep}
-        extra={""}
-      >
-        <section className="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid ">
-          {servicios.map((servicio, index) => (
-            <Card
-              key={index}
-              index={index}
-              title={servicio.title}
-              content={servicio.content}
-              svg={servicio.svg}
-              expanded={expandedIndex === index}
-              onExpand={handleExpand}
-            />
-          ))}
-        </section>
-        <section className="w-full flex flex-col gap-4 sm:flex md:hidden">
-          {servicios.map((servicio, index) => (
-            <CardAccordion
-              key={index}
-              index={index}
-              title={servicio.title}
-              content={servicio.content}
-              svg={servicio.svg}
-              expanded={expandedIndex === index}
-              onExpand={handleExpand}
-            />
-          ))}
-        </section>
-      </Section>
-    </Inspector>
+    <Section
+      title={"Nuestros Servicios"}
+      id={"quienessomos"}
+      index={index}
+      currentStep={currentStep}
+      extra={""}
+      onObserver={onObserver}
+    >
+      <section className="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 hidden sm:hidden md:grid ">
+        {servicios.map((servicio, index) => (
+          <Card
+            key={index}
+            index={index}
+            title={servicio.title}
+            content={servicio.content}
+            svg={servicio.svg}
+            expanded={expandedIndex === index}
+            onExpand={handleExpand}
+          />
+        ))}
+      </section>
+      <section className="w-full flex flex-col gap-4 sm:flex md:hidden">
+        {servicios.map((servicio, index) => (
+          <CardAccordion
+            key={index}
+            index={index}
+            title={servicio.title}
+            content={servicio.content}
+            svg={servicio.svg}
+            expanded={expandedIndex === index}
+            onExpand={handleExpand}
+          />
+        ))}
+      </section>
+    </Section>
   );
 };
 
