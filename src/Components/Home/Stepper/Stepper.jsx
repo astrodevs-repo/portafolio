@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Inspector from "../../shared/Inspector/Inspector";
+
 import Section from "../../shared/Section/Section";
 import ItemMobile from "./ItemMobile";
 
@@ -40,28 +40,27 @@ function Stepper({ index, onObserver }) {
   ];
 
   return (
-    <Inspector index={index} onObserver={onObserver}>
-      <Section
-        title={"Como trabajamos en Neurons"}
-        id={"comotrabajamos"}
-        bg={"bg-transparent"}
-        textColor={"text-white"}
-      >
-        <section className="mt-20 px-0">
-          {steps.map(({ name, index }, i) => (
-            <ItemMobile
-              currentStep={currentStep}
-              length={steps.length}
-              key={i}
-              name={name}
-              index={index}
-              i={i}
-              onObserver={handleStepChange}
-            />
-          ))}
-        </section>
-      </Section>
-    </Inspector>
+    <Section
+      title={"Como trabajamos en Neurons"}
+      id={index}
+      bg={"bg-transparent"}
+      textColor={"text-white"}
+      onObserver={onObserver}
+    >
+      <section className="mt-20 px-0">
+        {steps.map(({ name, index }, i) => (
+          <ItemMobile
+            currentStep={currentStep}
+            length={steps.length}
+            key={i}
+            name={name}
+            index={index}
+            i={i}
+            onObserver={handleStepChange}
+          />
+        ))}
+      </section>
+    </Section>
   );
 }
 

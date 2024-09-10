@@ -10,8 +10,9 @@ import d from "../../../public/about/1.jpg";
 
 import Text from "../shared/Text";
 import Title from "../shared/Title";
+import Inspector from "../shared/Inspector/Inspector";
 
-const About = ({ index }) => {
+const About = ({ index, onObserver }) => {
   const slides = [
     {
       title: "Quienes Somos",
@@ -57,91 +58,93 @@ const About = ({ index }) => {
 
   return (
     <section id={index} className="py-24">
-      <Swiper
-        slidesPerView={1.2}
-        spaceBetween={30}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 10000 }} // Add autoplay configuration
-        modules={[Pagination, Autoplay]} // Include Autoplay module
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 1.2,
-            spaceBetween: 30,
-          },
-        }} // Responsive breakpoints
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <motion.section
-              className="grid grid-cols-1 sm:grid-cols-4 h-full sm:h-[80vh] bg-white dark:bg-blackCeniza rounded-r-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+      <Inspector index={index} onObserver={onObserver}>
+        <Swiper
+          slidesPerView={1.2}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 10000 }} // Add autoplay configuration
+          modules={[Pagination, Autoplay]} // Include Autoplay module
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 1.2,
+              spaceBetween: 30,
+            },
+          }} // Responsive breakpoints
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
               <motion.section
-                className="h-full object-cover col-span-1 sm:col-span-2 flex sm:flex md:hidden"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                className="grid grid-cols-1 sm:grid-cols-4 h-full sm:h-[80vh] bg-white dark:bg-blackCeniza rounded-r-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  style={{
-                    clipPath: slide.clipPath2,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  className={`${slide.extraClass}`}
-                />
+                <motion.section
+                  className="h-full object-cover col-span-1 sm:col-span-2 flex sm:flex md:hidden"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    style={{
+                      clipPath: slide.clipPath2,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    className={`${slide.extraClass}`}
+                  />
+                </motion.section>
+                <motion.section
+                  className="col-span-2 z-10 h-full flex flex-col justify-center gap-10 sm:gap-20 items-center p-6 sm:p-12 py-10"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Title text={slide.title} extra={"font-Baskerville text-start"} />
+                  <Text
+                    content={slide.text}
+                    textColor={"text-blackCeniza"}
+                    w={"w-full "}
+                    extra={"text-start"}
+                  />
+                </motion.section>
+                <motion.section
+                  className="h-full object-cover col-span-1 sm:col-span-2 hidden sm:hidden md:flex"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    style={{
+                      clipPath: slide.clipPath,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    className={`${slide.extraClass} max-[80vh]`}
+                  />
+                </motion.section>
               </motion.section>
-              <motion.section
-                className="col-span-2 z-10 h-full flex flex-col justify-center gap-10 sm:gap-20 items-center p-6 sm:p-12 py-10"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Title text={slide.title} extra={"font-Baskerville text-start"} />
-                <Text
-                  content={slide.text}
-                  textColor={"text-blackCeniza"}
-                  w={"w-full "}
-                  extra={"text-start"}
-                />
-              </motion.section>
-              <motion.section
-                className="h-full object-cover col-span-1 sm:col-span-2 hidden sm:hidden md:flex"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  style={{
-                    clipPath: slide.clipPath,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  className={`${slide.extraClass}`}
-                />
-              </motion.section>
-            </motion.section>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Inspector>
     </section>
   );
 };

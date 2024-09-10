@@ -63,9 +63,8 @@ const Navbar = () => {
       <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden ">
         {navItems.map(({ id, label }) => (
           <li key={label}>
-            <p
-              onClick={() => scrollToSection(id)}
-              className={`block rounded cursor-pointer ${
+            {/**
+             *  ${
                 activeSection === id
                   ? "text-[#2FE3CE]"
                   : `${
@@ -73,14 +72,15 @@ const Navbar = () => {
                         ? "text-blackCeniza dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
                         : "text-blackCeniza dark:text-[#ffffff] hover:text-[#2FE3CE] focus:text-[#2FE3CE]"
                     } `
-              }`}
-            >
+              }
+             */}
+            <p onClick={() => scrollToSection(id)} className={`block rounded cursor-pointer`}>
               {label}
             </p>
           </li>
         ))}
       </ul>
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center justify-center h-full ">
         <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
         <DarkModeToggle />
         <DrawerNavigation />

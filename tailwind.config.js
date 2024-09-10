@@ -10,6 +10,14 @@ export default {
       colors: {
         blackCeniza: "#2D3142",
         Chicle: "#2FE3CE",
+        // BlueNeurons: "#31add5",
+        BlueNeurons: "#89b8fff7",
+
+        dark: {
+          blackCeniza: "#1a1a1a", // Example dark mode color for blackCeniza
+          Chicle: "#00bfae", // Example dark mode color for Chicle
+          BlueNeurons: "rgb(124 58 237 / var(--tw-bg-opacity))", // Example dark mode color for BlueNeurons
+        },
       },
       fontFamily: {
         LusitanaBold: ["LusitanaBold"],

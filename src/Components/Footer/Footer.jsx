@@ -3,101 +3,88 @@ import { motion } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
 import { FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
+
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
-import Logo from "../shared/Logo";
+import SubTitleItalic from "../shared/SubTitleItalic";
+import SubTitle from "../shared/SubTitle";
+import Title from "../shared/Title";
 
 const Footer = ({ index, onObserver }) => {
   return (
-    <Inspector index={index} onObserver={onObserver}>
-      <section
-        className="bg-transparent
-         pb-20 pt-10
-       
-      "
-        id="contactanos"
-      >
-        <Container>
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-20 ">
-            <motion.section className="">
-              <Text
-                textColor={"text-blackCeniza dark:text-white"}
-                content={
-                  "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
-                }
-              />
-              <p
-                className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
-              >
-                ¡Gracias por considerar Neurons como su socio digital!
-              </p>
-            </motion.section>
+    <>
+      <section className="bg-transparent pb-20 pt-0 sm:pt-20 " id="contactanos">
+        <Inspector index={index} onObserver={onObserver}>
+          <Container>
+            <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-20 ">
+              <motion.section className="flex flex-col gap-10 sm:gap-5">
+                <Title
+                  text={"Contactanos"}
+                  textColor={"text-blackCeniza  dark:text-white font-Baskerville"}
+                />
 
-            <ContactUs />
-          </section>
-        </Container>
+                <Text
+                  textColor={"text-blackCeniza dark:text-white"}
+                  content={
+                    "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
+                  }
+                />
+                <p
+                  className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
+                >
+                  ¡Gracias por considerar Neurons como su socio digital!
+                </p>
+              </motion.section>
+
+              <ContactUs />
+            </section>
+          </Container>
+        </Inspector>
       </section>
-
       <footer
-        className="bg-gradient-to-tr  from-[#89b8fff7] via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-t 
-        dark:from-[#001f3fe7] dark:via-[#001f3fe7] dark:to-gray-800 "
+        className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
+        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-full sm:h-[70vh] flex flex-col justify-end w-full px-3 sm:px-10 md:px-5 lg:px-20"
       >
-        <section className="px-3 sm:px-10 md:px-5 lg:px-20 ">
-          <div className="mx-auto w-full  p-4 py-6 lg:py-8">
-            <div className="md:flex md:justify-between">
-              <div className="mb-6 md:mb-0 flex flex-col justify-start">
-                <section className="w-full">
-                  <section className="flex items-center gap-2">
-                    <p className="font-bold text-xl text-[#31add5]">Neurons</p>
-                  </section>
-                  {/* <Text content={"SOLUCIONES DIGITALES"} /> */}
-                </section>
-              </div>
+        <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
+          <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
 
-              <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
-                {footerContent.map((section, index) => (
-                  <div key={index}>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                      {section.title}
-                    </h2>
-                    <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      {section.links.map((link, j) => (
-                        <li key={j} className="mb-4">
-                          <TextFooter content={link.text} />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
+            {footerContent.map((section, index) => (
+              <div key={index}>
+                <SubTitle text={section.title} extra={"font-extrabold mb-5"} />
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  {section.links.map((link, j) => (
+                    <TextFooter content={link.text} key={j} extra={"mb-2"} />
+                  ))}
+                </ul>
               </div>
-            </div>
-            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-
-            <div className="sm:flex sm:items-center sm:justify-between">
-              <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                {footerInfo.copyright}
-                <p className="">{footerInfo.poweredBy}</p>
-              </span>
-
-              <div className="flex mt-4 sm:justify-center sm:mt-0">
-                {footerInfo.socialLinks.map(({ url, icon, label }, index) => (
-                  <a
-                    href={url}
-                    key={index}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                  >
-                    {icon}
-                    <span className="sr-only">{label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </section>
+
+        <div className="sm:flex sm:items-center sm:justify-between w-full py-5 border-t-2">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            {footerInfo.copyright}
+            <p className="">{footerInfo.poweredBy}</p>
+          </span>
+
+          <div className="flex mt-4 sm:justify-center sm:mt-0">
+            {footerInfo.socialLinks.map(({ url, icon, label }, index) => (
+              <a
+                href={url}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              >
+                {icon}
+                <span className="sr-only">{label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </footer>
-    </Inspector>
+    </>
   );
 };
 const footerContent = [

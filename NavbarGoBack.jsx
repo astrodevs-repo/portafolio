@@ -4,7 +4,7 @@ import Text from "./src/Components/shared/Text";
 import DarkModeToggle from "./src/Components/shared/DarkModeToggle/DarkModeToggle";
 const NavbarGoBack = () => {
   return (
-    <section className="py-5 px-5 flex bg-[#e9eeff] dark:bg-gray-800 justify-between ">
+    <section className="py-5 px-5 sm:px-20 flex bg-[#e9eeff] dark:bg-gray-800 justify-between ">
       <section className="flex justify-start items-center gap-5 text-[106px]">
         <section>
           <Link to={"/"} className="cursor-pointer">
