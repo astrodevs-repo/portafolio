@@ -86,7 +86,7 @@ const Blog = () => {
       <NavbarGoBack />
       <ProgressBar />
       <SEO
-        title={"body.title"}
+        title={body.title}
         description={body.subtitle}
         image={body?.img}
         url={`https://lv6hkvjw-5173.brs.devtunnels.ms/blog/${id}`}
