@@ -1,70 +1,148 @@
-import SubTitle from "../shared/SubTitle";
-import Title from "../shared/Title";
-import Text from "../shared/Text";
-import Inspector from "../shared/Inspector/Inspector";
-import Container from "../Container/Container";
-
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
-import { about } from "../../data/Home";
+import "swiper/css";
+import "swiper/css/pagination";
+import a from "../../../public/about/4.jpg";
+import b from "../../../public/about/2.jpg";
+import c from "../../../public/about/3.jpg";
+import d from "../../../public/about/1.jpg";
 
-const About = ({ index, onObserver, currentStep }) => {
+import Text from "../shared/Text";
+import Title from "../shared/Title";
+
+const About = ({ index }) => {
+  const slides = [
+    {
+      title: "Quienes Somos",
+      text: "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
+      image: a,
+      clipPath: "polygon(0 0, 100% 0%, 100% 100%, 9% 100%)",
+      clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+      subtitle: "",
+      extraClass: "rounded-r-lg",
+    },
+    {
+      title: "Visión",
+      text: "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
+      image: b,
+      clipPath: "polygon(12% 0, 100% 0%, 100% 100%, 0 100%)",
+      clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+      subtitle: "Visión",
+      extraClass: "rounded-r-lg",
+    },
+    {
+      title: "Misión",
+      text: "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas.",
+      image: c,
+      clipPath: "polygon(3% 0, 100% 0, 100% 100%, 6% 100%, 21% 49%)",
+      clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+      subtitle: "Misión",
+      extraClass: "rounded-r-lg ",
+    },
+    {
+      title: "¿Por qué elegirnos?",
+      text: "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio.",
+      image: d,
+      clipPath: "polygon(15% 0, 100% 0, 100% 100%, 13% 100%, 0 49%)",
+      clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+      subtitle: "¿Por qué elegirnos?",
+      extraClass: "rounded-r-lg",
+    },
+  ];
+
   return (
-    <Inspector index={index} onObserver={onObserver}>
-      <motion.section
-        id={index}
-        initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
-        animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 50 } : { y: 80 }
-        }
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className=" w-full h-fit-content  py-0 sm:py-0 xl:px-20 2xl:px-24 px-5  md:px-10 lg:px-20 "
+    <section id={index} className="py-24">
+      <Swiper
+        slidesPerView={1.2}
+        spaceBetween={30}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 10000 }} // Add autoplay configuration
+        modules={[Pagination, Autoplay]} // Include Autoplay module
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 1.2,
+            spaceBetween: 30,
+          },
+        }} // Responsive breakpoints
       >
-        <section className={`dark:gap-5 relative pt-10`}>
-          <motion.article
-            initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)" }}
-            animate={
-              index === currentStep
-                ? { opacity: 1, color: "rgba(255, 255, 255, 1)", rotate: 360 }
-                : { y: 80, rotate: 0 }
-            }
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="bg-blackCeniza border-4 rounded-full w-fit absolute -bottom-14 left-[45%] hidden sm:flex"
-          >
-            <img src={about?.imgBrain} alt="" className="w-[100px] p-5" />
-          </motion.article>
-
-          <section className="bg-gradient-to-t to-gray-500 from-blackCeniza rounded-xl p-10 sm:p-20 flex flex-col justify-center items-center gap-10">
-            <Title
-              text={about?.title}
-              textColor={"text-white"}
-              extra={"font-Baskerville text-center"}
-            />
-            <SubTitle
-              text={about?.body}
-              textColor={"text-white "}
-              w={"w-3/4"}
-              extra={"text-center"}
-            />
-          </section>
-        </section>
-      </motion.section>
-
-      <section className="bg-transparent sm:bg-white  dark:bg-gray-900 h-fit">
-        <Container>
-          <section className="h-full w-full bg-white rounded-lg sm:rounded-none dark:bg-gray-900  rounded-b-lg  grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 divide-y-2 sm:divide-y-2 md:divide-y-0 lg:divide-x-2  dark:divide-y-0  grid mt-20 dark:divide-x-0 dark:sm:divide-x-2">
-            {about?.articles.map(({ title, content }) => (
-              <article
-                key={title}
-                className="w-full flex flex-col justify-center items-center gap-10 p-10  lg:p-10 "
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <motion.section
+              className="grid grid-cols-1 sm:grid-cols-4 h-full sm:h-[80vh] bg-white dark:bg-blackCeniza rounded-r-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.section
+                className="h-full object-cover col-span-1 sm:col-span-2 flex sm:flex md:hidden"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <SubTitle text={title} position={"text-center"} />
-                <Text content={content} extra={"text-start"} />
-              </article>
-            ))}
-          </section>
-        </Container>
-      </section>
-    </Inspector>
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  style={{
+                    clipPath: slide.clipPath2,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  className={`${slide.extraClass}`}
+                />
+              </motion.section>
+              <motion.section
+                className="col-span-2 z-10 h-full flex flex-col justify-center gap-10 sm:gap-20 items-center p-6 sm:p-12 py-10"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Title text={slide.title} extra={"font-Baskerville text-start"} />
+                <Text
+                  content={slide.text}
+                  textColor={"text-blackCeniza"}
+                  w={"w-full "}
+                  extra={"text-start"}
+                />
+              </motion.section>
+              <motion.section
+                className="h-full object-cover col-span-1 sm:col-span-2 hidden sm:hidden md:flex"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  style={{
+                    clipPath: slide.clipPath,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  className={`${slide.extraClass}`}
+                />
+              </motion.section>
+            </motion.section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 

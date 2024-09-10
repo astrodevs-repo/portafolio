@@ -20,7 +20,7 @@ const TextEffect = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="text-2xl sm:text-3xl font-Baskerville text-center"
+              className="text-2xl sm:text-3xl font-Poppins text-center"
             >
               {letter === " " ? "\u00A0" : letter}
             </motion.span>
@@ -35,7 +35,7 @@ const TextEffect = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: firstPhraseDelay + index * 0.05 }}
-              className="text-2xl sm:text-3xl font-Baskerville  text-center"
+              className="text-2xl sm:text-3xl font-Poppins  text-center"
             >
               {letter === " " ? "\u00A0" : letter}
             </motion.span>

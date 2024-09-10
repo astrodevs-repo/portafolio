@@ -1,5 +1,4 @@
 import Container from "../../Container/Container";
-
 import SubTitleItalic from "../SubTitleItalic";
 import Title from "../Title";
 import { motion } from "framer-motion";
@@ -7,11 +6,11 @@ import { motion } from "framer-motion";
 const Section = ({ id, children, bg, title, index, currentStep, extra, subtitle }) => {
   return (
     <motion.section
-      className={`w-full h-fit-content ${bg} py-10 sm:py-20 ${extra}`}
+      className={`w-full h-fit-content ${bg} py-5 sm:py-20 ${extra}`}
       id={id}
-      initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
-      animate={index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 0 } : {}}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={index === currentStep ? { opacity: 1 } : { opacity: 0 }} // Animate opacity based on currentStep
+      transition={{ duration: 1, ease: "easeInOut" }} // Adjust the transition properties as needed
     >
       <Container>
         <Title text={title} textColor={"text-blackCeniza"} extra={"font-LusitanaBold"} />
@@ -21,4 +20,5 @@ const Section = ({ id, children, bg, title, index, currentStep, extra, subtitle 
     </motion.section>
   );
 };
+
 export default Section;

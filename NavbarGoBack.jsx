@@ -4,15 +4,15 @@ import Text from "./src/Components/shared/Text";
 import DarkModeToggle from "./src/Components/shared/DarkModeToggle/DarkModeToggle";
 const NavbarGoBack = () => {
   return (
-    <section className="py-5 px-5 flex bg-blackCeniza justify-between ">
+    <section className="py-5 px-5 flex bg-[#e9eeff] dark:bg-gray-800 justify-between ">
       <section className="flex justify-start items-center gap-5 text-[106px]">
         <section>
           <Link to={"/"} className="cursor-pointer">
-            <MdKeyboardArrowLeft size={20} className="text-white" />
+            <MdKeyboardArrowLeft size={20} className="text-blackCeniza dark:text-white" />
           </Link>
         </section>
         <Link to={"/"} className="cursor-pointer">
-          <Text content={"Volver al Inicio"} textColor={"text-white"} />
+          <Text content={"Volver al Inicio"} textColor={"text-blackCeniza"} />
         </Link>
       </section>
       <DarkModeToggle />
