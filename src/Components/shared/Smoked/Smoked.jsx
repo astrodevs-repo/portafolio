@@ -48,7 +48,7 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
-          className="absolute right-0 bottom-0 w-80 h-80 opacity-50"
+          className="absolute right-40  bottom-0 w-60 h-60 opacity-50"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
         />

@@ -16,7 +16,7 @@ function Header({ index, onObserver }) {
         <TextPrincipal />
         <SubTitle
           text={
-            "Nuestra flexibilidad y adaptabilidad nos permiten convertir cada desafío en una estrategia personalizada que se alinea con tus objetivos empresariales, asegurando soluciones eficaces y a medida."
+            "Enfrentamos cada desafío con un toque fresco y creativo. Nuestra capacidad para adaptarnos y nuestra pasión por la innovación nos permiten ofrecerte soluciones digitales personalizadas que no solo cumplen, sino que superan tus expectativas."
           }
           extra={"w-[90%] sm:w-2/4 text-center hidden sm:flex"}
         />

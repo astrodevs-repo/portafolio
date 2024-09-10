@@ -10,8 +10,8 @@ export default {
       colors: {
         blackCeniza: "#2D3142",
         Chicle: "#2FE3CE",
-        BlueNeurons: "#31add5",
-        //        BlueNeurons: "#89b8fff7",
+        // BlueNeurons: "#31add5",
+        BlueNeurons: "#89b8fff7",
 
         dark: {
           blackCeniza: "#1a1a1a", // Example dark mode color for blackCeniza

@@ -137,7 +137,7 @@ const About = ({ index, onObserver }) => {
                       width: "100%",
                       height: "100%",
                     }}
-                    className={`${slide.extraClass}`}
+                    className={`${slide.extraClass} max-[80vh]`}
                   />
                 </motion.section>
               </motion.section>

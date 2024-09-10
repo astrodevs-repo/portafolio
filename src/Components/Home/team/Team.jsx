@@ -11,11 +11,9 @@ function Community({ index, onObserver, currentStep }) {
     <Inspector index={index} onObserver={onObserver}>
       <motion.section
         id="team"
-        initial={{ opacity: 1, color: "rgba(255, 255, 255, 0)", y: 100 }}
-        animate={
-          index === currentStep ? { opacity: 1, color: "rgba(255, 255, 255, 1)", y: 100 } : {}
-        }
-        transition={{ duration: 1, ease: "easeInOut" }}
+        initial={{ opacity: 0 }} // Start with opacity 0
+        animate={index === currentStep ? { opacity: 1 } : { opacity: 0 }} // Animate opacity based on currentStep
+        transition={{ duration: 1, ease: "easeInOut" }} // Adjust the transition properties as needed
         className="bg-gradient-to-r from-slate-600 to-blackCeniza dark:from-slate-900 dark:to-blackCeniza rounded-3xl sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20 transition-colors duration-1000 "
       >
         <section className="p-5 py-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">

@@ -3,18 +3,26 @@ import { motion } from "framer-motion";
 import Inspector from "../shared/Inspector/Inspector";
 import { FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
+
 import TextFooter from "../shared/TextFooter";
 import Container from "../Container/Container";
 import SubTitleItalic from "../shared/SubTitleItalic";
+import SubTitle from "../shared/SubTitle";
+import Title from "../shared/Title";
 
 const Footer = ({ index, onObserver }) => {
   return (
     <>
-      <section className="bg-transparent pb-20 pt-10" id="contactanos">
+      <section className="bg-transparent pb-20 pt-0 sm:pt-20 " id="contactanos">
         <Inspector index={index} onObserver={onObserver}>
           <Container>
             <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-20 ">
-              <motion.section className="">
+              <motion.section className="flex flex-col gap-10 sm:gap-5">
+                <Title
+                  text={"Contactanos"}
+                  textColor={"text-blackCeniza  dark:text-white font-Baskerville"}
+                />
+
                 <Text
                   textColor={"text-blackCeniza dark:text-white"}
                   content={
@@ -35,22 +43,18 @@ const Footer = ({ index, onObserver }) => {
       </section>
       <footer
         className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
-        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-[80vh] flex flex-col justify-end w-full px-3 sm:px-10 md:px-5 lg:px-20"
+        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-full sm:h-[70vh] flex flex-col justify-end w-full px-3 sm:px-10 md:px-5 lg:px-20"
       >
-        <section className="md:flex md:justify-between w-full my-10">
+        <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
 
           <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
             {footerContent.map((section, index) => (
               <div key={index}>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  {section.title}
-                </h2>
+                <SubTitle text={section.title} extra={"font-extrabold mb-5"} />
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   {section.links.map((link, j) => (
-                    <li key={j} className="mb-4">
-                      <TextFooter content={link.text} />
-                    </li>
+                    <TextFooter content={link.text} key={j} extra={"mb-2"} />
                   ))}
                 </ul>
               </div>

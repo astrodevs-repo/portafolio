@@ -1,5 +1,5 @@
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-import SubTitle from "../../shared/SubTitle";
+
 import useForm from "../../../hooks/useForm";
 
 const ContactUs = () => {
@@ -15,7 +15,6 @@ const ContactUs = () => {
 
   return (
     <section className="w-full flex flex-col gap-10 pt-20 sm:pt-20 md:pt-0" id="contactanosform">
-      <SubTitle text={"Contactanos"} textColor={"text-blackCeniza dark:text-white"} />
       <form ref={form} onSubmit={handleSubmit}>
         <section className={`w-full grid grid-cols-1 gap-4 mb-5 ${loading ? "opacity-50" : ""}`}>
           <div className="flex flex-col gap-2">

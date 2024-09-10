@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const TextEffect = () => {
-  const firstPhrase = "Una firma integral de ";
-  const secondPhrase = "soluciones digitales.";
+  const firstPhrase = "Agencia de Tecnología";
+  const secondPhrase = "e Innovación";
 
   const calculateTotalDelay = (phrase) => {
     return phrase.length * 0.05;
@@ -11,7 +11,7 @@ const TextEffect = () => {
   const firstPhraseDelay = calculateTotalDelay(firstPhrase);
 
   return (
-    <section className="flex flex-wrap justify-center px-12 sm:px-0 text-blackCeniza dark:text-white">
+    <section className="flex flex-wrap justify-center px-14 sm:px-0 text-blackCeniza dark:text-white">
       {[firstPhrase].map((phrase, phraseIndex) => (
         <div key={phraseIndex} className="flex flex-wrap justify-center">
           {phrase.split("").map((letter, index) => (

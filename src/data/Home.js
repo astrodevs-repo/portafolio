@@ -1,4 +1,6 @@
 import ia from "/public/Blog/ia.jpg";
+import education from "/public/Blog/educacion.jpg";
+
 import sql from "/public/OurSkills/sql.svg";
 import boostrap from "/public/OurSkills/Boopstrap.svg";
 import node from "/public/OurSkills/node.svg";
@@ -220,38 +222,63 @@ export const itemsBlog = [
   //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur.",
   //   img: "/public/Blog/sostenibilidad.jpg",
   // },
-  // {
-  //   fecha: "10 de abril del 2024",
-  //   hora: "02:30 PM",
-  //   id: "12131616153",
-  //   category: "Educación",
-  //   autor: "María Torres",
-  //   color: "bg-[#FF5722]",
-  //   title: "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
-  //   subtitle: "",
-  //   content: {
-  //     title: "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
-  //     sections: [
-  //       {
-  //         subtitle: "",
-  //         content:
-  //           "En este artículo exploramos cómo la educación digital está revolucionando el panorama educativo global. Desde plataformas de aprendizaje en línea hasta recursos interactivos, la tecnología está democratizando el acceso a la educación y mejorando la calidad del aprendizaje para estudiantes de todas las edades y ubicaciones geográficas.",
-  //       },
-  //       {
-  //         subtitle: "Beneficios y Desafíos",
-  //         content:
-  //           "La educación digital ofrece una serie de beneficios, como la personalización del aprendizaje, la flexibilidad en el horario de estudio y la accesibilidad mejorada. Sin embargo, también enfrenta desafíos como la brecha digital y la calidad de los contenidos educativos digitales. En este artículo analizamos cómo abordar estos desafíos y maximizar los beneficios de la educación digital en las aulas de todo el mundo.",
-  //       },
-  //       {
-  //         subtitle: "El Futuro de la Educación Digital",
-  //         content:
-  //           "El futuro de la educación digital promete innovaciones continuas, como el uso de realidad aumentada y inteligencia artificial en la enseñanza. Estas tecnologías están redefiniendo cómo se enseñan y se aprenden las materias, preparando a los estudiantes para enfrentar los desafíos del siglo XXI y contribuir de manera significativa a la sociedad global.",
-  //       },
-  //     ],
-  //   },
-  //   body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem doloribus dolorum at earum voluptas, corporis, dolores itaque id placeat aliquam. Delectus asperiores quod aliquid soluta ad alias consequatur.",
-  //   img: "/public/Blog/educacion.jpg",
-  // },
+  {
+    fecha: "22 de enero del 2024",
+    hora: "04:45 PM",
+    id: "1213161615156",
+    category: "Educación Digital",
+    autor: "Jesus E. Moreno",
+    color: "bg-[#005187]",
+    title: "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
+    subtitle: "Cómo la Tecnología Está Revolucionando la Forma en que Aprendemos y Enseñamos",
+    content: {
+      title: "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
+      sections: [
+        {
+          subtitle: "",
+          content:
+            "La educación digital ha emergido como un componente crucial en el aprendizaje del siglo XXI, transformando la manera en que los estudiantes y educadores interactúan con el conocimiento. La integración de tecnologías digitales en los entornos educativos está redefiniendo el proceso de enseñanza y aprendizaje, ofreciendo nuevas oportunidades para el acceso a la educación y la personalización del aprendizaje.",
+        },
+        {
+          subtitle: "¿Qué es la Educación Digital?",
+          content:
+            "La educación digital se refiere al uso de tecnologías digitales para apoyar y mejorar el proceso educativo. Esto incluye el uso de herramientas como plataformas de aprendizaje en línea, recursos multimedia, aplicaciones educativas y dispositivos tecnológicos en el aula. La educación digital permite a los estudiantes acceder a una amplia variedad de materiales de aprendizaje y participar en experiencias educativas interactivas que antes no eran posibles.",
+        },
+        {
+          subtitle: "Beneficios de la Educación Digital",
+          content: [
+            {
+              title: "",
+              body: "Uno de los principales beneficios de la educación digital es el acceso mejorado a recursos educativos. Los estudiantes pueden acceder a materiales de aprendizaje desde cualquier lugar y en cualquier momento, lo que facilita el aprendizaje autodirigido y la educación a distancia. Además, las herramientas digitales permiten a los educadores adaptar el contenido y los métodos de enseñanza a las necesidades individuales de cada estudiante, promoviendo un aprendizaje más personalizado y efectivo.",
+            },
+            {
+              title: "Aprendizaje Interactivo",
+              body: "Las tecnologías digitales permiten la creación de entornos de aprendizaje interactivos que fomentan la participación activa de los estudiantes. A través de simulaciones, juegos educativos y actividades prácticas, los estudiantes pueden experimentar y aplicar conceptos en contextos reales, lo que mejora la comprensión y retención del conocimiento. Estas herramientas también permiten una retroalimentación inmediata, lo que facilita la corrección de errores y el refuerzo del aprendizaje.",
+            },
+            {
+              title: "Acceso a Recursos Globales",
+              body: "La educación digital facilita el acceso a una vasta cantidad de recursos educativos globales. Los estudiantes pueden explorar materiales y participar en cursos ofrecidos por instituciones y expertos de todo el mundo, lo que enriquece su aprendizaje y expande sus perspectivas. Además, el acceso a comunidades en línea y foros de discusión permite a los estudiantes colaborar y compartir conocimientos con sus compañeros a nivel internacional.",
+            },
+            {
+              title: "Adaptación y Flexibilidad",
+              body: "La educación digital ofrece una mayor flexibilidad en el diseño y la entrega del contenido educativo. Los educadores pueden crear y modificar materiales de enseñanza de manera rápida y eficiente, adaptándolos a las necesidades y estilos de aprendizaje de sus estudiantes. Esta flexibilidad también permite la implementación de enfoques pedagógicos innovadores, como el aprendizaje basado en proyectos y el aprendizaje adaptativo, que responden a los cambios en el entorno educativo y las demandas del siglo XXI.",
+            },
+          ],
+        },
+        {
+          subtitle: "Desafíos y Consideraciones",
+          content:
+            "A pesar de los numerosos beneficios, la educación digital también presenta desafíos significativos. Uno de los principales desafíos es la brecha digital, que se refiere a la desigualdad en el acceso a tecnologías y recursos educativos entre diferentes regiones y grupos socioeconómicos. Además, la dependencia de la tecnología puede plantear problemas relacionados con la privacidad y la seguridad de los datos. Los educadores y responsables de políticas deben abordar estos desafíos mediante la implementación de estrategias inclusivas y la protección de la información personal de los estudiantes.",
+        },
+        {
+          subtitle: "El Futuro de la Educación Digital",
+          content:
+            "El futuro de la educación digital promete una evolución continua con el avance de las tecnologías emergentes, como la inteligencia artificial, la realidad aumentada y la realidad virtual. Estas tecnologías tienen el potencial de transformar aún más el aprendizaje, proporcionando experiencias educativas inmersivas y personalizadas. A medida que la educación digital sigue desarrollándose, es esencial que las instituciones educativas, los educadores y los responsables de políticas colaboren para garantizar que todos los estudiantes tengan acceso equitativo a las oportunidades de aprendizaje y que la tecnología se utilice de manera ética y efectiva para apoyar el desarrollo educativo.",
+        },
+      ],
+    },
+    img: education,
+  },
   // {
   //   fecha: "15 de marzo del 2024",
   //   hora: "10:00 AM",
