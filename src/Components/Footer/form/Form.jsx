@@ -102,8 +102,8 @@ const ContactUs = () => {
           w={"w-full"}
           display={"center"}
           loader={loading}
-          bg={"bg-Chicle"}
-          border={"border-[#28ae9e] border-2"}
+          bg={"bg-BlueNeurons"}
+          border={"border-BlueNeurons border-2"}
           hover={"hover:bg-[#28ae9e]"}
           textColor={"balck"}
           disabled={isSubmitting}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MdOutlineMenu } from "react-icons/md";
+import { scrollToSection } from "../../../utils/functions";
 
 const DrawerNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,21 +20,21 @@ const DrawerNavigation = () => {
     };
   }, []);
   const navItems = [
-    { id: "#aboutus", label: "Quienes somos" },
-    { id: "#quienessomos", label: "Servicios" },
-    { id: "#comotrabajamos", label: "Como trabajamos" },
-    { id: "#team", label: "Nuestro equipo" },
-    { id: "#contactanosform", label: "Contactanos" },
+    { id: "aboutus", label: "Quienes somos" },
+    { id: "quienessomos", label: "Servicios" },
+    { id: "comotrabajamos", label: "Como trabajamos" },
+    { id: "team", label: "Nuestro equipo" },
+    { id: "contactanos", label: "Contactanos" },
   ];
 
   return (
-    <div className=" flex justify-center items-center">
+    <div className=" flex justify-center items-center ">
       <button
         onClick={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[25px] text-white sm:text-[40px]"
+        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-blackCeniza dark:text-white sm:text-[35px] mb-2"
       >
         <MdOutlineMenu />
       </button>
@@ -81,12 +82,11 @@ const DrawerNavigation = () => {
                 <li key={id}>
                   <a
                     href={id}
-                    onClick={() => {
-                      setIsOpen(!isOpen);
-                    }}
+                    onClick={() => scrollToSection(id)}
                     className="block py-2 px-3 rounded text-white hover:bg-[#4A5171] dark:text-white dark:hover:bg-gray-700"
                   >
                     {label}
+                    {id}
                   </a>
                 </li>
               ))}

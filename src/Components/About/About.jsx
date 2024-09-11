@@ -62,7 +62,6 @@ const About = ({ index, onObserver }) => {
         <Swiper
           slidesPerView={1.2}
           spaceBetween={30}
-          pagination={{ clickable: true }}
           autoplay={{ delay: 10000 }} // Add autoplay configuration
           modules={[Pagination, Autoplay]} // Include Autoplay module
           breakpoints={{

@@ -10,7 +10,6 @@ export default function Carousel({ children, show }) {
     <Swiper
       slidesPerView={1}
       spaceBetween={5}
-      pagination={true}
       breakpoints={{
         300: {
           slidesPerView: 1.3,

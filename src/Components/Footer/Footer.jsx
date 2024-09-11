@@ -43,7 +43,7 @@ const Footer = ({ index, onObserver }) => {
       </section>
       <footer
         className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
-        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-full sm:h-[70vh] flex flex-col justify-end w-full px-3 sm:px-10 md:px-5 lg:px-20"
+        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20"
       >
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
