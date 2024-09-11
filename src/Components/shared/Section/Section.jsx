@@ -16,7 +16,7 @@ const Section = ({ id, children, bg, title, index, currentStep, extra, subtitle,
       >
         <Container>
           <Title text={title} textColor={"text-blackCeniza"} extra={"font-LusitanaBold"} />
-          {subtitle ? <SubTitleItalic text={subtitle} /> : ""}
+          {subtitle ? <SubTitleItalic text={subtitle} textColor={"text-blackCeniza"} /> : ""}
           {children}
         </Container>
       </motion.section>

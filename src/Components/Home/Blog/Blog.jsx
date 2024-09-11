@@ -24,7 +24,7 @@ const Blog = ({ index, onObserver }) => {
               <section className="group [perspective:1000px] ">
                 <img src={img} alt={title} className="w-full h-full object-cover rounded-lg" />
                 <section className="flex flex-col gap-2 pt-5">
-                  <SubTitle text={title} extra={"text-start"} />
+                  <SubTitle text={title} extra={"text-start font-bold"} />
                   <Text
                     content={content.sections[0].content.substring(0, 150) + "..."}
                     extra={"text-start"}

@@ -131,7 +131,7 @@ const Blog = () => {
                 </ul>
               </nav>
             </section>
-            <section className="w-full sm:w-full md:w-full lg:w-[75%] relative px-2">
+            <section className="w-full sm:w-full md:w-full lg:w-[75%] relative px-0">
               {body?.content.sections.map((section, index) => (
                 <section
                   key={index}
@@ -141,7 +141,7 @@ const Blog = () => {
                 >
                   {section?.subtitle && <SubTitle text={section?.subtitle} extra="font-bold" />}
                   {Array.isArray(section?.content) ? (
-                    <section className="py-10 flex flex-col gap-5 px-5">
+                    <section className="py-10 flex flex-col gap-5 px-0">
                       {section?.content.map(({ title, body }, index) => (
                         <section key={index} className="flex flex-col gap-5">
                           {title && <SubTitle text={title} extra="text-start" />}
