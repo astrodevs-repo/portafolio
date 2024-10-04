@@ -20,7 +20,7 @@ const Footer = ({ index, onObserver }) => {
               <motion.section className="flex flex-col gap-10 sm:gap-5">
                 <Title
                   text={"Contactanos"}
-                  textColor={"text-blackCeniza font-medium dark:text-white font-Baskerville"}
+                  textColor={"text-blackCeniza font-medium italic dark:text-white font-Baskerville"}
                 />
 
                 <Text
