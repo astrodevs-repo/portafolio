@@ -18,7 +18,7 @@ const Velocity = ({ left, right, items, extra }) => {
       >
         {items.map((item, index) => (
           <div className="min-w-fit flex items-center" key={index}>
-            <img src={item.svg} alt="" className={extra} />
+            <img src={item.svg} alt="" className={extra} width={100} height={100} />
           </div>
         ))}
       </motion.div>

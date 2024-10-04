@@ -120,7 +120,7 @@ const Card = ({ title, content, svg, index, expanded, onExpand }) => {
         className="relative bg-blackCeniza dark:bg-gray-900 h-full w-full rounded-3xl overflow-hidden flex flex-col justify-center items-center gap-10 px-20 py-10 cursor-pointer"
         onClick={() => onExpand(index)}
       >
-        <img src={svg} alt="" />
+        <img src={svg} alt="" width={50} height={50} />
         <Text content={title} textColor={"text-white"} extra={"text-center"} />
         <motion.div
           className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 bg-gradient-to-r from-slate-600 to-blackCeniza dark:from-slate-900 dark:to-blackCeniza bg-opacity-80 text-white text-center p-5 ${
@@ -144,7 +144,7 @@ const CardAccordion = ({ title, content, svg, index, expanded, onExpand }) => {
     >
       <motion.div className="flex items-center justify-between p-4 bg-blackCeniza text-white">
         <div className="flex items-center">
-          <img src={svg} alt={title} className="w-8 h-8 mr-4" />
+          <img src={svg} alt={title} className="mr-4" width={40} height={40} />
           <Text content={title} textColor={"text-white"} />
         </div>
         <motion.span

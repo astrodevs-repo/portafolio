@@ -26,6 +26,8 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
+          width={100}
+          height={100}
           className="absolute top-40 left-40 w-56 h-56 opacity-40"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
@@ -37,6 +39,8 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
+          width={100}
+          height={100}
           className="absolute right-0 top-20 w-96 h-96 opacity-40"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
@@ -48,6 +52,8 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
+          width={100}
+          height={100}
           className="absolute right-40  bottom-0 w-60 h-60 opacity-50"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
@@ -59,6 +65,8 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
+          width={100}
+          height={100}
           className="absolute right-1/2 top-0 w-64 h-64 opacity-20"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
@@ -70,6 +78,8 @@ const SectionA = () => {
             y: y3,
             rotate,
           }}
+          width={100}
+          height={100}
           className="absolute right-3/2 bottom-0 w-64 h-64 opacity-80"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua

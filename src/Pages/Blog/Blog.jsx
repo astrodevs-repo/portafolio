@@ -110,7 +110,13 @@ const Blog = () => {
           </section>
         </Container>
 
-        <img src={body?.img} alt="" className="h-[500px] object-cover w-full" />
+        <img
+          src={body?.img}
+          alt=""
+          className="h-[500px] object-cover w-full"
+          width={100}
+          height={100}
+        />
         <Container>
           <section className="w-full flex justify-between relative min-h-fit">
             <section className="w-[20%] hidden sm:hidden md:hidden lg:block">
@@ -170,6 +176,8 @@ const Blog = () => {
                           src={img}
                           alt={title}
                           className="w-full h-full object-cover rounded-lg"
+                          width={100}
+                          height={100}
                         />
                         <section className="flex flex-col gap-2 pt-5">
                           <SubTitle text={title} extra="text-start" />
