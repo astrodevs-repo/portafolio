@@ -35,8 +35,10 @@ const DrawerNavigation = () => {
           setIsOpen(!isOpen);
         }}
         className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-blackCeniza dark:text-white sm:text-[35px] mb-2"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <MdOutlineMenu />
+        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
       </button>
       {isOpen && (
         <div
