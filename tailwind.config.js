@@ -20,11 +20,9 @@ export default {
         },
       },
       fontFamily: {
-        LusitanaBold: ["LusitanaBold"],
-        LusitanaLght: ["LusitanaBold"],
-        Poppins: ["Poppins"],
-        PoppinsBold: ["PoppinsBold"],
-        Baskerville: ["Baskerville"],
+        Lusitana: ["Lusitana", "serif"], // Usa la fuente 'Lusitana' en normal
+        Poppins: ["Poppins", "sans-serif"], // Usa la fuente 'Poppins' en normal
+        Baskerville: ["'Libre Baskerville'", "serif"], // Usa 'Libre Baskerville'
       },
     },
   },

@@ -1,10 +1,7 @@
 import { useState } from "react";
-
 import { motion } from "framer-motion";
-
 import Section from "../../shared/Section/Section";
 import Text from "../../shared/Text";
-
 import icon1 from "/public/services/1.svg";
 import icon2 from "/public/services/2.svg";
 import icon3 from "/public/services/3.svg";

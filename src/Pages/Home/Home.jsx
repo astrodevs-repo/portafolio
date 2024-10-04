@@ -14,7 +14,6 @@ import Counter from "../../Components/Home/Counter/Counter";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
-
   const handleStepChange = (step) => setCurrentStep(step);
 
   return (

@@ -8,7 +8,7 @@ const Section = ({ id, children, bg, title, index, extra, subtitle, onObserver }
     <Inspector index={index} onObserver={onObserver}>
       <section className={`w-full h-fit-content ${bg} py-5 sm:py-20 ${extra}`} id={id}>
         <Container>
-          <Title text={title} textColor={"text-blackCeniza"} extra={"font-LusitanaBold"} />
+          <Title text={title} textColor={"text-blackCeniza"} extra={"font-Baskerville italic"} />
           {subtitle ? <SubTitleItalic text={subtitle} textColor={"text-blackCeniza"} /> : ""}
           {children}
         </Container>
