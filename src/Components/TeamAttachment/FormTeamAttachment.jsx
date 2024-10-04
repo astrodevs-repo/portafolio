@@ -267,6 +267,8 @@ const FormAttachment = () => {
                       src={preview}
                       alt="Vista previa"
                       className="max-w-full h-auto border border-gray-300 rounded"
+                      width={100}
+                      height={100}
                     />
                   </div>
                 )}

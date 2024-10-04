@@ -98,10 +98,10 @@ const About = ({ index, onObserver }) => {
                     alt={slide.title}
                     style={{
                       clipPath: slide.clipPath2,
-                      width: "100%",
-                      height: "100%",
                     }}
                     className={`${slide.extraClass}`}
+                    width={100}
+                    height={100}
                   />
                 </motion.section>
                 <motion.section
@@ -129,10 +129,10 @@ const About = ({ index, onObserver }) => {
                     alt={slide.title}
                     style={{
                       clipPath: slide.clipPath,
-                      width: "100%",
-                      height: "100%",
                     }}
-                    className={`${slide.extraClass} max-[80vh]`}
+                    width={100}
+                    height={100}
+                    className={`${slide.extraClass} `}
                   />
                 </motion.section>
               </motion.section>
