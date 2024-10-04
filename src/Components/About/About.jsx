@@ -3,21 +3,17 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import a from "../../../public/about/4.jpg";
-import b from "../../../public/about/2.jpg";
-import c from "../../../public/about/3.jpg";
-import d from "../../../public/about/1.jpg";
-
 import Text from "../shared/Text";
 import Title from "../shared/Title";
 import Inspector from "../shared/Inspector/Inspector";
+import { imagena, imagenb, imagenc, imagend } from "../../utils/urlImages";
 
 const About = ({ index, onObserver }) => {
   const slides = [
     {
       title: "Quienes Somos",
       text: "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
-      image: a,
+      image: imagena,
       clipPath: "polygon(0 0, 100% 0%, 100% 100%, 9% 100%)",
       clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
 
@@ -27,7 +23,7 @@ const About = ({ index, onObserver }) => {
     {
       title: "Visión",
       text: "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
-      image: b,
+      image: imagenb,
       clipPath: "polygon(12% 0, 100% 0%, 100% 100%, 0 100%)",
       clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
 
@@ -37,7 +33,7 @@ const About = ({ index, onObserver }) => {
     {
       title: "Misión",
       text: "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas.",
-      image: c,
+      image: imagenc,
       clipPath: "polygon(3% 0, 100% 0, 100% 100%, 6% 100%, 21% 49%)",
       clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
 
@@ -47,7 +43,7 @@ const About = ({ index, onObserver }) => {
     {
       title: "¿Por qué elegirnos?",
       text: "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio.",
-      image: d,
+      image: imagend,
       clipPath: "polygon(15% 0, 100% 0, 100% 100%, 13% 100%, 0 49%)",
       clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
 
@@ -62,8 +58,8 @@ const About = ({ index, onObserver }) => {
         <Swiper
           slidesPerView={1.2}
           spaceBetween={30}
-          autoplay={{ delay: 10000 }} // Add autoplay configuration
-          modules={[Pagination, Autoplay]} // Include Autoplay module
+          autoplay={{ delay: 10000 }}
+          modules={[Pagination, Autoplay]}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -114,7 +110,7 @@ const About = ({ index, onObserver }) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Title text={slide.title} extra={"font-Baskerville text-start"} />
+                  <Title text={slide.title} extra={"font-Baskerville italic text-start"} />
                   <Text
                     content={slide.text}
                     textColor={"text-blackCeniza"}

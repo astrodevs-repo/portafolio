@@ -20,7 +20,7 @@ const Footer = ({ index, onObserver }) => {
               <motion.section className="flex flex-col gap-10 sm:gap-5">
                 <Title
                   text={"Contactanos"}
-                  textColor={"text-blackCeniza  dark:text-white font-Baskerville"}
+                  textColor={"text-blackCeniza font-medium dark:text-white font-Baskerville"}
                 />
 
                 <Text
@@ -30,7 +30,7 @@ const Footer = ({ index, onObserver }) => {
                   }
                 />
                 <p
-                  className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl font-bold py-10 w-3/4 `}
+                  className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
                 >
                   ¡Gracias por considerar Neurons como su socio digital!
                 </p>
@@ -51,7 +51,7 @@ const Footer = ({ index, onObserver }) => {
           <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
             {footerContent.map((section, index) => (
               <div key={index}>
-                <SubTitle text={section.title} extra={"font-extrabold mb-5"} />
+                <SubTitle text={section.title} extra={"font-medium mb-5"} />
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   {section.links.map((link, j) => (
                     <TextFooter content={link.text} key={j} extra={"mb-2"} />

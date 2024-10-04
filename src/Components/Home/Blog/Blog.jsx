@@ -22,9 +22,9 @@ const Blog = ({ index, onObserver }) => {
           <SwiperSlide key={img}>
             <Link to={`blog/${id}`}>
               <section className="group [perspective:1000px] ">
-                <img src={img} alt={title} className="w-full h-full object-cover rounded-lg" />
+                <img src={img} alt={title} className="w-full h-full object-cover rounded-lg font" />
                 <section className="flex flex-col gap-2 pt-5">
-                  <SubTitle text={title} extra={"text-start font-bold"} />
+                  <SubTitle text={title} extra={"font-medium text-start "} />
                   <Text
                     content={content.sections[0].content.substring(0, 150) + "..."}
                     extra={"text-start"}

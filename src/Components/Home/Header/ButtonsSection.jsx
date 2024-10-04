@@ -1,6 +1,5 @@
 import { scrollToSection } from "../../../utils/functions";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-import arrow from "/public/arrow.svg";
 
 const ButtonsSection = () => {
   return (
@@ -9,7 +8,6 @@ const ButtonsSection = () => {
         <ButtonSimple
           textColor={"text-blackCeniza  "}
           text={"Nuestros Servicios"}
-          img={arrow}
           func={() => scrollToSection("quienessomos")}
           bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent "}
           extra={" w-full min-w-60"}
@@ -19,7 +17,6 @@ const ButtonsSection = () => {
         <ButtonSimple
           textColor={"text-blackCeniza"}
           text={"Quienes somos"}
-          img={arrow}
           bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent  "}
           func={() => scrollToSection("aboutus")}
           extra={" w-full min-w-60 flex justify-center gap-10"}

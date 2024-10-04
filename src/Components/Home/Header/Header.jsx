@@ -1,5 +1,4 @@
 import Inspector from "../../shared/Inspector/Inspector";
-import TextEffect from "./TextEffect";
 import TextPrincipal from "./TextPrincipal";
 import ButtonsSection from "./ButtonsSection";
 import SubTitle from "../../shared/SubTitle";
@@ -13,7 +12,7 @@ function Header({ index, onObserver }) {
       >
         <SubTitle
           text={"Agencia de Tecnología e Innovación"}
-          extra={"font-extrabold px-10 text-center"}
+          extra={"px-10 text-center font-semibold"}
         />
 
         <TextPrincipal />

@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import atom from "/public/atomgrueso.png";
+import { atomImageHeader } from "../../../utils/urlImages";
 
 const SectionA = () => {
   const { scrollY } = useScroll();
@@ -20,8 +20,8 @@ const SectionA = () => {
     <>
       <section className="absolute top-0 left-0 z-0 w-full h-screen overflow-hidden opacity-60">
         <motion.img
-          src={atom}
-          alt="Rotating Atom"
+          src={atomImageHeader}
+          alt="roating"
           style={{
             y: y3,
             rotate,
@@ -31,8 +31,8 @@ const SectionA = () => {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
         />
         <motion.img
-          src={atom}
-          alt="Rotating Atom"
+          src={atomImageHeader}
+          alt="roating"
           style={{
             y: y3,
             rotate,
@@ -42,8 +42,8 @@ const SectionA = () => {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
         />
         <motion.img
-          src={atom}
-          alt="Rotating Atom"
+          src={atomImageHeader}
+          alt="roating"
           style={{
             y: y3,
             rotate,
@@ -53,8 +53,8 @@ const SectionA = () => {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
         />
         <motion.img
-          src={atom}
-          alt="Rotating Atom"
+          src={atomImageHeader}
+          alt="roating"
           style={{
             y: y3,
             rotate,
@@ -64,8 +64,8 @@ const SectionA = () => {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Configura la animación continua
         />
         <motion.img
-          src={atom}
-          alt="Rotating Atom"
+          src={atomImageHeader}
+          alt="roating"
           style={{
             y: y3,
             rotate,
