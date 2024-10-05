@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /404
+Disallow: /sended
+Disallow: /teamattachment
+Disallow: /blog/*
+
+# Permitir el acceso a todo lo demás
+Allow: /
