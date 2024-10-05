@@ -89,7 +89,7 @@ const Blog = () => {
         title={body.title}
         description={body.subtitle}
         image={body?.img}
-        url={`https://lv6hkvjw-5173.brs.devtunnels.ms/blog/${id}`}
+        url={`https://neurons.com.ar/blog/${id}`}
         type="article"
         siteName="Company name."
       />

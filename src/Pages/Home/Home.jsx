@@ -11,6 +11,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 import ProgressBar from "../../Components/shared/ProgressBar/ProgressBar";
 import Counter from "../../Components/Home/Counter/Counter";
+import SEO from "../../Components/shared/SEO/Seo";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -18,6 +19,16 @@ const Home = () => {
 
   return (
     <>
+      <SEO
+        title={"Neurons | Empresa de Desarrollo y Diseño Web Profesional"}
+        description={
+          "En Neurons, desarrollamos sitios web y soluciones digitales personalizados y profesionales para y empresa o negocio. Somos una empresa ubicada en Argentina ¡Descubre cómo podemos ayudarte a crecer en línea!"
+        }
+        image={""}
+        url={`https://neurons.com.ar`}
+        type=""
+        siteName="Neurons"
+      />
       <Navbar />
       <ProgressBar />
       <SmokeBackground />
