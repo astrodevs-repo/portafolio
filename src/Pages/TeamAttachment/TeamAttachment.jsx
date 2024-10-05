@@ -9,6 +9,7 @@ import MovingTextJ from "../../Components/TeamAttachment/MovingTextJ";
 import FormAttachment from "../../Components/TeamAttachment/FormTeamAttachment";
 import Title from "../../Components/shared/Title";
 import useForm from "../../hooks/useForm";
+import SEO from "../../Components/shared/SEO/Seo";
 const TeamAttachment = () => {
   const { sended } = useForm();
 
@@ -28,6 +29,7 @@ const TeamAttachment = () => {
       className="flex flex-col gap-0 z-40"
     >
       <NavbarGoBack />
+
       <Container>
         <MovingTextJ
           items={[
