@@ -20,21 +20,17 @@ import icon5 from "/public/services/5.svg";
 import icon6 from "/public/services/6.svg";
 import icon7 from "/public/services/7.svg";
 import icon8 from "/public/services/8.svg";
-
-import {
-  Adri,
-  education,
-  ia,
-  imagena,
-  imagenb,
-  imagenc,
-  imagend,
-  Jesus,
-  Luisana,
-  Miguel,
-  Tomi,
-  Yeli,
-} from "../utils/urlImages";
+import imagena from "/public/About/1.webp";
+import imagenb from "/public/About/2.webp";
+import imagenc from "/public/About/3.webp";
+import imagend from "/public/About/4.webp";
+import Adri from "/public/Team/adrian.webp";
+import Jesus from "/public/Team/jesus2.webp";
+import Luisana from "/public/Team/luisana.webp";
+import Miguel from "/public/Team/miguel.webp";
+import Tomi from "/public/Team/tomas.webp";
+import Yeli from "/public/Team/yeli.webp";
+import { education, ia } from "../utils/urlImages";
 
 export const data = {
   Bg: "#31add5",
