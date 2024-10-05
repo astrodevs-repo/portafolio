@@ -11,7 +11,6 @@ import Title from "../../Components/shared/Title";
 import useForm from "../../hooks/useForm";
 const TeamAttachment = () => {
   const { sended } = useForm();
-  console.log("first", sended);
 
   useEffect(() => {
     window.scrollTo({

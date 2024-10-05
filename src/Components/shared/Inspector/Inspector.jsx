@@ -8,7 +8,6 @@ const Inspector = ({ children, index, onObserver }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) onObserver(index);
-          console.log(index);
         });
       },
       { threshold: 0, rootMargin: "-60% 0% -50% 0%" }
