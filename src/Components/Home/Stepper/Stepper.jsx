@@ -47,19 +47,17 @@ function Stepper({ index, onObserver }) {
       textColor={"text-white"}
       onObserver={onObserver}
     >
-      <section className="mt-20 px-0">
-        {steps.map(({ name, index }, i) => (
-          <ItemMobile
-            currentStep={currentStep}
-            length={steps.length}
-            key={i}
-            name={name}
-            index={index}
-            i={i}
-            onObserver={handleStepChange}
-          />
-        ))}
-      </section>
+      {steps.map(({ name, index }, i) => (
+        <ItemMobile
+          currentStep={currentStep}
+          length={steps.length}
+          key={i}
+          name={name}
+          index={index}
+          i={i}
+          onObserver={handleStepChange}
+        />
+      ))}
     </Section>
   );
 }

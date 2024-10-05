@@ -30,21 +30,17 @@ const Home = () => {
         siteName="Neurons"
       />
       <Navbar />
-      <ProgressBar />
       <SmokeBackground />
-      <Header index={"home"} onObserver={handleStepChange} currentStep={currentStep} />
+      <ProgressBar />
+      <Header index={"home"} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
-      <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
-      <StepList
-        index={"comotrabajamos"}
-        onObserver={handleStepChange}
-        currentStepAnother={currentStep}
-      />
-      <Blog index={"blog"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Team index={"team"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Footer index={"contactanos"} onObserver={handleStepChange} currentStep={currentStep} />
+      <Servicios index={"quienessomos"} />
+      <ClientsSection index={"skills"} />
+      <StepList index={"comotrabajamos"} />
+      <Blog index={"blog"} />
+      <Team index={"team"} />
+      <Footer index={"contactanos"} />
     </>
   );
 };

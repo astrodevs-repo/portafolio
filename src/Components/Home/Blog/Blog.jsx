@@ -21,23 +21,19 @@ const Blog = ({ index, onObserver }) => {
         {itemsBlog.map(({ title, img, id, content }) => (
           <SwiperSlide key={img}>
             <Link to={`blog/${id}`}>
-              <section className="group [perspective:1000px] ">
-                <img
-                  src={img}
-                  alt={title}
-                  width={100}
-                  height={100}
-                  className=" object-cover rounded-lg"
-                />
-                <section className="flex flex-col gap-2 pt-5">
-                  <SubTitle text={title} extra={"font-medium text-start "} />
-                  <Text
-                    content={content.sections[0].content.substring(0, 150) + "..."}
-                    extra={"text-start"}
-                  />
-                </section>
-              </section>
+              <img
+                src={img}
+                alt={title}
+                width={100}
+                height={100}
+                className=" object-cover rounded-lg"
+              />
             </Link>
+            <SubTitle text={title} extra={"font-medium text-start mt-5 "} />
+            <Text
+              content={content.sections[0].content.substring(0, 150) + "..."}
+              extra={"text-start"}
+            />
           </SwiperSlide>
         ))}
       </Carousel>

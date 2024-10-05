@@ -12,8 +12,29 @@ import pb from "/public/OurSkills/pb.svg";
 import php from "/public/OurSkills/php.svg";
 import python from "/public/OurSkills/python.svg";
 import r from "/public/OurSkills/r.svg";
+import icon1 from "/public/services/1.svg";
+import icon2 from "/public/services/2.svg";
+import icon3 from "/public/services/3.svg";
+import icon4 from "/public/services/4.svg";
+import icon5 from "/public/services/5.svg";
+import icon6 from "/public/services/6.svg";
+import icon7 from "/public/services/7.svg";
+import icon8 from "/public/services/8.svg";
 
-import { Adri, education, ia, Jesus, logo, Luisana, Miguel, Tomi, Yeli } from "../utils/urlImages";
+import {
+  Adri,
+  education,
+  ia,
+  imagena,
+  imagenb,
+  imagenc,
+  imagend,
+  Jesus,
+  Luisana,
+  Miguel,
+  Tomi,
+  Yeli,
+} from "../utils/urlImages";
 
 export const data = {
   Bg: "#31add5",
@@ -553,28 +574,68 @@ export const itemsTeam = [
     svg: Tomi,
   },
 ];
-export const about = {
-  title: "Transformando Ideas en Experiencias Digitales Extraordinarias",
-  body: "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
-  imgBrain: logo,
-  articles: [
-    {
-      title: "Visión",
-      content:
-        "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
-    },
-    {
-      title: "Misión",
-      content:
-        "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas ",
-    },
-    {
-      title: "¿Por qué eligirnos?",
-      content:
-        "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio. ",
-    },
-  ],
-};
+export const about = [
+  {
+    title: "Quienes Somos",
+    text: "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
+    image: imagena,
+    clipPath: "polygon(0 0, 100% 0%, 100% 100%, 9% 100%)",
+    clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+    subtitle: "",
+    extraClass: "rounded-r-lg",
+  },
+  {
+    title: "Visión",
+    text: "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
+    image: imagenb,
+    clipPath: "polygon(12% 0, 100% 0%, 100% 100%, 0 100%)",
+    clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+    subtitle: "Visión",
+    extraClass: "rounded-r-lg",
+  },
+  {
+    title: "Misión",
+    text: "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas.",
+    image: imagenc,
+    clipPath: "polygon(3% 0, 100% 0, 100% 100%, 6% 100%, 21% 49%)",
+    clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+    subtitle: "Misión",
+    extraClass: "rounded-r-lg ",
+  },
+  {
+    title: "¿Por qué elegirnos?",
+    text: "Elegir Neurons significa optar por un socio comprometido con la excelencia y la innovación continua. Estamos aquí para transformar su visión digital en realidad, asegurando que cada interacción con nosotros supere sus expectativas y contribuya al éxito sostenible de su negocio.",
+    image: imagend,
+    clipPath: "polygon(15% 0, 100% 0, 100% 100%, 13% 100%, 0 49%)",
+    clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
+
+    subtitle: "¿Por qué elegirnos?",
+    extraClass: "rounded-r-lg",
+  },
+];
+export const counterData = [
+  {
+    label: "Proyectos",
+    value: 15,
+    description:
+      "Contamos con un equipo especializado para alcanzar los objetivos con múltiples habilidades. Cada proyecto es un nuevo desafío que resolvemos de manera creativa y funcional.",
+  },
+  {
+    label: "Países",
+    value: 5,
+    description:
+      "Trabajamos con clientes de diferentes países, lo que nos permite adaptar nuestras soluciones a una variedad de contextos y necesidades internacionales.",
+  },
+  {
+    label: "Clientes Satisfechos",
+    value: 8,
+    description:
+      "Nuestros clientes confían en nosotros debido a nuestra capacidad para ofrecer estrategias personalizadas, desde la creatividad hasta la gestión, adaptadas a cada necesidad específica.",
+  },
+];
 export const Stepper = {
   title: "Trabajá con nosotros",
   linkButton: "/teamattachment",
@@ -594,3 +655,54 @@ export const StepperMobile = {
     { items: [Jesus, Miguel, Yeli, Adri, Luisana], top: "-10%", bottom: "0%", duration: "100" },
   ],
 };
+
+export const servicios = [
+  {
+    title: "Desarrollo Aplicaciones Web",
+    svg: icon1,
+    content:
+      "Creamos sitios web dinámicos, receptivos y optimizados para ofrecer una experiencia de usuario excepcional en todos los dispositivos.",
+  },
+  {
+    title: "Desarrollo de Aplicaciones Móviles",
+    svg: icon2,
+    content:
+      "Creamos aplicaciones móviles personalizadas para iOS y Android que ofrecen experiencias fluidas y atractivas para los usuarios, ampliando así el alcance y la interacción con la audiencia.",
+  },
+  {
+    title: "Creación de Bases de Datos",
+    svg: icon3,
+    content:
+      "Desarrollamos bases de datos robustas y escalables que permiten la gestión eficiente de la información y el acceso rápido a los datos críticos para el negocio.",
+  },
+  {
+    title: "Data Science y Data Analytic",
+    svg: icon4,
+    content:
+      "Aplicamos técnicas de Data Science y Data Analytics para extraer información valiosa de los datos y tomar decisiones informadas que impulsen el crecimiento de nuestros clientes.",
+  },
+  {
+    title: "Diseño UX/UI",
+    svg: icon5,
+    content:
+      "Diseñamos interfaces intuitivas y atractivas que maximizan la usabilidad y la interacción del usuario, utilizando herramientas como Figma para prototipado y diseño colaborativo.",
+  },
+  {
+    title: "Mantenimiento y Soporte",
+    svg: icon6,
+    content:
+      "Ofrecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
+  },
+  {
+    title: "Blockchain",
+    svg: icon7,
+    content:
+      "Implementamos soluciones basadas en tecnología Blockchain para garantizar la seguridad, la transparencia e integridad de los datos y las transacciones en línea.",
+  },
+  {
+    title: "Google Ads y Posicionamiento SEO",
+    svg: icon8,
+    content:
+      "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
+  },
+];
