@@ -19,7 +19,7 @@ const Servicios = ({ index }) => {
       index={index}
       extra={""}
       contentPosition={
-        "grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center gap-5 flex flex-col gap-4 sm:flex md:grid "
+        "grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center  flex flex-col gap-4 sm:flex md:grid w-full "
       }
     >
       {servicios.map((servicio, index) => (
