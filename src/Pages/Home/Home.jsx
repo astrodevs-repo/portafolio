@@ -9,7 +9,7 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-import ProgressBar from "../../Components/shared/ProgressBar/ProgressBar";
+
 import Counter from "../../Components/Home/Counter/Counter";
 import SEO from "../../Components/shared/SEO/Seo";
 
@@ -31,7 +31,6 @@ const Home = () => {
       />
       <Navbar />
       <SmokeBackground />
-      <ProgressBar />
       <Header index={"home"} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
