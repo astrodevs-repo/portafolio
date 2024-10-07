@@ -6,7 +6,7 @@ import React from "react";
 
 const SkillsSection = React.memo(function SkillsSection({ index }) {
   return (
-    <section className="" id={index}>
+    <section id={index}>
       <Container>
         <Title
           text={"Nuestras Herramientas"}

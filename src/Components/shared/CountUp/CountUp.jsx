@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SubTitle from "../SubTitle";
 import Text from "../Text";
 
@@ -22,7 +22,7 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
 
   return (
     <section className="flex flex-col gap-5">
-      <section>
+      <React.Fragment>
         <h1
           className={`text-Chicle  dark:text-violet-600 font-Baskerville leading-[40px] w-full text-4xl sm:text-sm md:text-4xl lg:text-4 xl:text-5xl 2xl:text-6xl  m-0`}
         >
@@ -30,7 +30,7 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
         </h1>
 
         <SubTitle text={label} extra={"font-extrabold ml-5"} />
-      </section>
+      </React.Fragment>
       <Text content={description} extra={"text-bold"} />
     </section>
   );
