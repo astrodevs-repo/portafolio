@@ -8,37 +8,37 @@ import SubTitleItalic from "../shared/SubTitleItalic";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import React from "react";
+import Section from "../shared/Section/Section";
 
 const Footer = React.memo(function Footer({ index }) {
   return (
-    <>
-      <Container>
-        <section
-          className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-32 "
-          id={index}
-        >
-          <section className="flex flex-col gap-10 sm:gap-5">
-            <Title
-              text={"Contactanos"}
-              textColor={"text-blackCeniza font-medium italic dark:text-white font-Baskerville"}
-            />
+    <React.Fragment>
+      <Section
+        contentPosition={
+          "grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-32 "
+        }
+        index={index}
+      >
+        <section className="flex flex-col gap-10 sm:gap-5">
+          <Title
+            text={"Contactanos"}
+            textColor={"text-blackCeniza font-medium italic dark:text-white font-Baskerville"}
+          />
 
-            <Text
-              textColor={"text-blackCeniza dark:text-white"}
-              content={
-                "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
-              }
-            />
-            <p
-              className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
-            >
-              ¡Gracias por considerar Neurons como su socio digital!
-            </p>
-          </section>
-
-          <ContactUs />
+          <Text
+            textColor={"text-blackCeniza dark:text-white"}
+            content={
+              "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
+            }
+          />
+          <p
+            className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
+          >
+            ¡Gracias por considerar Neurons como su socio digital!
+          </p>
         </section>
-      </Container>
+        <ContactUs />
+      </Section>
 
       <footer
         className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
@@ -47,7 +47,7 @@ const Footer = React.memo(function Footer({ index }) {
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
 
-          <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 ">
+          <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 w-full">
             {footerContent.map((section, index) => (
               <section key={index}>
                 <SubTitle text={section.title} extra={"font-medium mb-5"} />
@@ -83,7 +83,7 @@ const Footer = React.memo(function Footer({ index }) {
           </div>
         </section>
       </footer>
-    </>
+    </React.Fragment>
   );
 });
 const footerContent = [

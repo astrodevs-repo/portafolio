@@ -1,7 +1,14 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Content from "./Content";
-const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
+const ItemMobile = React.memo(function ItemMobile({
+  name,
+  index,
+  i,
+  onObserver,
+  currentStep,
+  length,
+}) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -51,7 +58,7 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
       <Content currentStep={currentStep} i={i} index={index} name={name} sections={sections} />
     </article>
   );
-};
+});
 
 export default ItemMobile;
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import About from "../../Components/About/About";
 import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
@@ -18,7 +18,7 @@ const Home = () => {
   const handleStepChange = (step) => setCurrentStep(step);
 
   return (
-    <>
+    <React.Fragment>
       <SEO
         title={"Neurons | Empresa de Desarrollo y Diseño Web Profesional"}
         description={
@@ -40,7 +40,7 @@ const Home = () => {
       <Blog index={"blog"} />
       <Team index={"team"} />
       <Footer index={"contactanos"} />
-    </>
+    </React.Fragment>
   );
 };
 
