@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Content from "./Content";
 const ItemMobile = React.memo(function ItemMobile({

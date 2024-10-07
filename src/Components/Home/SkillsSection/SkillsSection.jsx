@@ -6,7 +6,7 @@ import React from "react";
 
 const SkillsSection = React.memo(function SkillsSection({ index }) {
   return (
-    <React.Fragment id={index}>
+    <section id={index}>
       <Container>
         <Title
           text={"Nuestras Herramientas"}
@@ -14,7 +14,7 @@ const SkillsSection = React.memo(function SkillsSection({ index }) {
         />
       </Container>
       <MovingText right={"0%"} left={"-100%"} items={itemsClient} extra={"gap-20 "} />
-    </React.Fragment>
+    </section>
   );
 });
 export default SkillsSection;
