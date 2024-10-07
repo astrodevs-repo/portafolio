@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Section from "../../shared/Section/Section";
 import ItemMobile from "./ItemMobile";
 
-function Stepper({ index, onObserver }) {
+const Stepper = React.memo(function Stepper({ index }) {
   const [currentStep, setCurrentStep] = useState("1");
 
   const handleStepChange = (step) => setCurrentStep(step);
@@ -42,10 +42,10 @@ function Stepper({ index, onObserver }) {
   return (
     <Section
       title={"Como trabajamos en Neurons"}
-      id={index}
+      index={index}
       bg={"bg-transparent"}
       textColor={"text-white"}
-      onObserver={onObserver}
+      contentPosition={"pt-20"}
     >
       {steps.map(({ name, index }, i) => (
         <ItemMobile
@@ -60,6 +60,6 @@ function Stepper({ index, onObserver }) {
       ))}
     </Section>
   );
-}
+});
 
 export default Stepper;

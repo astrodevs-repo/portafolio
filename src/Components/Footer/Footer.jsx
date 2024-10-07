@@ -1,6 +1,4 @@
 import ContactUs from "./form/Form";
-import { motion } from "framer-motion";
-import Inspector from "../shared/Inspector/Inspector";
 import { FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
 
@@ -9,8 +7,9 @@ import Container from "../Container/Container";
 import SubTitleItalic from "../shared/SubTitleItalic";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
+import React from "react";
 
-const Footer = ({ index }) => {
+const Footer = React.memo(function Footer({ index }) {
   return (
     <>
       <Container>
@@ -86,7 +85,7 @@ const Footer = ({ index }) => {
       </footer>
     </>
   );
-};
+});
 const footerContent = [
   {
     title: "Nuestros Servicios",

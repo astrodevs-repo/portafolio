@@ -1,3 +1,5 @@
+import React from "react";
+
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -6,9 +8,9 @@ import Text from "../shared/Text";
 import Title from "../shared/Title";
 import { about } from "../../data/Home";
 
-const About = ({ index }) => {
+const About = React.memo(function About({ index }) {
   return (
-    <section id={index} className="">
+    <section id={index} className="py-20">
       <Swiper
         slidesPerView={1.2}
         spaceBetween={30}
@@ -61,6 +63,6 @@ const About = ({ index }) => {
       </Swiper>
     </section>
   );
-};
+});
 
 export default About;
