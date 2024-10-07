@@ -1,8 +1,10 @@
+import React from "react";
+
 import Section from "../../shared/Section/Section";
 import CountUp from "../../shared/CountUp/CountUp";
 import { counterData } from "../../../data/Home";
 
-const Counter = ({ index, onObserver, currentStep }) => {
+const Counter = React.memo(function Counter({ currentStep, onObserver, index }) {
   return (
     <Section
       currentStep={currentStep}
@@ -22,6 +24,6 @@ const Counter = ({ index, onObserver, currentStep }) => {
       ))}
     </Section>
   );
-};
+});
 
 export default Counter;

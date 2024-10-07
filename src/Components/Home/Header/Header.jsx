@@ -1,8 +1,10 @@
+import React from "react";
+
 import TextPrincipal from "./TextPrincipal";
 import ButtonsSection from "./ButtonsSection";
 import SubTitle from "../../shared/SubTitle";
 
-function Header({ index }) {
+const Header = React.memo(function Header({ index }) {
   return (
     <section
       id={index}
@@ -22,6 +24,6 @@ function Header({ index }) {
       <ButtonsSection />
     </section>
   );
-}
+});
 
 export default Header;

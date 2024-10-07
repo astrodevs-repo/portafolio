@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import SubTitle from "../../shared/SubTitle";
-import Text from "../../shared/Text";
-
+import Content from "./Content";
 const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
   const ref = useRef(null);
 
@@ -42,23 +40,6 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
         ></motion.div>
         {/** circle */}
 
-        {/** circle fade */}
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 20, y: 20 }}
-          animate={{
-            opacity: parseInt(currentStep) >= parseInt(index) ? 1 : 0,
-            y: parseInt(currentStep) >= parseInt(index) ? 0 : 20,
-            scale: parseInt(currentStep) >= parseInt(index) ? 1.3 : 1,
-          }}
-          transition={{ duration: 0.5 }}
-          className={`  ${
-            parseInt(currentStep) >= parseInt(index) &&
-            "bg-blackCeniza dark:bg-gray-400 w-5 <h-5></h-5> rounded-full absolute -top-4 -left-3 "
-          }`}
-        ></motion.div>
-        {/** circle fade */}
-
         <span
           className={`border-l-5  ${
             parseInt(currentStep) >= parseInt(index) &&
@@ -67,44 +48,12 @@ const ItemMobile = ({ name, index, i, onObserver, currentStep, length }) => {
         ></span>
       </section>
 
-      <Content currentStep={currentStep} i={i} index={index} name={name} />
+      <Content currentStep={currentStep} i={i} index={index} name={name} sections={sections} />
     </article>
   );
 };
 
 export default ItemMobile;
-
-const Content = ({ currentStep, index, i, name }) => {
-  return (
-    <section className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 pb-20  -mt-5">
-      <motion.p
-        initial={{ opacity: 20, y: 20 }}
-        animate={{
-          opacity: parseInt(currentStep) >= parseInt(index) ? 1 : 0,
-          y: parseInt(currentStep) >= parseInt(index) ? 0 : 5,
-          scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
-        }}
-        transition={{ duration: 0.5 }}
-        className="text-xs sm:text-xs md:text-lg lg:text-2xl w-3/4 md:max-w-[20rem]  mt-3 ml-8 sm:ml-20 md:ml-14 text-black font-Poppins uppercase hidden sm:flex"
-      >
-        <SubTitle text={name} />
-      </motion.p>
-      <motion.section
-        initial={{ opacity: 0, x: 100 }} // Inicia fuera del área visible a la derecha
-        animate={{
-          opacity: parseInt(currentStep) >= parseInt(index) ? 1 : 0,
-          x: parseInt(currentStep) >= parseInt(index) ? 0 : 20, // Se mueve desde 100 hasta 0, y si no está en el paso actual, se mueve hacia la derecha ligeramente
-          scale: parseInt(currentStep) >= parseInt(index) ? 1.1 : 1,
-        }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col pl-10 pr-5 col-span-2 h-full py-1 gap-5"
-      >
-        <SubTitle text={sections[i]?.title} />
-        <Text content={sections[i]?.subTitle} />
-      </motion.section>
-    </section>
-  );
-};
 
 const sections = [
   {

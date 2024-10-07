@@ -5,8 +5,9 @@ import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
 import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
+import React from "react";
 
-const Blog = ({ index, onObserver }) => {
+const Blog = React.memo(function Blog({ index, onObserver }) {
   return (
     <Section
       title={"Blog y Artículos"}
@@ -39,6 +40,6 @@ const Blog = ({ index, onObserver }) => {
       </Carousel>
     </Section>
   );
-};
+});
 
 export default Blog;

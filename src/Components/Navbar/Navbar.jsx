@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
 import Logo from "../shared/Logo";
 import DrawerNavigation from "../shared/drawer/Drawer";
@@ -7,7 +7,7 @@ import { navItems } from "../../data/data";
 import { scrollToSection } from "../../utils/functions";
 import TextNavbar from "../shared/TextNavBar";
 
-const Navbar = () => {
+const Navbar = React.memo(function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -41,6 +41,6 @@ const Navbar = () => {
       </section>
     </nav>
   );
-};
+});
 
 export default Navbar;

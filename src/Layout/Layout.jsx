@@ -1,49 +1,10 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Layout = ({ children }) => {
-  const [showButton, setShowButton] = useState(true); // Inicialmente es true
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Check initial position on mount
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section style={{ position: "relative" }}>
-      <motion.section
-        className="z-40"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
-      >
-        {children}
-      </motion.section>
+      {children}
 
       <a
         href="https://wa.me/+5492612336104"
