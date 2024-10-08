@@ -1,9 +1,7 @@
 import ContactUs from "./form/Form";
 import { FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
-
 import TextFooter from "../shared/TextFooter";
-import Container from "../Container/Container";
 import SubTitleItalic from "../shared/SubTitleItalic";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
@@ -14,9 +12,7 @@ const Footer = React.memo(function Footer({ index }) {
   return (
     <React.Fragment>
       <Section
-        contentPosition={
-          "grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center pt-32 "
-        }
+        contentPosition={"grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center "}
         index={index}
       >
         <section className="flex flex-col gap-10 sm:gap-5">
