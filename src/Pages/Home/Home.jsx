@@ -12,6 +12,7 @@ import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 
 import Counter from "../../Components/Home/Counter/Counter";
 import SEO from "../../Components/shared/SEO/Seo";
+import BackToTopButton from "../../Components/shared/BackTotopButtom";
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState("1");
@@ -34,12 +35,13 @@ const Home = () => {
       <Header index={"home"} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Servicios index={"quienessomos"} />
+      <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
       <ClientsSection index={"skills"} />
       <StepList index={"comotrabajamos"} />
-      <Blog index={"blog"} />
+      <Blog index={"blog"} currentStep={currentStep} onObserver={handleStepChange} />
       <Team index={"team"} />
       <Footer index={"contactanos"} />
+      <BackToTopButton currentStep={currentStep} />
     </React.Fragment>
   );
 };
