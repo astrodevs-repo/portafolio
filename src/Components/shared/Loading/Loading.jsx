@@ -1,6 +1,8 @@
+import React from "react";
+
 const Loading = () => {
   return (
-    <section>
+    <React.Fragment>
       <svg
         aria-hidden="true"
         className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-BlueNeurons"
@@ -18,7 +20,7 @@ const Loading = () => {
         />
       </svg>
       <span className="sr-only">Loading...</span>
-    </section>
+    </React.Fragment>
   );
 };
 
