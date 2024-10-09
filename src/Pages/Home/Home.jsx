@@ -9,11 +9,10 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-
 import Counter from "../../Components/Home/Counter/Counter";
 import SEO from "../../Components/shared/SEO/Seo";
 
-const Home = () => {
+const Home = React.memo(function Home() {
   const [currentStep, setCurrentStep] = useState("1");
   const handleStepChange = (step) => setCurrentStep(step);
 
@@ -42,6 +41,6 @@ const Home = () => {
       <Footer index={"contactanos"} />
     </React.Fragment>
   );
-};
+});
 
 export default Home;
