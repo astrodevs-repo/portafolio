@@ -28,7 +28,7 @@ const Servicios = React.memo(function Servicios({ index, currentStep, onObserver
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0.5, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.2 }} // Retraso basado en el índice
               >

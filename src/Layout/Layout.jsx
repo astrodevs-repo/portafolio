@@ -1,10 +1,18 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ReactLenis } from "lenis/dist/lenis-react";
 
 const Layout = ({ children }) => {
   return (
     <section style={{ position: "relative" }}>
-      {children}
+      <ReactLenis
+        root
+        options={{
+          lerp: 0.05,
+        }}
+      >
+        {children}
+      </ReactLenis>
 
       <a
         href="https://wa.me/+5492612336104"

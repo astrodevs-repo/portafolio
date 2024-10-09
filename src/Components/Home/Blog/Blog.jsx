@@ -10,8 +10,6 @@ import { motion } from "framer-motion";
 import Inspector from "../../shared/Inspector/Inspector";
 
 const Blog = React.memo(function Blog({ index, onObserver, currentStep }) {
-  const currentBlogIndex = itemsBlog.findIndex((item) => item.id === currentStep);
-
   return (
     <Inspector index={index} onObserver={onObserver}>
       <Section
@@ -23,18 +21,15 @@ const Blog = React.memo(function Blog({ index, onObserver, currentStep }) {
         onObserver={onObserver}
         extra={"  "}
       >
-        <Carousel show={"1"}>
-          {" "}
-          {/* Mostrar uno a la vez */}
+        <Carousel show={"3.5"}>
           {itemsBlog.map(({ title, img, id, content }, idx) => {
-            // Solo mostrar el blog actual según currentBlogIndex
-            if (idx === currentBlogIndex) {
+            if (index === currentStep) {
               return (
                 <motion.section
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0.5, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0 }} // Ajusta el delay si es necesario
+                  transition={{ duration: 0.5, delay: idx * 4 }} // Ajusta el delay si es necesario
                 >
                   <SwiperSlide>
                     <Link to={`blog/${id}`}>
@@ -55,7 +50,7 @@ const Blog = React.memo(function Blog({ index, onObserver, currentStep }) {
                 </motion.section>
               );
             }
-            return null; // Retorna null para otros elementos
+            return null;
           })}
         </Carousel>
       </Section>
