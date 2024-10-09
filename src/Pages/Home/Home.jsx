@@ -34,10 +34,10 @@ const Home = () => {
       <Header index={"home"} />
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Servicios index={"quienessomos"} />
+      <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
       <ClientsSection index={"skills"} />
       <StepList index={"comotrabajamos"} />
-      <Blog index={"blog"} />
+      <Blog index={"blog"} currentStep={currentStep} onObserver={handleStepChange} />
       <Team index={"team"} />
       <Footer index={"contactanos"} />
     </React.Fragment>

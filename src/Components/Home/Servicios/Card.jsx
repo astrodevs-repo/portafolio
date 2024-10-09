@@ -6,7 +6,6 @@ const Card = ({ title, content, svg, index, expanded, onExpand }) => {
     <motion.article
       className="relative bg-blackCeniza dark:bg-gray-900 h-full w-full rounded-3xl overflow-hidden hidden sm:hidden md:flex flex-col justify-center items-center gap-10 px-20 py-10 cursor-pointer"
       onClick={() => onExpand(index)}
-      whileHover={{ scale: 1.02 }}
     >
       <img src={svg} alt="" width={50} height={50} />
       <Text content={title} textColor={"text-white"} extra={"text-center"} />
