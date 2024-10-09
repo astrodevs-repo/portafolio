@@ -1,5 +1,4 @@
 import React from "react";
-
 import TextPrincipal from "./TextPrincipal";
 import ButtonsSection from "./ButtonsSection";
 import SubTitle from "../../shared/SubTitle";
