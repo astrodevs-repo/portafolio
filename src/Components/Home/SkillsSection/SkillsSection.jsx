@@ -8,10 +8,7 @@ const SkillsSection = React.memo(function SkillsSection({ index }) {
   return (
     <section id={index}>
       <Container>
-        <Title
-          text={"Nuestras Herramientas"}
-          textColor={"text-blackCeniza italic font-Baskerville"}
-        />
+        <Title text={"Nuestras Herramientas"} textColor={"text-blackCeniza font-Baskerville"} />
       </Container>
       <MovingText right={"0%"} left={"-100%"} items={itemsClient} extra={"gap-20 "} />
     </section>
