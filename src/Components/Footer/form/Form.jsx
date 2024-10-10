@@ -100,7 +100,7 @@ const ContactUs = () => {
 
         <section className={`flex justify-center w-full`}>
           <motion.button
-            type={"button"}
+            type={"submit"}
             disabled={isSubmitting}
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.02 }}
