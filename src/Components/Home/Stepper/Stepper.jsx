@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import Section from "../../shared/Section/Section";
 import ItemMobile from "./ItemMobile";
+import Inspector from "../../shared/Inspector/Inspector";
 
-const Stepper = React.memo(function Stepper({ index }) {
+const Stepper = React.memo(function Stepper({ index, onObserver }) {
   const [currentStep, setCurrentStep] = useState("1");
 
   const handleStepChange = (step) => setCurrentStep(step);
@@ -40,25 +41,27 @@ const Stepper = React.memo(function Stepper({ index }) {
   ];
 
   return (
-    <Section
-      title={"Como trabajamos en Neurons"}
-      index={index}
-      bg={"bg-transparent"}
-      textColor={"text-white"}
-      contentPosition={"pt-20"}
-    >
-      {steps.map(({ name, index }, i) => (
-        <ItemMobile
-          currentStep={currentStep}
-          length={steps.length}
-          key={i}
-          name={name}
-          index={index}
-          i={i}
-          onObserver={handleStepChange}
-        />
-      ))}
-    </Section>
+    <Inspector index={index} onObserver={onObserver}>
+      <Section
+        title={"Como trabajamos en Neurons"}
+        index={index}
+        bg={"bg-transparent"}
+        textColor={"text-white"}
+        contentPosition={"pt-20"}
+      >
+        {steps.map(({ name, index }, i) => (
+          <ItemMobile
+            currentStep={currentStep}
+            length={steps.length}
+            key={i}
+            name={name}
+            index={index}
+            i={i}
+            onObserver={handleStepChange}
+          />
+        ))}
+      </Section>
+    </Inspector>
   );
 });
 

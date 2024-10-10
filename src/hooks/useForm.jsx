@@ -24,8 +24,8 @@ const useForm = (initialValues) => {
     async (values) => {
       try {
         setLoading(true);
-        await emailjs.sendForm("service_vnyx5ko", "template_0mirxxd", form.current, {
-          publicKey: "R13_8ytNrA1XcoYTj",
+        await emailjs.sendForm("service_muuqd9i", "template_0mirxxd", form.current, {
+          publicKey: "1Vvcs4rfZRejkjIrj",
         });
         toast.success("Tu mensaje ha sido enviado satisfactoriamente!", {
           position: "top-right",
