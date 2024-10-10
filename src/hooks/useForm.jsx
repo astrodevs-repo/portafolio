@@ -82,7 +82,14 @@ const useForm = (initialValues) => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setIsSubmitting(true);
-    window.location.href = "/sended";
+    console.log({ values });
+    if (values.type === "home") {
+      console.log("hola");
+    } else {
+      setTimeout(() => {
+        window.location.href = "/sended";
+      }, 3000);
+    }
   };
 
   useEffect(() => {

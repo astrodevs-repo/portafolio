@@ -8,12 +8,12 @@ import Title from "../shared/Title";
 import React from "react";
 import Section from "../shared/Section/Section";
 
-const Footer = React.memo(function Footer({ index }) {
+const Footer = React.memo(function Footer() {
   return (
     <React.Fragment>
       <Section
         contentPosition={"grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center "}
-        index={index}
+        index={"contactanos"}
       >
         <section className="flex flex-col gap-10 sm:gap-5">
           <Title

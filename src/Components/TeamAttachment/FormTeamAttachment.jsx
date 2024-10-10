@@ -8,6 +8,7 @@ import useForm from "../../hooks/useForm";
 
 const FormAttachment = () => {
   const initialValues = {
+    type: "attachement",
     nombreCompleto: "",
     fechaNacimiento: "",
     telefono: "",

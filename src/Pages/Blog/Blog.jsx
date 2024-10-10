@@ -11,7 +11,7 @@ import Footer from "../../Components/Footer/Footer";
 import NavbarGoBack from "../../../NavbarGoBack";
 import Carousel from "../../Components/shared/Carousel/Carousel";
 import { SwiperSlide } from "swiper/react";
-import ProgressBar from "../../Components/shared/ProgressBar/ProgressBar";
+import { motion } from "framer-motion";
 import Loading from "../../Components/shared/Loading/Loading";
 import SEO from "../../Components/shared/SEO/Seo";
 
@@ -83,17 +83,22 @@ const Blog = () => {
 
   return (
     <ScrollToTop>
-      <NavbarGoBack />
-      <ProgressBar />
-      <SEO
-        title={body.title}
-        description={body.subtitle}
-        image={body?.img}
-        url={`https://neurons.com.ar/blog/${id}`}
-        type="article"
-        siteName="Company name."
-      />
-      <section className="relative">
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3 }}
+        className="relative"
+      >
+        <NavbarGoBack />
+        <SEO
+          title={body.title}
+          description={body.subtitle}
+          image={body?.img}
+          url={`https://neurons.com.ar/blog/${id}`}
+          type="article"
+          siteName="Company name."
+        />
         <Container>
           <section className="flex flex-col gap-2">
             <Title text={body?.title} extra="text-start font-Baskerville" />
@@ -193,8 +198,7 @@ const Blog = () => {
             </Carousel>
           </section>
         </Container>
-      </section>
-      <Footer />
+      </motion.section>
     </ScrollToTop>
   );
 };

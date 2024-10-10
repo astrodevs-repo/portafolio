@@ -1,10 +1,12 @@
-import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-
 import useForm from "../../../hooks/useForm";
+import { motion } from "framer-motion";
+import Loading from "../../shared/Loading/Loading";
+import Text from "../../shared/Text";
 
 const ContactUs = () => {
   const { handleChange, handleBlur, handleSubmit, loading, values, errors, isSubmitting, form } =
     useForm({
+      type: "home",
       name1: "",
       name: "",
       email: "",
@@ -96,18 +98,20 @@ const ContactUs = () => {
           </div>
         </section>
 
-        <ButtonSimple
-          type="submit"
-          text={"Enviar"}
-          w={"w-full"}
-          display={"center"}
-          loader={loading}
-          bg={"bg-BlueNeurons"}
-          border={"border-BlueNeurons border-2"}
-          hover={"hover:bg-[#28ae9e]"}
-          textColor={"balck"}
-          disabled={isSubmitting}
-        />
+        <section className={`flex justify-center w-full`}>
+          <motion.button
+            type={"button"}
+            disabled={isSubmitting}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+            className={`bg-BlueNeurons  flex justify-center items-center gap-2 dark:bg-gray-600 dark:border-gray-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-BlueNeurons border-2 hover:bg-[#28ae9e] focus:z-10 focus:ring-4 transition-colors duration-700 ${
+              isSubmitting && "opacity-50 cursor-not-allowed"
+            } w-full`}
+          >
+            {loading ? <Loading /> : <Text textColor={"text-blackCeniza"} content={"Enviar"} />}
+          </motion.button>
+        </section>
       </form>
     </section>
   );
