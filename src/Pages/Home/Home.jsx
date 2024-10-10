@@ -11,6 +11,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 import Counter from "../../Components/Home/Counter/Counter";
 import SEO from "../../Components/shared/SEO/Seo";
+import BackToTopButton from "../../Components/shared/BackTotopButtom";
 
 const Home = React.memo(function Home() {
   const [currentStep, setCurrentStep] = useState("1");
@@ -38,7 +39,7 @@ const Home = React.memo(function Home() {
       <StepList index={"comotrabajamos"} />
       <Blog index={"blog"} currentStep={currentStep} onObserver={handleStepChange} />
       <Team index={"team"} />
-      <Footer index={"contactanos"} />
+      <BackToTopButton currentStep={currentStep} />
     </React.Fragment>
   );
 });

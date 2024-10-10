@@ -20,10 +20,10 @@ const Velocity = ({ left, right, items, extra }) => {
           <img
             src={item.svg}
             alt=""
-            className="min-w-fit flex items-center"
+            className="w-[40vw] flex items-center"
             key={index}
             width={100}
-            height={100}
+            height={500}
           />
         ))}
       </motion.section>

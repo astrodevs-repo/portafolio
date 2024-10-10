@@ -1,6 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ReactLenis } from "lenis/dist/lenis-react";
+import Footer from "../Components/Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -43,6 +44,7 @@ const Layout = ({ children }) => {
         theme="light"
         transition="Bounce" // Corrige la propiedad de transición
       />
+      <Footer />
     </section>
   );
 };
