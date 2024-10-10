@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import About from "../../Components/About/About";
 import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
-import Footer from "../../Components/Footer/Footer";
 import StepList from "../../Components/Home/Stepper/Stepper";
 import ClientsSection from "../../Components/Home/SkillsSection/SkillsSection";
 import Servicios from "../../Components/Home/Servicios/Servicios";
@@ -35,8 +34,8 @@ const Home = React.memo(function Home() {
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
-      <ClientsSection index={"skills"} />
-      <StepList index={"comotrabajamos"} />
+      <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
+      <StepList index={"comotrabajamos"} onObserver={handleStepChange} currentStep={currentStep} />
       <Blog index={"blog"} currentStep={currentStep} onObserver={handleStepChange} />
       <Team index={"team"} />
       <BackToTopButton currentStep={currentStep} />
