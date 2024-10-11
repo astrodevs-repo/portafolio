@@ -1,7 +1,8 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import TextPrincipal from "./TextPrincipal";
 import ButtonsSection from "./ButtonsSection";
-import SubTitle from "../../shared/SubTitle";
+import SkeletonText from "../../shared/Skeleton/Text";
+const SubTitle = lazy(() => import("../../shared/SubTitle"));
 
 const Header = React.memo(function Header({ index }) {
   return (
@@ -9,10 +10,12 @@ const Header = React.memo(function Header({ index }) {
       id={index}
       className={`min-h-screen bg-gradient-to-bl from-BlueNeurons/50 via-[#e9eeffe2]  to-[#e9eeff] dark:from-dark-BlueNeurons/20 dark:via-gray-800/90 dark:to-gray-800 flex flex-col gap-5 sm:gap-10 justify-center sm:justify-center items-center relative`}
     >
-      <SubTitle
-        text={"Agencia de Tecnología e Innovación"}
-        extra={"px-10 text-center font-semibold"}
-      />
+      <Suspense fallback={<SkeletonText width={"w-[50vw]"} height={"h-5"} />}>
+        <SubTitle
+          text={"Agencia de Tecnología e Innovación"}
+          extra={"px-10 text-center font-semibold"}
+        />
+      </Suspense>
       <TextPrincipal />
       <SubTitle
         text={

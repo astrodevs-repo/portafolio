@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Text from "../Text";
 import Loading from "../Loading/Loading";
+import React from "react";
 
-const ButtonSimple = ({
+const ButtonSimple = React.memo(function ButtonSimple({
   text,
   textColor,
   border,
@@ -15,18 +16,21 @@ const ButtonSimple = ({
   hover,
   active,
   route,
-
   extra,
   type,
-}) => {
+}) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if (func) {
-      func();
-    }
-    if (route) {
-      navigate(route);
+    try {
+      if (func) {
+        func();
+      }
+      if (route) {
+        navigate(route);
+      }
+    } catch (error) {
+      console.error("error hlandle click button simple:", error);
     }
   };
 
@@ -48,6 +52,6 @@ const ButtonSimple = ({
       </motion.button>
     </section>
   );
-};
+});
 
 export default ButtonSimple;
