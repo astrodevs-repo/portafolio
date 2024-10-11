@@ -1,4 +1,6 @@
-const SubTitle = ({ text, extra, textColor, position, font }) => {
+import React from "react";
+
+const SubTitle = React.memo(function SubTitle({ text, extra, textColor, position, font }) {
   return (
     <h1
       style={{ lineHeight: "2rem" }}
@@ -9,6 +11,6 @@ const SubTitle = ({ text, extra, textColor, position, font }) => {
       {text}
     </h1>
   );
-};
+});
 
 export default SubTitle;
