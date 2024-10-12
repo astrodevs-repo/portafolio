@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
-import ButtonGrandient from "../shared/Buttons/ButtonGrandient";
-import Logo from "../shared/Logo";
-import DrawerNavigation from "../shared/drawer/Drawer";
-import DarkModeToggle from "../shared/DarkModeToggle/DarkModeToggle";
+import React, { lazy, Suspense, useEffect, useState } from "react";
+
+const Logo = lazy(() => import("../shared/Logo"));
+const TextNavbar = lazy(() => import("../shared/TextNavBar"));
+const ButtonGrandient = lazy(() => import("../shared/Buttons/ButtonGrandient"));
+
+const DrawerNavigation = lazy(() => import("../shared/drawer/Drawer"));
+const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggle"));
 import { navItems } from "../../data/data";
 import { scrollToSection } from "../../utils/functions";
-import TextNavbar from "../shared/TextNavBar";
+import SkeletonText from "../shared/Skeleton/Text";
 
 const Navbar = React.memo(function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,17 +30,27 @@ const Navbar = React.memo(function Navbar() {
         isScrolled ? "bg-[#e9eeff] dark:bg-gray-800" : "bg-transparent"
       }`}
     >
-      <Logo link={"home"} />
+      <Suspense fallback={<section className="w-10 h-10 rounded-full bg-BlueNeurons"></section>}>
+        <Logo link={"home"} />
+      </Suspense>
 
       <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden">
         {navItems.map(({ id, label }) => (
-          <TextNavbar content={label} func={() => scrollToSection(id)} key={label} />
+          <Suspense key={label} fallback={<SkeletonText height={"h-2"} width={"w-10"} />}>
+            <TextNavbar content={label} func={() => scrollToSection(id)} />
+          </Suspense>
         ))}
       </ul>
       <section className="flex gap-5 items-center justify-center h-full">
-        <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
-        <DarkModeToggle />
-        <DrawerNavigation />
+        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+          <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
+        </Suspense>
+        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+          <DarkModeToggle />
+        </Suspense>
+        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+          <DrawerNavigation />
+        </Suspense>
       </section>
     </nav>
   );
