@@ -1,5 +1,4 @@
 import ContactUs from "./form/Form";
-import { FaLinkedin } from "react-icons/fa";
 import Text from "../shared/Text";
 import TextFooter from "../shared/TextFooter";
 import SubTitleItalic from "../shared/SubTitleItalic";
@@ -7,6 +6,8 @@ import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import React from "react";
 import Section from "../shared/Section/Section";
+
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = React.memo(function Footer() {
   return (
@@ -42,7 +43,6 @@ const Footer = React.memo(function Footer() {
       >
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
-
           <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 w-full">
             {footerContent.map((section, index) => (
               <section key={index}>
@@ -63,20 +63,20 @@ const Footer = React.memo(function Footer() {
             <span className="">{footerInfo.poweredBy}</span>
           </p>
 
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+          <ul className="flex mt-4 sm:justify-center sm:mt-0">
             {footerInfo.socialLinks.map(({ url, icon, label }, index) => (
-              <a
-                href={url}
+              <li
                 key={index}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
-                {icon}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
+
                 <span className="sr-only">{label}</span>
-              </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       </footer>
     </React.Fragment>

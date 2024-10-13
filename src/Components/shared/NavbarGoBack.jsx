@@ -1,7 +1,7 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Text from "./src/Components/shared/Text";
-import DarkModeToggle from "./src/Components/shared/DarkModeToggle/DarkModeToggle";
+import Text from "./Text";
+import DarkModeToggle from "./DarkModeToggle/DarkModeToggle";
 const NavbarGoBack = () => {
   return (
     <section className="py-5 px-5 sm:px-20 flex bg-[#e9eeff] dark:bg-gray-800 justify-between ">

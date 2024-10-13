@@ -30,7 +30,8 @@ import Luisana from "/public/Team/luisana.webp";
 import Miguel from "/public/Team/miguel.webp";
 import Tomi from "/public/Team/tomas.webp";
 import Yeli from "/public/Team/yeli.webp";
-import { education, ia } from "../utils/urlImages";
+import ia from "/public/Blog/ia.webp";
+import education from "/public/Blog/educacion.webp";
 
 export const data = {
   Bg: "#31add5",

@@ -1,8 +1,11 @@
 import React, { lazy, Suspense } from "react";
-import ButtonsSection from "./ButtonsSection";
 import SkeletonText from "../../shared/Skeleton/Text";
+import ButtonSimple from "../../shared/Buttons/ButtonSimple";
+import { scrollToSection } from "../../../utils/functions";
+import SkeletonButton from "../../shared/Skeleton/Button";
+
 const SubTitle = lazy(() => import("../../shared/SubTitle"));
-const TextPrincipal = lazy(() => import("./TextPrincipal"));
+import { motion } from "framer-motion";
 
 const Header = React.memo(function Header({ index }) {
   return (
@@ -16,6 +19,7 @@ const Header = React.memo(function Header({ index }) {
           extra={"px-10 text-center font-semibold"}
         />
       </Suspense>
+
       <Suspense
         fallback={
           <section className="w-full justify-center items-center flex flex-col gap-2">
@@ -24,8 +28,11 @@ const Header = React.memo(function Header({ index }) {
           </section>
         }
       >
-        <TextPrincipal />
+        <motion.p className="flex flex-wrap sm:px-40 justify-center text-center items-center gap-2 text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-Baskerville text-blackCeniza dark:text-white ">
+          Transformando Ideas en Experiencias Digitales Extraordinarias
+        </motion.p>
       </Suspense>
+
       <Suspense
         fallback={
           <section className="w-full flex flex-col gap-2 justify-center items-center">
@@ -43,7 +50,26 @@ const Header = React.memo(function Header({ index }) {
         />
       </Suspense>
 
-      <ButtonsSection />
+      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-2 sm:gap-10">
+        <Suspense fallback={<SkeletonButton />}>
+          <ButtonSimple
+            textColor={"text-blackCeniza  "}
+            text={"Nuestros Servicios"}
+            func={() => scrollToSection("quienessomos")}
+            bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent "}
+            extra={" w-full min-w-60"}
+          />
+        </Suspense>
+        <Suspense fallback={<SkeletonButton />}>
+          <ButtonSimple
+            textColor={"text-blackCeniza"}
+            text={"Quienes somos"}
+            bg={"border-2 border-blackCeniza dark:border-[#e9eeff] dark:bg-transparent  "}
+            func={() => scrollToSection("aboutus")}
+            extra={" w-full min-w-60 flex justify-center gap-10"}
+          />
+        </Suspense>
+      </section>
     </section>
   );
 });

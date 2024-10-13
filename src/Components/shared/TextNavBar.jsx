@@ -1,4 +1,5 @@
-const TextNavbar = ({ textColor, extra, content, func }) => {
+import React from "react";
+const TextNavbar = React.memo(function TextNavbar({ textColor, extra, content, func }) {
   return (
     <li
       onClick={func}
@@ -9,6 +10,5 @@ const TextNavbar = ({ textColor, extra, content, func }) => {
       {content}
     </li>
   );
-};
-
+});
 export default TextNavbar;

@@ -1,4 +1,6 @@
-const Text = ({ textColor, extra, content }) => {
+import React from "react";
+
+const Text = React.memo(function Text({ textColor, extra, content }) {
   return (
     <p
       style={{ lineHeight: "1.5rem" }}
@@ -9,6 +11,6 @@ const Text = ({ textColor, extra, content }) => {
       {content}
     </p>
   );
-};
+});
 
 export default Text;

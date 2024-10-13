@@ -1,12 +1,14 @@
-import { SwiperSlide } from "swiper/react";
+import React from "react";
+
 import Carousel from "../../shared/Carousel/Carousel";
 import Section from "../../shared/Section/Section";
 import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
+import Inspector from "../../shared/Inspector/Inspector";
+
+import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
-import React from "react";
-import Inspector from "../../shared/Inspector/Inspector";
 
 const Blog = React.memo(function Blog({ index, onObserver }) {
   return (

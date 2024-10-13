@@ -4,10 +4,10 @@ import SubTitle from "../../Components/shared/SubTitle";
 import MovingText from "../../Components/shared/velocity/Velocity";
 import { itemsTeam } from "../../data/Home";
 import { motion } from "framer-motion";
-import NavbarGoBack from "../../../NavbarGoBack";
 import Title from "../../Components/shared/Title";
 import { FaCheck } from "react-icons/fa";
 import ScrollToTop from "../../Components/shared/ScrollTop/ScrollTop";
+import NavbarGoBack from "../../Components/shared/NavbarGoBack";
 const Sended = () => {
   const [animationState, setAnimationState] = useState("initial");
   useEffect(() => {

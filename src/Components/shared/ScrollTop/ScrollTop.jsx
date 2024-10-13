@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const ScrollToTop = ({ children }) => {
+const ScrollTop = ({ children }) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
-export default ScrollToTop;
+export default ScrollTop;

@@ -1,4 +1,6 @@
-const SubTitleItalic = ({ text, extra, textColor, position }) => {
+import React from "react";
+
+const SubTitleItalic = React.memo(function SubTitleItalic({ text, extra, textColor, position }) {
   return (
     <h1
       className={`${
@@ -8,6 +10,6 @@ const SubTitleItalic = ({ text, extra, textColor, position }) => {
       {text}
     </h1>
   );
-};
+});
 
 export default SubTitleItalic;

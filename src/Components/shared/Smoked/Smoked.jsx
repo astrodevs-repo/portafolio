@@ -1,6 +1,6 @@
 import { useScroll, useTransform, useSpring } from "framer-motion";
-import { atomImageHeader } from "../../../utils/urlImages";
 import React, { Suspense, lazy } from "react";
+import atomImageHeader from "/public/atomImageHeader.webp";
 
 const LazyImage = lazy(() => import("../LazyImage"));
 
