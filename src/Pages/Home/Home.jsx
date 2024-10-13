@@ -31,6 +31,7 @@ const Home = React.memo(function Home() {
       <Navbar />
       <SmokeBackground />
       <Header index={"home"} />
+
       <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
       <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
       <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
