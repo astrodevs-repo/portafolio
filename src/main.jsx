@@ -7,11 +7,9 @@ import Layout from "./Layout/Layout.jsx";
 
 import App from "./App.jsx";
 const helmetContext = {};
-// const router = createBrowserRouter(routes);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider context={helmetContext}>
-      {/* <RouterProvider router={router} /> */}
       <Layout>
         <App />
       </Layout>
