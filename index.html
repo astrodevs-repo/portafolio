@@ -8,23 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Preload de la imagen más importante -->
+    <link rel="preload" as="image" href="/public/atomImageHeader.webp" />
+
+    <!-- Cargar Google Fonts de manera optimizada -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+    /></noscript>
+
     <!-- CSS crítico en línea -->
     <style>
-      /* Aquí irían tus estilos críticos */
       body {
         font-family: "Poppins", sans-serif;
       }
       /* Más estilos críticos... */
     </style>
-
-    <!-- Cargar Google Fonts de manera optimizada -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Preload de la imagen más importante -->
-    <link rel="preload" as="image" href="/public/atomImageHeader.webp" />
 
     <!-- Google Tag Manager Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-53WQW3ELCR"></script>
@@ -36,11 +42,11 @@
       gtag("js", new Date());
       gtag("config", "G-53WQW3ELCR");
     </script>
-
-    <!-- Carga diferida de JavaScript no crítico -->
-    <script type="module" src="/src/main.jsx" defer></script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Carga diferida de JavaScript no crítico -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
