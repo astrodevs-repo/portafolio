@@ -1,11 +1,17 @@
+import React from "react";
 import Container from "../../Container/Container";
 import SubTitleItalic from "../SubTitleItalic";
 import Title from "../Title";
 
-const Section = ({ children, bg, title, index, extra, subtitle, contentPosition, currentStep }) => {
-  if (currentStep === index) {
-    console.log("hola manda de delincuentes", currentStep, index);
-  }
+const Section = React.memo(function Section({
+  children,
+  bg,
+  title,
+  index,
+  extra,
+  subtitle,
+  contentPosition,
+}) {
   return (
     <section className={`w-full h-fit-content ${bg} py-5 sm:py-20 ${extra}`} id={index}>
       <Container>
@@ -16,6 +22,6 @@ const Section = ({ children, bg, title, index, extra, subtitle, contentPosition,
       </Container>
     </section>
   );
-};
+});
 
 export default Section;

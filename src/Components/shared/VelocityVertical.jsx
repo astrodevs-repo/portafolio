@@ -1,18 +1,15 @@
 import { motion } from "framer-motion";
 
-// Duplicar los ítems
-const duplicateItems = (items, times) => {
-  let result = [];
-  for (let i = 0; i < times; i++) {
-    result = result.concat(items);
-  }
-  return result;
-};
-
 const VelocityVertical = ({ top, bottom, items, extra, duration }) => {
-  // Duplicar los ítems para crear la ilusión de continuidad
-  const duplicatedItems = duplicateItems(items, 10); // Cambia el número para ajustar cuántas veces duplicar los ítems
+  const duplicateItems = (items, times) => {
+    let result = [];
+    for (let i = 0; i < times; i++) {
+      result = result.concat(items);
+    }
+    return result;
+  };
 
+  const duplicatedItems = duplicateItems(items, 10);
   return (
     <section className="relative h-[500px] py-5 overflow-hidden w-full px-2 z-0">
       <motion.div
@@ -25,9 +22,9 @@ const VelocityVertical = ({ top, bottom, items, extra, duration }) => {
           <motion.div
             className="min-w-fit flex items-center gap-5 cursor-pointer"
             key={index}
-            initial={{ opacity: 0.5 }} // Opacidad por defecto
-            whileHover={{ opacity: 1 }} // Opacidad al pasar el mouse
-            transition={{ duration: 1 }} // Duración del efecto hover
+            initial={{ opacity: 0.5 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
             <img src={item} alt="" className={extra} />
           </motion.div>

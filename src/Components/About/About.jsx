@@ -1,7 +1,6 @@
 import React from "react";
 
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Text from "../shared/Text";
@@ -16,8 +15,6 @@ const About = React.memo(function About({ index, onObserver }) {
         <Swiper
           slidesPerView={1.2}
           spaceBetween={30}
-          autoplay={{ delay: 10000 }}
-          modules={[Pagination, Autoplay]}
           breakpoints={{
             320: {
               slidesPerView: 1,

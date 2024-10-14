@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../Components/Footer/Footer";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Layout = ({ children }) => {
   return (
@@ -24,12 +25,7 @@ const Layout = ({ children }) => {
           zIndex: "1000",
         }}
       >
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/018/930/748/non_2x/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png"
-          alt="WhatsApp"
-          width="100"
-          height="100"
-        />
+        <IoLogoWhatsapp size={50} className="text-[#25d366]" />
       </a>
       <ToastContainer
         position="top-right"

@@ -1,20 +1,19 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
+import { navItems } from "../../data/data";
+import { scrollToSection } from "../../utils/functions";
+import SkeletonText from "../shared/Skeleton/Text";
 
 const Logo = lazy(() => import("../shared/Logo"));
 const TextNavbar = lazy(() => import("../shared/TextNavBar"));
 const ButtonGrandient = lazy(() => import("../shared/Buttons/ButtonGrandient"));
-
 const DrawerNavigation = lazy(() => import("../shared/drawer/Drawer"));
 const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggle"));
-import { navItems } from "../../data/data";
-import { scrollToSection } from "../../utils/functions";
-import SkeletonText from "../shared/Skeleton/Text";
 
 const Navbar = React.memo(function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    setIsScrolled(window.scrollY > 300);
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
@@ -33,25 +32,21 @@ const Navbar = React.memo(function Navbar() {
       <Suspense fallback={<section className="w-10 h-10 rounded-full bg-BlueNeurons"></section>}>
         <Logo link={"home"} />
       </Suspense>
-
-      <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden">
-        {navItems.map(({ id, label }) => (
-          <Suspense key={label} fallback={<SkeletonText height={"h-2"} width={"w-10"} />}>
-            <TextNavbar content={label} func={() => scrollToSection(id)} />
-          </Suspense>
-        ))}
-      </ul>
-      <section className="flex gap-5 items-center justify-center h-full">
-        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+      <Suspense fallback={<SkeletonText height={"h-2"} width={"w-10"} extra={"hidden sm:flex"} />}>
+        <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden">
+          {navItems.map(({ id, label }) => (
+            <TextNavbar key={label} content={label} func={() => scrollToSection(id)} />
+          ))}
+        </ul>
+      </Suspense>
+      <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+        <section className="flex gap-5 items-center justify-center h-full">
           <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
-        </Suspense>
-        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
           <DarkModeToggle />
-        </Suspense>
-        <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
+
           <DrawerNavigation />
-        </Suspense>
-      </section>
+        </section>
+      </Suspense>
     </nav>
   );
 });

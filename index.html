@@ -2,28 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="https://res.cloudinary.com/dfzmauivm/image/upload/v1728060514/ci1y9athg60vtfpza1uw.png"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Preconexiones para fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload de la imagen más importante -->
+    <link rel="preload" as="image" href="/public/atomImageHeader.webp" />
+
+    <!-- Cargar Google Fonts de manera optimizada -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lusitana:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Google tag (gtag.js) -->
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+    /></noscript>
+
+    <!-- CSS crítico en línea -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      /* Más estilos críticos... */
+    </style>
+
+    <!-- Google Tag Manager Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-53WQW3ELCR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -36,6 +45,8 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Carga diferida de JavaScript no crítico -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>

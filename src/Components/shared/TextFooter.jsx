@@ -1,4 +1,6 @@
-const TextFooter = ({ textColor, extra, content }) => {
+import React from "react";
+
+const TextFooter = React.memo(function TextFooter({ textColor, extra, content }) {
   return (
     <li
       className={`${
@@ -8,6 +10,6 @@ const TextFooter = ({ textColor, extra, content }) => {
       {content}
     </li>
   );
-};
+});
 
 export default TextFooter;

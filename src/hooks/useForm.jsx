@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Bounce, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-import { Navigate } from "react-router-dom";
 
 const useForm = (initialValues) => {
   const [values, setValues] = useState(initialValues);
@@ -83,9 +82,8 @@ const useForm = (initialValues) => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setIsSubmitting(true);
-    console.log({ values });
     if (values.type === "home") {
-      console.log("hola");
+      return;
     } else {
       setTimeout(() => {
         window.location.href = "/sended";

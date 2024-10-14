@@ -4,13 +4,6 @@ const Velocity = ({ left, right, items, extra }) => {
   return (
     <section className={`relative h-fit py-5 overflow-hidden w-full rotate `}>
       <motion.section
-        style={{
-          transform: "translate(-50%, -50%)",
-          zIndex: 99999,
-          fontSize: "24px",
-          color: "black",
-          fontWeight: "bold",
-        }}
         initial={{ x: right }}
         animate={{ x: left }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}

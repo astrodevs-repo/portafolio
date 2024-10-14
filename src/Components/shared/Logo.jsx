@@ -1,6 +1,6 @@
 import React from "react";
 import { scrollToSection } from "../../utils/functions";
-import { logo } from "../../utils/urlImages";
+import logo from "/public/logo.webp";
 const Logo = React.memo(function Logo({ link }) {
   return (
     <img

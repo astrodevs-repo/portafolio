@@ -1,6 +1,6 @@
 import { useScroll, useTransform, useSpring } from "framer-motion";
-import { atomImageHeader } from "../../../utils/urlImages";
 import React, { Suspense, lazy } from "react";
+import atomImageHeader from "/public/atomImageHeader.webp";
 
 const LazyImage = lazy(() => import("../LazyImage"));
 
@@ -21,6 +21,8 @@ const SectionA = React.memo(function SectionA() {
           alt="rotating"
           style={{ y: y3, rotate }}
           className="absolute top-40 left-40 w-56 h-56 opacity-40"
+          width={224} // 56 * 4
+          height={224} // 56 * 4
         />
       </Suspense>
       <Suspense fallback={<section></section>}>
