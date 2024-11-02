@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import SubTitle from "../SubTitle";
 import Text from "../Text";
 
-const CountUp = ({ end, duration, currentStep, description, label }) => {
+const CountUp = ({ end, duration, description, label }) => {
   const [count, setCount] = useState(0);
+  const [isCounting, setIsCounting] = useState(false);
 
   useEffect(() => {
+    if (!isCounting) return; // Si no está contando, salir
+
     let start = 0;
     const stepTime = Math.abs(Math.floor((duration * 1000) / end));
     const timer = setInterval(() => {
@@ -18,13 +22,20 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [currentStep]);
+  }, [isCounting, duration, end]);
 
   return (
-    <section className="flex flex-col gap-5">
+    <motion.section
+      className="flex flex-col gap-5"
+      onViewportEnter={() => setIsCounting(true)}
+      onViewportLeave={() => setIsCounting(false)}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <React.Fragment>
         <h1
-          className={`text-Chicle  dark:text-violet-600 font-Baskerville leading-[40px] w-full text-4xl sm:text-sm md:text-4xl lg:text-4 xl:text-5xl 2xl:text-6xl  m-0`}
+          className={`text-Chicle dark:text-violet-600 font-Baskerville leading-[40px] w-full text-4xl sm:text-sm md:text-4xl lg:text-4 xl:text-5xl 2xl:text-6xl m-0`}
         >
           +{count}
         </h1>
@@ -32,7 +43,8 @@ const CountUp = ({ end, duration, currentStep, description, label }) => {
         <SubTitle text={label} extra={"font-extrabold ml-5"} />
       </React.Fragment>
       <Text content={description} extra={"text-bold"} />
-    </section>
+    </motion.section>
   );
 };
+
 export default CountUp;

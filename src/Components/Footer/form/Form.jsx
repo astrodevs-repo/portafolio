@@ -16,7 +16,7 @@ const ContactUs = () => {
     });
 
   return (
-    <section className="w-full flex flex-col gap-10 pt-20 sm:pt-20 md:pt-0" id="contactanosform">
+    <section className="w-full flex flex-col gap-10 pt-0 sm:pt-20 md:pt-0" id="contactanosform">
       <form ref={form} onSubmit={handleSubmit}>
         <section className={`w-full grid grid-cols-1 gap-4 mb-5 ${loading ? "opacity-50" : ""}`}>
           <div className="flex flex-col gap-2">
@@ -91,7 +91,7 @@ const ContactUs = () => {
               value={values.message}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-2 hover:outline-none custom-placeholder"
+              className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-10 overflow-hidden hover:outline-none custom-placeholder"
               placeholder="Dejanos tu consulta, nos contactaremos contigo de inmediato"
               required
             />
@@ -105,11 +105,11 @@ const ContactUs = () => {
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
-            className={`bg-BlueNeurons  flex justify-center items-center gap-2 dark:bg-gray-600 dark:border-gray-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-BlueNeurons border-2 hover:bg-[#28ae9e] focus:z-10 focus:ring-4 transition-colors duration-700 ${
+            className={`bg-blue-600 flex justify-center items-center gap-2 dark:bg-purple-600 dark:border-purple-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-blue-600 border-2 hover:bg-blue-700 dark:hover:bg-purple-700 focus:z-10 focus:ring-4 transition-colors duration-700 ${
               isSubmitting && "opacity-50 cursor-not-allowed"
             } w-full`}
           >
-            {loading ? <Loading /> : <Text textColor={"text-blackCeniza"} content={"Enviar"} />}
+            {loading ? <Loading /> : <Text textColor={"text-white"} content={"Enviar"} />}
           </motion.button>
         </section>
       </form>

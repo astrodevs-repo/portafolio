@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import About from "../../Components/About/About";
 import Header from "../../Components/Home/Header/Header";
 import Team from "../../Components/Home/team/Team";
@@ -8,14 +8,11 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
 import SmokeBackground from "../../Components/shared/Smoked/Smoked";
-import Counter from "../../Components/Home/Counter/Counter";
 import SEO from "../../Components/shared/SEO/Seo";
 import BackToTopButton from "../../Components/shared/BackTotopButtom";
+import Counter from "../../Components/Home/Counter/Counter";
 
 const Home = React.memo(function Home() {
-  const [currentStep, setCurrentStep] = useState("1");
-  const handleStepChange = (step) => setCurrentStep(step);
-
   return (
     <React.Fragment>
       <SEO
@@ -31,14 +28,14 @@ const Home = React.memo(function Home() {
       <Navbar />
       <SmokeBackground />
       <Header index={"home"} />
-      <About index={"aboutus"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Counter index={"counter"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Servicios index={"quienessomos"} onObserver={handleStepChange} currentStep={currentStep} />
-      <ClientsSection index={"skills"} onObserver={handleStepChange} currentStep={currentStep} />
-      <StepList index={"comotrabajamos"} onObserver={handleStepChange} currentStep={currentStep} />
-      <Blog index={"blog"} currentStep={currentStep} onObserver={handleStepChange} />
+      <Counter index={"counter"} />
+      <About index={"aboutus"} />
+      <Servicios index={"quienessomos"} />
+      <ClientsSection index={"skills"} />
+      <StepList index={"comotrabajamos"} />
+      <Blog index={"blog"} />
       <Team index={"team"} />
-      <BackToTopButton currentStep={currentStep} />
+      <BackToTopButton />
     </React.Fragment>
   );
 });

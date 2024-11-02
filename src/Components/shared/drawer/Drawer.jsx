@@ -34,7 +34,7 @@ const DrawerNavigation = () => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-blackCeniza dark:text-white sm:text-[35px] mb-2"
+        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-white dark:text-white sm:text-[35px] mb-2"
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <MdOutlineMenu />
@@ -88,7 +88,6 @@ const DrawerNavigation = () => {
                     className="block py-2 px-3 rounded text-white hover:bg-[#4A5171] dark:text-white dark:hover:bg-gray-700"
                   >
                     {label}
-                    {id}
                   </a>
                 </li>
               ))}

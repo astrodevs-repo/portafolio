@@ -44,9 +44,9 @@ const ButtonSimple = React.memo(function ButtonSimple({
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
-        className={`${bg} ${extra} flex justify-center items-center gap-2 dark:bg-gray-600 dark:border-gray-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium text-white focus:outline-none rounded-lg ${border} ${hover} focus:z-10 focus:ring-4 transition-colors duration-700 ${
+        className={`${bg} ${extra} ${border} ${hover}  ${
           active && "opacity-50 cursor-not-allowed"
-        } ${w}`}
+        } ${w} bg-blue-600 flex justify-center items-center gap-2 dark:bg-purple-600 dark:border-purple-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-blue-600 border-2 hover:bg-blue-700 dark:hover:bg-purple-700 focus:z-10 focus:ring-4 transition-colors duration-700`}
       >
         {loader ? <Loading /> : <Text textColor={textColor} content={text} />}
       </motion.button>
