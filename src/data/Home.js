@@ -638,9 +638,27 @@ export const Stepper = {
   linkButton: "/teamattachment",
   body: " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
   itemsStepperImages: [
-    { items: [Luisana, Yeli, Adri, Jesus, Miguel], top: "0%", bottom: "-10%", duration: "100" },
-    { items: [Jesus, Miguel, Yeli, Adri, Luisana], top: "-10%", bottom: "0%", duration: "100" },
-    { items: [Luisana, Yeli, Adri, Jesus, Miguel], top: "0%", bottom: "-10%", duration: "100" },
+    {
+      items: [Luisana, Yeli, Adri, Jesus, Miguel],
+      top: "0%",
+      bottom: "-10%",
+      duration: "100",
+      direction: -1,
+    },
+    {
+      items: [Jesus, Miguel, Yeli, Adri, Luisana],
+      top: "-10%",
+      bottom: "0%",
+      duration: "100",
+      direction: 1,
+    },
+    {
+      items: [Luisana, Yeli, Adri, Jesus, Miguel],
+      top: "0%",
+      bottom: "-10%",
+      duration: "100",
+      direction: -1,
+    },
   ],
 };
 export const StepperMobile = {
@@ -648,8 +666,20 @@ export const StepperMobile = {
   linkButton: "/teamattachment",
   body: " Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
   itemsStepperImages: [
-    { items: [Luisana, Yeli, Adri, Jesus, Miguel], top: "0%", bottom: "-10%", duration: "100" },
-    { items: [Jesus, Miguel, Yeli, Adri, Luisana], top: "-10%", bottom: "0%", duration: "100" },
+    {
+      items: [Luisana, Yeli, Adri, Jesus, Miguel],
+      top: "0%",
+      bottom: "-10%",
+      duration: "100",
+      direction: -1,
+    },
+    {
+      items: [Jesus, Miguel, Yeli, Adri, Luisana],
+      top: "-10%",
+      bottom: "0%",
+      duration: "100",
+      direction: 1,
+    },
   ],
 };
 

@@ -1,27 +1,50 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame,
+} from "framer-motion";
+import { wrap } from "@motionone/utils";
 
-const Velocity = ({ left, right, items, extra }) => {
+export default function ParallaxText({ items, baseVelocity = 100 }) {
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+
+  const directionFactor = useRef(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    baseX.set(baseX.get() + moveBy);
+  });
+
   return (
-    <section className={`relative h-fit py-5 overflow-hidden w-full rotate `}>
-      <motion.section
-        initial={{ x: right }}
-        animate={{ x: left }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className={`${extra} w-[100%] flex gap-10`}
-      >
-        {items.map((item, index) => (
-          <img
-            src={item.svg}
-            alt=""
-            className="w-[40vw] flex items-center"
-            key={index}
-            width={100}
-            height={500}
-          />
+    <div className="parallax">
+      <motion.div className="scroller" style={{ x }}>
+        {items.map((e, index) => (
+          <img key={index} src={e.svg} alt="" className="px-10" />
         ))}
-      </motion.section>
-    </section>
+      </motion.div>
+    </div>
   );
-};
-
-export default Velocity;
+}

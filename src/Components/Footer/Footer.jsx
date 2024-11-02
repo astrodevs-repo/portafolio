@@ -8,34 +8,39 @@ import React from "react";
 import Section from "../shared/Section/Section";
 
 import { FaLinkedin } from "react-icons/fa";
+import Container from "../Container/Container";
 
 const Footer = React.memo(function Footer() {
   return (
     <React.Fragment>
-      <Section
-        contentPosition={"grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center "}
-        index={"contactanos"}
-      >
-        <section className="flex flex-col gap-10 sm:gap-5">
-          <Title
-            text={"Contactanos"}
-            textColor={"text-blackCeniza font-medium dark:text-white font-Baskerville"}
-          />
-
-          <Text
-            textColor={"text-blackCeniza dark:text-white"}
-            content={
-              "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
-            }
-          />
-          <p
-            className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
+      <section className="bg-white dark:bg-blackCeniza">
+        <Container>
+          <section
+            className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center  "
+            id="contactanos"
           >
-            ¡Gracias por considerar Neurons como su socio digital!
-          </p>
-        </section>
-        <ContactUs />
-      </Section>
+            <section className="flex flex-col gap-10 sm:gap-5">
+              <Title
+                text={"Contactanos"}
+                textColor={"text-blackCeniza font-medium dark:text-white font-Baskerville"}
+              />
+
+              <Text
+                textColor={"text-blackCeniza dark:text-white"}
+                content={
+                  "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
+                }
+              />
+              <p
+                className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
+              >
+                ¡Gracias por considerar Neurons como su socio digital!
+              </p>
+            </section>
+            <ContactUs />
+          </section>
+        </Container>
+      </section>
 
       <footer
         className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 

@@ -1,19 +1,31 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { navItems } from "../../data/data";
 import { scrollToSection } from "../../utils/functions";
 import SkeletonText from "../shared/Skeleton/Text";
 
 const Logo = lazy(() => import("../shared/Logo"));
 const TextNavbar = lazy(() => import("../shared/TextNavBar"));
-const ButtonGrandient = lazy(() => import("../shared/Buttons/ButtonGrandient"));
 const DrawerNavigation = lazy(() => import("../shared/drawer/Drawer"));
 const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggle"));
 
 const Navbar = React.memo(function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const controls = useAnimation();
+  let lastScrollY = window.scrollY;
 
   const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      // Scrolling down
+      setIsVisible(false);
+    } else if (currentScrollY < lastScrollY) {
+      // Scrolling up
+      setIsVisible(true);
+    }
+
+    lastScrollY = currentScrollY;
   };
 
   useEffect(() => {
@@ -23,11 +35,21 @@ const Navbar = React.memo(function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ y: "0%", transition: { duration: 0.3 } });
+    } else {
+      controls.start({ y: "-100%", transition: { duration: 0.3 } });
+    }
+  }, [isVisible, controls]);
+
   return (
-    <nav
+    <motion.nav
       className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 transition-colors duration-300 ${
-        isScrolled ? "bg-[#e9eeff] dark:bg-gray-800" : "bg-transparent"
+        isVisible ? "bg-blackCeniza dark:bg-blackCeniza" : "bg-transparent"
       }`}
+      animate={controls}
+      initial={{ y: "0%" }}
     >
       <Suspense fallback={<section className="w-10 h-10 rounded-full bg-BlueNeurons"></section>}>
         <Logo link={"home"} />
@@ -41,13 +63,12 @@ const Navbar = React.memo(function Navbar() {
       </Suspense>
       <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
         <section className="flex gap-5 items-center justify-center h-full">
-          <ButtonGrandient id={"contactanos"} text={"Contactanos"} />
+          {/* <ButtonGrandient id={"contactanos"} text={"Contactanos"} /> */}
           <DarkModeToggle />
-
           <DrawerNavigation />
         </section>
       </Suspense>
-    </nav>
+    </motion.nav>
   );
 });
 

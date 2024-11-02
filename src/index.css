@@ -59,7 +59,7 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #e9eeff; /* Color de fondo de la pista */
-  border-radius: 10px; /* Bordes redondeados de la pista */
+  border-radius: 0px; /* Bordes redondeados de la pista */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -70,4 +70,15 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #4b5563; /* Color del pulgar al pasar el mouse */
+}
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 200px; /* Adjust height as needed */
+}
+
+.scroller {
+  display: inline-flex;
+  align-items: center;
 }
