@@ -42,7 +42,7 @@ export default function ParallaxText({ items, baseVelocity = 100 }) {
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
         {items.map((e, index) => (
-          <img key={index} src={e.svg} alt="" className="px-10" />
+          <img key={index} src={e.svg} alt="" className="px-10 w-full" />
         ))}
       </motion.div>
     </div>
