@@ -215,17 +215,17 @@ const FormAttachment = () => {
         `}
       >
         <Title
-          text={"¡Comparte tu currículum con nosotros!"}
+          text={"¡Queremos conocerte!"}
           extra={"font-Baskerville text-blackCeniza text-center"}
         />
         <SubTitle
           text={
             "Completa el formulario con tu información personal, educativa y profesional. Asegúrate de adjuntar tu currículum en formato PDF o Word para que podamos evaluar tu experiencia y habilidades. Una vez enviado, nuestro equipo revisará tu currículum y nos pondremos en contacto contigo si tu perfil se ajusta a nuestras necesidades."
           }
-          extra={"text-blackCeniza text-center px-0 sm:px-0 md:px-20 lg:px-40"}
+          extra={"text-blackCeniza text-center px-0 sm:px-0 md:px-10 lg:px-10"}
         />
 
-        <form ref={form} onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit} className="bg-white p-5 rounded-lg">
           <section className={`w-full flex flex-col mb-5 ${loading ? "opacity-50" : ""}`}>
             {inputs.map((section, sectionIndex) => (
               <div key={sectionIndex} className="mb-8">

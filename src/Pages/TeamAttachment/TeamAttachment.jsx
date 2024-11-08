@@ -1,12 +1,12 @@
 import Container from "../../Components/Container/Container";
 import SubTitle from "../../Components/shared/SubTitle";
-import MovingText from "../../Components/shared/velocity/Velocity";
-import { itemsTeam } from "../../data/Home";
+import { itemsClient, itemsTeam } from "../../data/Home";
 import { motion } from "framer-motion";
 import MovingTextJ from "../../Components/TeamAttachment/MovingTextJ";
 import FormAttachment from "../../Components/TeamAttachment/FormTeamAttachment";
 import Title from "../../Components/shared/Title";
 import NavbarGoBack from "../../Components/shared/NavbarGoBack";
+import ParallaxText from "../../Components/shared/VelocityVertical";
 const TeamAttachment = () => {
   return (
     <motion.section
@@ -31,23 +31,16 @@ const TeamAttachment = () => {
           transitionTime={8000} // Adjust the transition time as needed
         />
 
-        <Title extra={"font-Baskerville text-center"} text={"Queremos conocerte"} />
+        {/* <Title extra={"font-Baskerville text-center"} text={"Queremos conocerte"} /> */}
 
-        <SubTitle
+        {/* <SubTitle
           text={
             "En Neurons, nuestro equipo está formado por profesionales apasionados y dedicados que trabajan juntos para crear soluciones innovadoras. Creemos en la colaboración, el aprendizaje continuo y el desarrollo de habilidades. Si te unes a nosotros, formarás parte de un entorno dinámico donde tu voz será escuchada y tu crecimiento profesional será apoyado. ¡Estamos emocionados de conocerte y explorar cómo puedes contribuir a nuestro éxito!"
           }
           extra={"text-start sm:text-center"}
-        />
+        /> */}
       </Container>
-      <MovingText
-        right={"0%"}
-        left={"-100%"}
-        items={itemsTeam}
-        extra={
-          "max-w-[250px] min-w-[250px] max-h-[300px] min-h-[300px] sm:max-w-[400px] sm:min-w-[400px] sm:max-h-[500px] sm:min-h-[500px] rounded-lg  "
-        }
-      />
+      {/* <ParallaxText items={itemsTeam} baseVelocity={-1} direction={1} extra={""} /> */}
       <FormAttachment />
     </motion.section>
   );
