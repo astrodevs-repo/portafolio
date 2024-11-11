@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const Blog = React.memo(function Blog({ index }) {
   return (
     <Container>
-      <section className=" flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
+      <section className="flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
         <Title
           text={"Blog y Artículos"}
           textColor={"text-blackCeniza"}
