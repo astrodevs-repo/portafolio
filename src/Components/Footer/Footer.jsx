@@ -16,7 +16,7 @@ const Footer = React.memo(function Footer() {
       className="flex flex-col justify-center items-center bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
         dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800"
     >
-      <section className="bg-white dark:bg-blackCeniza">
+      <section className="bg-white w-full dark:bg-blackCeniza">
         <Container>
           <section
             className="grid grid-cols-1 sm:grid-cols-2 gap-20 items-center justify-center  "
