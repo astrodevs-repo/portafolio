@@ -5,7 +5,7 @@ const TextNavbar = React.memo(function TextNavbar({ textColor, extra, content, f
       onClick={func}
       className={`${
         textColor ? textColor : " text-white dark:text-white"
-      } font-Poppins leading-[40px] dark:text-white w-full text-sm sm:text-xs: md:text-sx lg:text-sm xl:text-sm 2xl:text-md ${extra} leading-5 cursor-pointer min-w-40`}
+      } font-Poppins leading-[40px] dark:text-white w-full text-sm sm:text-xs: md:text-sx lg:text-sm xl:text-sm 2xl:text-md 3xl:text-lg ${extra} leading-5 cursor-pointer min-w-40`}
     >
       {content}
     </li>

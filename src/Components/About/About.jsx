@@ -17,66 +17,33 @@ const About = React.memo(function About({ index }) {
   };
 
   return (
-    <motion.section id={index} className="grid grid-cols-1 max-w-screen" {...animationProps}>
-      <section className="px-5 sm:px-5 md:px-10 lg:px-10 xl:px-40 2xl:px-32  3xl:px-80 flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
-        <Title text={"Quienes Somos"} textColor={"text-blackCeniza"} extra={"font-Baskerville "} />
-        <SubTitleItalic text={about[0].text} textColor={"text-blackCeniza"} />
-      </section>
-      {about.slice(1, 4).map((slide, slideIndex) => (
-        <motion.section key={slideIndex} className="grid grid-cols-1 sm:grid-cols-2">
-          {slideIndex % 2 === 0 ? (
-            <>
-              <motion.article
-                className="bg-transparent p-0 sm:p-5 flex flex-col justify-center items-center col-end w-full"
-                initial={{ y: 0, opacity: 0 }}
-                whileInView={{ y: 50, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }} // Animación de salida
-                transition={{ ease: "easeInOut", duration: 1 }}
-              >
-                <Container>
-                  <SubTitle
-                    text={slide.title}
-                    extra={"font-Baskerville italic sm:text-end  text-center"}
-                  />
-                  <Text
-                    content={slide.text}
-                    textColor={"text-blackCeniza"}
-                    w={"w-full"}
-                    extra={"sm:text-end  text-center"}
-                  />
-                </Container>
-              </motion.article>
-              <img src={slide.image} alt="" className="hidden sm:flex" />
-            </>
-          ) : (
-            <>
-              <img src={slide.image} alt="" className="hidden sm:flex" />
-              <motion.article
-                className="bg-transparent p-0 sm:p-5  flex flex-col justify-center items-center col-start w-full"
-                initial={{ y: 0, opacity: 0 }}
-                whileInView={{ y: 50, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ ease: "easeInOut", duration: 1 }}
-              >
-                <Container>
-                  <SubTitle
-                    text={slide.title}
-                    extra={"font-Baskerville italic sm:text-start text-center"}
-                  />
-                  <Text
-                    content={slide.text}
-                    textColor={"text-blackCeniza"}
-                    w={"w-full"}
-                    extra={"sm:text-start  text-center"}
-                  />
-                </Container>
-              </motion.article>
-            </>
-          )}
+    <section className="flex justify-center">
+      <Container>
+        <motion.section id={index} className="grid grid-cols-1 max-w-screen " {...animationProps}>
+          <section className=" flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
+            <Title
+              text={"Quienes Somos"}
+              textColor={"text-blackCeniza"}
+              extra={"font-Baskerville "}
+            />
+            <Text content={about[0].text} textColor={"text-blackCeniza"} />
+          </section>
+          <section className="grid grid-cols-3 gap-5 divide-white divide-x-2">
+            {about.slice(1, 4).map((slide, slideIndex) => (
+              <motion.section key={slideIndex} className="flex flex-col p-5 gap-5">
+                <SubTitle text={slide.title} extra={"font-Baskerville  text-center font-medium"} />
+                <Text
+                  content={slide.text}
+                  textColor={"text-blackCeniza"}
+                  w={"w-full"}
+                  extra={"text-center"}
+                />
+              </motion.section>
+            ))}
+          </section>
         </motion.section>
-      ))}
-    </motion.section>
+      </Container>
+    </section>
   );
 });
-
 export default About;

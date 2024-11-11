@@ -14,10 +14,11 @@ const SkillsSection = React.memo(function SkillsSection({ index }) {
   };
 
   return (
-    <motion.section id={index} {...animationProps}>
+    <motion.section id={index} {...animationProps} className="">
       <Container>
         <Title text={"Nuestras Herramientas"} textColor={"text-blackCeniza font-Baskerville"} />
       </Container>
+
       <MovingText
         right={"0%"}
         left={"-100%"}

@@ -12,7 +12,10 @@ import Container from "../Container/Container";
 
 const Footer = React.memo(function Footer() {
   return (
-    <React.Fragment>
+    <section
+      className="flex flex-col justify-center items-center bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
+        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800"
+    >
       <section className="bg-white dark:bg-blackCeniza">
         <Container>
           <section
@@ -42,10 +45,7 @@ const Footer = React.memo(function Footer() {
         </Container>
       </section>
 
-      <footer
-        className="bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
-        dark:from-dark-BlueNeurons/10 dark:via-gray-800 dark:to-gray-800 h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20"
-      >
+      <footer className="max-w-[1600px]  h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20">
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-BlueNeurons"} extra={"textBas"} />
           <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 w-full">
@@ -84,7 +84,7 @@ const Footer = React.memo(function Footer() {
           </ul>
         </section>
       </footer>
-    </React.Fragment>
+    </section>
   );
 });
 const footerContent = [

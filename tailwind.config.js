@@ -4,6 +4,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "640px", // Small screens (Tablets and larger)
+        md: "768px", // Medium screens (Small laptops and larger)
+        lg: "1024px", // Large screens (Laptops and larger)
+        xl: "1280px", // Extra large screens (Desktops and larger)
+        "2xl": "1536px", // 2x extra large screens (Large desktops)
+        "3xl": "1920px", // 3x extra large screens (Extra-wide monitors)
+      },
       lineHeight: {
         "extra-tight": "1.1",
       },

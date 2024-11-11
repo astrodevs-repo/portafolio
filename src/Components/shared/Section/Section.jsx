@@ -22,7 +22,7 @@ const Section = React.memo(function Section({
 
   return (
     <motion.section
-      className={`w-full h-fit-content ${bg} py-5 sm:py-5 ${extra}`}
+      className={`w-fit-content h-fit-content ${bg} py-5 sm:py-5 ${extra} flex justify-center`}
       id={index}
       {...animationProps}
     >

@@ -6,7 +6,7 @@ const SubTitle = React.memo(function SubTitle({ text, extra, textColor, position
       style={{ lineHeight: "2rem" }}
       className={`${textColor ? textColor : "text-blackCeniza"} ${
         font ? font : "font-Poppins"
-      } text-blackCeniza dark:text-white leading-[40px]  text-xl sm:text-sm md:text-2xl lg:text-lg xl:text-xl 2xl:text-xl ${position}  ${extra} leading-5 m-0`}
+      } text-blackCeniza dark:text-white leading-[40px]  text-xl sm:text-sm md:text-2xl lg:text-lg xl:text-xl 2xl:text-xl 3xl:text-4xl ${position}  ${extra} leading-5 m-0`}
     >
       {text}
     </h1>
