@@ -1,10 +1,6 @@
 import React from "react";
-
-import Carousel from "../../shared/Carousel/Carousel";
 import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
-
-import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
 import Container from "../../Container/Container";
@@ -14,7 +10,7 @@ import { motion } from "framer-motion";
 const Blog = React.memo(function Blog({ index }) {
   return (
     <Container>
-      <section className=" flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
+      <section id={index} className="flex flex-col gap-10 pt-20 pb-0 sm:pb-20 ">
         <Title
           text={"Blog y Artículos"}
           textColor={"text-blackCeniza"}

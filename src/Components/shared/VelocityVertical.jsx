@@ -47,7 +47,7 @@ export default function ParallaxText({ items, baseVelocity = 100 }) {
   const duplicatedItems = duplicateItems(items, 10);
 
   return (
-    <section className="relative h-[600px] py-5 overflow-hidden w-full px-2 z-0">
+    <section className="relative max-h-[450px] 3xl:max-h-[600px] min-h-[400px] py-5 overflow-hidden w-full px-2 z-0">
       <motion.div style={{ y }} className="scroller w-full flex flex-col gap-5">
         {duplicatedItems.map((item, index) => (
           <motion.div
