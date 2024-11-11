@@ -1,7 +1,6 @@
 import React from "react";
 
 import Carousel from "../../shared/Carousel/Carousel";
-import Section from "../../shared/Section/Section";
 import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
 
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
 import Container from "../../Container/Container";
 import Title from "../../shared/Title";
-import SubTitleItalic from "../../shared/SubTitleItalic";
+import { motion } from "framer-motion";
 
 const Blog = React.memo(function Blog({ index }) {
   return (
@@ -27,28 +26,28 @@ const Blog = React.memo(function Blog({ index }) {
           extra={"w-3/4"}
         />
       </section>
-      <Carousel show={"3.5"}>
+      <motion.div className="scroller">
         {itemsBlog.map(({ title, img, id, content }, idx) => (
-          <SwiperSlide key={idx}>
+          <article className="w-1/2 sm:w-1/3 mr-2" key={idx}>
             <Link to={`blog/${id}`}>
               <img
                 src={img}
                 alt={title}
                 width={100}
                 height={100}
-                className="object-cover rounded-md"
+                className="object-cover rounded-md max-w-96 w-full"
               />
             </Link>
-            <section className="flex flex-col gap-5 pt-5">
-              <SubTitle text={title} extra={"font-medium text-start "} />
+            <section className="flex flex-col gap-2 pt-5">
+              <SubTitle text={title.substring(0, 20) + "..."} extra={"font-medium text-start "} />
               <Text
-                content={content.sections[0].content.substring(0, 150) + "..."}
+                content={content.sections[0].content.substring(0, 50) + "..."}
                 extra={"text-start"}
               />
             </section>
-          </SwiperSlide>
+          </article>
         ))}
-      </Carousel>
+      </motion.div>
     </Container>
   );
 });
