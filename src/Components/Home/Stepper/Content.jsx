@@ -13,7 +13,7 @@ const Content = React.memo(function Content({ name, sections, i }) {
           y: 0,
         }}
         transition={{ duration: 0.5 }}
-        className="-mt-10"
+        className="-mt-10 flex flex-col gap-5"
       >
         <SubTitle text={name} extra={"font-bold"} font={"font-Baskerville italic"} />
         <Text content={sections[i]?.subTitle} />

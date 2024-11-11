@@ -41,7 +41,7 @@ const Stepper = React.memo(function Stepper({ index }) {
       index={index}
       bg={"bg-transparent"}
       textColor={"text-white"}
-      contentPosition={"pt-20 "}
+      contentPosition={"pt-20 sm:pt-40 "}
     >
       {steps.map(({ name }, i) => (
         <ItemMobile length={steps.length} key={i} name={name} index={i} i={i} />

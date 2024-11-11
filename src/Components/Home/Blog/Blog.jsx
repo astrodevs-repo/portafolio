@@ -8,14 +8,25 @@ import SubTitle from "../../shared/SubTitle";
 import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { itemsBlog } from "../../../data/Home";
+import Container from "../../Container/Container";
+import Title from "../../shared/Title";
+import SubTitleItalic from "../../shared/SubTitleItalic";
 
 const Blog = React.memo(function Blog({ index }) {
   return (
-    <Section
-      title={"Blog y Artículos"}
-      subtitle={"Descubre nuestra perspectiva innovadora sobre tecnología y soluciones"}
-      index={index}
-    >
+    <Container>
+      <section className=" flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
+        <Title
+          text={"Blog y Artículos"}
+          textColor={"text-blackCeniza"}
+          extra={"font-Baskerville "}
+        />
+        <SubTitle
+          text={"Descubre nuestra perspectiva innovadora sobre tecnología y soluciones"}
+          textColor={"text-blackCeniza"}
+          extra={"w-3/4"}
+        />
+      </section>
       <Carousel show={"3.5"}>
         {itemsBlog.map(({ title, img, id, content }, idx) => (
           <SwiperSlide key={idx}>
@@ -28,15 +39,17 @@ const Blog = React.memo(function Blog({ index }) {
                 className="object-cover rounded-md"
               />
             </Link>
-            <SubTitle text={title} extra={"font-medium text-start "} />
-            <Text
-              content={content.sections[0].content.substring(0, 150) + "..."}
-              extra={"text-start"}
-            />
+            <section className="flex flex-col gap-5 pt-5">
+              <SubTitle text={title} extra={"font-medium text-start "} />
+              <Text
+                content={content.sections[0].content.substring(0, 150) + "..."}
+                extra={"text-start"}
+              />
+            </section>
           </SwiperSlide>
         ))}
       </Carousel>
-    </Section>
+    </Container>
   );
 });
 

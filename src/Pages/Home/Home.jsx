@@ -31,8 +31,9 @@ const Home = React.memo(function Home() {
       <Counter index={"counter"} />
       <About index={"aboutus"} />
       <Servicios index={"quienessomos"} />
-      <ClientsSection index={"skills"} />
       <StepList index={"comotrabajamos"} />
+      <ClientsSection index={"skills"} />
+
       <Blog index={"blog"} />
       <Team index={"team"} />
       <BackToTopButton />
