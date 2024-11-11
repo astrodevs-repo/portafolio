@@ -584,7 +584,7 @@ export const about = [
   },
   {
     title: "Visión",
-    text: "En Neurons, visualizamos un presente donde la innovación digital es accesible y poderosa para todos. Nos esforzamos por ser líderes en la transformación digital, creando soluciones que no solo resuelven desafíos, sino que también inspiran y conectan.",
+    text: "En Neurons, creemos en un futuro donde la innovación digital sea accesible y transformadora para todos. Nuestro objetivo es liderar la transformación digital, creando soluciones que no solo resuelvan los desafíos actuales, sino que también inspiran y conectan a las marcas con sus usuarios de manera significativa y efectiva.",
     image: imagenb,
     clipPath: "polygon(12% 0, 100% 0%, 100% 100%, 0 100%)",
     clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",
@@ -594,7 +594,7 @@ export const about = [
   },
   {
     title: "Misión",
-    text: "Nuestra misión es impulsar el éxito de nuestros clientes en el mundo digital mediante la creación de experiencias innovadoras y estratégicas. Desde el desarrollo web hasta la analítica de datos, nos esforzamos por comprender las necesidades únicas de cada cliente y ofrecer soluciones personalizadas.",
+    text: "Nuestra misión es ayudar a nuestros clientes a destacar en el mundo digital mediante la creación de soluciones innovadoras y personalizadas. Desde el desarrollo de páginas web y aplicaciones móviles hasta la optimización SEO y analítica de datos, nos enfocamos en comprender a fondo las necesidades de cada cliente para entregar resultados que marcan la diferencia y impulsan su éxito en línea",
     image: imagenc,
     clipPath: "polygon(3% 0, 100% 0, 100% 100%, 6% 100%, 21% 49%)",
     clipPath2: "polygon(0 0, 100% 0%, 100% 95%, 0 86%)",

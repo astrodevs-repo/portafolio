@@ -16,10 +16,15 @@ const Blog = React.memo(function Blog({ index }) {
   return (
     <Container>
       <section className=" flex flex-col gap-10 pt-20 pb-0 sm:pb-20">
-        <Title text={"Quienes Somos"} textColor={"text-blackCeniza"} extra={"font-Baskerville "} />
-        <SubTitleItalic
+        <Title
+          text={"Blog y Artículos"}
+          textColor={"text-blackCeniza"}
+          extra={"font-Baskerville "}
+        />
+        <SubTitle
           text={"Descubre nuestra perspectiva innovadora sobre tecnología y soluciones"}
           textColor={"text-blackCeniza"}
+          extra={"w-3/4"}
         />
       </section>
       <Carousel show={"3.5"}>

@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "../../Container/Container";
-import SubTitleItalic from "../SubTitleItalic";
 import Title from "../Title";
 import { motion } from "framer-motion";
+import SubTitle from "../SubTitle";
 const Section = React.memo(function Section({
   children,
   bg,
@@ -27,9 +27,11 @@ const Section = React.memo(function Section({
       {...animationProps}
     >
       <Container>
-        <Title text={title} textColor={"text-blackCeniza"} extra={"font-Baskerville "} />
-        {subtitle ? <SubTitleItalic text={subtitle} textColor={"text-blackCeniza"} /> : ""}
-        <section className={contentPosition}>{children}</section>
+        <section className="flex flex-col gap-5">
+          <Title text={title} textColor={"text-blackCeniza"} extra={"font-Baskerville "} />
+          {subtitle ? <SubTitle text={subtitle} textColor={"text-blackCeniza"} extra={""} /> : ""}
+        </section>
+        <section className={`${contentPosition} `}>{children}</section>
       </Container>
     </motion.section>
   );

@@ -14,10 +14,12 @@ const Servicios = React.memo(function Servicios({ index }) {
 
   return (
     <Section
-      title={"Nuestros Servicios"}
+      title={"¿Por qué elegirnos?"}
+      subtitle={
+        "Creamos páginas web a medida y responsivas que se adaptan a todos los dispositivos, garantizando una experiencia fluida para tus usuarios y mejorando la interacción con tus clientes."
+      }
       index={index}
-      extra={""}
-      contentPosition="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center flex flex-col gap-0 sm:flex md:grid w-full "
+      contentPosition="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center flex flex-col gap-0 sm:flex md:grid w-full pt-0 sm:pt-5 md:pt-10 lg:pt-10 xl:pt-20 2xl:pt-20  3xl:pt-20 "
     >
       {servicios.map((servicio, idx) => (
         <motion.div

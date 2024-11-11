@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const CardAccordion = ({ title, content, svg, index, expanded, onExpand }) => {
   return (
     <motion.div
-      className="border border-gray-300 rounded-md overflow-hidden cursor-pointer flex flex-col sm:flex md:hidden w-full my-2"
+      className="border border-gray-300 rounded-md overflow-hidden cursor-pointer flex flex-col sm:flex md:hidden w-full my-0"
       onClick={() => onExpand(index)}
     >
       <motion.section className="flex items-center justify-between p-4 bg-blackCeniza w-full text-white">
