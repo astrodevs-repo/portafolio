@@ -18,7 +18,7 @@ const Text = React.memo(function Text({ textColor, extra, content }) {
     <p
       className={`${
         textColor ? textColor : "text-blackCeniza"
-      } font-Poppins text-sm sm:text-xs dark:text-white md:text-sm lg:text-md xl:text-md 2xl:text-md 3xl:text-xl leading-normal ${extra}`}
+      } font-Poppins text-sm sm:text-xs dark:text-white md:text-sm lg:text-md xl:text-md 2xl:text-lg 3xl:text-xl leading-normal ${extra}`}
     >
       {formattedContent}
     </p>

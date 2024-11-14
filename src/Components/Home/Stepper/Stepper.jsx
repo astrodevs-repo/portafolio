@@ -1,9 +1,7 @@
-import React from "react";
-
 import Section from "../../shared/Section/Section";
 import ItemMobile from "./ItemMobile";
 
-const Stepper = React.memo(function Stepper({ index }) {
+function Stepper({ index }) {
   const steps = [
     {
       name: "1. Contacto inicial",
@@ -48,6 +46,6 @@ const Stepper = React.memo(function Stepper({ index }) {
       ))}
     </Section>
   );
-});
+}
 
 export default Stepper;

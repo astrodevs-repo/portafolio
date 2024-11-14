@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import SubTitle from "../SubTitle";
 import Text from "../Text";
 
-const CountUp = ({ end, duration, description, label }) => {
+const CountUp = React.memo(function CountUp({ end, duration, description, label }) {
   const [count, setCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
 
+  // Definir funciones con useCallback
+  const handleViewportEnter = useCallback(() => setIsCounting(true), []);
+  const handleViewportLeave = useCallback(() => setIsCounting(false), []);
+
   useEffect(() => {
-    if (!isCounting) return; // Si no está contando, salir
+    if (!isCounting) return;
 
     let start = 0;
     const stepTime = Math.abs(Math.floor((duration * 1000) / end));
@@ -27,8 +31,8 @@ const CountUp = ({ end, duration, description, label }) => {
   return (
     <motion.section
       className="flex flex-col gap-5"
-      onViewportEnter={() => setIsCounting(true)}
-      onViewportLeave={() => setIsCounting(false)}
+      onViewportEnter={handleViewportEnter}
+      onViewportLeave={handleViewportLeave}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -45,6 +49,6 @@ const CountUp = ({ end, duration, description, label }) => {
       <Text content={description} extra={"text-bold"} />
     </motion.section>
   );
-};
+});
 
 export default CountUp;

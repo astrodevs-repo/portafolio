@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { scrollToSection } from "../../utils/functions";
 
-const BackToTopButton = React.memo(function BackToTopButton() {
+function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -40,6 +40,6 @@ const BackToTopButton = React.memo(function BackToTopButton() {
       <span className="sr-only">Come back to the top</span>
     </motion.button>
   );
-});
+}
 
 export default BackToTopButton;

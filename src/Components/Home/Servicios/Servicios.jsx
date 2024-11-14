@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Section from "../../shared/Section/Section";
 import Card from "./Card";
 import CardAccordion from "./CardAccordion";
 import { servicios } from "../../../data/Home";
 
-const Servicios = React.memo(function Servicios({ index }) {
+function Servicios({ index }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleExpand = (index) => {
@@ -54,6 +54,6 @@ const Servicios = React.memo(function Servicios({ index }) {
       ))}
     </Section>
   );
-});
+}
 
 export default Servicios;

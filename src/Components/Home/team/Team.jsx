@@ -5,9 +5,8 @@ import { Stepper, StepperMobile } from "../../../data/Home";
 import { motion } from "framer-motion";
 
 import VelocityVertical from "../../shared/VelocityVertical";
-import React from "react";
 
-const Community = React.memo(function Community({ index }) {
+function TeamSection({ index }) {
   const animationProps = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -61,6 +60,6 @@ const Community = React.memo(function Community({ index }) {
       </section>
     </motion.section>
   );
-});
+}
 
-export default Community;
+export default TeamSection;

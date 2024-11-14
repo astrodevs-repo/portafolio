@@ -5,6 +5,11 @@
 body {
   background-color: #e9eeff;
   transition: background-color 0.5s ease-in-out;
+
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-family: "Poppins", sans-serif; /* Aplicas la fuente a los encabezados */
 }
 
 .dark body {

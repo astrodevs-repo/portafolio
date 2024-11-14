@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 import {
   motion,
   useScroll,
@@ -38,12 +38,16 @@ export default function ParallaxText({ items, baseVelocity = 100 }) {
     baseX.set(baseX.get() + moveBy);
   });
 
+  // Uso de useCallback para memorizar la función de renderizado de items
+  const renderItems = useCallback(
+    () => items.map((e, index) => <img key={index} src={e.svg} alt="" className="px-10 w-full" />),
+    [items]
+  );
+
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
-        {items.map((e, index) => (
-          <img key={index} src={e.svg} alt="" className="px-10 w-full" />
-        ))}
+        {renderItems()}
       </motion.div>
     </div>
   );

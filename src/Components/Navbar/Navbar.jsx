@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { navItems } from "../../data/data";
 import { scrollToSection } from "../../utils/functions";
@@ -14,19 +14,16 @@ const Navbar = React.memo(function Navbar() {
   const controls = useAnimation();
   let lastScrollY = window.scrollY;
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      // Scrolling down
       setIsVisible(false);
     } else if (currentScrollY < lastScrollY) {
-      // Scrolling up
       setIsVisible(true);
     }
-
     lastScrollY = currentScrollY;
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
