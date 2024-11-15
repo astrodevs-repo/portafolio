@@ -5,7 +5,6 @@ import SEO from "../../Components/shared/SEO/Seo";
 
 import { lazy, Suspense } from "react";
 
-// Cargar los componentes de manera diferida
 const About = lazy(() => import("../../Components/About/About"));
 const Team = lazy(() => import("../../Components/Home/team/Team"));
 const StepList = lazy(() => import("../../Components/Home/Stepper/Stepper"));
