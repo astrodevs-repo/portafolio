@@ -683,53 +683,72 @@ export const StepperMobile = {
   ],
 };
 
+const coloresDeFondo = [
+  "bg-red-500/80",
+  "bg-blue-500/80",
+  "bg-green-500/80",
+  "bg-yellow-500/80",
+  "bg-purple-500/80",
+  "bg-pink-500/80",
+  "bg-teal-500/80",
+  "bg-indigo-500/80",
+];
+
 export const servicios = [
   {
     title: "Desarrollo Aplicaciones Web",
     svg: icon1,
     content:
       "Creamos sitios web dinámicos, receptivos y optimizados para ofrecer una experiencia de usuario excepcional en todos los dispositivos.",
+    bg: coloresDeFondo[0], // Fijamos el primer color
   },
   {
     title: "Desarrollo de Aplicaciones Móviles",
     svg: icon2,
     content:
       "Creamos aplicaciones móviles personalizadas para iOS y Android que ofrecen experiencias fluidas y atractivas para los usuarios, ampliando así el alcance y la interacción con la audiencia.",
+    bg: coloresDeFondo[1], // Fijamos el segundo color
   },
   {
     title: "Creación de Bases de Datos",
     svg: icon3,
     content:
       "Desarrollamos bases de datos robustas y escalables que permiten la gestión eficiente de la información y el acceso rápido a los datos críticos para el negocio.",
+    bg: coloresDeFondo[2], // Fijamos el tercer color
   },
   {
     title: "Data Science y Data Analytic",
     svg: icon4,
     content:
       "Aplicamos técnicas de Data Science y Data Analytics para extraer información valiosa de los datos y tomar decisiones informadas que impulsen el crecimiento de nuestros clientes.",
+    bg: coloresDeFondo[3], // Fijamos el cuarto color
   },
   {
     title: "Diseño UX/UI",
     svg: icon5,
     content:
       "Diseñamos interfaces intuitivas y atractivas que maximizan la usabilidad y la interacción del usuario, utilizando herramientas como Figma para prototipado y diseño colaborativo.",
+    bg: coloresDeFondo[4], // Fijamos el quinto color
   },
   {
     title: "Mantenimiento y Soporte",
     svg: icon6,
     content:
       "Ofrecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
+    bg: coloresDeFondo[5], // Fijamos el sexto color
   },
   {
     title: "Blockchain",
     svg: icon7,
     content:
       "Implementamos soluciones basadas en tecnología Blockchain para garantizar la seguridad, la transparencia e integridad de los datos y las transacciones en línea.",
+    bg: coloresDeFondo[6], // Fijamos el séptimo color
   },
   {
     title: "Google Ads y Posicionamiento SEO",
     svg: icon8,
     content:
       "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
+    bg: coloresDeFondo[7], // Fijamos el octavo color
   },
 ];
