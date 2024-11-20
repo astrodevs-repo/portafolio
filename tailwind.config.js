@@ -18,21 +18,36 @@ export default {
       colors: {
         blackCeniza: "#2D3142",
         Chicle: "#2FE3CE",
-        // BlueNeurons: "#31add5",
         BlueNeurons: "#89b8fff7",
-
         dark: {
-          blackCeniza: "#1a1a1a", // Example dark mode color for blackCeniza
-          Chicle: "#00bfae", // Example dark mode color for Chicle
-          BlueNeurons: "rgb(124 58 237 / var(--tw-bg-opacity))", // Example dark mode color for BlueNeurons
+          blackCeniza: "#1a1a1a",
+          Chicle: "#00bfae",
+          BlueNeurons: "rgb(124 58 237 / var(--tw-bg-opacity))",
         },
       },
       fontFamily: {
-        Lusitana: ["Lusitana", "sans-serif"], // Usa la fuente 'Lusitana' en normal
-        Poppins: ["Poppins", "sans-serif"], // Usa la fuente 'Poppins' en normal
-        Baskerville: ["'Libre Baskerville'", "sans-serif"], // Usa 'Libre Baskerville'
+        Lusitana: ["Lusitana", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+        Baskerville: ["'Libre Baskerville'", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase }) {
+      addBase({
+        "@font-face": [
+          {
+            fontFamily: "Poppins",
+            src: "url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap) format('woff2')",
+            fontDisplay: "swap",
+          },
+          {
+            fontFamily: "Libre Baskerville",
+            src: "url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap) format('woff2')",
+            fontDisplay: "swap",
+          },
+        ],
+      });
+    },
+  ],
 };

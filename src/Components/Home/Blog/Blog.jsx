@@ -1,4 +1,3 @@
-import React from "react";
 import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
 import { Link } from "react-router-dom";
@@ -7,7 +6,7 @@ import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import { motion } from "framer-motion";
 
-const Blog = React.memo(function Blog({ index }) {
+function Blog({ index }) {
   return (
     <Container>
       <section id={index} className="flex flex-col gap-10 pt-20 pb-0 sm:pb-20 ">
@@ -46,6 +45,6 @@ const Blog = React.memo(function Blog({ index }) {
       </motion.div>
     </Container>
   );
-});
+}
 
 export default Blog;

@@ -2,10 +2,10 @@ import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import MovingText from "../../shared/velocity/Velocity";
 import { itemsClient } from "../../../data/Home";
-import React from "react";
+
 import { motion } from "framer-motion";
 
-const SkillsSection = React.memo(function SkillsSection({ index }) {
+function SkillsSection({ index }) {
   const animationProps = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -28,5 +28,5 @@ const SkillsSection = React.memo(function SkillsSection({ index }) {
       />
     </motion.section>
   );
-});
+}
 export default SkillsSection;

@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Section from "../../shared/Section/Section";
 import Card from "./Card";
 import CardAccordion from "./CardAccordion";
 import { servicios } from "../../../data/Home";
+import SubTitle from "../../shared/SubTitle";
+import Title from "../../shared/Title";
 
-const Servicios = React.memo(function Servicios({ index }) {
+function Servicios({ index }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleExpand = (index) => {
@@ -15,12 +17,20 @@ const Servicios = React.memo(function Servicios({ index }) {
   return (
     <Section
       title={"¿Por qué elegirnos?"}
-      subtitle={
-        "Creamos páginas web a medida y responsivas que se adaptan a todos los dispositivos, garantizando una experiencia fluida para tus usuarios y mejorando la interacción con tus clientes."
-      }
+      subtitle={" "}
       index={index}
-      contentPosition="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center flex flex-col gap-0 sm:flex md:grid w-full pt-0 sm:pt-5 md:pt-10 lg:pt-10 xl:pt-20 2xl:pt-20  3xl:pt-20 "
+      contentPosition="grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 justify-center flex flex-col gap-0 sm:flex md:grid w-full pt-0 sm:pt-5 md:pt-10 lg:pt-10 xl:pt-10 2xl:pt-20  3xl:pt-20 "
     >
+      <SubTitle
+        text={
+          "Elegir a Neurons, es optar por una agencia de diseño y desarrollo que se especializa en crear soluciones digitales personalizadas. Que van desde el diseño web profesional o diseño web para empresas ofreciéndote páginas modernas, responsivas y optimizadas para destacar tu negocio en línea, hasta ayudándote a construir plataformas eCommerce que impulsan tus ventas a través del posicionamiento SEO, tambien manejando áreas como la Data Science y Data Analytics. Escogernos significa confiar en un equipo que entiende tus necesidades, prioriza tus objetivos y te acompaña para llevar tu negocio al siguiente nivel con tecnología innovadora y un diseño estratégico."
+        }
+        extra={"col-span-4 pb-20 font-Baskerville text-blackCeniza"}
+      />
+      <SubTitle
+        text={"En Neurons te ofrecemos los siguientes servicios:"}
+        extra={"col-span-4 pb-20 font-Baskerville text-blackCeniza"}
+      />
       {servicios.map((servicio, idx) => (
         <motion.div
           key={idx}
@@ -37,6 +47,7 @@ const Servicios = React.memo(function Servicios({ index }) {
             svg={servicio.svg}
             expanded={expandedIndex === idx}
             onExpand={handleExpand}
+            bg={servicio.bg}
           />
         </motion.div>
       ))}
@@ -54,6 +65,6 @@ const Servicios = React.memo(function Servicios({ index }) {
       ))}
     </Section>
   );
-});
+}
 
 export default Servicios;

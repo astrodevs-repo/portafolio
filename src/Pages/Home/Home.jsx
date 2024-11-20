@@ -1,24 +1,26 @@
 import React from "react";
-import About from "../../Components/About/About";
 import Header from "../../Components/Home/Header/Header";
-import Team from "../../Components/Home/team/Team";
-import StepList from "../../Components/Home/Stepper/Stepper";
-import ClientsSection from "../../Components/Home/SkillsSection/SkillsSection";
-import Servicios from "../../Components/Home/Servicios/Servicios";
-import Blog from "../../Components/Home/Blog/Blog";
 import Navbar from "../../Components/Navbar/Navbar";
-import SmokeBackground from "../../Components/shared/Smoked/Smoked";
 import SEO from "../../Components/shared/SEO/Seo";
-import BackToTopButton from "../../Components/shared/BackTotopButtom";
-import Counter from "../../Components/Home/Counter/Counter";
 
-const Home = React.memo(function Home() {
+import { lazy, Suspense } from "react";
+
+const About = lazy(() => import("../../Components/About/About"));
+const Team = lazy(() => import("../../Components/Home/team/Team"));
+const StepList = lazy(() => import("../../Components/Home/Stepper/Stepper"));
+const ClientsSection = lazy(() => import("../../Components/Home/SkillsSection/SkillsSection"));
+const Blog = lazy(() => import("../../Components/Home/Blog/Blog"));
+const Counter = lazy(() => import("../../Components/Home/Counter/Counter"));
+const BackToTopButton = lazy(() => import("../../Components/shared/BackTotopButtom"));
+const Servicios = lazy(() => import("../../Components/Home/Servicios/Servicios"));
+
+function Home() {
   return (
     <React.Fragment>
       <SEO
         title={"Neurons | Empresa de Desarrollo y Diseño Web Profesional"}
         description={
-          "En Neurons, desarrollamos sitios web y soluciones digitales personalizados y profesionales para y empresa o negocio. Somos una empresa ubicada en Argentina ¡Descubre cómo podemos ayudarte a crecer en línea!"
+          "En Neurons, desarrollamos sitios web y soluciones digitales personalizados y profesionales para cualquier empresa o negocio. ¡Descubre cómo podemos ayudarte a crecer en línea!"
         }
         image={""}
         url={`https://neurons.com.ar`}
@@ -26,19 +28,33 @@ const Home = React.memo(function Home() {
         siteName="Neurons"
       />
       <Navbar />
-      <SmokeBackground />
       <Header index={"home"} />
-      <Counter index={"counter"} />
-      <About index={"aboutus"} />
-      <Servicios index={"quienessomos"} />
-      <StepList index={"comotrabajamos"} />
-      <ClientsSection index={"skills"} />
-
-      <Blog index={"blog"} />
-      <Team index={"team"} />
-      <BackToTopButton />
+      <Suspense fallback={<div>Cargando contador...</div>}>
+        <Counter index={"counter"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando sobre nosotros...</div>}>
+        <About index={"aboutus"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando servicios...</div>}>
+        <Servicios index={"quienessomos"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando pasos...</div>}>
+        <StepList index={"comotrabajamos"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando habilidades...</div>}>
+        <ClientsSection index={"skills"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando blog...</div>}>
+        <Blog index={"blog"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando equipo...</div>}>
+        <Team index={"team"} />
+      </Suspense>
+      <Suspense fallback={<div>Cargando botón...</div>}>
+        <BackToTopButton />
+      </Suspense>
     </React.Fragment>
   );
-});
+}
 
 export default Home;
