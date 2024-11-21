@@ -20,7 +20,7 @@ function TeamSection({ index }) {
       className="pt-5 sm:py-20 pb-10 flex justify-center"
       {...animationProps}
     >
-      <section className=" max-w-[1800px] min-h-[450px] max-h-[600px]  bg-gradient-to-r from-slate-600 to-blackCeniza dark:from-slate-900 dark:to-blackCeniza rounded-lg sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20 transition-colors duration-1000  ">
+      <section className=" shadow-2xl shadow-blackCeniza max-w-[1800px] min-h-[450px] max-h-[600px]  bg-gradient-to-r from-slate-600 to-blackCeniza dark:from-slate-900 dark:to-blackCeniza rounded-lg sm:rounded-3xl  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 mx-5 sm:mx-5 md:mx-5 lg:mx-10 xl:mx-20 2xl:mx-20 transition-colors duration-1000  ">
         <section className="p-5 py-10 sm:p-20 h-full flex flex-col justify-center items-center gap-5">
           <Title text={"Nuestro Equipo"} textColor={"text-white"} extra={"font-Baskerville"} />
           <Text content={Stepper.body} textColor={"text-white"} />

@@ -42,7 +42,7 @@ const Navbar = React.memo(function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed w-full z-20 top-0 start-0 flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 transition-colors duration-300 ${
+      className={`fixed w-full z-20 top-0 start-0 flex justify-between  shadow-BlueNeurons/30 dark:shadow-dark-BlueNeurons/10 shadow-lg px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 transition-colors duration-300 ${
         isVisible ? "bg-blackCeniza dark:bg-blackCeniza" : "bg-transparent"
       }`}
       animate={controls}
