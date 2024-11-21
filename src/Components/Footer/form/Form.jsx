@@ -98,19 +98,16 @@ const ContactUs = () => {
           </div>
         </section>
 
-        <section className={`flex justify-center w-full`}>
-          <motion.button
+        <section className={`flex justify-center w-full  transition-colors `}>
+          <button
             type={"submit"}
             disabled={isSubmitting}
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300, damping: 15 }}
-            className={`bg-blue-600 flex justify-center items-center gap-2 dark:bg-purple-600 dark:border-purple-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-blue-600 border-2 hover:bg-blue-700 dark:hover:bg-purple-700 focus:z-10 focus:ring-4 transition-colors duration-700 ${
+            className={`bg-blue-600 transition-shadow duration-700  shadow-lg shadow-blackCeniza hover:shadow-2xl hover:shadow-blackCeniza flex justify-center items-center gap-2 dark:bg-purple-600 dark:border-purple-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-blue-600 border-2 hover:bg-blue-700 dark:hover:bg-purple-700 focus:z-10 focus:ring-4 ${
               isSubmitting && "opacity-50 cursor-not-allowed"
             } w-full`}
           >
             {loading ? <Loading /> : <Text textColor={"text-white"} content={"Enviar"} />}
-          </motion.button>
+          </button>
         </section>
       </form>
     </section>

@@ -120,22 +120,22 @@ const Blog = () => {
       />
       <Container>
         <section className="w-full flex justify-between relative min-h-fit">
-          <section className="w-[20%] hidden sm:hidden md:hidden lg:block">
+          {/* <section className="w-[20%] hidden sm:hidden md:hidden lg:block">
             <nav className="sticky top-20">
               <ul>
                 {body?.content.sections.map((section, index) => (
                   <li
                     key={index}
                     onClick={() => scrollToSection(index)}
-                    className="font-bold font-Poppins my-2"
+                    className="font-bold font-Poppins my-2 bg-red-500"
                   >
                     {section?.subtitle && section?.subtitle}
                   </li>
                 ))}
               </ul>
             </nav>
-          </section>
-          <section className="w-full sm:w-full md:w-full lg:w-[75%] relative px-0">
+          </section> */}
+          <section className="w-full sm:w-full md:w-full lg:w-full relative px-0">
             {body?.content.sections.map((section, index) => (
               <section
                 key={index}
