@@ -20,12 +20,16 @@ const Layout = ({ children }) => {
         href="https://wa.me/+5492612336104"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 right-5"
+        className="fixed bottom-10 right-0"
         style={{
           zIndex: "1000",
         }}
       >
-        <IoLogoWhatsapp size={50} className="text-[#25d366]" />
+        <img
+          src="https://i.pinimg.com/originals/16/71/c0/1671c09a32f98796ede36fabfab4dee7.png"
+          alt=""
+          className="w-32 h-32"
+        />
       </a>
       <ToastContainer
         position="top-right"
