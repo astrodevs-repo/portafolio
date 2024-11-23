@@ -1,5 +1,7 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import jsConfetti from "js-confetti"; // Import the js-confetti library
 import SkeletonText from "../../shared/Skeleton/Text";
+
 const ContactUs = lazy(() => import("../../Footer/form/Form"));
 const Text = lazy(() => import("../../shared/Text"));
 const Title = lazy(() => import("../../shared/Title"));
@@ -27,8 +29,7 @@ function Header({ index }) {
           </Suspense>
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-5h-10"} row={4} />}>
             <Text
-              content="En Neurons, somos expertos en el **desarrollo de software** a medida, creando **páginas web** modernas y **aplicaciones móviles** personalizadas. Ofrecemos **soluciones digitales** que mejoran la experiencia de usuario y optimizan procesos de negocio. Desde sitios web corporativos hasta **tiendas online** y **apps** para **Android** e **iOS**, nuestro equipo combina creatividad, tecnología avanzada y un enfoque centrado en el usuario para asegurar el éxito de tu proyecto.
-"
+              content="En Neurons, somos expertos en el **desarrollo de software** a medida, creando **páginas web** modernas y **aplicaciones móviles** personalizadas. Ofrecemos **soluciones digitales** que mejoran la experiencia de usuario y optimizan procesos de negocio. Desde sitios web corporativos hasta **tiendas online** y **apps** para **Android** e **iOS**, nuestro equipo combina creatividad, tecnología avanzada y un enfoque centrado en el usuario para asegurar el éxito de tu proyecto."
               extra="text-start"
             />
           </Suspense>
