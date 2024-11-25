@@ -9,7 +9,7 @@ const About = lazy(() => import("../../Components/About/About"));
 const Team = lazy(() => import("../../Components/Home/team/Team"));
 const StepList = lazy(() => import("../../Components/Home/Stepper/Stepper"));
 const ClientsSection = lazy(() => import("../../Components/Home/SkillsSection/SkillsSection"));
-const Blog = lazy(() => import("../../Components/Home/Blog/Blog"));
+// const Blog = lazy(() => import("../../Components/Home/Blog/Blog"));
 const Counter = lazy(() => import("../../Components/Home/Counter/Counter"));
 const BackToTopButton = lazy(() => import("../../Components/shared/BackTotopButtom"));
 const Servicios = lazy(() => import("../../Components/Home/Servicios/Servicios"));
@@ -44,9 +44,9 @@ function Home() {
       <Suspense fallback={<div>Cargando habilidades...</div>}>
         <ClientsSection index={"skills"} />
       </Suspense>
-      <Suspense fallback={<div>Cargando blog...</div>}>
+      {/* <Suspense fallback={<div>Cargando blog...</div>}>
         <Blog index={"blog"} />
-      </Suspense>
+      </Suspense> */}
       <Suspense fallback={<div>Cargando equipo...</div>}>
         <Team index={"team"} />
       </Suspense>

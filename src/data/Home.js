@@ -684,14 +684,14 @@ export const StepperMobile = {
 };
 
 const coloresDeFondo = [
-  "bg-red-500/80",
-  "bg-blue-500/80",
-  "bg-green-500/80",
-  "bg-yellow-500/80",
-  "bg-purple-500/80",
-  "bg-pink-500/80",
-  "bg-teal-500/80",
-  "bg-indigo-500/80",
+  "bg-red-500 dark:bg-red-900",
+  "bg-blue-500  dark:bg-blue-900",
+  "bg-green-500  dark:bg-green-900",
+  "bg-yellow-500  dark:bg-yellow-900",
+  "bg-purple-500  dark:bg-purple-900",
+  "bg-pink-500  dark:bg-pink-900",
+  "bg-teal-500  dark:bg-teal-900",
+  "bg-indigo-500  dark:bg-indigo-900",
 ];
 
 export const servicios = [
