@@ -1,7 +1,7 @@
 import Title from "../../shared/Title";
 import Text from "../../shared/Text";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
-import { Stepper, StepperMobile } from "../../../data/Home";
+import { Stepper } from "../../../data/Home";
 import { motion } from "framer-motion";
 
 import VelocityVertical from "../../shared/VelocityVertical";
@@ -32,18 +32,8 @@ function TeamSection({ index }) {
             route={Stepper.linkButton}
           />
         </section>
-        <section className={`flex sm:hidden md:hidden justify-center px-0 sm:px-2`}>
-          {StepperMobile.itemsStepperImages.map(({ items, direction }) => (
-            <VelocityVertical
-              items={items}
-              extra={"rounded-md"}
-              baseVelocity={direction}
-              direction={direction} // Moving down
-              key={"velocity1"}
-            />
-          ))}
-        </section>
-        <section className={`md:flex justify-center px-0 sm:px-2 hidden sm:hidden  `}>
+
+        <section className={`justify-center px-0 sm:px-2 hidden sm:hidden md:hidden lg:flex `}>
           {Stepper.itemsStepperImages.map(({ direction, items, top, bottom, duration }, index) => (
             <VelocityVertical
               top={top}

@@ -19,7 +19,7 @@ function About({ index }) {
       {about.slice(1, 3).map((slide, slideIndex) => (
         <article
           key={slideIndex}
-          className="flex flex-col gap-5 min-h-96 px-10 sm:px-20 justify-center items-center "
+          className="flex flex-col gap-5 sm:min-h-96 min-h-[70vh]  justify-center items-center "
           style={{
             backgroundImage: `url(${slide.image})`,
             backgroundSize: "cover",
@@ -27,8 +27,15 @@ function About({ index }) {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <SubTitle text={slide.title} extra={"text-white text-center font-medium"} />
-          <Text content={slide.text} textColor={"text-white"} w={"w-full"} extra={"text-center"} />
+          <section className="bg-black/50 h-full w-full px-10 sm:px-20 flex flex-col justify-center items-center">
+            <SubTitle text={slide.title} extra={"text-white text-center font-medium"} />
+            <Text
+              content={slide.text}
+              textColor={"text-white"}
+              w={"w-full"}
+              extra={"text-center"}
+            />
+          </section>
         </article>
       ))}
     </section>
