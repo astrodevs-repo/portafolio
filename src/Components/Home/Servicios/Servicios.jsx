@@ -24,11 +24,13 @@ function Servicios({ index }) {
         content={
           "Elegir a Neurons, es optar por una agencia de diseño y desarrollo que se especializa en crear soluciones digitales personalizadas. Que van desde el diseño web profesional o diseño web para empresas ofreciéndote páginas modernas, responsivas y optimizadas para destacar tu negocio en línea, hasta ayudándote a construir plataformas eCommerce que impulsan tus ventas a través del posicionamiento SEO, tambien manejando áreas como la Data Science y Data Analytics. Escogernos significa confiar en un equipo que entiende tus necesidades, prioriza tus objetivos y te acompaña para llevar tu negocio al siguiente nivel con tecnología innovadora y un diseño estratégico."
         }
-        extra={"col-span-4 md:col-span-1 pb-10 font-Baskerville text-blackCeniza"}
+        extra={"col-span-4 md:col-span-1 lg:col-span-4 pb-10 font-Baskerville text-blackCeniza"}
       />
       <Text
         content={"En Neurons te ofrecemos los siguientes servicios:"}
-        extra={"col-span-4  md:col-span-1 pb-0 font-Baskerville text-blackCeniza md:pb-20"}
+        extra={
+          "col-span-4  md:col-span-1 lg:col-span-4 pb-0 font-Baskerville text-blackCeniza md:pb-20"
+        }
       />
       {servicios.map((servicio, idx) => (
         <motion.div
