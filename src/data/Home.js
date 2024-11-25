@@ -752,3 +752,5 @@ export const servicios = [
     bg: coloresDeFondo[7], // Fijamos el octavo color
   },
 ];
+////////////////////////////////////
+//sectionA(header)

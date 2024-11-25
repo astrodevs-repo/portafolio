@@ -1,6 +1,5 @@
 import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { navItems } from "../../data/data";
 import { scrollToSection } from "../../utils/functions";
 import SkeletonText from "../shared/Skeleton/Text";
 
@@ -9,7 +8,7 @@ const TextNavbar = lazy(() => import("../shared/TextNavBar"));
 const DrawerNavigation = lazy(() => import("../shared/drawer/Drawer"));
 const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggle"));
 
-const Navbar = React.memo(function Navbar() {
+const Navbar = React.memo(function Navbar({ itemsNavbar }) {
   const [isVisible, setIsVisible] = useState(true);
   const controls = useAnimation();
   let lastScrollY = window.scrollY;
@@ -53,7 +52,7 @@ const Navbar = React.memo(function Navbar() {
       </Suspense>
       <Suspense fallback={<SkeletonText height={"h-2"} width={"w-10"} extra={"hidden sm:flex"} />}>
         <ul className="md:hidden lg:flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg sm:gap-5 md:gap-5 lg:gap-10 md:flex-row md:mt-0 md:border-0 hidden">
-          {navItems.map(({ id, label }) => (
+          {itemsNavbar?.map(({ id, label }) => (
             <TextNavbar key={label} content={label} func={() => scrollToSection(id)} />
           ))}
         </ul>
@@ -62,7 +61,7 @@ const Navbar = React.memo(function Navbar() {
         <section className="flex gap-5 items-center justify-center h-full">
           {/* <ButtonGrandient id={"contactanos"} text={"Contactanos"} /> */}
           <DarkModeToggle />
-          <DrawerNavigation />
+          <DrawerNavigation itemsNavbar={itemsNavbar} />
         </section>
       </Suspense>
     </motion.nav>

@@ -5,12 +5,15 @@ import SubTitleItalic from "../shared/SubTitleItalic";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import React from "react";
-import Section from "../shared/Section/Section";
 
 import { FaLinkedin } from "react-icons/fa";
 import Container from "../Container/Container";
 
-const Footer = React.memo(function Footer() {
+const Footer = React.memo(function Footer({ footerContent, footerInfo, socialLinks }) {
+  const iconMapping = {
+    FaLinkedin: <FaLinkedin />,
+    // Puedes agregar más íconos aquí según sea necesario
+  };
   return (
     <section
       className="flex flex-col justify-center items-center bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
@@ -45,11 +48,11 @@ const Footer = React.memo(function Footer() {
         </Container>
       </section>
 
-      <footer className="max-w-[1600px]  h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20">
+      <footer className="max-w-[1600px] h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20">
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
           <SubTitleItalic text={"Neurons"} textColor={"text-[#6352ff]"} extra={"font-extrabold"} />
           <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 w-full">
-            {footerContent.map((section, index) => (
+            {footerContent?.map((section, index) => (
               <section key={index}>
                 <SubTitle text={section.title} extra={"font-medium mb-5"} />
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -64,20 +67,19 @@ const Footer = React.memo(function Footer() {
 
         <section className="sm:flex sm:items-center sm:justify-between w-full py-5 border-t-2">
           <p className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            {footerInfo.copyright}
-            <span className="">{footerInfo.poweredBy}</span>
+            {footerInfo?.copyright}
           </p>
 
           <ul className="flex mt-4 sm:justify-center sm:mt-0">
-            {footerInfo.socialLinks.map(({ url, icon, label }, index) => (
+            {socialLinks?.map(({ url, icon, label }, index) => (
               <li
                 key={index}
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <a href={url} target="_blank" rel="noopener noreferrer">
-                  {icon}
+                  {/* Renderizamos el ícono dinámicamente usando el objeto `iconMapping` */}
+                  {iconMapping[icon]}
                 </a>
-
                 <span className="sr-only">{label}</span>
               </li>
             ))}
@@ -87,75 +89,5 @@ const Footer = React.memo(function Footer() {
     </section>
   );
 });
-const footerContent = [
-  {
-    title: "Nuestros Servicios",
-    links: [
-      { text: "Desarrollo Web" },
-      { text: "Diseño UX/UI" },
-      { text: "Data Science y Data Analytics" },
-      { text: "Creación de Bases de Datos" },
-      { text: "Blockchain" },
-      { text: "Desarrollo de Aplicaciones Móviles" },
-      { text: "Google Ads y Posicionamiento SEO" },
-      { text: "Mantenimiento y Soporte" },
-    ],
-  },
-  {
-    title: "Encuentranos",
-    links: [
-      {
-        text: "Martín Zapata 488, Mendoza Capital",
-        url: "",
-      },
-      {
-        text: "Mendoza, Argentina",
-        url: "",
-      },
-      {
-        text: "Telefono +54 9 261 233-6104",
-        url: "",
-      },
-      {
-        text: "Email contacto@neurons.com",
-        url: "",
-      },
-    ],
-  },
-];
-
-const socialLinks = [
-  // {
-  //   icon: <FaFacebook />,
-  //   url: "#",
-  //   label: "Facebook page",
-  // },
-  // {
-  //   icon: <FaDiscord />,
-  //   url: "#",
-  //   label: "Discord community",
-  // },
-  // {
-  //   icon: <FaXTwitter />,
-  //   url: "#",
-  //   label: "Twitter page",
-  // },
-  // {
-  //   icon: <FaGithub />,
-  //   url: "#",
-  //   label: "GitHub account",
-  // },
-  {
-    icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
-    label: "Dribbble account",
-  },
-];
-
-const footerInfo = {
-  copyright: "© 2024 Neurons",
-
-  socialLinks: socialLinks,
-};
 
 export default Footer;

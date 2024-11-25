@@ -1,0 +1,856 @@
+{
+  "es": {
+    "home": {
+      "sections": {
+        "section_1": {
+          "index": "home",
+          "title1": "Desarrollo de software a medida para sitios web y apps móviles",
+          "title2": "Nosotros **Somos Neurons**, tu socio en soluciones digitales",
+          "title3": "En Neurons, somos expertos en el desarrollo de software a medida, creando páginas web modernas y aplicaciones móviles personalizadas. Ofrecemos soluciones digitales que mejoran la experiencia de usuario y optimizan procesos de negocio."
+        },
+        "section_2": {
+          "index": "counter",
+          "content": [
+            {
+              "label": "Proyectos",
+              "value": 15,
+              "description": "Contamos con un equipo especializado para alcanzar los objetivos con múltiples habilidades. Cada proyecto es un nuevo desafío que resolvemos de manera creativa y funcional."
+            },
+            {
+              "label": "Países",
+              "value": 5,
+              "description": "Trabajamos con clientes de diferentes países, lo que nos permite adaptar nuestras soluciones a una variedad de contextos y necesidades internacionales."
+            },
+            {
+              "label": "Clientes Satisfechos",
+              "value": 8,
+              "description": "Nuestros clientes confían en nosotros debido a nuestra capacidad para ofrecer estrategias personalizadas, desde la creatividad hasta la gestión, adaptadas a cada necesidad específica."
+            }
+          ]
+        },
+        "section_3": {
+          "index": "aboutus",
+          "title": "Quienes Somos",
+          "content": "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
+          "items": [
+            {
+              "title": "Visión",
+              "text": "En Neurons, creemos en un futuro donde la innovación digital sea accesible y transformadora para todos. Nuestro objetivo es liderar la transformación digital, creando soluciones que no solo resuelvan los desafíos actuales, sino que también inspiran y conectan a las marcas con sus usuarios de manera significativa y efectiva.",
+              "image": "/About/2.webp"
+            },
+            {
+              "title": "Misión",
+              "text": "Nuestra misión es ayudar a nuestros clientes a destacar en el mundo digital mediante la creación de soluciones innovadoras y personalizadas. Desde el desarrollo de páginas web y aplicaciones móviles hasta la optimización SEO y analítica de datos, nos enfocamos en comprender a fondo las necesidades de cada cliente para entregar resultados que marcan la diferencia y impulsan su éxito en línea",
+              "image": "/About/3.webp"
+            }
+          ]
+        },
+        "section_4": {
+          "index": "quienessomos",
+          "title": "¿Por qué elegirnos?",
+          "subtitle1": "Elegir a Neurons, es optar por una agencia de diseño y desarrollo que se especializa en crear soluciones digitales personalizadas. Que van desde el diseño web profesional o diseño web para empresas ofreciéndote páginas modernas, responsivas y optimizadas para destacar tu negocio en línea, hasta ayudándote a construir plataformas eCommerce que impulsan tus ventas a través del posicionamiento SEO, tambien manejando áreas como la Data Science y Data Analytics. Escogernos significa confiar en un equipo que entiende tus necesidades, prioriza tus objetivos y te acompaña para llevar tu negocio al siguiente nivel con tecnología innovadora y un diseño estratégico.",
+          "subtitle2": "En Neurons te ofrecemos los siguientes servicios:",
+          "items": [
+            {
+              "title": "Desarrollo Aplicaciones Web",
+              "svg": "/services/1.svg",
+              "content": "Creamos sitios web dinámicos, receptivos y optimizados para ofrecer una experiencia de usuario excepcional en todos los dispositivos.",
+              "bg": "bg-red-500 dark:bg-red-900"
+            },
+            {
+              "title": "Desarrollo de Aplicaciones Móviles",
+              "svg": "/services/2.svg",
+              "content": "Creamos aplicaciones móviles personalizadas para iOS y Android que ofrecen experiencias fluidas y atractivas para los usuarios, ampliando así el alcance y la interacción con la audiencia.",
+              "bg": "bg-blue-500 dark:bg-blue-900"
+            },
+            {
+              "title": "Creación de Bases de Datos",
+              "svg": "/services/3.svg",
+              "content": "Desarrollamos bases de datos robustas y escalables que permiten la gestión eficiente de la información y el acceso rápido a los datos críticos para el negocio.",
+              "bg": "bg-green-500 dark:bg-green-900"
+            },
+            {
+              "title": "Data Science y Data Analytic",
+              "svg": "/services/4.svg",
+              "content": "Aplicamos técnicas de Data Science y Data Analytics para extraer información valiosa de los datos y tomar decisiones informadas que impulsen el crecimiento de nuestros clientes.",
+              "bg": "bg-yellow-500 dark:bg-yellow-900"
+            },
+            {
+              "title": "Diseño UX/UI",
+              "svg": "/services/5.svg",
+              "content": "Diseñamos interfaces intuitivas y atractivas que maximizan la usabilidad y la interacción del usuario, utilizando herramientas como Figma para prototipado y diseño colaborativo.",
+              "bg": "bg-purple-500 dark:bg-purple-900"
+            },
+            {
+              "title": "Mantenimiento y Soporte",
+              "svg": "/services/6.svg",
+              "content": "Ofrecemos servicios de mantenimiento continuo y soporte técnico para garantizar el rendimiento óptimo y la seguridad de los sitios web, aplicaciones móviles y las soluciones digitales en general.",
+              "bg": "bg-pink-500 dark:bg-pink-900"
+            },
+            {
+              "title": "Blockchain",
+              "svg": "/services/7.svg",
+              "content": "Implementamos soluciones basadas en tecnología Blockchain para garantizar la seguridad, la transparencia e integridad de los datos y las transacciones en línea.",
+              "bg": "bg-teal-500 dark:bg-teal-900"
+            },
+            {
+              "title": "Google Ads y Posicionamiento SEO",
+              "svg": "/services/8.svg",
+              "content": "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
+              "bg": "bg-indigo-500 dark:bg-indigo-900"
+            }
+          ]
+        },
+        "section_5": {
+          "index": "comotrabajamos",
+          "title": "Como trabajamos en Neurons",
+          "steps": [
+            {
+              "name": "1. Contacto inicial",
+              "index": 1,
+              "content": {
+                "title": "Contacto Inicial",
+                "subTitle": "Nos contactas a través de nuestra WEB, WhatsApp o redes sociales. Recibimos tu solicitud y registramos toda la información relevante en nuestro sistema de gestión de proyectos.",
+                "img": "roadmap1",
+                "index": "1"
+              }
+            },
+            {
+              "name": "2. Reunión Inicial y Análisis de Requerimientos",
+              "index": 2,
+              "content": {
+                "title": "Reunión Inicial y Análisis de Requerimientos",
+                "subTitle": "Nuestro equipo especializado te contactará para agendar una videollamada y discutir cómo Neurons te puede ayudar. Durante la videollamada, recopilamos todos los requisitos del proyecto y documentamos detalladamente las especificaciones y objetivos. Esto se convierte en el documento de requisitos que guiará todo el proyecto.",
+                "img": "roadmap2",
+                "index": "2"
+              }
+            },
+            {
+              "name": "3. Diseño del Plan de Acción",
+              "index": 3,
+              "content": {
+                "title": "Diseño del Plan de Acción",
+                "subTitle": "Neurons genera un plan de acción para establecer plazos, aciertos y desaciertos de tus requerimientos. Elaboramos un diseño detallado del sistema, incluyendo arquitectura, componentes, interfaces y algoritmos. Este diseño es revisado y aprobado antes de avanzar.",
+                "img": "roadmap3",
+                "index": "3"
+              }
+            },
+            {
+              "name": "4. Ejecución del Plan",
+              "index": 4,
+              "content": {
+                "title": "Ejecución del Plan",
+                "subTitle": "Ejecución del plan de acción con plazos establecidos, donde te mostraremos nuestros avances. Desarrollamos el sistema siguiendo el diseño aprobado, implementando cada componente de manera secuencial. Este proceso incluye desarrollo de código, integración de componentes y preparación para pruebas.",
+                "img": "roadmap4",
+                "index": "4"
+              }
+            },
+            {
+              "name": "5. Pruebas y Validación",
+              "index": 5,
+              "content": {
+                "title": "Pruebas y Validación",
+                "subTitle": "Puesta en producción para recibir tu feedback. Realizamos pruebas exhaustivas para garantizar que el sistema cumple con todos los requisitos especificados. Estas pruebas incluyen pruebas unitarias, de integración, de sistema y de aceptación por el usuario.",
+                "img": "roadmap5",
+                "index": "5"
+              }
+            },
+            {
+              "name": "6. Entrega del Proyecto",
+              "index": 6,
+              "content": {
+                "title": "Entrega del Proyecto",
+                "subTitle": "Una vez que el sistema ha pasado todas las pruebas, se entrega el proyecto completo al cliente. Esta entrega incluye toda la documentación necesaria y una capacitación si es requerida.",
+                "img": "roadmap6",
+                "index": "6"
+              }
+            },
+            {
+              "name": "7. Mantenimiento y Mejoras",
+              "index": 7,
+              "content": {
+                "title": "Mantenimiento y Mejoras",
+                "subTitle": "Después de la entrega, proporcionamos soporte para el mantenimiento y cualquier mejora necesaria. Esto incluye corrección de errores, actualizaciones y mejoras basadas en nuevas necesidades del cliente.",
+                "img": "roadmap6",
+                "index": "6"
+              }
+            }
+          ]
+        },
+        "section_6": {
+          "index": "skills",
+          "title": "Nuestras Herramientas",
+          "items": [
+            { "svg": "/OurSkills/sql.svg" },
+            { "svg": "/OurSkills/Boopstrap.svg" },
+            { "svg": "/OurSkills/node.svg" },
+            { "svg": "/OurSkills/angular.svg" },
+            { "svg": "/OurSkills/html.svg" },
+            { "svg": "/OurSkills/java.svg" },
+            { "svg": "/OurSkills/js.svg" },
+            { "svg": "/OurSkills/ts.svg" },
+            { "svg": "/OurSkills/mongodb.svg" },
+            { "svg": "/OurSkills/mysql.svg" },
+            { "svg": "/OurSkills/pb.svg" },
+            { "svg": "/OurSkills/php.svg" },
+            { "svg": "/OurSkills/python.svg" },
+            { "svg": "/OurSkills/r.svg" }
+          ]
+        },
+        "section_7": {
+          "index": "blog",
+          "title": "Blog y Artículos",
+          "subtitle": "Descubre nuestra perspectiva innovadora sobre tecnología y soluciones",
+          "itemsBlog": [
+            [
+              {
+                "fecha": "22 de enero del 2024",
+                "hora": "04:45 PM",
+                "id": "12131616151",
+                "category": "AI",
+                "autor": "Jesus E. Moreno",
+                "color": "bg-[#005187]",
+                "title": "Inteligencia artificial",
+                "subtitle": "La Revolución de la Inteligencia Artificial: Transformando el Futuro de Nuestro Negocio",
+                "content": {
+                  "title": "La Revolución de la Inteligencia Artificial: Transformando el Futuro de Nuestro Negocio",
+                  "sections": [
+                    {
+                      "subtitle": "",
+                      "content": "La inteligencia artificial (IA) ha dejado de ser una mera fantasía de la ciencia ficción para convertirse en una realidad tangible que está redefiniendo la manera en que operan las empresas y cómo interactuamos con el mundo que nos rodea. En nuestra empresa, hemos abrazado esta revolución tecnológica para mejorar nuestros procesos, optimizar nuestras operaciones y ofrecer un mejor servicio a nuestros clientes."
+                    },
+                    {
+                      "subtitle": "¿Qué es la Inteligencia Artificial?",
+                      "content": "La inteligencia artificial se refiere a la capacidad de una máquina para imitar las funciones cognitivas humanas, como aprender y resolver problemas. A través de algoritmos avanzados y grandes cantidades de datos, las IA pueden analizar información, reconocer patrones y tomar decisiones con una precisión impresionante. Esta tecnología se está utilizando en una variedad de sectores, desde la medicina y la agricultura hasta la educación y el entretenimiento."
+                    },
+                    {
+                      "subtitle": "Beneficios de la IA en Nuestro Negocio",
+                      "content": [
+                        {
+                          "title": "",
+                          "body": "La integración de la IA en nuestros procesos operativos ha resultado en una automatización significativa de tareas repetitivas y rutinarias. Esto no solo ha permitido una reducción en los costos operativos, sino que también ha liberado a nuestro personal para que se concentre en actividades que requieren creatividad y toma de decisiones estratégicas. Por ejemplo, en la gestión de inventarios, los algoritmos predictivos pueden anticipar las necesidades futuras, optimizando así el flujo de productos y minimizando el desperdicio."
+                        },
+                        {
+                          "title": "Análisis Predictivo",
+                          "body": "La capacidad de la IA para analizar grandes volúmenes de datos en tiempo real proporciona a nuestra empresa una ventaja competitiva al ofrecer insights valiosos sobre tendencias del mercado y comportamientos del consumidor. Estos análisis predictivos nos permiten ajustar nuestras estrategias de manera proactiva, anticipar cambios en la demanda y personalizar nuestras ofertas para alinearlas con las expectativas de nuestros clientes."
+                        },
+                        {
+                          "title": "Personalización del Servicio",
+                          "body": "A través del análisis de datos sobre las preferencias y comportamientos de nuestros clientes, la IA nos permite ofrecer un nivel de personalización sin precedentes. Desde recomendaciones de productos hasta servicios personalizados, la IA facilita una experiencia de usuario más ajustada a las necesidades individuales, aumentando la satisfacción y fidelidad de nuestros clientes."
+                        },
+                        {
+                          "title": "Innovación Continua",
+                          "body": "La IA actúa como un catalizador para la innovación dentro de nuestra empresa. Estamos utilizando esta tecnología para desarrollar productos y servicios innovadores que no solo cumplen con las expectativas del mercado, sino que también establecen nuevos estándares en la industria. La capacidad de simular y modelar distintos escenarios permite a nuestros equipos explorar nuevas ideas y enfoques que antes eran impensables."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "Desafíos y Consideraciones Éticas",
+                      "content": "A pesar de los numerosos beneficios que ofrece la IA, también presenta desafíos y dilemas éticos que deben ser cuidadosamente gestionados. Uno de los principales problemas es la privacidad de los datos. La recopilación y el análisis de grandes cantidades de datos personales plantean riesgos significativos si no se manejan adecuadamente. Además, la transparencia en el uso de algoritmos es crucial para garantizar que los sistemas de IA operen de manera justa y equitativa. En nuestra empresa, estamos comprometidos a implementar prácticas responsables en el uso de la IA. Esto incluye la adopción de políticas claras para la protección de datos, la auditoría de algoritmos para evitar sesgos y la implementación de mecanismos de transparencia que permitan a nuestros usuarios entender cómo y por qué se toman decisiones basadas en IA."
+                    },
+                    {
+                      "subtitle": "El Futuro de la IA en Nuestra Empresa",
+                      "content": "Mirando hacia el futuro, estamos entusiasmados con las posibilidades que la inteligencia artificial ofrece para seguir transformando nuestro negocio. La tecnología está avanzando a un ritmo rápido, y estamos comprometidos a explorar nuevas aplicaciones de la IA que puedan mejorar aún más nuestros productos y servicios. Creemos firmemente que la IA no solo cambiará nuestra empresa, sino que también redefinirá la manera en que nuestros clientes experimentan y se benefician de nuestras soluciones. En resumen, la inteligencia artificial está marcando el comienzo de una nueva era para nuestra empresa. Con su capacidad para optimizar procesos, ofrecer personalización y fomentar la innovación, la IA está destinada a ser un motor clave de nuestro crecimiento y éxito continuo. Estamos emocionados por liderar esta revolución tecnológica y por el impacto positivo que tendrá en el futuro de nuestra industria."
+                    }
+                  ]
+                },
+                "img": "/images/ia.webp"
+              },
+              {
+                "fecha": "22 de enero del 2024",
+                "hora": "04:45 PM",
+                "id": "1213161615156",
+                "category": "Educación Digital",
+                "autor": "Jesus E. Moreno",
+                "color": "bg-[#005187]",
+                "title": "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
+                "subtitle": "Cómo la Tecnología Está Revolucionando la Forma en que Aprendemos y Enseñamos",
+                "content": {
+                  "title": "El Impacto de la Educación Digital en el Aprendizaje del Siglo XXI",
+                  "sections": [
+                    {
+                      "subtitle": "",
+                      "content": "La educación digital ha emergido como un componente crucial en el aprendizaje del siglo XXI, transformando la manera en que los estudiantes y educadores interactúan con el conocimiento. La integración de tecnologías digitales en los entornos educativos está redefiniendo el proceso de enseñanza y aprendizaje, ofreciendo nuevas oportunidades para el acceso a la educación y la personalización del aprendizaje."
+                    },
+                    {
+                      "subtitle": "¿Qué es la Educación Digital?",
+                      "content": "La educación digital se refiere al uso de tecnologías digitales para apoyar y mejorar el proceso educativo. Esto incluye el uso de herramientas como plataformas de aprendizaje en línea, recursos multimedia, aplicaciones educativas y dispositivos tecnológicos en el aula. La educación digital permite a los estudiantes acceder a una amplia variedad de materiales de aprendizaje y participar en experiencias educativas interactivas que antes no eran posibles."
+                    },
+                    {
+                      "subtitle": "Beneficios de la Educación Digital",
+                      "content": [
+                        {
+                          "title": "",
+                          "body": "Uno de los principales beneficios de la educación digital es el acceso mejorado a recursos educativos. Los estudiantes pueden acceder a materiales de aprendizaje desde cualquier lugar y en cualquier momento, lo que facilita el aprendizaje autodirigido y la educación a distancia. Además, las herramientas digitales permiten a los educadores adaptar el contenido y los métodos de enseñanza a las necesidades individuales de cada estudiante, promoviendo un aprendizaje más personalizado y efectivo."
+                        },
+                        {
+                          "title": "Aprendizaje Interactivo",
+                          "body": "Las tecnologías digitales permiten la creación de entornos de aprendizaje interactivos que fomentan la participación activa de los estudiantes. A través de simulaciones, juegos educativos y actividades prácticas, los estudiantes pueden experimentar y aplicar conceptos en contextos reales, lo que mejora la comprensión y retención del conocimiento. Estas herramientas también permiten una retroalimentación inmediata, lo que facilita la corrección de errores y el refuerzo del aprendizaje."
+                        },
+                        {
+                          "title": "Acceso a Recursos Globales",
+                          "body": "La educación digital facilita el acceso a una vasta cantidad de recursos educativos globales. Los estudiantes pueden explorar materiales y participar en cursos ofrecidos por instituciones y expertos de todo el mundo, lo que enriquece su aprendizaje y expande sus perspectivas. Además, el acceso a comunidades en línea y foros de discusión permite a los estudiantes colaborar y compartir conocimientos con sus compañeros a nivel internacional."
+                        },
+                        {
+                          "title": "Adaptación y Flexibilidad",
+                          "body": "La educación digital ofrece una mayor flexibilidad en el diseño y la entrega del contenido educativo. Los educadores pueden crear y modificar materiales de enseñanza de manera rápida y eficiente, adaptándolos a las necesidades y estilos de aprendizaje de sus estudiantes. Esta flexibilidad también permite la implementación de enfoques pedagógicos innovadores, como el aprendizaje basado en proyectos y el aprendizaje adaptativo, que responden a los cambios en el entorno educativo y las demandas del siglo XXI."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "Desafíos y Consideraciones",
+                      "content": "A pesar de los numerosos beneficios, la educación digital también presenta desafíos significativos. Uno de los principales desafíos es la brecha digital, que se refiere a la desigualdad en el acceso a tecnologías y recursos educativos entre diferentes regiones y grupos socioeconómicos. Además, la dependencia de la tecnología puede plantear problemas relacionados con la privacidad y la seguridad de los datos. Los educadores y responsables de políticas deben abordar estos desafíos mediante la implementación de estrategias inclusivas y la protección de la información personal de los estudiantes."
+                    },
+                    {
+                      "subtitle": "El Futuro de la Educación Digital",
+                      "content": "El futuro de la educación digital promete una evolución continua con el avance de las tecnologías emergentes, como la inteligencia artificial, la realidad aumentada y la realidad virtual. Estas tecnologías tienen el potencial de transformar aún más el aprendizaje, proporcionando experiencias educativas inmersivas y personalizadas. A medida que la educación digital sigue desarrollándose, es esencial que las instituciones educativas, los educadores y los responsables de políticas colaboren para garantizar que todos los estudiantes tengan acceso equitativo a las oportunidades de aprendizaje y que la tecnología se utilice de manera ética y efectiva para apoyar el desarrollo educativo."
+                    }
+                  ]
+                },
+                "img": "/images/education.webp"
+              }
+            ]
+          ]
+        },
+        "section_8": {
+          "index": "team",
+          "title": "Nuestro Equipo",
+          "content": "Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
+          "buttontext": "Trabjá con nosotros",
+          "linkButton": "/teamattachment",
+          "itemsStepperImages": [
+            {
+              "items": [
+                "/Team/luisana.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp"
+              ],
+              "top": "0%",
+              "bottom": "-10%",
+              "duration": "100",
+              "direction": -1
+            },
+            {
+              "items": [
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/luisana.webp"
+              ],
+              "top": "-10%",
+              "bottom": "0%",
+              "duration": "100",
+              "direction": 1
+            },
+            {
+              "items": [
+                "/Team/luisana.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp"
+              ],
+              "top": "0%",
+              "bottom": "-10%",
+              "duration": "100",
+              "direction": -1
+            }
+          ]
+        }
+      }
+    },
+    "navbar": {
+      "itemsNavbar": [
+        { "id": "aboutus", "label": "Quienes somos" },
+        { "id": "quienessomos", "label": "Servicios" },
+        { "id": "comotrabajamos", "label": "Como trabajamos" },
+        { "id": "team", "label": "Nuestro equipo" }
+      ]
+    },
+    "footer": {
+      "footerContent": [
+        {
+          "title": "Nuestros Servicios",
+          "links": [
+            { "text": "Desarrollo Web" },
+            { "text": "Diseño UX/UI" },
+            { "text": "Data Science y Data Analytics" },
+            { "text": "Creación de Bases de Datos" },
+            { "text": "Blockchain" },
+            { "text": "Desarrollo de Aplicaciones Móviles" },
+            { "text": "Google Ads y Posicionamiento SEO" },
+            { "text": "Mantenimiento y Soporte" }
+          ]
+        },
+        {
+          "title": "Encuentranos",
+          "links": [
+            {
+              "text": "Martín Zapata 488, Mendoza Capital",
+              "url": ""
+            },
+            {
+              "text": "Mendoza, Argentina",
+              "url": ""
+            },
+            {
+              "text": "Telefono +54 9 261 233-6104",
+              "url": ""
+            },
+            {
+              "text": "Email contacto@neurons.com",
+              "url": ""
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "icon": "FaLinkedin",
+          "url": "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
+          "label": "Dribbble account"
+        }
+      ],
+      "footerInfo": {
+        "copyright": "© 2024 Neurons",
+        "socialLinks": [
+          {
+            "icon": "FaLinkedin",
+            "url": "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
+            "label": "Dribbble account"
+          }
+        ]
+      }
+    }
+  },
+  "en": {
+    "home": {
+      "sections": {
+        "section_1": {
+          "index": "home",
+          "title1": "Custom Software Development for Websites and Mobile Apps",
+          "title2": "We **Are Neurons**, your partner in digital solutions",
+          "title3": "At Neurons, we are experts in **custom software development**, creating modern **websites** and **custom mobile apps**. We offer **digital solutions** that enhance user experience and optimize business processes."
+        },
+        "section_2": {
+          "index": "counter",
+          "content": [
+            {
+              "label": "Projects",
+              "value": 15,
+              "description": "We have a specialized team with multiple skills to achieve the goals. Each project is a new challenge that we solve creatively and functionally."
+            },
+            {
+              "label": "Countries",
+              "value": 5,
+              "description": "We work with clients from different countries, allowing us to adapt our solutions to a variety of contexts and international needs."
+            },
+            {
+              "label": "Satisfied Clients",
+              "value": 8,
+              "description": "Our clients trust us because of our ability to deliver personalized strategies, from creativity to management, tailored to each specific need."
+            }
+          ]
+        },
+        "section_3": {
+          "index": "aboutus",
+          "title": "Who We Are",
+          "content": "We take pride in offering services that range from web design and development to data management and analysis, as well as venturing into disruptive technologies such as Blockchain. At Neurons, we transform ideas into extraordinary digital experiences that drive our clients' online success.",
+          "items": [
+            {
+              "title": "Vision",
+              "text": "At Neurons, we believe in a future where digital innovation is accessible and transformative for all. Our goal is to lead digital transformation by creating solutions that not only solve current challenges but also inspire and connect brands with their users in meaningful and effective ways.",
+              "image": "/About/2.webp"
+            },
+            {
+              "title": "Mission",
+              "text": "Our mission is to help our clients stand out in the digital world by creating innovative and customized solutions. From web and mobile app development to SEO optimization and data analytics, we focus on deeply understanding each client's needs to deliver results that make a difference and drive online success.",
+              "image": "/About/3.webp"
+            }
+          ]
+        },
+        "section_4": {
+          "index": "quienessomos",
+          "title": "Why Choose Us?",
+          "subtitle1": "Choosing Neurons means opting for a design and development agency that specializes in creating custom digital solutions. These range from professional web design or corporate website design, offering you modern, responsive, and optimized pages to make your business stand out online, to helping you build eCommerce platforms that boost your sales through SEO positioning, also handling areas like Data Science and Data Analytics. Choosing us means trusting a team that understands your needs, prioritizes your goals, and supports you in taking your business to the next level with innovative technology and strategic design.",
+          "subtitle2": "At Neurons, we offer the following services:",
+          "items": [
+            {
+              "title": "Web Application Development",
+              "svg": "/services/1.svg",
+              "content": "We create dynamic, responsive, and optimized websites that deliver an exceptional user experience across all devices.",
+              "bg": "bg-red-500 dark:bg-red-900"
+            },
+            {
+              "title": "Mobile Application Development",
+              "svg": "/services/2.svg",
+              "content": "We create custom mobile applications for iOS and Android that offer smooth and engaging user experiences, expanding reach and interaction with the audience.",
+              "bg": "bg-blue-500 dark:bg-blue-900"
+            },
+            {
+              "title": "Database Creation",
+              "svg": "/services/3.svg",
+              "content": "We develop robust and scalable databases that allow efficient information management and quick access to critical business data.",
+              "bg": "bg-green-500 dark:bg-green-900"
+            },
+            {
+              "title": "Data Science and Data Analytics",
+              "svg": "/services/4.svg",
+              "content": "We apply Data Science and Data Analytics techniques to extract valuable insights from data and make informed decisions that drive our clients' growth.",
+              "bg": "bg-yellow-500 dark:bg-yellow-900"
+            },
+            {
+              "title": "UX/UI Design",
+              "svg": "/services/5.svg",
+              "content": "We design intuitive and attractive interfaces that maximize usability and user interaction, using tools like Figma for prototyping and collaborative design.",
+              "bg": "bg-purple-500 dark:bg-purple-900"
+            },
+            {
+              "title": "Maintenance and Support",
+              "svg": "/services/6.svg",
+              "content": "We offer continuous maintenance services and technical support to ensure optimal performance and security of websites, mobile apps, and digital solutions in general.",
+              "bg": "bg-pink-500 dark:bg-pink-900"
+            },
+            {
+              "title": "Blockchain",
+              "svg": "/services/7.svg",
+              "content": "We implement Blockchain-based solutions to ensure security, transparency, and integrity of data and online transactions.",
+              "bg": "bg-teal-500 dark:bg-teal-900"
+            },
+            {
+              "title": "Google Ads and SEO Positioning",
+              "svg": "/services/8.svg",
+              "content": "We develop Google Ads and SEO strategies to increase visibility and organic traffic for websites and mobile apps, maximizing the return on investment for our clients.",
+              "bg": "bg-indigo-500 dark:bg-indigo-900"
+            }
+          ]
+        },
+        "section_5": {
+          "index": "comotrabajamos",
+          "title": "How We Work at Neurons",
+          "steps": [
+            {
+              "name": "1. Initial Contact",
+              "index": 1,
+              "content": {
+                "title": "Initial Contact",
+                "subTitle": "You contact us through our website, WhatsApp, or social media. We receive your request and record all relevant information in our project management system.",
+                "img": "roadmap1",
+                "index": "1"
+              }
+            },
+            {
+              "name": "2. Initial Meeting and Requirement Analysis",
+              "index": 2,
+              "content": {
+                "title": "Initial Meeting and Requirement Analysis",
+                "subTitle": "Our specialized team will contact you to schedule a video call and discuss how Neurons can help. During the call, we gather all project requirements and document them in detail. This becomes the requirements document that will guide the entire project.",
+                "img": "roadmap2",
+                "index": "2"
+              }
+            },
+            {
+              "name": "3. Action Plan Design",
+              "index": 3,
+              "content": {
+                "title": "Action Plan Design",
+                "subTitle": "Neurons creates an action plan to establish deadlines, successes, and failures of your requirements. We create a detailed system design, including architecture, components, interfaces, and algorithms. This design is reviewed and approved before moving forward.",
+                "img": "roadmap3",
+                "index": "3"
+              }
+            },
+            {
+              "name": "4. Plan Execution",
+              "index": 4,
+              "content": {
+                "title": "Plan Execution",
+                "subTitle": "Execution of the action plan with established deadlines, where we will show you our progress. We develop the system following the approved design, sequentially implementing each component. This process includes coding, component integration, and preparation for testing.",
+                "img": "roadmap4",
+                "index": "4"
+              }
+            },
+            {
+              "name": "5. Testing and Validation",
+              "index": 5,
+              "content": {
+                "title": "Testing and Validation",
+                "subTitle": "Deployment for feedback. We conduct exhaustive testing to ensure that the system meets all specified requirements. These tests include unit testing, integration testing, system testing, and user acceptance testing.",
+                "img": "roadmap5",
+                "index": "5"
+              }
+            },
+            {
+              "name": "6. Project Delivery",
+              "index": 6,
+              "content": {
+                "title": "Project Delivery",
+                "subTitle": "Once the system has passed all tests, the completed project is delivered to the client. This delivery includes all necessary documentation and training if required.",
+                "img": "roadmap6",
+                "index": "6"
+              }
+            },
+            {
+              "name": "7. Maintenance and Improvements",
+              "index": 7,
+              "content": {
+                "title": "Maintenance and Improvements",
+                "subTitle": "After delivery, we provide support for maintenance and any necessary improvements. This includes bug fixes, updates, and enhancements based on new client needs.",
+                "img": "roadmap6",
+                "index": "6"
+              }
+            }
+          ]
+        },
+        "section_6": {
+          "index": "skills",
+          "title": "Our Tools",
+          "items": [
+            { "svg": "/OurSkills/sql.svg" },
+            { "svg": "/OurSkills/Boopstrap.svg" },
+            { "svg": "/OurSkills/node.svg" },
+            { "svg": "/OurSkills/angular.svg" },
+            { "svg": "/OurSkills/html.svg" },
+            { "svg": "/OurSkills/java.svg" },
+            { "svg": "/OurSkills/js.svg" },
+            { "svg": "/OurSkills/ts.svg" },
+            { "svg": "/OurSkills/mongodb.svg" },
+            { "svg": "/OurSkills/mysql.svg" },
+            { "svg": "/OurSkills/pb.svg" },
+            { "svg": "/OurSkills/php.svg" },
+            { "svg": "/OurSkills/python.svg" },
+            { "svg": "/OurSkills/r.svg" }
+          ]
+        },
+        "section_7": {
+          "index": "blog",
+          "title": "Blog and Articles",
+          "subtitle": "Discover our innovative perspective on technology and solutions",
+          "itemsBlog": [
+            [
+              {
+                "fecha": "January 22, 2024",
+                "hora": "04:45 PM",
+                "id": "12131616151",
+                "category": "AI",
+                "autor": "Jesus E. Moreno",
+                "color": "bg-[#005187]",
+                "title": "Artificial Intelligence",
+                "subtitle": "The Revolution of Artificial Intelligence: Transforming the Future of Our Business",
+                "content": {
+                  "title": "The Revolution of Artificial Intelligence: Transforming the Future of Our Business",
+                  "sections": [
+                    {
+                      "subtitle": "",
+                      "content": "Artificial Intelligence (AI) has ceased to be a mere fantasy from science fiction and has become a tangible reality that is redefining the way businesses operate and how we interact with the world around us. In our company, we have embraced this technological revolution to improve our processes, optimize our operations, and offer better service to our customers."
+                    },
+                    {
+                      "subtitle": "What is Artificial Intelligence?",
+                      "content": "Artificial Intelligence refers to a machine's ability to mimic human cognitive functions, such as learning and problem-solving. Through advanced algorithms and large amounts of data, AI can analyze information, recognize patterns, and make decisions with impressive accuracy. This technology is being used in a variety of sectors, from medicine and agriculture to education and entertainment."
+                    },
+                    {
+                      "subtitle": "Benefits of AI in Our Business",
+                      "content": [
+                        {
+                          "title": "",
+                          "body": "The integration of AI into our operational processes has resulted in significant automation of repetitive and routine tasks. This has not only led to a reduction in operational costs but also freed up our staff to focus on activities that require creativity and strategic decision-making. For example, in inventory management, predictive algorithms can anticipate future needs, optimizing product flow and minimizing waste."
+                        },
+                        {
+                          "title": "Predictive Analysis",
+                          "body": "AI's ability to analyze large volumes of data in real time gives our company a competitive advantage by providing valuable insights into market trends and consumer behavior. These predictive analyses allow us to proactively adjust our strategies, anticipate changes in demand, and personalize our offerings to align with customer expectations."
+                        },
+                        {
+                          "title": "Service Personalization",
+                          "body": "Through the analysis of data on customer preferences and behaviors, AI allows us to offer an unprecedented level of personalization. From product recommendations to customized services, AI enables a user experience more tailored to individual needs, increasing customer satisfaction and loyalty."
+                        },
+                        {
+                          "title": "Continuous Innovation",
+                          "body": "AI acts as a catalyst for innovation within our company. We are using this technology to develop innovative products and services that not only meet market expectations but also set new industry standards. The ability to simulate and model different scenarios allows our teams to explore new ideas and approaches that were previously unthinkable."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "Challenges and Ethical Considerations",
+                      "content": "Despite the numerous benefits AI offers, it also presents challenges and ethical dilemmas that need to be carefully managed. One of the main issues is data privacy. The collection and analysis of large amounts of personal data pose significant risks if not handled properly. Furthermore, transparency in the use of algorithms is crucial to ensure that AI systems operate fairly and equitably. In our company, we are committed to implementing responsible practices in the use of AI. This includes adopting clear policies for data protection, auditing algorithms to prevent biases, and implementing transparency mechanisms that allow our users to understand how and why decisions based on AI are made."
+                    },
+                    {
+                      "subtitle": "The Future of AI in Our Company",
+                      "content": "Looking toward the future, we are excited about the possibilities that artificial intelligence offers to continue transforming our business. Technology is advancing rapidly, and we are committed to exploring new AI applications that can further enhance our products and services. We firmly believe that AI will not only change our company but also redefine the way our customers experience and benefit from our solutions. In summary, artificial intelligence is ushering in a new era for our company. With its ability to optimize processes, offer personalization, and foster innovation, AI is destined to be a key driver of our growth and ongoing success. We are thrilled to lead this technological revolution and the positive impact it will have on the future of our industry."
+                    }
+                  ]
+                },
+                "img": "/images/ia.webp"
+              },
+              {
+                "fecha": "January 22, 2024",
+                "hora": "04:45 PM",
+                "id": "1213161615156",
+                "category": "Digital Education",
+                "autor": "Jesus E. Moreno",
+                "color": "bg-[#005187]",
+                "title": "The Impact of Digital Education on 21st Century Learning",
+                "subtitle": "How Technology is Revolutionizing the Way We Learn and Teach",
+                "content": {
+                  "title": "The Impact of Digital Education on 21st Century Learning",
+                  "sections": [
+                    {
+                      "subtitle": "",
+                      "content": "Digital education has emerged as a crucial component in 21st-century learning, transforming the way students and educators interact with knowledge. The integration of digital technologies in educational environments is redefining the teaching and learning process, offering new opportunities for access to education and personalized learning."
+                    },
+                    {
+                      "subtitle": "What is Digital Education?",
+                      "content": "Digital education refers to the use of digital technologies to support and enhance the educational process. This includes the use of tools like online learning platforms, multimedia resources, educational apps, and technological devices in the classroom. Digital education allows students to access a wide variety of learning materials and engage in interactive educational experiences that were previously not possible."
+                    },
+                    {
+                      "subtitle": "Benefits of Digital Education",
+                      "content": [
+                        {
+                          "title": "",
+                          "body": "One of the main benefits of digital education is the enhanced access to educational resources. Students can access learning materials from anywhere and at any time, facilitating self-directed learning and distance education. Additionally, digital tools allow educators to adapt content and teaching methods to the individual needs of each student, promoting more personalized and effective learning."
+                        },
+                        {
+                          "title": "Interactive Learning",
+                          "body": "Digital technologies enable the creation of interactive learning environments that encourage active student participation. Through simulations, educational games, and hands-on activities, students can experience and apply concepts in real-world contexts, improving understanding and retention of knowledge. These tools also provide immediate feedback, which facilitates error correction and reinforces learning."
+                        },
+                        {
+                          "title": "Access to Global Resources",
+                          "body": "Digital education facilitates access to a vast amount of global educational resources. Students can explore materials and participate in courses offered by institutions and experts from around the world, enriching their learning and broadening their perspectives. Moreover, access to online communities and discussion forums allows students to collaborate and share knowledge with peers internationally."
+                        },
+                        {
+                          "title": "Adaptation and Flexibility",
+                          "body": "Digital education offers greater flexibility in the design and delivery of educational content. Educators can create and modify teaching materials quickly and efficiently, adapting them to the needs and learning styles of their students. This flexibility also allows for the implementation of innovative pedagogical approaches, such as project-based learning and adaptive learning, which respond to changes in the educational environment and the demands of the 21st century."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "Challenges and Considerations",
+                      "content": "Despite the numerous benefits, digital education also presents significant challenges. One of the main challenges is the digital divide, referring to the inequality in access to technology and educational resources among different regions and socioeconomic groups. Furthermore, the dependence on technology can raise issues related to privacy and data security. Educators and policymakers must address these challenges by implementing inclusive strategies and protecting students' personal information."
+                    },
+                    {
+                      "subtitle": "The Future of Digital Education",
+                      "content": "The future of digital education promises continuous evolution with the advancement of emerging technologies like artificial intelligence, augmented reality, and virtual reality. These technologies have the potential to further transform learning, providing immersive and personalized educational experiences. As digital education continues to develop, it is essential for educational institutions, educators, and policymakers to collaborate to ensure all students have equitable access to learning opportunities and that technology is used ethically and effectively to support educational development."
+                    }
+                  ]
+                },
+                "img": "/images/education.webp"
+              }
+            ]
+          ]
+        },
+        "section_8": {
+          "index": "team",
+          "title": "Our Team",
+          "content": "Neurons has a diverse team of professionals passionate about technology and web design, as well as experts in Data Science, Blockchain, and database management. Our multidisciplinary team works closely to deliver integrated solutions that drive the success of our clients online.",
+          "buttontext": "Work with us",
+          "linkButton": "/teamattachment",
+          "itemsStepperImages": [
+            {
+              "items": [
+                "/Team/luisana.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp"
+              ],
+              "top": "0%",
+              "bottom": "-10%",
+              "duration": "100",
+              "direction": -1
+            },
+            {
+              "items": [
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/luisana.webp"
+              ],
+              "top": "-10%",
+              "bottom": "0%",
+              "duration": "100",
+              "direction": 1
+            },
+            {
+              "items": [
+                "/Team/luisana.webp",
+                "/Team/yeli.webp",
+                "/Team/adrian.webp",
+                "/Team/jesus2.webp",
+                "/Team/miguel.webp"
+              ],
+              "top": "0%",
+              "bottom": "-10%",
+              "duration": "100",
+              "direction": -1
+            }
+          ]
+        }
+      }
+    },
+    "navbar": {
+      "itemsNavbar": [
+        { "id": "aboutus", "label": "About Us" },
+        { "id": "quienessomos", "label": "Services" },
+        { "id": "comotrabajamos", "label": "How We Work" },
+        { "id": "team", "label": "Our Team" }
+      ]
+    },
+    "footer": {
+      "footerContent": [
+        {
+          "title": "Our Services",
+          "links": [
+            { "text": "Web Development" },
+            { "text": "UX/UI Design" },
+            { "text": "Data Science and Data Analytics" },
+            { "text": "Database Creation" },
+            { "text": "Blockchain" },
+            { "text": "Mobile Application Development" },
+            { "text": "Google Ads and SEO Positioning" },
+            { "text": "Maintenance and Support" }
+          ]
+        },
+        {
+          "title": "Find Us",
+          "links": [
+            {
+              "text": "Martín Zapata 488, Mendoza Capital",
+              "url": ""
+            },
+            {
+              "text": "Mendoza, Argentina",
+              "url": ""
+            },
+            {
+              "text": "Phone +54 9 261 233-6104",
+              "url": ""
+            },
+            {
+              "text": "Email contacto@neurons.com",
+              "url": ""
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "icon": "FaLinkedin",
+          "url": "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
+          "label": "Dribbble account"
+        }
+      ],
+      "footerInfo": {
+        "copyright": "© 2024 Neurons",
+        "socialLinks": [
+          {
+            "icon": "FaLinkedin",
+            "url": "https://www.linkedin.com/company/neurons-soluciones-digitales/about/",
+            "label": "Dribbble account"
+          }
+        ]
+      }
+    }
+  }
+}
