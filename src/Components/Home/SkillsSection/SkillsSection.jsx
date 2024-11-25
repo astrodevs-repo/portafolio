@@ -1,11 +1,10 @@
 import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import MovingText from "../../shared/velocity/Velocity";
-import { itemsClient } from "../../../data/Home";
 
 import { motion } from "framer-motion";
 
-function SkillsSection({ index }) {
+function SkillsSection({ index, title, items }) {
   const animationProps = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -16,16 +15,10 @@ function SkillsSection({ index }) {
   return (
     <motion.section id={index} {...animationProps} className="">
       <Container>
-        <Title text={"Nuestras Herramientas"} textColor={"text-blackCeniza font-Baskerville"} />
+        <Title text={title} textColor={"text-blackCeniza font-Baskerville"} />
       </Container>
 
-      <MovingText
-        right={"0%"}
-        left={"-100%"}
-        items={itemsClient}
-        extra={"gap-20 "}
-        baseVelocity={-1}
-      />
+      <MovingText right={"0%"} left={"-100%"} items={items} extra={"gap-20 "} baseVelocity={-1} />
     </motion.section>
   );
 }

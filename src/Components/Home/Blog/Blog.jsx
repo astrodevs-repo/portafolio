@@ -1,12 +1,11 @@
 import Text from "../../shared/Text";
 import SubTitle from "../../shared/SubTitle";
 import { Link } from "react-router-dom";
-import { itemsBlog } from "../../../data/Home";
 import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import { motion } from "framer-motion";
 
-function Blog({ index }) {
+function Blog({ index, itemsBlog }) {
   return (
     <Container>
       <section id={index} className="flex flex-col gap-10 pt-20 pb-0 sm:pb-20 ">
@@ -22,7 +21,7 @@ function Blog({ index }) {
         />
       </section>
       <motion.div className="scroller">
-        {itemsBlog.map(({ title, img, id, content }, idx) => (
+        {itemsBlog?.map(({ title, img, id, content }, idx) => (
           <article className="w-1/2 sm:w-1/3 mr-2" key={idx}>
             <Link to={`blog/${id}`}>
               <img

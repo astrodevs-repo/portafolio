@@ -1,12 +1,9 @@
 import Container from "../../Components/Container/Container";
-import SubTitle from "../../Components/shared/SubTitle";
-import { itemsClient, itemsTeam } from "../../data/Home";
+
 import { motion } from "framer-motion";
 import MovingTextJ from "../../Components/TeamAttachment/MovingTextJ";
 import FormAttachment from "../../Components/TeamAttachment/FormTeamAttachment";
-import Title from "../../Components/shared/Title";
 import NavbarGoBack from "../../Components/shared/NavbarGoBack";
-import ParallaxText from "../../Components/shared/VelocityVertical";
 const TeamAttachment = () => {
   return (
     <motion.section

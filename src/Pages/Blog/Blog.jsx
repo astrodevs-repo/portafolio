@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import Title from "../../Components/shared/Title";
-import { itemsBlog } from "../../data/Home";
 import Text from "../../Components/shared/Text";
 import Container from "../../Components/Container/Container";
 import SubTitle from "../../Components/shared/SubTitle";
@@ -12,8 +11,11 @@ import { motion } from "framer-motion";
 import Loading from "../../Components/shared/Loading/Loading";
 import SEO from "../../Components/shared/SEO/Seo";
 import NavbarGoBack from "../../Components/shared/NavbarGoBack";
+import { useLang } from "../../context/useLang";
 
 const Blog = () => {
+  const data = useLang();
+
   const { id } = useParams();
   const [body, setBody] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +23,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const aux = itemsBlog.find((e) => e.id === id);
+        const aux = data?.home?.sections?.section_7?.itemsBlog.find((e) => e.id === id);
         if (aux) {
           setBody(aux);
         } else {
@@ -38,13 +40,6 @@ const Blog = () => {
       fetchData();
     }
   }, [id]);
-
-  const scrollToSection = (index) => {
-    const section = document.getElementById(`section-${index}`);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   if (loading) {
     return (
@@ -164,7 +159,7 @@ const Blog = () => {
         </section>
 
         <Carousel show={3.5}>
-          {itemsBlog
+          {data?.home?.sections?.section_7?.itemsBlog
             .filter(({ id: blogId }) => blogId !== id)
             .map(({ title, img, id, content }) => (
               <SwiperSlide key={img}>

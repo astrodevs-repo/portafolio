@@ -1,48 +1,53 @@
 import Section from "../../shared/Section/Section";
-import ItemMobile from "./ItemMobile";
-
-function Stepper({ index }) {
-  const steps = [
-    {
-      name: "1. Contacto inicial",
-      index: "1",
-    },
-    {
-      name: "2. Reunión Inicial y Análisis de Requerimientos",
-      index: "2",
-    },
-    {
-      name: "3. Diseño del Plan de Acción",
-      index: "3",
-    },
-    {
-      name: "4. Ejecución del Plan",
-      index: "4",
-    },
-    {
-      name: "5. Pruebas y Validación",
-      index: "5",
-    },
-    {
-      name: "6. Entrega del Proyecto",
-      index: "6",
-    },
-    {
-      name: "7. Mantenimiento y Mejoras",
-      index: "7",
-    },
-  ];
-
+import { motion } from "framer-motion";
+import Text from "../../shared/Text";
+import SubTitle from "../../shared/SubTitle";
+function Stepper({ index, title, steps }) {
   return (
     <Section
-      title={"Como trabajamos en Neurons"}
+      title={title}
       index={index}
       bg={"bg-transparent"}
       textColor={"text-white"}
       contentPosition={"pt-20 sm:pt-40 "}
     >
-      {steps.map(({ name }, i) => (
-        <ItemMobile length={steps.length} key={i} name={name} index={i} i={i} />
+      {steps?.map(({ name, content, index }) => (
+        <article
+          key={name}
+          className={`relative flex justify-center ${
+            index < steps.length ? "divide-x-4 divide-blackCeniza dark:divide-gray-400" : ""
+          }`}
+        >
+          <section>
+            {/** Circle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-blackCeniza dark:bg-gray-400 h-5 w-5 rounded-full absolute -top-5 -left-2"
+            ></motion.div>
+            {/** Circle */}
+
+            <span
+              className={`border-l-5 ${"bg-blackCeniza dark:bg-gray-400 opacity-20 w-10 h-10 absolute -top-[30px] left-[-18px] rounded-full"}`}
+            ></span>
+          </section>
+
+          <section className="pl-14 pr-5 sm:pl-40 pb-32">
+            <motion.section
+              initial={{ opacity: 0.5, y: 40 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{ duration: 0.5 }}
+              className="-mt-10 flex flex-col gap-5"
+            >
+              <SubTitle text={content.title} extra={"font-bold"} font={"font-Baskerville italic"} />
+              <Text content={content.subTitle} />
+            </motion.section>
+          </section>
+        </article>
       ))}
     </Section>
   );

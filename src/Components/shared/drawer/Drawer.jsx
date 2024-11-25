@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { scrollToSection } from "../../../utils/functions";
 
-const DrawerNavigation = () => {
+const DrawerNavigation = ({ itemsNavbar }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOutsideClick = (event) => {
@@ -19,14 +19,6 @@ const DrawerNavigation = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  const navItems = [
-    { id: "aboutus", label: "Quienes somos" },
-    { id: "quienessomos", label: "Servicios" },
-    { id: "comotrabajamos", label: "Como trabajamos" },
-    { id: "team", label: "Nuestro equipo" },
-    { id: "contactanos", label: "Contactanos" },
-  ];
 
   return (
     <div className="flex justify-center items-center">
@@ -83,7 +75,7 @@ const DrawerNavigation = () => {
           </button>
           <div className="py-4 overflow-y-auto">
             <ul className="space-y-2 font-medium">
-              {navItems.map(({ id, label }) => (
+              {itemsNavbar.map(({ id, label }) => (
                 <li
                   key={id}
                   onClick={() => {

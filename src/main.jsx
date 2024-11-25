@@ -6,13 +6,18 @@ import { HelmetProvider } from "react-helmet-async";
 import Layout from "./Layout/Layout.jsx";
 
 import App from "./App.jsx";
+import { LangProvider } from "./context/useLang.jsx";
+
 const helmetContext = {};
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HelmetProvider context={helmetContext}>
-      <Layout>
-        <App />
-      </Layout>
-    </HelmetProvider>
+    <LangProvider>
+      <HelmetProvider context={helmetContext}>
+        <Layout>
+          <App />
+        </Layout>
+      </HelmetProvider>
+    </LangProvider>
   </React.StrictMode>
 );

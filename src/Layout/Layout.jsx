@@ -2,8 +2,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../Components/Footer/Footer";
+import { useLang } from "../context/useLang";
 
 const Layout = ({ children }) => {
+  const data = useLang();
   return (
     <section style={{ position: "relative" }}>
       <ReactLenis
@@ -43,7 +45,7 @@ const Layout = ({ children }) => {
         theme="light"
         transition="Bounce" // Corrige la propiedad de transición
       />
-      <Footer />
+      <Footer {...data?.footer} />
     </section>
   );
 };

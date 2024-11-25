@@ -1,12 +1,11 @@
 import { lazy, Suspense } from "react";
 import SkeletonText from "../../shared/Skeleton/Text";
-
 const ContactUs = lazy(() => import("../../Footer/form/Form"));
 const Text = lazy(() => import("../../shared/Text"));
 const Title = lazy(() => import("../../shared/Title"));
 const SubTitle = lazy(() => import("../../shared/SubTitle"));
 
-function Header({ index }) {
+function Header({ index, title1, title2, title3 }) {
   return (
     <section
       id={index}
@@ -15,20 +14,14 @@ function Header({ index }) {
       <section className="grid grid-cols-1 sm:grid-cols-3 w-full gap-0 sm:gap-10 max-w-[1900px]">
         <section className="flex flex-col justify-center items-start gap-5 col-span-2 md:col-span-3 lg:col-span-2">
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-10"} />}>
-            <Text
-              content="Desarrollo de software a medida para sitios web y apps móviles"
-              extra="text-center sm:text-start w-full font-normal"
-            />
+            <Text content={title1} extra="text-center sm:text-start w-full font-normal" />
           </Suspense>
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-10"} row={2} />}>
-            <Title
-              text="Nosotros **Somos Neurons**, tu socio en soluciones digitales"
-              extra="text-center sm:text-start font-bold font-Baskerville"
-            />
+            <Title text={title2} extra="text-center sm:text-start font-bold font-Baskerville" />
           </Suspense>
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-5h-10"} row={4} />}>
             <SubTitle
-              text="En Neurons, somos expertos en el **desarrollo de software** a medida, creando **páginas web** modernas y **aplicaciones móviles** personalizadas. Ofrecemos **soluciones digitales** que mejoran la experiencia de usuario y optimizan procesos de negocio."
+              text={title3}
               extra="text-start hidden sm:block"
               textColor={"text-blackCeniza"}
             />
@@ -46,7 +39,7 @@ function Header({ index }) {
           </section>
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-5h-10"} row={4} />}>
             <SubTitle
-              text="En Neurons, somos expertos en el **desarrollo de software** a medida, creando **páginas web** modernas y **aplicaciones móviles** personalizadas. Ofrecemos **soluciones digitales** que mejoran la experiencia de usuario y optimizan procesos de negocio."
+              text={title3}
               extra="text-start sm:hidden block py-10"
               textColor={"text-blackCeniza"}
             />

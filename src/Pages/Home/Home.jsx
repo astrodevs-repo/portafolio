@@ -2,19 +2,18 @@ import React from "react";
 import Header from "../../Components/Home/Header/Header";
 import Navbar from "../../Components/Navbar/Navbar";
 import SEO from "../../Components/shared/SEO/Seo";
-
-import { lazy, Suspense } from "react";
-
-const About = lazy(() => import("../../Components/About/About"));
-const Team = lazy(() => import("../../Components/Home/team/Team"));
-const StepList = lazy(() => import("../../Components/Home/Stepper/Stepper"));
-const ClientsSection = lazy(() => import("../../Components/Home/SkillsSection/SkillsSection"));
-// const Blog = lazy(() => import("../../Components/Home/Blog/Blog"));
-const Counter = lazy(() => import("../../Components/Home/Counter/Counter"));
-const BackToTopButton = lazy(() => import("../../Components/shared/BackTotopButtom"));
-const Servicios = lazy(() => import("../../Components/Home/Servicios/Servicios"));
+import About from "../../Components/About/About";
+import Team from "../../Components/Home/team/Team";
+import StepList from "../../Components/Home/Stepper/Stepper";
+import ClientsSection from "../../Components/Home/SkillsSection/SkillsSection";
+//import Blog from "../../Components/Home/Blog/Blog"; // Si necesitas el componente Blog, descomenta esta línea
+import Counter from "../../Components/Home/Counter/Counter";
+import BackToTopButton from "../../Components/shared/BackTotopButtom";
+import Servicios from "../../Components/Home/Servicios/Servicios";
+import { useLang } from "../../context/useLang";
 
 function Home() {
+  const data = useLang();
   return (
     <React.Fragment>
       <SEO
@@ -27,32 +26,18 @@ function Home() {
         type=""
         siteName="Neurons"
       />
-      <Navbar />
-      <Header index={"home"} />
-      <Suspense fallback={<div>Cargando contador...</div>}>
-        <Counter index={"counter"} />
-      </Suspense>
-      <Suspense fallback={<div>Cargando sobre nosotros...</div>}>
-        <About index={"aboutus"} />
-      </Suspense>
-      <Suspense fallback={<div>Cargando servicios...</div>}>
-        <Servicios index={"quienessomos"} />
-      </Suspense>
-      <Suspense fallback={<div>Cargando pasos...</div>}>
-        <StepList index={"comotrabajamos"} />
-      </Suspense>
-      <Suspense fallback={<div>Cargando habilidades...</div>}>
-        <ClientsSection index={"skills"} />
-      </Suspense>
-      {/* <Suspense fallback={<div>Cargando blog...</div>}>
-        <Blog index={"blog"} />
-      </Suspense> */}
-      <Suspense fallback={<div>Cargando equipo...</div>}>
-        <Team index={"team"} />
-      </Suspense>
-      <Suspense fallback={<div>Cargando botón...</div>}>
-        <BackToTopButton />
-      </Suspense>
+      <Navbar {...data?.navbar} />
+      <Header {...data?.home?.sections?.section_1} />
+      <Counter {...data?.home?.sections?.section_2} />
+      <About {...data?.home?.sections?.section_3} />
+      <Servicios {...data?.home?.sections?.section_4} />
+      <StepList {...data?.home?.sections?.section_5} />
+      <ClientsSection {...data?.home?.sections?.section_6} />
+
+      {/* <Blog {...data?.home?.sections?.section_7} /> */}
+
+      <Team {...data?.home?.sections?.section_8} />
+      <BackToTopButton />
     </React.Fragment>
   );
 }

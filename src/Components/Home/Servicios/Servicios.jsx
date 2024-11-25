@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import Section from "../../shared/Section/Section";
 import Card from "./Card";
 import CardAccordion from "./CardAccordion";
-import { servicios } from "../../../data/Home";
 import Text from "../../shared/Text";
 
-function Servicios({ index }) {
+function Servicios({ index, title, subtitle1, subtitle2, items }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleExpand = (index) => {
@@ -15,24 +14,22 @@ function Servicios({ index }) {
 
   return (
     <Section
-      title={"¿Por qué elegirnos?"}
+      title={title}
       subtitle={" "}
       index={index}
       contentPosition="grid-cols-1 sm:grid-cols-4 md:grid-cols-1 lg:grid-cols-4 justify-center flex flex-col gap-0 sm:flex md:grid w-full pt-0 sm:pt-0 md:pt-10 lg:pt-10 xl:pt-10 2xl:pt-20  3xl:pt-20 "
     >
       <Text
-        content={
-          "Elegir a Neurons, es optar por una agencia de diseño y desarrollo que se especializa en crear soluciones digitales personalizadas. Que van desde el diseño web profesional o diseño web para empresas ofreciéndote páginas modernas, responsivas y optimizadas para destacar tu negocio en línea, hasta ayudándote a construir plataformas eCommerce que impulsan tus ventas a través del posicionamiento SEO, tambien manejando áreas como la Data Science y Data Analytics. Escogernos significa confiar en un equipo que entiende tus necesidades, prioriza tus objetivos y te acompaña para llevar tu negocio al siguiente nivel con tecnología innovadora y un diseño estratégico."
-        }
+        content={subtitle1}
         extra={"col-span-4 md:col-span-1 lg:col-span-4 pb-10 font-Baskerville text-blackCeniza"}
       />
       <Text
-        content={"En Neurons te ofrecemos los siguientes servicios:"}
+        content={subtitle2}
         extra={
           "col-span-4  md:col-span-1 lg:col-span-4 pb-0 font-Baskerville text-blackCeniza md:pb-20"
         }
       />
-      {servicios.map((servicio, idx) => (
+      {items?.map((servicio, idx) => (
         <motion.div
           key={idx}
           initial={{ opacity: 0.5, y: 20 }}
@@ -53,7 +50,7 @@ function Servicios({ index }) {
         </motion.div>
       ))}
 
-      {servicios.map((servicio, index) => (
+      {items?.map((servicio, index) => (
         <CardAccordion
           key={index}
           index={index}

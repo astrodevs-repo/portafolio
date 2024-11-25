@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import Container from "../../Components/Container/Container";
 import SubTitle from "../../Components/shared/SubTitle";
-import MovingText from "../../Components/shared/velocity/Velocity";
-import { itemsTeam } from "../../data/Home";
 import { motion } from "framer-motion";
 import Title from "../../Components/shared/Title";
 import { FaCheck } from "react-icons/fa";
@@ -10,6 +8,7 @@ import ScrollToTop from "../../Components/shared/ScrollTop/ScrollTop";
 import NavbarGoBack from "../../Components/shared/NavbarGoBack";
 const Sended = () => {
   const [animationState, setAnimationState] = useState("initial");
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -56,14 +55,6 @@ const Sended = () => {
             extra={"text-center sm:text-center"}
           />
         </Container>
-        <MovingText
-          right={"0%"}
-          left={"-100%"}
-          items={itemsTeam}
-          extra={
-            "max-w-[250px] min-w-[250px] max-h-[300px] min-h-[300px] sm:max-w-[400px] sm:min-w-[400px] sm:max-h-[500px] sm:min-h-[500px] rounded-lg "
-          }
-        />
       </motion.section>
     </ScrollToTop>
   );
