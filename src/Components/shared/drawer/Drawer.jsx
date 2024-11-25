@@ -19,6 +19,7 @@ const DrawerNavigation = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
+
   const navItems = [
     { id: "aboutus", label: "Quienes somos" },
     { id: "quienessomos", label: "Servicios" },
@@ -28,7 +29,7 @@ const DrawerNavigation = () => {
   ];
 
   return (
-    <div className=" flex justify-center items-center ">
+    <div className="flex justify-center items-center">
       <button
         onClick={(e) => {
           e.stopPropagation();
@@ -43,8 +44,10 @@ const DrawerNavigation = () => {
       {isOpen && (
         <div
           id="drawer-navigation"
-          className={`fixed w-[80%] sm:w-[30%] md:w-[50%] top-0 right-0 z-40 h-screen  overflow-y-auto transition-transform  ${
-            isOpen ? "animate__animated animate__slideInRight" : "-translate-x-full"
+          className={`fixed w-[80%] sm:w-[30%] md:w-[50%] top-0 right-0 z-40 h-screen overflow-y-auto transition-transform transition-opacity duration-300 ease-in-out ${
+            isOpen
+              ? "animate__animated animate__slideInRight"
+              : "transform translate-x-full opacity-0"
           } bg-blackCeniza w-80`}
           tabIndex="-1"
           aria-labelledby="drawer-navigation-label"
@@ -81,14 +84,15 @@ const DrawerNavigation = () => {
           <div className="py-4 overflow-y-auto">
             <ul className="space-y-2 font-medium">
               {navItems.map(({ id, label }) => (
-                <li key={id}>
-                  <a
-                    href={id}
-                    onClick={() => scrollToSection(id)}
-                    className="block py-2 px-3 rounded text-white hover:bg-[#4A5171] dark:text-white dark:hover:bg-gray-700"
-                  >
-                    {label}
-                  </a>
+                <li
+                  key={id}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    scrollToSection(id);
+                  }}
+                  className="block py-2 px-3 rounded text-white hover:bg-[#4A5171] dark:text-white dark:hover:bg-gray-700"
+                >
+                  {label}
                 </li>
               ))}
             </ul>

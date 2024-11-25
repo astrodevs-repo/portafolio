@@ -7,19 +7,19 @@ import Title from "../shared/Title";
 function About({ index }) {
   return (
     <section id={index} className="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
-      <Container extra={"col-span-2"}>
+      <Container extra={"col-span-1 sm:col-span-2"}>
         <Title
           text={"Quienes Somos"}
           textColor={"text-blackCeniza"}
-          extra={"font-Baskerville text-center pb-0 sm:pb-20 "}
+          extra={"font-Baskerville text-center pb-10 sm:pb-20 "}
         />
-        <SubTitle text={about[0].text} textColor={"text-blackCeniza"} extra={""} />
+        <Text content={about[0].text} textColor={"text-blackCeniza"} extra={""} />
       </Container>
 
       {about.slice(1, 3).map((slide, slideIndex) => (
         <article
           key={slideIndex}
-          className="flex flex-col gap-5 min-h-96 px-10 sm:px-20 justify-center items-center "
+          className="flex flex-col gap-5 sm:min-h-96 min-h-[70vh]  justify-center items-center "
           style={{
             backgroundImage: `url(${slide.image})`,
             backgroundSize: "cover",
@@ -27,8 +27,15 @@ function About({ index }) {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <SubTitle text={slide.title} extra={"text-white text-center font-medium"} />
-          <Text content={slide.text} textColor={"text-white"} w={"w-full"} extra={"text-center"} />
+          <section className="bg-black/50 h-full w-full px-10 sm:px-20 flex flex-col justify-center items-center">
+            <SubTitle text={slide.title} extra={"text-white text-center font-medium"} />
+            <Text
+              content={slide.text}
+              textColor={"text-white"}
+              w={"w-full"}
+              extra={"text-center"}
+            />
+          </section>
         </article>
       ))}
     </section>

@@ -2,7 +2,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../Components/Footer/Footer";
-import { IoLogoWhatsapp } from "react-icons/io";
 
 const Layout = ({ children }) => {
   return (
@@ -28,7 +27,7 @@ const Layout = ({ children }) => {
         <img
           src="https://i.pinimg.com/originals/16/71/c0/1671c09a32f98796ede36fabfab4dee7.png"
           alt=""
-          className="w-32 h-32"
+          className="w-24 h-24 sm:w-32 sm:h-32"
         />
       </a>
       <ToastContainer
