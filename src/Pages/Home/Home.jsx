@@ -32,7 +32,7 @@ function Home() {
         siteName="Neurons"
       />
       <Navbar {...data?.navbar} />
-      <Header {...data?.home?.sections?.section_1} />
+      <Header {...data?.home?.sections?.section_1} form={data?.footer?.form} />
       <Counter {...data?.home?.sections?.section_2} />
       <About {...data?.home?.sections?.section_3} />
       <Servicios {...data?.home?.sections?.section_4} />

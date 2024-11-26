@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLang } from "../../context/useLang";
 const LangDropdown = () => {
-  const { language, changeLanguage } = useLang(); // Destructure the context value
+  const { language } = useLang(); // Destructure the context value
 
   return (
-    <div className="flex justify-center px-3">
+    <div className="justify-center px-3 hidden sm:hidden md:hidden lg:flex">
       <FlyoutLink href="#" FlyoutContent={PricingContent}>
         <button
           type="button"

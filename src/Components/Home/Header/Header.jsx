@@ -5,7 +5,7 @@ const Text = lazy(() => import("../../shared/Text"));
 const Title = lazy(() => import("../../shared/Title"));
 const SubTitle = lazy(() => import("../../shared/SubTitle"));
 
-function Header({ index, title1, title2, title3 }) {
+function Header({ index, title1, title2, title3, form }) {
   return (
     <section
       id={index}
@@ -30,11 +30,11 @@ function Header({ index, title1, title2, title3 }) {
 
         <section className="flex flex-col gap-5 py-5 sm:py-0 sm:flex md:col-span-3 lg:col-span-1 lg:flex">
           <Suspense fallback={<SkeletonText width={"w-full"} />}>
-            <SubTitle text="Dejanos tu consulta" extra={"hidden sm:flex"} />
+            <SubTitle text={form?.title} extra={"hidden sm:flex"} />
           </Suspense>
           <section className="bg-white shadow-2xl shadow-blackCeniza  dark:shadow-black dark:bg-blackCeniza p-5 rounded-md">
             <Suspense fallback={<SkeletonText width={"w-full"} height={"h-[60vh]"} />}>
-              <ContactUs />
+              <ContactUs {...form} />
             </Suspense>
           </section>
           <Suspense fallback={<SkeletonText width={"w-full"} height={"h-5h-10"} row={4} />}>

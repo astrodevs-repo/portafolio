@@ -6,6 +6,10 @@ import { useLang } from "../context/useLang";
 
 const Layout = ({ children }) => {
   const data = useLang();
+
+  if (!data) {
+    return <div>Loading...</div>; // Display loading state until data is available
+  }
   return (
     <section style={{ position: "relative" }}>
       <ReactLenis
@@ -45,7 +49,7 @@ const Layout = ({ children }) => {
         theme="light"
         transition="Bounce" // Corrige la propiedad de transición
       />
-      <Footer {...data?.footer} />
+      <Footer {...data?.data?.footer} />
     </section>
   );
 };
