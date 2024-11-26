@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { scrollToSection } from "../../../utils/functions";
+import { useLang } from "../../../context/useLang";
+import { motion } from "framer-motion";
 
 const DrawerNavigation = ({ itemsNavbar }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, changeLanguage } = useLang();
 
   const handleOutsideClick = (event) => {
     const drawer = document.getElementById("drawer-navigation");
@@ -27,7 +30,7 @@ const DrawerNavigation = ({ itemsNavbar }) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
-        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-white dark:text-white sm:text-[35px] mb-2"
+        className="sm:flex md:flex lg:hidden flex justify-center items-center text-[30px] text-white dark:text-white sm:text-[35px] "
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <MdOutlineMenu />
@@ -89,6 +92,27 @@ const DrawerNavigation = ({ itemsNavbar }) => {
               ))}
             </ul>
           </div>
+
+          <button
+            type="button"
+            className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white hover:bg-[#4A5171] gap-3 ${
+              language === "en" && "border-b-2 border-BlueNeurons"
+            }`}
+            onClick={() => changeLanguage("en")}
+          >
+            <img src={`/navbar/en.svg`} alt="language" className="max-w-5 object-contain min-h-5" />
+            English
+          </button>
+          <button
+            type="button"
+            className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-white hover:bg-[#4A5171] gap-3 ${
+              language === "es" && "border-b-2 border-BlueNeurons "
+            }`}
+            onClick={() => changeLanguage("es")}
+          >
+            <img src={`/navbar/es.svg`} alt="language" className="max-w-5 object-contain min-h-5" />
+            Español
+          </button>
         </div>
       )}
     </div>

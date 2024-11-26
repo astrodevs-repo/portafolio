@@ -9,11 +9,12 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import Container from "../Container/Container";
 
-const Footer = React.memo(function Footer({ footerContent, footerInfo, socialLinks }) {
+const Footer = React.memo(function Footer({ footerContent, footerInfo, socialLinks, form }) {
   const iconMapping = {
     FaLinkedin: <FaLinkedin />,
     // Puedes agregar más íconos aquí según sea necesario
   };
+
   return (
     <section
       className="flex flex-col justify-center items-center bg-gradient-to-tr  from-BlueNeurons/50 via-[#e9eeff] to-[#e9eeff] dark:bg-gradient-to-tr 
@@ -27,23 +28,18 @@ const Footer = React.memo(function Footer({ footerContent, footerInfo, socialLin
           >
             <section className="flex flex-col gap-10 sm:gap-5">
               <Title
-                text={"Contactanos"}
+                text={form?.title}
                 textColor={"text-blackCeniza font-medium dark:text-white font-Baskerville"}
               />
 
-              <Text
-                textColor={"text-blackCeniza dark:text-white"}
-                content={
-                  "En  Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!"
-                }
-              />
+              <Text textColor={"text-blackCeniza dark:text-white"} content={form?.content} />
               <p
                 className={`text-blackCeniza dark:text-white font-Poppins leading-[40px]   text-xl sm:text-lg: md:text-xl lg:text-2xl  py-10 w-3/4 `}
               >
-                ¡Gracias por considerar Neurons como su socio digital!
+                {form?.finally}
               </p>
             </section>
-            <ContactUs />
+            <ContactUs {...form} />
           </section>
         </Container>
       </section>

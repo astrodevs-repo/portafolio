@@ -11,17 +11,17 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="mb-2 text-gray-200 dark:text-gray-200 h-full"
+      className="h-10 px-5 sm:px-5 md:px-10 lg:px-0 text-gray-200 dark:text-gray-200  flex justify-center items-center"
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {darkMode ? (
         <>
-          <FiSun className="text-lg md:text-xl" />
+          <FiSun className="text-2xl md:text-xl" />
           <span className="sr-only">Switch to light mode</span>
         </>
       ) : (
         <>
-          <FiMoon className="text-lg md:text-xl" />
+          <FiMoon className="text-2xl md:text-xl" />
           <span className="sr-only">Switch to dark mode</span>
         </>
       )}

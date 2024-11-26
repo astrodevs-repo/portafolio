@@ -1,9 +1,8 @@
 import useForm from "../../../hooks/useForm";
-import { motion } from "framer-motion";
 import Loading from "../../shared/Loading/Loading";
 import Text from "../../shared/Text";
 
-const ContactUs = () => {
+const ContactUs = ({ input1, input2, input3, input4, input5, input6, buttonText }) => {
   const { handleChange, handleBlur, handleSubmit, loading, values, errors, isSubmitting, form } =
     useForm({
       type: "home",
@@ -23,7 +22,7 @@ const ContactUs = () => {
             <input
               type="text"
               name="name1"
-              placeholder="Escribe tu nombre"
+              placeholder={input1}
               value={values.name1}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -36,7 +35,7 @@ const ContactUs = () => {
             <div className="flex flex-col w-full text-blackCeniza dark:text-white gap-2">
               <input
                 type="text"
-                placeholder="Dejanos tu teléfono"
+                placeholder={input2}
                 name="user_referrer"
                 value={values.user_referrer}
                 onChange={handleChange}
@@ -53,7 +52,7 @@ const ContactUs = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
-                placeholder="En que país estás"
+                placeholder={input3}
                 required
               />
             </div>
@@ -67,7 +66,7 @@ const ContactUs = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-1 hover:outline-none custom-placeholder"
-              placeholder="Escribe tu email"
+              placeholder={input4}
               required
             />
           </div>
@@ -79,7 +78,7 @@ const ContactUs = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               className={`bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white  rounded px-3 py-1 hover:outline-none custom-placeholder`}
-              placeholder="Confirme su email"
+              placeholder={input5}
               required
             />
             {errors.email1 && <p className="text-red-300">{errors.email1}</p>}
@@ -92,7 +91,7 @@ const ContactUs = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               className="bg-transparent text-blackCeniza dark:text-white border border-blackCeniza dark:border-white rounded px-3 py-10 overflow-hidden hover:outline-none custom-placeholder"
-              placeholder="Dejanos tu consulta, nos contactaremos contigo de inmediato"
+              placeholder={input6}
               required
             />
           </div>
@@ -106,7 +105,7 @@ const ContactUs = () => {
               isSubmitting && "opacity-50 cursor-not-allowed"
             } w-full`}
           >
-            {loading ? <Loading /> : <Text textColor={"text-white"} content={"Enviar"} />}
+            {loading ? <Loading /> : <Text textColor={"text-white"} content={buttonText} />}
           </button>
         </section>
       </form>

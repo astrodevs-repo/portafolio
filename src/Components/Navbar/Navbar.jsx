@@ -11,7 +11,6 @@ const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggl
 
 const Navbar = React.memo(function Navbar({ itemsNavbar }) {
   const [isVisible, setIsVisible] = useState(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // state to control the dropdown
   const controls = useAnimation();
   let lastScrollY = window.scrollY;
 
@@ -41,11 +40,6 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
     }
   }, [isVisible, controls]);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
-  // Function to toggle dropdown open/close
-
   return (
     <motion.nav
       className={`fixed w-full z-20 top-0 start-0 flex justify-between  shadow-BlueNeurons/30 dark:shadow-dark-BlueNeurons/10 shadow-lg px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 transition-colors duration-300 ${
@@ -65,7 +59,7 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
         </ul>
       </Suspense>
       <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
-        <section className="flex gap-5 items-center justify-center h-full">
+        <section className="flex gap-2 items-center justify-center h-full ">
           {/* <ButtonGrandient id={"contactanos"} text={"Contactanos"} /> */}
           <DarkModeToggle />
           <DrawerNavigation itemsNavbar={itemsNavbar} />
