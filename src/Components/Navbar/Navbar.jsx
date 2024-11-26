@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { scrollToSection } from "../../utils/functions";
 import SkeletonText from "../shared/Skeleton/Text";
+import LangDropdown from "../shared/LangDropdown";
 
 const Logo = lazy(() => import("../shared/Logo"));
 const TextNavbar = lazy(() => import("../shared/TextNavBar"));
@@ -10,6 +11,7 @@ const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggl
 
 const Navbar = React.memo(function Navbar({ itemsNavbar }) {
   const [isVisible, setIsVisible] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // state to control the dropdown
   const controls = useAnimation();
   let lastScrollY = window.scrollY;
 
@@ -39,6 +41,11 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
     }
   }, [isVisible, controls]);
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+  // Function to toggle dropdown open/close
+
   return (
     <motion.nav
       className={`fixed w-full z-20 top-0 start-0 flex justify-between  shadow-BlueNeurons/30 dark:shadow-dark-BlueNeurons/10 shadow-lg px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2 transition-colors duration-300 ${
@@ -62,6 +69,7 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
           {/* <ButtonGrandient id={"contactanos"} text={"Contactanos"} /> */}
           <DarkModeToggle />
           <DrawerNavigation itemsNavbar={itemsNavbar} />
+          <LangDropdown />
         </section>
       </Suspense>
     </motion.nav>

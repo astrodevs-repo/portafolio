@@ -13,7 +13,12 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import { useLang } from "../../context/useLang";
 
 function Home() {
-  const data = useLang();
+  const { data } = useLang(); // Destructure to get data
+
+  if (!data) {
+    return <div>Loading...</div>; // Display loading state until data is available
+  }
+
   return (
     <React.Fragment>
       <SEO

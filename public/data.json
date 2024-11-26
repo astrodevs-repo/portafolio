@@ -371,6 +371,18 @@
       ]
     },
     "footer": {
+      "form": {
+        "title": "Contactanos",
+        "content": "En Neurons, nos comprometemos a ofrecer soluciones digitales de primera clase que ayudan a nuestros clientes a alcanzar sus objetivos comerciales en el mundo digital. Si está buscando una agencia que combine experiencia técnica, creatividad y visión estratégica, ¡estamos aquí para ayudarle a lograrlo!",
+        "finally": "¡Gracias por considerar Neurons como su socio digital!",
+        "input1": "Escribí tu nombre",
+        "input2": "Dejanos tu télefono",
+        "input3": "En qué país estás",
+        "input4": "Escribí tu email",
+        "input5": "Confirmá tu email",
+        "input6": "Dejanos una consulta, nos contactarems con vos de inmediato",
+        "buttonText": "Enviar"
+      },
       "footerContent": [
         {
           "title": "Nuestros Servicios",
@@ -798,6 +810,19 @@
       ]
     },
     "footer": {
+      "form": {
+        "title": "Contact Us",
+        "content": "At Neurons, we are committed to delivering top-notch digital solutions that help our clients achieve their business goals in the digital world. If you're looking for an agency that combines technical expertise, creativity, and strategic vision, we are here to help you make it happen!",
+        "finally": "Thank you for considering Neurons as your digital partner!",
+        "input1": "Enter your name",
+        "input2": "Leave us your phone number",
+        "input3": "Which country are you in",
+        "input4": "Enter your email",
+        "input5": "Confirm your email",
+        "input6": "Leave us a message, we will contact you immediately",
+        "buttonText": "Send"
+      },
+
       "footerContent": [
         {
           "title": "Our Services",
