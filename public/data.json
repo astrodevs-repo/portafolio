@@ -79,7 +79,7 @@
               "title": "Diseño UX/UI",
               "svg": "/services/5.svg",
               "content": "Diseñamos interfaces intuitivas y atractivas que maximizan la usabilidad y la interacción del usuario, utilizando herramientas como Figma para prototipado y diseño colaborativo.",
-              "bg": "bg-purple-500 dark:bg-purple-900"
+              "bg": "bg-green-500 dark:bg-purple-900"
             },
             {
               "title": "Mantenimiento y Soporte",
@@ -91,13 +91,13 @@
               "title": "Blockchain",
               "svg": "/services/7.svg",
               "content": "Implementamos soluciones basadas en tecnología Blockchain para garantizar la seguridad, la transparencia e integridad de los datos y las transacciones en línea.",
-              "bg": "bg-teal-500 dark:bg-teal-900"
+              "bg": "bg-red-500 dark:bg-teal-900"
             },
             {
               "title": "Google Ads y Posicionamiento SEO",
               "svg": "/services/8.svg",
               "content": "Desarrollamos estrategias de Google Ads y SEO para aumentar la visibilidad y el tráfico orgánico de los sitios web y aplicaciones móviles, maximizando así el retorno de la inversión de nuestros clientes.",
-              "bg": "bg-indigo-500 dark:bg-indigo-900"
+              "bg": "bg-blue-500 dark:bg-indigo-900"
             }
           ]
         },
@@ -445,7 +445,7 @@
           "index": "home",
           "title1": "Custom Software Development for Websites and Mobile Apps",
           "title2": "We **Are Neurons**, your partner in digital solutions",
-          "title3": "At Neurons, we are experts in **custom software development**, creating modern **websites** and **custom mobile apps**. We offer **digital solutions** that enhance user experience and optimize business processes."
+          "title3": "At Neurons, we are experts in custom software development, creating modern websites and custom mobile apps. We offer digital solutions that enhance user experience and optimize business processes."
         },
         "section_2": {
           "index": "counter",
@@ -518,7 +518,7 @@
               "title": "UX/UI Design",
               "svg": "/services/5.svg",
               "content": "We design intuitive and attractive interfaces that maximize usability and user interaction, using tools like Figma for prototyping and collaborative design.",
-              "bg": "bg-purple-500 dark:bg-purple-900"
+              "bg": "bg-green-500 dark:bg-purple-900"
             },
             {
               "title": "Maintenance and Support",
@@ -530,13 +530,13 @@
               "title": "Blockchain",
               "svg": "/services/7.svg",
               "content": "We implement Blockchain-based solutions to ensure security, transparency, and integrity of data and online transactions.",
-              "bg": "bg-teal-500 dark:bg-teal-900"
+              "bg": "bg-red-500 dark:bg-teal-900"
             },
             {
               "title": "Google Ads and SEO Positioning",
               "svg": "/services/8.svg",
               "content": "We develop Google Ads and SEO strategies to increase visibility and organic traffic for websites and mobile apps, maximizing the return on investment for our clients.",
-              "bg": "bg-indigo-500 dark:bg-indigo-900"
+              "bg": "bg-blue-500 dark:bg-indigo-900"
             }
           ]
         },
