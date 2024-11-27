@@ -18,7 +18,15 @@ export default {
       colors: {
         blackCeniza: "#2D3142",
         Chicle: "#2FE3CE",
+        Yellow: "#a8aa02",
         BlueNeurons: "#89b8fff7",
+        purple: "#3f3cbb",
+        midnight: "#121063",
+        metal: "#565584",
+        tahiti: "#3ab7bf",
+        silver: "#ecebff",
+        "bubble-gum": "#ff77e9",
+        bermuda: "#78dcca",
         dark: {
           blackCeniza: "#1a1a1a",
           Chicle: "#00bfae",
