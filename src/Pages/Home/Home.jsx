@@ -22,7 +22,7 @@ function Home() {
   return (
     <React.Fragment>
       <SEO
-        title={"Neurons | Empresa de Desarrollo y Diseño Web Profesional"}
+        title={"Neurons | Agencia de Desarrollo y Diseño Web Profesionales"}
         description={
           "En Neurons, desarrollamos sitios web y soluciones digitales personalizados y profesionales para cualquier empresa o negocio. ¡Descubre cómo podemos ayudarte a crecer en línea!"
         }

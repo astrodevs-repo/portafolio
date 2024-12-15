@@ -5,7 +5,7 @@ function Counter({ index, content }) {
   return (
     <Section
       index={index}
-      bg={"bg-white dark:bg-blackCeniza"}
+      bg={"bg-transparent"}
       contentPosition={"grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-20"}
     >
       {content?.map(({ value, label, description }, index) => (

@@ -46,7 +46,7 @@ const Footer = React.memo(function Footer({ footerContent, footerInfo, socialLin
 
       <footer className="max-w-[1600px] h-full sm:h-[70vh] flex flex-col justify-end w-full px-5 sm:px-10 md:px-5 lg:px-20">
         <section className="grid grid-cols-1 sm:grid-cols-2 w-full my-10 gap-10 sm:gap-0">
-          <SubTitleItalic text={"Neurons"} textColor={"text-[#6352ff]"} extra={"font-extrabold"} />
+          <SubTitleItalic text={"Neurons"} textColor={"text-[#33aed6]"} extra={"font-extrabold"} />
           <section className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-2 w-full">
             {footerContent?.map((section, index) => (
               <section key={index}>
