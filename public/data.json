@@ -4,9 +4,9 @@
       "sections": {
         "section_1": {
           "index": "home",
-          "title1": "Desarrollo de software a medida para sitios web y apps móviles",
+          "title1": "Agencia de desarrollo de páginas web, software y apps móviles",
           "title2": "Nosotros **Somos Neurons**, tu socio en soluciones digitales",
-          "title3": "En Neurons, somos expertos en el desarrollo de software a medida, creando páginas web modernas y aplicaciones móviles personalizadas. Ofrecemos soluciones digitales que mejoran la experiencia de usuario y optimizan procesos de negocio."
+          "title3": "En Neurons, somos expertos en el desarrollo de páginas web modernas, creando aplicaciones móviles personalizadas y software a medida. Ofrecemos soluciones digitales que mejoran la experiencia de usuario y optimizan procesos de negocio."
         },
         "section_2": {
           "index": "counter",
@@ -31,7 +31,7 @@
         "section_3": {
           "index": "aboutus",
           "title": "Quienes Somos",
-          "content": "Nos enorgullece ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea.",
+          "content": "Somos una agencia que se enorgullece de ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como la Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea, enfocados en diseño, creatividad y soluciones para pymes y startups. También estamos orientados a servicios técnicos, desarrollo a medida y soluciones empresariales, adaptándonos a las necesidades específicas de cada cliente.",
           "items": [
             {
               "title": "Visión",
