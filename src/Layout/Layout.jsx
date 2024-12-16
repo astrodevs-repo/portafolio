@@ -81,7 +81,7 @@ const Layout = ({ children }) => {
 
           {isVisible && (
             <motion.div
-              className="absolute bottom-10 right-28 transform -translate-x-full p-2 bg-white text-black rounded-md min-w-72"
+              className="absolute bottom-10 right-28 transform -translate-x-full p-2 bg-white text-black rounded-md  min-w-fit md:min-w-72"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
