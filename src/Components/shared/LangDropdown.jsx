@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLang } from "../../context/useLang";
+
 const LangDropdown = () => {
-  const { language } = useLang(); // Destructure the context value
+  const { language } = useLang(); // Desestructuramos el valor del contexto
 
   return (
     <div className="justify-center px-3 hidden sm:hidden md:hidden lg:flex">
@@ -50,10 +51,10 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
             exit={{ opacity: 0, y: 15 }}
             style={{ translateX: "-50%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-1/2 top-16 bg-white text-black"
+            className="absolute left-1/2 top-16 bg-white dark:bg-gray-800 text-black dark:text-white"
           >
             <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
-            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
+            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white dark:bg-gray-800" />
             <FlyoutContent />
           </motion.div>
         )}
@@ -66,7 +67,7 @@ const PricingContent = () => {
   const { changeLanguage } = useLang();
 
   return (
-    <div className="w-64 bg-white p-6 shadow-xl">
+    <div className="w-64 bg-white dark:bg-gray-800 p-6 shadow-xl dark:shadow-lg">
       <button
         type="button"
         onClick={() => changeLanguage("en")}
