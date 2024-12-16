@@ -278,7 +278,7 @@ const FormAttachment = () => {
           </section>
           <ButtonSimple
             text={"Enviar"}
-            bg={"bg-blue-500"}
+            bg={""}
             w={"w-full sm:w-1/2"}
             type={"submit"}
             loader={loading}
