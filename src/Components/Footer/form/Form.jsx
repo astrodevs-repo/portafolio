@@ -1,4 +1,5 @@
 import useForm from "../../../hooks/useForm";
+import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 import Loading from "../../shared/Loading/Loading";
 import Text from "../../shared/Text";
 
@@ -98,15 +99,13 @@ const ContactUs = ({ input1, input2, input3, input4, input5, input6, buttonText 
         </section>
 
         <section className={`flex justify-center w-full  transition-colors `}>
-          <button
+          <ButtonSimple
+            text={loading ? <Loading /> : buttonText}
+            textColor={"text-white"}
+            w={"w-full"}
+            active={isSubmitting}
             type={"submit"}
-            disabled={isSubmitting}
-            className={`bg-[#33aed6] transition-shadow duration-700  shadow-lg shadow-blackCeniza hover:shadow-2xl hover:shadow-blackCeniza flex justify-center items-center gap-2 dark:bg-purple-600 dark:border-purple-600 dark:text-white py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border-[#33aed6] border-2 hover:bg-[#33aed6] dark:hover:bg-purple-700 focus:z-10 focus:ring-4 ${
-              isSubmitting && "opacity-50 cursor-not-allowed"
-            } w-full`}
-          >
-            {loading ? <Loading /> : <Text textColor={"text-white"} content={buttonText} />}
-          </button>
+          />
         </section>
       </form>
     </section>

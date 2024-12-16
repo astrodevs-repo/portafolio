@@ -11,6 +11,7 @@ import Counter from "../../Components/Home/Counter/Counter";
 import BackToTopButton from "../../Components/shared/BackTotopButtom";
 import Servicios from "../../Components/Home/Servicios/Servicios";
 import { useLang } from "../../context/useLang";
+import Footer from "../../Components/Footer/Footer";
 
 function Home() {
   const { data } = useLang(); // Destructure to get data
@@ -44,6 +45,7 @@ function Home() {
 
       <Team {...data?.home?.sections?.section_8} />
       <BackToTopButton />
+      <Footer {...data?.footer} />
     </React.Fragment>
   );
 }
