@@ -3,13 +3,13 @@
     "home": {
       "sections": {
         "section_1": {
-          "index": "home",
+          "index": "inicio",
           "title1": "Agencia de desarrollo web, software y aplicaciones móviles",
           "title2": "Nosotros **Somos Neurons**, tu socio en soluciones digitales",
           "title3": "En Neurons, somos expertos en el desarrollo de páginas web modernas, aplicaciones móviles personalizadas y software a medida. Ofrecemos soluciones digitales que mejoran la experiencia de usuario y optimizan los procesos empresariales."
         },
         "section_2": {
-          "index": "counter",
+          "index": "estadisticas",
           "content": [
             {
               "label": "Proyectos",
@@ -29,7 +29,7 @@
           ]
         },
         "section_3": {
-          "index": "aboutus",
+          "index": "quienessomos",
           "title": "Quiénes Somos",
           "content": "Somos una agencia que se enorgullece de ofrecer servicios que van desde el diseño y desarrollo web hasta la gestión y análisis de datos, además de incursionar en tecnologías disruptivas como Blockchain. En Neurons, transformamos ideas en experiencias digitales extraordinarias que impulsan el éxito de nuestros clientes en línea, enfocados en diseño, creatividad y soluciones para pymes y startups. También estamos orientados a servicios técnicos, desarrollo a medida y soluciones empresariales, adaptándonos a las necesidades específicas de cada cliente.",
           "items": [
@@ -46,7 +46,7 @@
           ]
         },
         "section_4": {
-          "index": "quienessomos",
+          "index": "porqueelegirnos",
           "title": "¿Por qué elegirnos?",
           "subtitle1": "Elegir a Neurons es optar por una agencia de diseño y desarrollo que se especializa en crear soluciones digitales personalizadas. Desde el diseño web profesional o diseño web para empresas, ofreciendo páginas modernas, responsivas y optimizadas para destacar tu negocio en línea, hasta la creación de plataformas de eCommerce que impulsan tus ventas mediante posicionamiento SEO. También manejamos áreas como Data Science y Data Analytics. Escogernos significa confiar en un equipo que entiende tus necesidades, prioriza tus objetivos y te acompaña para llevar tu negocio al siguiente nivel con tecnología innovadora y un diseño estratégico.",
           "subtitle2": "En Neurons te ofrecemos los siguientes servicios:",
@@ -178,7 +178,7 @@
           ]
         },
         "section_6": {
-          "index": "skills",
+          "index": "herramientas",
           "title": "Nuestras herramientas",
           "items": [
             { "svg": "/OurSkills/sql.svg" },
@@ -313,7 +313,7 @@
           ]
         },
         "section_8": {
-          "index": "team",
+          "index": "equipo",
           "title": "Nuestro equipo",
           "content": "Neurons cuenta con un equipo diverso de profesionales apasionados por la tecnología y el diseño web, así como expertos en Data Science, Blockchain y gestión de bases de datos. Nuestro equipo multidisciplinario trabaja en estrecha colaboración para ofrecer soluciones integrales que impulsan el éxito de nuestros clientes en línea.",
           "buttontext": "Trabaja con nosotros",
@@ -364,10 +364,10 @@
     },
     "navbar": {
       "itemsNavbar": [
-        { "id": "aboutus", "label": "Quienes somos" },
-        { "id": "quienessomos", "label": "Servicios" },
+        { "id": "quienessomos", "label": "Quienes somos" },
+        { "id": "porqueelegirnos", "label": "Servicios" },
         { "id": "comotrabajamos", "label": "Como trabajamos" },
-        { "id": "team", "label": "Nuestro equipo" }
+        { "id": "equipo", "label": "Nuestro equipo" }
       ]
     },
     "footer": {

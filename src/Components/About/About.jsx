@@ -5,7 +5,7 @@ import Title from "../shared/Title";
 
 function About({ index, title, content, items }) {
   return (
-    <section id={index} className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <section id={index} className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 sm:pt-10">
       <Container extra={"col-span-1 sm:col-span-2"}>
         <Title
           text={title}

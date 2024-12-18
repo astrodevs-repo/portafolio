@@ -23,7 +23,7 @@ function BackToTopButton() {
 
   return (
     <motion.button
-      onClick={() => scrollToSection("home")}
+      onClick={() => scrollToSection("back")}
       className="fixed bottom-14 left-5 p-4 border-2 border-white text-black dark:text-white rounded-full shadow-lg z-40 hidden sm:flex"
       initial={{ opacity: 0, y: 50, rotate: 180 }}
       animate={{

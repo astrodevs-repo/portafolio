@@ -6,7 +6,7 @@ function Stepper({ index, title, steps }) {
   return (
     <Section
       title={title}
-      index={index}
+      index={"comotrabajamos"}
       bg={"bg-transparent"}
       textColor={"text-white"}
       contentPosition={"pt-20 sm:pt-40 "}
