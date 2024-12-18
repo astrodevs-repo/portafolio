@@ -12,6 +12,8 @@ const DarkModeToggle = lazy(() => import("../shared/DarkModeToggle/DarkModeToggl
 const Navbar = React.memo(function Navbar({ itemsNavbar }) {
   const [isVisible, setIsVisible] = useState(true);
   const [alert, setAlert] = useState(true);
+  const [rotate, setRotate] = useState(false);
+  const [hasRotated, setHasRotated] = useState(false); // Nuevo estado para saber si ya giró
 
   const controls = useAnimation();
   let lastScrollY = window.scrollY;
@@ -47,9 +49,41 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
     }
   }, [isVisible, controls]);
 
+  useEffect(() => {
+    // Crear el IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasRotated) {
+            setRotate(true); // Girar solo la primera vez que se ve
+            setHasRotated(true); // Marcar que ya giró
+          }
+        });
+      },
+      { threshold: 0.5 } // Ejecutar cuando al menos el 50% del logo esté visible
+    );
+
+    // Observar el logo
+    const logoElement = document.getElementById("logo");
+    if (logoElement) {
+      observer.observe(logoElement);
+    }
+
+    // Limpiar el observador al desmontar el componente
+    return () => {
+      if (logoElement) {
+        observer.unobserve(logoElement);
+      }
+    };
+  }, [hasRotated]);
+
+  const handleLogoClick = () => {
+    setRotate((prev) => !prev); // Cambiar el estado de rotación al hacer clic
+  };
+
   return (
     <motion.nav
-      className={`fixed w-full z-20 top-0 start-0  shadow-BlueNeurons/30 dark:shadow-dark-BlueNeurons/10 shadow-lg  transition-colors duration-300 ${
+      className={`fixed w-full z-20 top-0 start-0 shadow-BlueNeurons/30 dark:shadow-dark-BlueNeurons/10 shadow-lg transition-colors duration-300 ${
         isVisible ? "bg-blackCeniza dark:bg-blackCeniza" : "bg-transparent"
       }`}
       animate={controls}
@@ -58,7 +92,7 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
       <section
         className={`w-full hidden h-5 flex items-center justify-start bg-Chicle py-5 px-3 sm:px-10 md:px-5 lg:px-20 ${
           alert === false ? "hidden" : ""
-        } `}
+        }`}
       >
         <h1 className="font-Poppins">
           Si ya eres nuestro cliente, podes fijarte el estado de tu proyecto e interactuar con
@@ -67,19 +101,26 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
             href="/seguimiento"
             className="text-white bg-blue-500 p-1 rounded-md px-2 font-Baskerville font-bold"
             whileHover={{
-              scale: 1.05, // Añadir un pequeño zoom al pasar el ratón
-              backgroundColor: "#4A90E2", // Un color de fondo más claro o personalizado
-              color: "#FFD700", // Color de texto dorado cuando se pasa el ratón
-              transition: { duration: 0.3 }, // Animación suave de 0.3 segundos
+              scale: 1.05,
+              backgroundColor: "#4A90E2",
+              color: "#FFD700",
+              transition: { duration: 0.3 },
             }}
           >
             aquí
           </motion.a>
         </h1>
       </section>
-      <section className="flex justify-between  px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2">
+      <section className="flex justify-between px-3 sm:px-10 md:px-5 lg:px-20 gap-5 items-center py-2">
         <Suspense fallback={<section className="w-10 h-10 rounded-full bg-BlueNeurons"></section>}>
-          <Logo link={"home"} />
+          <motion.div
+            id="logo" // Añadir un id para que el IntersectionObserver lo encuentre
+            animate={{ rotate: rotate ? 360 : 0 }}
+            transition={{ duration: 1 }}
+            onClick={handleLogoClick}
+          >
+            <Logo link={"inicio"} />
+          </motion.div>
         </Suspense>
         <Suspense
           fallback={<SkeletonText height={"h-2"} width={"w-10"} extra={"hidden sm:flex"} />}
@@ -92,7 +133,6 @@ const Navbar = React.memo(function Navbar({ itemsNavbar }) {
         </Suspense>
         <Suspense fallback={<SkeletonText height={"h-5"} width={"w-10"} extra={"rounded-xl"} />}>
           <section className="flex gap-2 items-center justify-center h-full ">
-            {/* <ButtonGrandient id={"contactanos"} text={"Contactanos"} /> */}
             <DarkModeToggle />
             <DrawerNavigation itemsNavbar={itemsNavbar} />
             <LangDropdown />

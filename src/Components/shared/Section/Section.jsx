@@ -23,11 +23,10 @@ const Section = React.memo(function Section({
   return (
     <motion.section
       className={`w-fit-content h-fit-content ${bg} py-5 sm:py-5 ${extra} flex justify-center`}
-      id={index}
       {...animationProps}
     >
       <Container>
-        <section className="flex flex-col gap-5">
+        <section id={index} className="flex flex-col gap-5 pt-10 sm:pt-40">
           <Title text={title} textColor={"text-blackCeniza"} extra={"font-Baskerville "} />
           {subtitle ? <SubTitle text={subtitle} textColor={"text-blackCeniza"} extra={""} /> : ""}
         </section>
