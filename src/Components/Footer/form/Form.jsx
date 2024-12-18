@@ -1,7 +1,6 @@
 import useForm from "../../../hooks/useForm";
 import ButtonSimple from "../../shared/Buttons/ButtonSimple";
 import Loading from "../../shared/Loading/Loading";
-import Text from "../../shared/Text";
 
 const ContactUs = ({ input1, input2, input3, input4, input5, input6, buttonText }) => {
   const { handleChange, handleBlur, handleSubmit, loading, values, errors, isSubmitting, form } =

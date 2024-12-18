@@ -190,7 +190,7 @@ const FormAttachment = () => {
     },
   ];
 
-  const { values, errors, form, loading, handleChange, handleBlur, handleSubmit, sended } =
+  const { values, errors, form, loading, handleChange, handleBlur, handleSubmit } =
     useForm(initialValues);
   const [preview, setPreview] = useState(null);
 
