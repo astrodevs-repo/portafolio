@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
-
 import Title from "../../Components/shared/Title";
 import Text from "../../Components/shared/Text";
 import Container from "../../Components/Container/Container";
@@ -12,14 +11,16 @@ import Loading from "../../Components/shared/Loading/Loading";
 import SEO from "../../Components/shared/SEO/Seo";
 import NavbarGoBack from "../../Components/shared/NavbarGoBack";
 import { useLang } from "../../context/useLang";
+import Footer from "../../Components/Footer/Footer";
 
 const Blog = () => {
-  const data = useLang();
-
+  const { data } = useLang();
   const { id } = useParams();
   const [body, setBody] = useState(null);
   const [loading, setLoading] = useState(true);
   const sectionsRef = useRef([]);
+  const navItemsRef = useRef([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -39,7 +40,15 @@ const Blog = () => {
     if (id) {
       fetchData();
     }
-  }, [id]);
+  }, [id, data]);
+
+  const scrollToSection = (index) => {
+    const section = sectionsRef.current[index];
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   if (loading) {
     return (
@@ -114,36 +123,39 @@ const Blog = () => {
         height={100}
       />
       <Container>
-        <section className="w-full flex justify-between relative min-h-fit">
-          {/* <section className="w-[20%] hidden sm:hidden md:hidden lg:block">
-            <nav className="sticky top-20">
+        <section className="w-full grid grid-cols-3 relative min-h-fit pb-20">
+          <section className=" hidden sm:hidden md:hidden lg:block">
+            <nav className="sticky top-10 p-10 bg-white/40 rounded-lg m-5">
               <ul>
                 {body?.content.sections.map((section, index) => (
                   <li
                     key={index}
+                    ref={(el) => (navItemsRef.current[index] = el)}
                     onClick={() => scrollToSection(index)}
-                    className="font-bold font-Poppins my-2 bg-red-500"
+                    className={`font-Poppins my-2 cursor-pointer hover:text-blackCeniza `}
                   >
                     {section?.subtitle && section?.subtitle}
                   </li>
                 ))}
               </ul>
             </nav>
-          </section> */}
-          <section className="w-full sm:w-full md:w-full lg:w-full relative px-0">
+          </section>
+          <section className="col-span-3 sm:col-span-2 sm:w-full md:w-full lg:w-full relative px-0">
             {body?.content.sections.map((section, index) => (
               <section
                 key={index}
                 id={`section-${index}`}
                 ref={(el) => (sectionsRef.current[index] = el)}
-                className="py-5"
+                className=""
               >
                 {section?.subtitle && <SubTitle text={section?.subtitle} extra="font-bold" />}
                 {Array.isArray(section?.content) ? (
                   <article className="py-10 flex flex-col gap-5 px-0">
                     {section?.content.map(({ title, body }, index) => (
                       <section key={index} className="flex flex-col gap-5">
-                        {title && <SubTitle text={title} extra="text-start" />}
+                        {title && (
+                          <Text content={title} extra="text-start font-semibold opacity-80" />
+                        )}
                         {body && <Text content={body} extra="text-start" />}
                       </section>
                     ))}
@@ -157,6 +169,8 @@ const Blog = () => {
             ))}
           </section>
         </section>
+
+        <SubTitle text={"Sigue leyendo"} extra="text-start" />
 
         <Carousel show={3.5}>
           {data?.home?.sections?.section_7?.itemsBlog
@@ -185,6 +199,7 @@ const Blog = () => {
             ))}
         </Carousel>
       </Container>
+      <Footer {...data?.footer} />
     </motion.section>
   );
 };

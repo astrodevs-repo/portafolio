@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Container from "../../Container/Container";
 import Title from "../../shared/Title";
 import { motion } from "framer-motion";
+import Carousel from "../../shared/Carousel/Carousel";
+import { SwiperSlide } from "swiper/react";
 
 function Blog({ index, itemsBlog }) {
   return (
@@ -20,28 +22,29 @@ function Blog({ index, itemsBlog }) {
           extra={"w-3/4"}
         />
       </section>
-      <motion.div className="scroller">
-        {itemsBlog?.map(({ title, img, id, content }, idx) => (
-          <article className="w-1/2 sm:w-1/3 mr-2" key={idx}>
-            <Link to={`blog/${id}`}>
-              <img
-                src={img}
-                alt={title}
-                width={100}
-                height={100}
-                className="object-cover rounded-md max-w-96 w-full"
-              />
-            </Link>
-            <section className="flex flex-col gap-2 pt-5">
-              <SubTitle text={title.substring(0, 20) + "..."} extra={"font-medium text-start "} />
-              <Text
-                content={content.sections[0].content.substring(0, 50) + "..."}
-                extra={"text-start"}
-              />
-            </section>
-          </article>
-        ))}
-      </motion.div>
+      {itemsBlog && (
+        <Carousel show={3.5}>
+          {itemsBlog?.map(({ title, img, id, subtitle }, index) => (
+            <SwiperSlide key={img}>
+              <Link to={`/blog/${id}`}>
+                <section className="group [perspective:1000px] pt-20">
+                  <img
+                    src={img}
+                    alt={title}
+                    className="w-full h-full object-cover rounded-lg"
+                    width={100}
+                    height={100}
+                  />
+                  <section className="flex flex-col gap-2 pt-5">
+                    <SubTitle text={title} extra="text-start" />
+                    <Text content={subtitle?.substring(0, 150) + "..."} extra="text-start" />
+                  </section>
+                </section>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Carousel>
+      )}
     </Container>
   );
 }

@@ -12,7 +12,7 @@ import Servicios from "../../Components/Home/Servicios/Servicios";
 import { useLang } from "../../context/useLang";
 import Footer from "../../Components/Footer/Footer";
 import useScrollSpy from "../../hooks/useScrollSpy"; // Importamos el hook
-
+import Blog from "../../Components/Home/Blog/Blog";
 function Home() {
   const { data } = useLang(); // Destructure to get data
   // Definir los IDs de las secciones que quieres rastrear
@@ -60,6 +60,7 @@ function Home() {
       <Servicios id="porqueelegirnos" {...data?.home?.sections?.section_4} />
       <StepList id="comotrabajamos" {...data?.home?.sections?.section_5} />
       <ClientsSection id="herramientas" {...data?.home?.sections?.section_6} />
+      <Blog id="blog" {...data?.home?.sections?.section_7} />
       <Team id="equipo" {...data?.home?.sections?.section_8} />
 
       <BackToTopButton />
