@@ -1,5 +1,9 @@
 {
   "es": {
+    "WhatsApp": {
+      "link": "https://wa.me/5492612336104",
+      "message": "¡Hola! ¿En qué podemos ayudarte hoy?"
+    },
     "home": {
       "sections": {
         "section_1": {
@@ -203,13 +207,14 @@
           "subtitle": "Descubre nuestra perspectiva innovadora sobre tecnología y soluciones",
           "itemsBlog": [
             {
-              "fecha": "22 de enero de 2024",
+              "fecha": "10 de enero de 2024",
               "hora": "04:45 PM",
               "id": "12131616151",
               "category": "IA",
               "autor": "Jesús E. Moreno",
               "color": "bg-[#005187]",
               "title": "Inteligencia artificial",
+              "keywords": "inteligencia artificial, IA, aprendizaje automático, automatización, innovación, tecnología",
               "subtitle": "La revolución de la inteligencia artificial: Transformando el futuro de nuestro negocio",
               "content": {
                 "title": "La revolución de la inteligencia artificial: Transformando el futuro de nuestro negocio",
@@ -256,12 +261,13 @@
               "img": "/Blog/ia.webp"
             },
             {
-              "fecha": "22 de enero de 2024",
-              "hora": "04:45 PM",
+              "fecha": "22 de marzo de 2024",
+              "hora": "05:45 PM",
               "id": "1213161615156",
               "category": "Educación Digital",
               "autor": "Jesús E. Moreno",
               "color": "bg-[#005187]",
+              "keywords": "educación digital, tecnología educativa, aprendizaje en línea, personalización del aprendizaje, acceso a recursos educativos",
               "title": "El impacto de la educación digital en el aprendizaje del siglo XXI",
               "subtitle": "Cómo la tecnología está revolucionando la forma en que aprendemos y enseñamos",
               "content": {
@@ -309,14 +315,15 @@
               "img": "/Blog/educacion.webp"
             },
             {
-              "fecha": "22 de enero de 2024",
-              "hora": "04:45 PM",
+              "fecha": "26 de diciembre de 2024",
+              "hora": "01:45 PM",
               "id": "1213161615157",
               "category": "Tecnología y Desarrollo",
               "autor": "Jesús E. Moreno",
               "color": "bg-[#8B0000]",
               "title": "Los retos del desarrollo de software en el 2025",
               "subtitle": "Cómo la inteligencia artificial y las tecnologías emergentes están redefiniendo el panorama del desarrollo de software",
+              "keywords": "desarrollo de software, inteligencia artificial, automatización, ciberseguridad, sostenibilidad, innovación, colaboración global",
               "content": {
                 "title": "Los retos del desarrollo de software en el 2025",
                 "sections": [
@@ -503,6 +510,10 @@
     }
   },
   "en": {
+    "WhatsApp": {
+      "link": "https://wa.me/5492612336104",
+      "message": "Write to us here, we are Neurons"
+    },
     "home": {
       "sections": {
         "section_1": {
@@ -811,6 +822,73 @@
                   ]
                 },
                 "img": "/images/education.webp"
+              },
+              {
+                "date": "December 26, 2024",
+                "time": "01:45 PM",
+                "id": "1213161615157",
+                "category": "Technology and Development",
+                "author": "Jesús E. Moreno",
+                "color": "bg-[#8B0000]",
+                "title": "The Challenges of Software Development in 2025",
+                "subtitle": "How Artificial Intelligence and Emerging Technologies are Redefining the Software Development Landscape",
+                "keywords": "software development, artificial intelligence, automation, cybersecurity, sustainability, innovation, global collaboration",
+                "content": {
+                  "title": "The Challenges of Software Development in 2025",
+                  "sections": [
+                    {
+                      "subtitle": "",
+                      "content": "Software development is facing unprecedented challenges as we move toward 2025. The accelerated adoption of technologies like artificial intelligence, cloud computing, and automation is transforming the industry, requiring developers to adapt to a highly dynamic and innovative environment."
+                    },
+                    {
+                      "subtitle": "What Drives the Challenges of Software Development?",
+                      "content": "The current technological revolution is marked by the massive integration of artificial intelligence (AI) and automation tools in software development processes. This includes everything from automated code generation to the implementation of highly customized systems, reshaping the skills and competencies required for professionals in the field."
+                    },
+                    {
+                      "subtitle": "Key Challenges in Software Development",
+                      "content": [
+                        {
+                          "title": "Scalability and Complexity",
+                          "body": "The demand for scalable and highly complex solutions is on the rise. Developers face the challenge of creating robust architectures capable of handling millions of users simultaneously while ensuring system stability in an environment of exponential growth."
+                        },
+                        {
+                          "title": "AI Adoption in the Development Cycle",
+                          "body": "AI not only assists in code generation but also in error detection, performance optimization, and predictive project analysis. However, integrating these technologies poses challenges related to the quality of automatically generated code and the necessary human oversight."
+                        },
+                        {
+                          "title": "Cybersecurity",
+                          "body": "With increased connectivity and interconnected data, software development faces constant threats of cyberattacks. Protecting user data and ensuring privacy remains a critical priority, especially in an environment where laws and regulations vary across regions."
+                        },
+                        {
+                          "title": "Sustainability and Energy Efficiency",
+                          "body": "The environmental impact of software is an emerging concern. Large-scale applications and intensive computing systems require solutions that minimize energy consumption and reduce their ecological footprint."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "Benefits and Opportunities",
+                      "content": [
+                        {
+                          "title": "Automation of Repetitive Tasks",
+                          "body": "Automation enables developers to focus on creative and complex tasks, reducing development time and costs. Tools like AI-based programming assistants are revolutionizing productivity in the sector."
+                        },
+                        {
+                          "title": "Advanced Personalization",
+                          "body": "The use of data and advanced analytics enables the creation of highly personalized applications, improving user experience and tailoring solutions to specific contexts."
+                        },
+                        {
+                          "title": "Global Collaboration",
+                          "body": "Digitization and remote work are fostering international collaboration, allowing multidisciplinary teams from different parts of the world to contribute to ambitious projects."
+                        }
+                      ]
+                    },
+                    {
+                      "subtitle": "The Future of Software Development",
+                      "content": "In 2025, emerging technologies such as quantum computing, edge computing, and extended reality (XR) will open new frontiers for software development. These technologies have the potential to transform how we interact with systems, providing more immersive, faster, and accurate experiences. The key to success lies in balancing innovation with ethical responsibility, ensuring that software is inclusive, secure, and accessible to all."
+                    }
+                  ]
+                },
+                "img": "/Blog/programing.webp"
               }
             ]
           ]

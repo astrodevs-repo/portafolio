@@ -53,12 +53,6 @@ const Blog = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <SEO
-          title="Learning React Helmet!"
-          description="Beginner friendly page for learning React Helmet."
-          name="Company name."
-          type="article"
-        />
         <Loading />
       </div>
     );
@@ -73,7 +67,7 @@ const Blog = () => {
           image="" // Placeholder if needed
           url={`https://neurons.com.ar/blog/${id}`} // Placeholder URL
           type="article"
-          siteName="Company name."
+          siteName="Neurons Blog"
         />
         <div className="text-center">
           <h1>Blog Post Not Found</h1>
@@ -93,12 +87,15 @@ const Blog = () => {
       <NavbarGoBack />
       <SEO
         title={body.title}
-        description={body.subtitle}
-        image={body?.img}
-        url={`https://neurons.com.ar/blog/${id}`}
+        description={body.subtitle || "Explore more insights on our blog."}
+        name="Neurons Blog"
         type="article"
-        siteName="Company name."
+        image={body.img}
+        url={`https://neurons.com.ar/blog/${id}`}
+        siteName="Neurons Blog"
+        keywords={["Blog", body.category, body.title, body?.keywords]}
       />
+
       <Container>
         <section className="flex flex-col gap-2">
           <Title text={body?.title} extra="text-start font-Baskerville" />
@@ -108,7 +105,7 @@ const Blog = () => {
             <p className="bg-blackCeniza bg-opacity-50 text-white rounded-lg p-2 m-0">
               {body?.hora} <span>{body?.fecha}</span>
             </p>
-            <p className={`${body?.color} bg-opacity-50 text-white rounded-lg p-2 m-0`}>
+            <p className={`${body?.color} bg-opacity-50 text-blackCeniza rounded-lg p-2 m-0`}>
               {body?.category}
             </p>
           </section>

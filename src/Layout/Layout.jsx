@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
   if (!data) {
     return <div>Loading...</div>; // Display loading state until data is available
   }
+
   return (
     <section style={{ position: "relative" }}>
       <ReactLenis
@@ -42,7 +43,7 @@ const Layout = ({ children }) => {
       </ReactLenis>
 
       <a
-        href="https://wa.me/+5492612336104"
+        href={data?.WhatsApp?.link}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-0 right-0"
@@ -80,12 +81,12 @@ const Layout = ({ children }) => {
 
           {isVisible && (
             <motion.div
-              className="absolute bottom-10 right-28 transform -translate-x-full p-2 bg-white text-black rounded-md hidden sm:flex min-w-fit md:min-w-72"
+              className="absolute bottom-10 right-28 transform -translate-x-full p-2 bg-white text-black rounded-md hidden sm:flex min-w-fit md:min-w-96"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="block">Escribenos acá, somos Neurons</span>
+              <span className="block">{data?.data?.WhatsApp?.message}</span>
             </motion.div>
           )}
         </motion.section>
